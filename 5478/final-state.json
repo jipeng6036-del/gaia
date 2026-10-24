@@ -1,0 +1,40 @@
+{
+  "started": "2026-10-24T13:26:57.510717+00:00",
+  "stage": "finished",
+  "baseline_controls_exit_code": 0,
+  "candidate_controls_exit_code": 0,
+  "storage": "/tmp is a 4GiB executable tmpfs; /home/gaia-runner is a fresh 1GiB executable tmpfs; non-root uid 1000",
+  "previous_attempt": "overlay-six-state.json: interrupted after three concurrency failures; not a pass",
+  "exec_preflight_exit_code": 0,
+  "module_skip_guard_exit_code": 0,
+  "suite_started": "2026-10-24T13:27:20.800418+00:00",
+  "command": [
+    "/usr/sbin/runuser",
+    "-u",
+    "gaia-runner",
+    "--",
+    "/core-venv/bin/python",
+    "-m",
+    "pytest",
+    "tests/unit/",
+    "-n",
+    "4",
+    "--dist=worksteal",
+    "--timeout=180",
+    "-v",
+    "--tb=short",
+    "--durations=50",
+    "--basetemp=/tmp/gaia-core-pytest",
+    "--cov=src/gaia",
+    "--cov-report=term-missing",
+    "--cov-report=xml:/evidence/final-core-coverage.xml",
+    "--junitxml=/evidence/final-core-unit.xml"
+  ],
+  "tested_file_sha256": {
+    "hub/agents/chat/python/gaia_agent_chat/agent.py": "68103041051dd55525da841afa8bbb89b60b69cd0871d7636aecb9d9e4c0e28e",
+    "hub/agents/chat/python/tests/test_chat_agent_rag_offline.py": "f8d8087fb96f4063c6fad06719555bc18e8ab7981ae68ed4b26bfca736d87a29",
+    "hub/agents/chat/python/CHANGELOG.md": "0ba579b2e8a6db8c4fb5d6fe326b30577267ccb7ccd70dcc984f8b8c269a4c75"
+  },
+  "exit_code": 0,
+  "finished": "2026-10-24T13:35:54.582725+00:00"
+}

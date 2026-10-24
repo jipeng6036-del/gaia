@@ -1,0 +1,45 @@
+tests/unit/test_file_watcher_settle.py::test_real_watcher_reports_a_copied_file_once_complete PASSED [ 95%]
+tests/unit/test_file_watcher_settle.py::test_a_file_still_locked_by_its_writer_is_retried PASSED [ 96%]
+tests/unit/test_file_watcher_settle.py::test_a_file_locked_for_good_is_given_up_on_loudly PASSED [ 96%]
+tests/unit/test_file_watcher_settle.py::test_a_new_change_to_a_locked_file_restarts_its_retries PASSED [ 97%]
+tests/unit/test_file_watcher_settle.py::test_a_change_queued_during_a_locked_read_is_not_counted_as_a_retry PASSED [ 97%]
+tests/unit/test_file_watcher_settle.py::test_deleting_a_locked_file_forgets_its_retries PASSED [ 98%]
+tests/unit/test_file_watcher_settle.py::test_a_successful_move_clears_both_paths_retry_counts PASSED [ 98%]
+tests/unit/test_file_watcher_settle.py::test_a_locked_move_destination_is_retried_as_a_modification PASSED [ 99%]
+tests/unit/test_file_watcher_settle.py::test_a_dispatch_bug_is_logged_and_dispatch_continues PASSED [100%]
+
+- generated xml file: F:\Github-PR\ci-evidence\gaia-office-runtime\windows-candidate-affected-final\results.xml -
+============================ slowest 30 durations =============================
+16.71s call     hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.pptx]
+12.75s call     hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.PPTX]
+10.19s call     hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.xlsx]
+7.20s call     hub/agents/chat/python/tests/test_chat_reindex_locked.py::test_a_document_locked_for_good_is_given_up_on_once_loudly
+7.16s call     tests/unit/test_file_watcher_settle.py::test_a_new_change_to_a_locked_file_restarts_its_retries
+7.16s call     tests/unit/test_file_watcher_settle.py::test_a_file_locked_for_good_is_given_up_on_loudly
+4.64s call     hub/agents/chat/python/tests/test_session_storage.py::test_agent_refuses_to_replace_corrupt_ui_session
+3.96s call     hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.docx]
+3.14s call     tests/unit/test_file_watcher_settle.py::test_a_file_still_locked_by_its_writer_is_retried
+3.10s call     hub/agents/chat/python/tests/test_chat_reindex_locked.py::test_a_lock_rag_reports_after_the_probe_is_retried
+3.07s call     hub/agents/chat/python/tests/test_chat_reindex_locked.py::test_a_locked_document_is_retried_until_it_reindexes
+2.10s call     hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.DOCX]
+2.07s call     hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_office_save_by_rename_ignores_temporary_files
+2.06s call     hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.XLSX]
+2.05s call     hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.txt]
+1.02s call     hub/agents/chat/python/tests/test_chat_reindex_locked.py::test_a_document_saved_by_rename_while_locked_is_retried
+1.00s call     tests/unit/test_file_watcher_settle.py::test_a_dispatch_bug_is_logged_and_dispatch_continues
+1.00s call     tests/unit/test_file_watcher_settle.py::test_a_locked_move_destination_is_retried_as_a_modification
+0.58s call     tests/unit/test_file_watcher_settle.py::test_a_file_that_cannot_be_checked_is_logged_not_silently_dropped
+0.58s call     tests/unit/test_file_watcher_settle.py::test_a_file_still_growing_without_events_is_not_reported_yet
+0.46s call     tests/unit/test_file_watcher_settle.py::test_a_file_written_in_pieces_is_reported_once_with_its_final_content
+0.29s call     hub/agents/chat/python/tests/test_chat_agent.py::test_discovered_when_installed
+0.25s setup    tests/unit/test_file_watcher.py::TestFileHashUtilities::test_compute_file_hash_returns_sha256
+0.14s setup    hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_index_multiple_code_files
+0.14s setup    hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.pptx]
+0.13s call     tests/unit/test_file_watcher_settle.py::test_a_change_queued_during_a_locked_read_is_not_counted_as_a_retry
+0.11s setup    hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_office_save_by_rename_ignores_temporary_files
+0.10s setup    hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_index_document_by_type[text]
+0.10s setup    hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.XLSX]
+0.10s setup    hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_index_document_by_type[json]
+=========================== short test summary info ===========================
+SKIPPED [1] hub\agents\chat\python\tests\test_chat_file_tools_allowed_folders.py:60: symlinks unavailable on this platform
+================== 185 passed, 1 skipped in 98.72s (0:01:38) ==================

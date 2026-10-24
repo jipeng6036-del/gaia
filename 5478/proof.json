@@ -1,0 +1,13 @@
+{
+  "baseline": {
+    "last_answer": "Actual indexed text returned by GAIA (deterministic model fixture):\n\nThe officewatch project status is ALPHA. Word briefing.\n\n[Page 1]\nThe officewatch project status is ALPHA. PowerPoint briefing.\n\nSheet: Sheet\nThe officewatch project status is ALPHA. Excel briefing.\n\nThe officewatch project status is BRAVO. Text control."
+  },
+  "candidate": {
+    "last_answer": "Actual indexed text returned by GAIA (deterministic model fixture):\n\nThe officewatch project status is BRAVO. Word briefing.\n\n[Page 1]\nThe officewatch project status is BRAVO. PowerPoint briefing.\n\nSheet: Sheet\nThe officewatch project status is BRAVO. Excel briefing.\n\nThe officewatch project status is BRAVO. Text control."
+  },
+  "baseline_commit": "5981f2128c11d6a04166025a936db7bb36406b93",
+  "baseline_agent_sha256": "4190963b1853657121f997103240e9a4a40136d757376e8d29afc4571bc10791",
+  "candidate_agent_sha256": "68103041051dd55525da841afa8bbb89b60b69cd0871d7636aecb9d9e4c0e28e",
+  "boundary": "Only model HTTP inference and embeddings are deterministic fixtures. Actual gaia CLI, built Agent UI, HTTP routes, flagship GaiaAgent/ChatAgent tools, native watchdog, Office parsing and FAISS updates execute unpatched. No real Lemonade inference or model-generated answer quality is certified.",
+  "candidate_commit": "1a899844225b2b07fda06e54d756197fca0b6992"
+}

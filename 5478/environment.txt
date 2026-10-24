@@ -1,0 +1,4 @@
+3.12.13 (main, Mar 10 2026, 18:15:39) [MSC v.1944 64 bit (AMD64)]
+F:\Github-PR\inspection\gaia-office-watch\hub\agents\chat\python\gaia_agent_chat\agent.py
+68103041051dd55525da841afa8bbb89b60b69cd0871d7636aecb9d9e4c0e28e
+{'pytest': '9.1.1', 'pytest-xdist': '3.8.0', 'pytest-timeout': '2.4.0', 'watchdog': '6.0.0', 'faiss-cpu': '1.15.1', 'python-docx': '1.2.0', 'python-pptx': '1.0.2', 'openpyxl': '3.1.5', 'pymupdf': '1.28.2'}

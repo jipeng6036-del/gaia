@@ -1,0 +1,45 @@
+
+[2026-10-24 04:53:31] | [37mINFO[0m | gaia.rag.sdk._split_text_into_chunks | sdk.py:2345 | 📝 Splitting text into semantic chunks...
+
+[2026-10-24 04:53:31] | [37mINFO[0m | gaia.rag.sdk._split_text_into_chunks | sdk.py:2550 | 📦 Created 1 semantic chunks
+
+[2026-10-24 04:53:31] | [37mINFO[0m | gaia.rag.sdk._start_embedder | sdk.py:801 | Loading embedding model via Lemonade: user.embeddinggemma-300m-GGUF
+
+[2026-10-24 04:53:31] | [37mINFO[0m | gaia.rag.sdk._start_embedder | sdk.py:858 | Loaded embedding model (ubatch-size=2048); chat model left resident
+
+[2026-10-24 04:53:31] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2645 | 🔍 Generating embeddings for 1 chunks...
+
+[2026-10-24 04:53:31] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2686 | 🏗️  Building FAISS search index...
+
+[2026-10-24 04:53:31] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2704 | 📚 Index ready with 1 vectors (embed: 0.00s, index: 0.00s)
+
+[2026-10-24 04:53:31] | [37mINFO[0m | gaia.rag.sdk._index_document | sdk.py:3509 | ✅ Successfully indexed C:\Users\lyz\AppData\Local\Temp\pytest-of-lyz\pytest-1521\test_watched_office_save_by_re0\work\report.docx
+
+[2026-10-24 04:53:31] | [37mINFO[0m | gaia_agent_chat.agent.reindex_file | agent.py:3115 | Successfully reindexed C:\Users\lyz\AppData\Local\Temp\pytest-of-lyz\pytest-1521\test_watched_office_save_by_re0\work\report.docx
+
+[2026-10-24 04:53:31] | [37mINFO[0m | gaia_agent_chat.agent._watch_directory | agent.py:3040 | Started watching: C:\Users\lyz\AppData\Local\Temp\pytest-of-lyz\pytest-1521\test_watched_office_save_by_re0\work
+
+------------------------------ Captured log call ------------------------------
+INFO     gaia_agent_chat.agent:agent.py:3092 Reindexing: C:\Users\lyz\AppData\Local\Temp\pytest-of-lyz\pytest-1521\test_watched_office_save_by_re0\work\report.docx
+INFO     gaia.rag.sdk:sdk.py:2870 Indexing new version of C:\Users\lyz\AppData\Local\Temp\pytest-of-lyz\pytest-1521\test_watched_office_save_by_re0\work\report.docx
+INFO     gaia.rag.sdk:sdk.py:3343 📄 Indexing document: C:\Users\lyz\AppData\Local\Temp\pytest-of-lyz\pytest-1521\test_watched_office_save_by_re0\work\report.docx (.docx)
+INFO     gaia.rag.sdk:sdk.py:2192 📄 Extracted 26 characters from Word file
+INFO     gaia.rag.sdk:sdk.py:2345 📝 Splitting text into semantic chunks...
+INFO     gaia.rag.sdk:sdk.py:2550 📦 Created 1 semantic chunks
+INFO     gaia.rag.sdk:sdk.py:801 Loading embedding model via Lemonade: user.embeddinggemma-300m-GGUF
+INFO     gaia.rag.sdk:sdk.py:858 Loaded embedding model (ubatch-size=2048); chat model left resident
+INFO     gaia.rag.sdk:sdk.py:2645 🔍 Generating embeddings for 1 chunks...
+INFO     gaia.rag.sdk:sdk.py:2686 🏗️  Building FAISS search index...
+INFO     gaia.rag.sdk:sdk.py:2704 📚 Index ready with 1 vectors (embed: 0.00s, index: 0.00s)
+INFO     gaia.rag.sdk:sdk.py:3509 ✅ Successfully indexed C:\Users\lyz\AppData\Local\Temp\pytest-of-lyz\pytest-1521\test_watched_office_save_by_re0\work\report.docx
+INFO     gaia_agent_chat.agent:agent.py:3115 Successfully reindexed C:\Users\lyz\AppData\Local\Temp\pytest-of-lyz\pytest-1521\test_watched_office_save_by_re0\work\report.docx
+INFO     gaia_agent_chat.agent:agent.py:3040 Started watching: C:\Users\lyz\AppData\Local\Temp\pytest-of-lyz\pytest-1521\test_watched_office_save_by_re0\work
+=========================== short test summary info ===========================
+FAILED hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.docx]
+FAILED hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.pptx]
+FAILED hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.xlsx]
+FAILED hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.DOCX]
+FAILED hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.PPTX]
+FAILED hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_documents_reindex_after_save[.XLSX]
+FAILED hub/agents/chat/python/tests/test_chat_agent_rag_offline.py::test_watched_office_save_by_rename_ignores_temporary_files
+7 failed, 4 passed, 25 deselected in 87.91s (0:01:27)

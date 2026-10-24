@@ -1,0 +1,7 @@
+.......................................................................s [ 38%]
+s....................................................................... [ 77%]
+..........................................                               [100%]
+=========================== short test summary info ============================
+SKIPPED [1] hub/agents/chat/python/tests/test_chat_reindex_locked.py:263: Windows mandatory locks
+SKIPPED [1] hub/agents/chat/python/tests/test_chat_reindex_locked.py:281: Windows mandatory locks
+184 passed, 2 skipped in 83.51s (0:01:23)

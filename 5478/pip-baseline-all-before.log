@@ -1,0 +1,54 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+_______ test_install_real_wheel_lands_in_site_packages_and_is_importable _______
+tests/unit/test_hub_installer.py:1628: in test_install_real_wheel_lands_in_site_packages_and_is_importable
+    result = install(
+src/gaia/hub/installer.py:1747: in install
+    _install_python_artifact(
+src/gaia/hub/installer.py:989: in _install_python_artifact
+    run_pip(["--target", str(site_packages), str(wheel_path)])
+tests/unit/test_hub_installer.py:1617: in real_run_pip
+    subprocess.run(
+/usr/local/lib/python3.12/subprocess.py:571: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['/core-venv/bin/python', '-m', 'pip', 'install', '--target', '/tmp/pytest-of-gaia-runner/pytest-18/test_install_real_wheel_lands_0/realwheeltestagent/site-packages', '/tmp/gaia-hub-l2zi3fji/realwheeltestagent-0.1.0-py3-none-any.whl']' returned non-zero exit status 1.
+----------------------------- Captured stderr call -----------------------------
+[2026-10-24 12:49:29] | [37mINFO[0m | gaia.hub.installer._clear_failed_install | installer.py:2086 | installer: removed the failed first install of realwheeltestagent so it is not reported as installed
+------------------------------ Captured log call -------------------------------
+INFO     gaia.hub.installer:installer.py:2086 installer: removed the failed first install of realwheeltestagent so it is not reported as installed
+________ test_default_run_pip_falls_back_to_python_pip_when_uv_missing _________
+tests/unit/test_hub_installer.py:1709: in test_default_run_pip_falls_back_to_python_pip_when_uv_missing
+    installer._default_run_pip(["--target", str(site_packages), str(wheel_path)])
+src/gaia/hub/installer.py:964: in _default_run_pip
+    raise InstallError(
+E   gaia.hub.installer.InstallError: Could not install the agent's Python package -- every pip frontend failed:
+E     - uv (not found on PATH)
+E     - /core-venv/bin/python (not found on PATH)
+E     - /core-venv/bin/python -m pip install (exit 1): /core-venv/bin/python: No module named pip
+E   Install uv (https://docs.astral.sh/uv/) or ensure '/core-venv/bin/python -m pip' works, then retry.
+_______ test_the_install_hint_appears_only_when_no_backend_is_installed ________
+tests/unit/test_screenshot_tools.py:83: in test_the_install_hint_appears_only_when_no_backend_is_installed
+    assert "pip install mss" in result["error"]
+E   assert 'pip install mss' in "Screenshot capture failed: mss is not installed; PIL.ImageGrab is not available. No capture backend: mss, or Pillow's PIL.ImageGrab on Windows/macOS. Install with: uv pip install --python /core-venv/bin/python mss"
+__________ test_hub_installed_wheel_agent_importable_in_fresh_process __________
+tests/unit/test_registry_installed_import.py:116: in test_hub_installed_wheel_agent_importable_in_fresh_process
+    result = hub_installer.install(
+src/gaia/hub/installer.py:1747: in install
+    _install_python_artifact(
+src/gaia/hub/installer.py:989: in _install_python_artifact
+    run_pip(["--target", str(site_packages), str(wheel_path)])
+tests/unit/test_registry_installed_import.py:84: in run_pip
+    subprocess.run(
+/usr/local/lib/python3.12/subprocess.py:571: in run
+    raise CalledProcessError(retcode, process.args,
+E   subprocess.CalledProcessError: Command '['/core-venv/bin/python', '-m', 'pip', 'install', '--target', '/tmp/pytest-of-gaia-runner/pytest-18/test_hub_installed_wheel_agent0/home/.gaia/agents/fixturetestagent/site-packages', '/tmp/gaia-hub-cu0oko3e/fixturetestagent-0.1.0-py3-none-any.whl']' returned non-zero exit status 1.
+----------------------------- Captured stderr call -----------------------------
+[2026-10-24 12:49:29] | [37mINFO[0m | gaia.hub.installer._clear_failed_install | installer.py:2086 | installer: removed the failed first install of fixturetestagent so it is not reported as installed
+------------------------------ Captured log call -------------------------------
+INFO     gaia.hub.installer:installer.py:2086 installer: removed the failed first install of fixturetestagent so it is not reported as installed
+=========================== short test summary info ============================
+FAILED tests/unit/test_hub_installer.py::test_install_real_wheel_lands_in_site_packages_and_is_importable
+FAILED tests/unit/test_hub_installer.py::test_default_run_pip_falls_back_to_python_pip_when_uv_missing
+FAILED tests/unit/test_screenshot_tools.py::test_the_install_hint_appears_only_when_no_backend_is_installed
+FAILED tests/unit/test_registry_installed_import.py::test_hub_installed_wheel_agent_importable_in_fresh_process
+4 failed in 0.66s

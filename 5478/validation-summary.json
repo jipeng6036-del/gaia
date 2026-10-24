@@ -1,0 +1,59 @@
+{
+  "windows_affected": {
+    "tests": 186,
+    "passed": 185,
+    "failed": 0,
+    "skipped": [
+      {
+        "name": "hub.agents.chat.python.tests.test_chat_file_tools_allowed_folders::test_list_files_outside_is_refused[symlink]",
+        "reason": "symlinks unavailable on this platform"
+      }
+    ]
+  },
+  "linux_affected": {
+    "tests": 186,
+    "passed": 184,
+    "failed": 0,
+    "skipped": [
+      {
+        "name": "hub.agents.chat.python.tests.test_chat_reindex_locked::test_a_document_another_handle_has_locked_is_not_handed_to_rag",
+        "reason": "Windows mandatory locks"
+      },
+      {
+        "name": "hub.agents.chat.python.tests.test_chat_reindex_locked::test_a_partial_lock_the_probe_misses_is_raised_through_real_rag",
+        "reason": "Windows mandatory locks"
+      }
+    ]
+  },
+  "linux_core": {
+    "passed": 27427,
+    "skipped": 478,
+    "xfailed": 3,
+    "exit_code": 0,
+    "result": "27427 passed, 478 skipped, 3 xfailed, 7 warnings, 41 subtests passed",
+    "finished": "2026-10-24T13:35:54.582725+00:00"
+  },
+  "baseline_new_regressions": {
+    "failed": 7,
+    "passed": 4,
+    "deselected": 25
+  },
+  "lint": {
+    "exit_code": 0,
+    "passed_checks": 17,
+    "advisory_warnings": 1,
+    "failed_checks": 0
+  },
+  "windows_core_limitation": "Full developer-profile run did not complete successfully: pytest-timeout exhausted available threads. The eleven captured failures were rerun on exact baseline. After activating PATH and moving this run's frontend node_modules outside src, both baseline and candidate had 7 passes and the same 4 unrelated shell/venv failures. This is not a Windows full-suite pass.",
+  "candidate_commit": "1a899844225b2b07fda06e54d756197fca0b6992",
+  "tested_file_sha256": {
+    "hub/agents/chat/python/gaia_agent_chat/agent.py": "68103041051dd55525da841afa8bbb89b60b69cd0871d7636aecb9d9e4c0e28e",
+    "hub/agents/chat/python/tests/test_chat_agent_rag_offline.py": "f8d8087fb96f4063c6fad06719555bc18e8ab7981ae68ed4b26bfca736d87a29",
+    "hub/agents/chat/python/CHANGELOG.md": "0ba579b2e8a6db8c4fb5d6fe326b30577267ccb7ccd70dcc984f8b8c269a4c75"
+  },
+  "core_storage": "/tmp is a 4GiB executable tmpfs; /home/gaia-runner is a fresh 1GiB executable tmpfs; non-root uid 1000",
+  "linux_pip_controls": {
+    "before": "4 baseline failures, matching candidate full-run failures",
+    "after": "4 baseline passes and 4 candidate passes after ensurepip; entire candidate core suite rerun"
+  }
+}

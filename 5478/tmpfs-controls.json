@@ -1,0 +1,50 @@
+[
+  {
+    "phase": "baseline",
+    "exit_code": 0,
+    "command": [
+      "/usr/sbin/runuser",
+      "-u",
+      "gaia-runner",
+      "--",
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/test_concurrent_state_writes.py::test_agent_ui_model_pick_and_config_set_keep_both",
+      "tests/unit/test_concurrent_state_writes.py::test_rag_cache_reader_never_sees_a_half_written_cache",
+      "tests/unit/test_concurrent_state_writes.py::test_hub_concurrent_installs_keep_every_pth_line",
+      "-q",
+      "--timeout=180",
+      "--tb=short",
+      "--basetemp=/dev/shm/gaia-office-control/baseline",
+      "--cov=src/gaia",
+      "--cov-report=xml:/evidence/tmpfs-controls-baseline-coverage.xml",
+      "--junitxml=/evidence/tmpfs-controls-baseline.xml"
+    ],
+    "finished": "2026-10-24T13:17:38.642218+00:00"
+  },
+  {
+    "phase": "candidate",
+    "exit_code": 0,
+    "command": [
+      "/usr/sbin/runuser",
+      "-u",
+      "gaia-runner",
+      "--",
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/test_concurrent_state_writes.py::test_agent_ui_model_pick_and_config_set_keep_both",
+      "tests/unit/test_concurrent_state_writes.py::test_rag_cache_reader_never_sees_a_half_written_cache",
+      "tests/unit/test_concurrent_state_writes.py::test_hub_concurrent_installs_keep_every_pth_line",
+      "-q",
+      "--timeout=180",
+      "--tb=short",
+      "--basetemp=/dev/shm/gaia-office-control/candidate",
+      "--cov=src/gaia",
+      "--cov-report=xml:/evidence/tmpfs-controls-candidate-coverage.xml",
+      "--junitxml=/evidence/tmpfs-controls-candidate.xml"
+    ],
+    "finished": "2026-10-24T13:18:02.072501+00:00"
+  }
+]
