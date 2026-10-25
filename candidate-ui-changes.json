@@ -1,0 +1,1 @@
+{"turns":[{"turn_id":"20261025025230-9926e2c9","session_id":"6bc49df8-8fd6-4a78-b86e-9c178aa4845a","message_id":null,"started_at":"2026-10-25T02:52:30+00:00","finished_at":null,"restored_at":null,"files":[{"path":"/documents/proof.txt","change":"pending","tool":"write_file"}],"untracked":[],"incomplete":false}]}

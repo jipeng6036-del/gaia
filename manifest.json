@@ -1,0 +1,2375 @@
+{
+  "createdAtUtc": "2026-10-25T03:07:13.453536+00:00",
+  "repository": "amd/gaia",
+  "issue": 5666,
+  "baseline": "82ad2a771c7ed5b6b26f4521b3e4eaad40820f85",
+  "candidate": "529dc35fd434f9582c3490b2f7f39d1797464c6b",
+  "branch": "fix/preserve-query-error-if-undo-save-fails",
+  "files": {
+    "docs/spec/agent-ui-query-sse-contract.md": {
+      "gitBlob": "7aa91483c635c4340e5f83976feab1055037fa66",
+      "normalizedSha256": "22454ab434cc3480ec21fab10cb31ef25d8075a1353a1ebbf4f7c17a4d789977"
+    },
+    "hub/agents/gaia/python/gaia_agent/server.py": {
+      "gitBlob": "66482e97ccb61de1af9ef3f77204d64a6b589dd1",
+      "normalizedSha256": "1d126fc747bf78bac62712e3fc6900b979b57405acce5449d252684c6d951cb0"
+    },
+    "hub/agents/gaia/python/tests/test_server_changes.py": {
+      "gitBlob": "3dd10e6de0502cf56b74128c18285ad623138f43",
+      "normalizedSha256": "102cbf51f877582ef729fed4c8cc6566f02243416632aee2c954119d7386c7b3"
+    }
+  },
+  "finalCommands": {
+    "started": "2026-10-25T02:56:29.957445+00:00",
+    "init": "docker-init",
+    "stage": "final-sidecar-contract",
+    "final-core-unit": {
+      "exit": 0,
+      "command": [
+        "/usr/sbin/runuser",
+        "-u",
+        "gaia-runner",
+        "--",
+        "/core-venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/unit/",
+        "-n",
+        "4",
+        "--dist=worksteal",
+        "--timeout=180",
+        "-v",
+        "--tb=short",
+        "--durations=50",
+        "--basetemp=/tmp/gaia-snapshot-core",
+        "--junitxml=/evidence/final-core-unit.xml"
+      ]
+    },
+    "final-sidecar-contract": {
+      "exit": 0,
+      "command": [
+        "/usr/sbin/runuser",
+        "-u",
+        "gaia-runner",
+        "--",
+        "/hub-venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/unit/agents/test_binary_install_dispatch.py",
+        "tests/unit/agents/test_sidecar_card_drift.py",
+        "tests/unit/chat/ui/test_sidecar_dispatch_coverage.py",
+        "tests/unit/chat/ui/test_sidecar_relay_profiles.py",
+        "tests/integration/test_gaia_sidecar_relay_live.py",
+        "tests/unit/chat/ui/test_turn_changes_recording.py",
+        "tests/unit/chat/ui/test_changes_router.py",
+        "tests/unit/agents/test_file_snapshots.py",
+        "-v",
+        "--tb=short",
+        "--timeout=180",
+        "--basetemp=/tmp/gaia-query-contract",
+        "--junitxml=/evidence/final-sidecar-contract.xml"
+      ],
+      "childImportPaths": [
+        "/5666/candidate/src",
+        "/5666/candidate/hub/agents/chat/python",
+        "/5666/candidate/hub/agents/gaia/python"
+      ]
+    },
+    "contract-temp-baseline-forbidden-word": 1,
+    "contract-temp-baseline-plain": 0,
+    "contract-temp-candidate-forbidden-word": 1,
+    "contract-temp-candidate-plain": 0,
+    "finished": "2026-10-25T03:05:20.761839+00:00"
+  },
+  "results": {
+    "final-baseline-regressions.xml": {
+      "junitTests": 13,
+      "failures": 4,
+      "errors": 0,
+      "skipped": []
+    },
+    "final-core-unit.xml": {
+      "junitTests": 27989,
+      "failures": 0,
+      "errors": 0,
+      "skipped": [
+        {
+          "node": "::tests.unit.agents.email.test_archive_undo_outlook",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_attention_contract",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_backend_selection",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_batch_archive",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_batch_contract",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_batch_triage_service",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_calendar_conflicts",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_connector_routes",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_connector_scope_and_badge",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_contract_schema",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_create_event_from_email",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_draft_token_provider_binding",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_grant_revoked_clean_error",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_informational_tail_auditability",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_init_endpoint",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_mcp_send_backend_parity",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_meeting_detection",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_multi_inbox_triage",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_multimailbox_provenance",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_needs_review_decision",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_outlook_backend",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_outlook_calendar_backend",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_outlook_prescan_coverage",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_outlook_query",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_phishing_block_tool",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_playground",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_pre_scan_budget_reclaim",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_pre_scan_counts",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_pre_scan_coverage_disclosure",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_pre_scan_gmail_unread_coverage",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_pre_scan_meeting_detection",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_pre_scan_needs_review",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_prescan_contract_shape",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_priority_sender_severity",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_rest_search",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_send_backend_selection",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_send_connector_errors",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_spec_html",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_summarize_tools",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_thread_comprehension",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_triage_pagination_2634",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_triage_usage_metric",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.email.test_unhandled_exception_json",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.test_email_agent",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.test_email_agent_confirmation",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.test_email_agent_local_llm_enforcement",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.test_email_agent_prompt_injection",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.test_email_agent_soft_delete",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.test_email_agent_tools",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.agents.test_email_llm_triage",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.chat.test_session_prompt_context",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.connectors.test_email_scope_drift",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.connectors.test_summarize_error_envelope",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.email.test_attachments",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.email.test_corpus_integrity",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.email.test_fake_gmail_metadata_batch_2643",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.email.test_fake_gmail_search",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.email.test_gmail_client",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.email.test_phishing_precision",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.email.test_text_signals",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.email.test_triage_heuristics",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.email.test_waiting_on_you_precision",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.messaging.test_bridge_contract",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.messaging.test_bridge_hung_tool",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_agent_ui_mcp_messages",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_chat_agent_integration",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_chat_dynamic_tools",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_chat_fix_contracts",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_chat_inline_web_ssrf",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_chat_system_prompt_budget",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_chat_tool_bundles",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_chat_tool_requests",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_dynamic_tool_filtering",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_execute_python_file_cwd",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_flagship_code_index_scope",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_indexed_docs_per_turn",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_inference_location",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_mcp2_server",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_prompt_size_budget",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_run_python_adversarial",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_run_python_frozen",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_run_python_frozen_adversarial",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_run_python_timeouts",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_run_python_tool",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_run_python_untracked",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_scratch_dir_lifecycle",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_sd_rule_gating",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_skill_tools_same_turn",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_stdio_permission_control",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_synthetic_mbox",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_tool_admission_order",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_tool_loader_disambiguation",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "::tests.unit.test_tool_loader_token_budget",
+          "reason": "collection skipped"
+        },
+        {
+          "node": "tests.unit.test_concurrent_state_writes::test_config_loads_from_an_acl_denied_directory",
+          "reason": "Windows ACLs"
+        },
+        {
+          "node": "tests.unit.connectors.test_catalog_ledger::test_kept_spec_matches_legacy_fields[mcp-git]",
+          "reason": "legacy _CATALOG already removed; field-equivalence step done"
+        },
+        {
+          "node": "tests.unit.connectors.test_catalog_ledger::test_kept_spec_matches_legacy_fields[mcp-github]",
+          "reason": "legacy _CATALOG already removed; field-equivalence step done"
+        },
+        {
+          "node": "tests.unit.connectors.test_catalog_ledger::test_kept_spec_matches_legacy_fields[mcp-memory]",
+          "reason": "legacy _CATALOG already removed; field-equivalence step done"
+        },
+        {
+          "node": "tests.unit.connectors.test_catalog_ledger::test_kept_spec_matches_legacy_fields[mcp-tavily]",
+          "reason": "legacy _CATALOG already removed; field-equivalence step done"
+        },
+        {
+          "node": "tests.unit.test_multi_device_wiring.TestChatAgentConfigDeviceField::test_config_has_device_and_ctx",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_multi_device_wiring.TestChatAgentConfigDeviceField::test_config_device_defaults_none",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.connectors.test_grant_agent_scope_derivation.TestFlagshipSidecarGrantDerivation::test_spec_matches_flagship_required_connectors",
+          "reason": "could not import 'gaia_agent.connectors': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.agents.test_console_tool_confirmation.TestSilentModeStillAsks::test_chat_agents_console_can_be_asked",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_path_access_grant::test_chat_agent_hands_its_validator_to_the_rag_sdk",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_power_stay_awake::test_the_request_is_held_for_the_work_and_released_after",
+          "reason": "Windows power requests"
+        },
+        {
+          "node": "tests.unit.test_power_stay_awake::test_an_inner_holder_does_not_release_the_outer_one",
+          "reason": "Windows power requests"
+        },
+        {
+          "node": "tests.unit.test_power_stay_awake::test_a_refused_request_is_fatal_only_when_required",
+          "reason": "Windows power requests"
+        },
+        {
+          "node": "tests.unit.test_power_stay_awake::test_an_agent_turn_holds_the_request",
+          "reason": "Windows power requests"
+        },
+        {
+          "node": "tests.unit.test_powershell_command_injection.TestNotifyDesktopScript::test_script_constant_reads_both_values_from_the_environment",
+          "reason": "gaia-agent-chat wheel not installed in this env"
+        },
+        {
+          "node": "tests.unit.test_powershell_command_injection.TestNotifyDesktopScript::test_quote_in_message_cannot_alter_the_command",
+          "reason": "gaia-agent-chat wheel not installed in this env"
+        },
+        {
+          "node": "tests.unit.agents.test_default_max_steps.TestDefaultMaxSteps::test_configs_inherit_the_override_at_construction",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_deliverable_grounding::test_xlsx_written_by_a_script_with_hard_coded_prices_is_flagged",
+          "reason": "could not import 'openpyxl': No module named 'openpyxl'"
+        },
+        {
+          "node": "tests.unit.test_relay_flagship_documents::test_a_document_attached_on_turn_three_is_read_by_the_relayed_flagship",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_relay_flagship_documents::test_an_older_flagship_says_documents_need_an_update",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_relay_flagship_documents::test_an_older_flagship_still_chats_without_documents",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_relay_flagship_question::test_the_ui_answer_reaches_the_flagship_question",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_relay_flagship_question::test_both_relayed_agents_take_the_same_answer_body",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_relay_full_access::test_the_flagship_follows_the_chats_mode_turn_by_turn",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.agents.test_deliverable_grounding_adversarial::test_a_ten_thousand_row_workbook_is_read_up_to_the_row_cap",
+          "reason": "could not import 'openpyxl': No module named 'openpyxl'"
+        },
+        {
+          "node": "tests.unit.test_relay_tool_confirmation::test_the_ui_answer_runs_or_declines_the_sidecar_tool[True]",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_relay_tool_confirmation::test_the_ui_answer_runs_or_declines_the_sidecar_tool[False]",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_relay_tool_confirmation::test_an_unanswered_prompt_is_denied_and_a_late_answer_reaches_nothing",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_relay_tool_confirmation::test_full_access_relays_a_gated_shell_prompt_to_the_ui[True]",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_relay_tool_confirmation::test_full_access_relays_a_gated_shell_prompt_to_the_ui[False]",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_remedy_commands_are_runnable::test_flagship_readiness_hint_pulls_with_the_resolved_client[tooling0]",
+          "reason": "could not import 'gaia_agent.server': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_remedy_commands_are_runnable::test_flagship_readiness_hint_pulls_with_the_resolved_client[tooling1]",
+          "reason": "could not import 'gaia_agent.server': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_remedy_commands_are_runnable::test_flagship_readiness_hint_pulls_with_the_resolved_client[tooling2]",
+          "reason": "could not import 'gaia_agent.server': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_schedule_lock.TestDaemonLock::test_windows_omits_the_pid_rather_than_inventing_one",
+          "reason": "msvcrt lock path"
+        },
+        {
+          "node": "tests.unit.test_schedule_lock.TestWindowsLockingPrimitive::test_the_owner_may_truncate_and_write_the_byte_it_locked",
+          "reason": "msvcrt lock path"
+        },
+        {
+          "node": "tests.unit.test_schedule_lock.TestWindowsLockingPrimitive::test_unlocking_needs_the_seek_back_that_release_does",
+          "reason": "msvcrt lock path"
+        },
+        {
+          "node": "tests.unit.test_schedule_lock.TestWindowsLockingPrimitive::test_another_handle_cannot_read_the_locked_byte",
+          "reason": "msvcrt lock path"
+        },
+        {
+          "node": "tests.unit.eval.test_bench_config::test_the_fence_really_blocks_answer_keys_and_leaves_the_workdir_open",
+          "reason": "macOS sandbox-exec"
+        },
+        {
+          "node": "tests.unit.agents.test_file_snapshots.TestReviewFixes::test_short_and_long_windows_names_are_one_entry",
+          "reason": "8.3 short names are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_security_edge_cases.TestGetBlockedDirectoriesUserProfile::test_userprofile_empty_string",
+          "reason": "Windows-specific test"
+        },
+        {
+          "node": "tests.unit.test_security_edge_cases.TestGetBlockedDirectoriesUserProfile::test_userprofile_missing",
+          "reason": "Windows-specific test"
+        },
+        {
+          "node": "tests.unit.test_security_edge_cases.TestGetBlockedDirectoriesUserProfile::test_userprofile_valid_produces_ssh_dir",
+          "reason": "Windows-specific test"
+        },
+        {
+          "node": "tests.unit.eval.test_bench_ghstub::test_jq_is_applied_the_way_gh_applies_it",
+          "reason": "--jq needs jq"
+        },
+        {
+          "node": "tests.unit.test_shell_compound_commands::test_cd_to_an_absolute_windows_path_runs_the_line[bare]",
+          "reason": "needs a real Windows path"
+        },
+        {
+          "node": "tests.unit.test_shell_compound_commands::test_cd_to_an_absolute_windows_path_runs_the_line[quoted]",
+          "reason": "needs a real Windows path"
+        },
+        {
+          "node": "tests.unit.eval.test_bench_ghstub_windows::test_gh_as_argv_runs_the_stand_in",
+          "reason": "CreateProcess resolves only gh.exe"
+        },
+        {
+          "node": "tests.unit.eval.test_bench_ghstub_windows::test_gh_as_argv_serves_the_fixture_issues_and_passes_arguments",
+          "reason": "CreateProcess resolves only gh.exe"
+        },
+        {
+          "node": "tests.unit.eval.test_bench_ghstub_windows::test_a_missing_launcher_template_fails_loudly",
+          "reason": "CreateProcess resolves only gh.exe"
+        },
+        {
+          "node": "tests.unit.test_shell_exit_status::test_cmd_type_of_a_missing_file_is_a_failure",
+          "reason": "cmd.exe's type prints a file"
+        },
+        {
+          "node": "tests.unit.test_shell_guardrails.TestASpellingDoesNotChangeTheTier::test_git_exe_on_windows_gets_bare_gits_verdict[log --oneline]",
+          "reason": "git.exe is bare git only on Windows"
+        },
+        {
+          "node": "tests.unit.test_shell_guardrails.TestASpellingDoesNotChangeTheTier::test_git_exe_on_windows_gets_bare_gits_verdict[status]",
+          "reason": "git.exe is bare git only on Windows"
+        },
+        {
+          "node": "tests.unit.test_shell_guardrails.TestASpellingDoesNotChangeTheTier::test_git_exe_on_windows_gets_bare_gits_verdict[-c core.pager=evil.sh status]",
+          "reason": "git.exe is bare git only on Windows"
+        },
+        {
+          "node": "tests.unit.test_shell_inline_script_paths::test_the_reported_command_verbatim",
+          "reason": "Windows drive-letter paths"
+        },
+        {
+          "node": "tests.unit.test_shell_output_encoding::test_output_with_non_locale_bytes_survives",
+          "reason": "locale decode trap is Windows cp1252"
+        },
+        {
+          "node": "tests.unit.test_shell_output_encoding::test_plain_ascii_output_is_unchanged",
+          "reason": "uses a Windows shell builtin"
+        },
+        {
+          "node": "tests.unit.test_daemon_secret_acl::test_real_lockdown_leaves_only_the_current_user",
+          "reason": "real DACL behavior is observable only on Windows/NTFS (#2250)"
+        },
+        {
+          "node": "tests.unit.test_daemon_secret_acl::test_real_lockdown_strips_inherited_parent_ace",
+          "reason": "real DACL behavior is observable only on Windows/NTFS (#2250)"
+        },
+        {
+          "node": "tests.unit.test_daemon_secret_acl::test_pywin32_is_a_declared_windows_dependency",
+          "reason": "real DACL behavior is observable only on Windows/NTFS (#2250)"
+        },
+        {
+          "node": "tests.unit.test_daemon_spawned_pid::test_windows_venv_launcher_registers_its_child",
+          "reason": "venv launcher is Windows-only"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_inside_folder_sees_through_other_spellings_of_the_folder",
+          "reason": "this host has no other spelling of a local path"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_scratch_script_named_another_way_is_still_asked_about",
+          "reason": "this host has no other spelling of a local path"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_shell_grant_does_not_reach_scratch_code[go run-extended]",
+          "reason": "\\\\?\\ paths are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_shell_grant_does_not_reach_scratch_code[go run-case]",
+          "reason": "this filesystem is case-sensitive"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_shell_grant_does_not_reach_scratch_code[make-extended]",
+          "reason": "\\\\?\\ paths are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_shell_grant_does_not_reach_scratch_code[make-case]",
+          "reason": "this filesystem is case-sensitive"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_shell_grant_does_not_reach_scratch_code[pip install-extended]",
+          "reason": "\\\\?\\ paths are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_shell_grant_does_not_reach_scratch_code[pip install-case]",
+          "reason": "this filesystem is case-sensitive"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_shell_grant_does_not_reach_scratch_code[project script-extended]",
+          "reason": "\\\\?\\ paths are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_shell_grant_does_not_reach_scratch_code[project script-case]",
+          "reason": "this filesystem is case-sensitive"
+        },
+        {
+          "node": "tests.unit.test_device_check.TestGetProcessorName::test_windows_registry_success",
+          "reason": "Windows-only test"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_shell_grant_does_not_reach_scratch_code[pytest-extended]",
+          "reason": "\\\\?\\ paths are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_shell_grant_does_not_reach_scratch_code[pytest-case]",
+          "reason": "this filesystem is case-sensitive"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_shell_grant_does_not_reach_scratch_code[python -m via cd-extended]",
+          "reason": "\\\\?\\ paths are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_shell_grant_does_not_reach_scratch_code[python -m via cd-case]",
+          "reason": "this filesystem is case-sensitive"
+        },
+        {
+          "node": "tests.unit.test_email_sidecar_devmode_app::test_server_app_dir_import_string_resolves_to_fastapi_app",
+          "reason": "email agent wheel not installed (uv pip install -e hub/agents/email/python)"
+        },
+        {
+          "node": "tests.unit.test_email_sidecar_devmode_app::test_server_main_serves_the_single_module_app_openapi",
+          "reason": "email agent wheel not installed"
+        },
+        {
+          "node": "tests.unit.test_email_sidecar_proxy::test_live_proxy_health_and_version_roundtrip",
+          "reason": "email agent + uvicorn required for live proxy round-trip"
+        },
+        {
+          "node": "tests.unit.test_email_sidecar_proxy::test_live_triage_roundtrip_through_manager_proxy",
+          "reason": "email agent + uvicorn required for live triage round-trip"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_shell_grant_does_not_reach_scratch_code[uv run-extended]",
+          "reason": "\\\\?\\ paths are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_shell_grant_does_not_reach_scratch_code[uv run-case]",
+          "reason": "this filesystem is case-sensitive"
+        },
+        {
+          "node": "tests.unit.test_email_sidecar_relay.TestPreScanOmitsRenderCardByDesign::test_raw_query_stream_omits_render_card_by_design",
+          "reason": "uvicorn, requests, and gaia-agent-email must all be importable for the real-server /query integration tests"
+        },
+        {
+          "node": "tests.unit.test_email_sidecar_relay.TestPreScanOmitsRenderCardByDesign::test_relay_query_omits_render_card_by_design",
+          "reason": "uvicorn, requests, and gaia-agent-email must all be importable for the real-server /query integration tests"
+        },
+        {
+          "node": "tests.unit.test_email_sidecar_relay.TestConfirmationSequenceRealPipeline::test_raw_query_stream_needs_confirmation_then_final",
+          "reason": "uvicorn, requests, and gaia-agent-email must all be importable for the real-server /query integration tests"
+        },
+        {
+          "node": "tests.unit.test_email_sidecar_relay.TestConfirmationSequenceRealPipeline::test_relay_query_needs_confirmation_then_answer_terminates_fast",
+          "reason": "uvicorn, requests, and gaia-agent-email must all be importable for the real-server /query integration tests"
+        },
+        {
+          "node": "tests.unit.test_email_sidecar_relay.TestReadTimeoutMidStream::test_relay_read_timeout_emits_stream_ended_unexpectedly",
+          "reason": "uvicorn, requests, and gaia-agent-email must all be importable for the real-server /query integration tests"
+        },
+        {
+          "node": "tests.unit.test_email_sidecar_relay.TestCancelParkPattern::test_relay_reacts_to_handler_cancelled_and_calls_cancel_query",
+          "reason": "uvicorn, requests, and gaia-agent-email must all be importable for the real-server /query integration tests"
+        },
+        {
+          "node": "tests.unit.test_email_sidecar_relay.TestStreamingIsNotBuffered::test_inter_arrival_gap_reflects_real_server_side_sleep",
+          "reason": "uvicorn, requests, and gaia-agent-email must all be importable for the real-server /query integration tests"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_python_m_run_in_scratch_as_its_working_folder_asks[extended]",
+          "reason": "\\\\?\\ paths are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_python_m_run_in_scratch_as_its_working_folder_asks[case]",
+          "reason": "this filesystem is case-sensitive"
+        },
+        {
+          "node": "tests.unit.test_file_editing_prompt.TestTheFragmentExists::test_profiles_that_can_edit_say_so[chat-False]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_file_editing_prompt.TestTheFragmentExists::test_profiles_that_can_edit_say_so[doc-True]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_file_editing_prompt.TestTheFragmentExists::test_profiles_that_can_edit_say_so[file-True]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_file_editing_prompt.TestTheFragmentExists::test_profiles_that_can_edit_say_so[full-True]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_file_editing_prompt.TestTheFragmentExists::test_profiles_that_can_edit_say_so[data-True]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_file_editing_prompt.TestTheFragmentExists::test_profiles_that_can_edit_say_so[web-False]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_file_lock::test_replace_waits_out_a_brief_hold_by_another_program",
+          "reason": "Windows refuses a rename onto an open file"
+        },
+        {
+          "node": "tests.unit.test_file_lock::test_replace_held_too_long_names_the_file",
+          "reason": "Windows refuses a rename onto an open file"
+        },
+        {
+          "node": "tests.unit.test_file_lock::test_a_read_only_target_fails_at_once_instead_of_waiting",
+          "reason": "Windows read-only attribute"
+        },
+        {
+          "node": "tests.unit.test_file_lock::test_an_acl_denied_folder_is_reported_unwritable",
+          "reason": "Windows ACLs"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_network_path_is_never_looked_at_before_the_prompt[\\\\\\\\evil\\\\share\\\\t.py]",
+          "reason": "UNC paths are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_network_path_is_never_looked_at_before_the_prompt[//evil/share/t.py]",
+          "reason": "UNC paths are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_adversarial::test_a_network_path_is_never_looked_at_before_the_prompt[\\\\\\\\?\\\\UNC\\\\evil\\\\share\\\\t.py]",
+          "reason": "UNC paths are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_instead_of_refuse::test_a_full_access_chat_asks_before_a_gated_command_and_runs_it_on_allow",
+          "reason": "could not import 'gaia_agent.stdio': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_instead_of_refuse::test_a_full_access_chat_runs_nothing_the_person_denies",
+          "reason": "could not import 'gaia_agent.stdio': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_instead_of_refuse::test_a_full_access_chat_asks_once_for_a_one_time_line",
+          "reason": "could not import 'gaia_agent.stdio': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_instead_of_refuse::test_a_full_access_chat_runs_a_safe_command_unasked",
+          "reason": "could not import 'gaia_agent.stdio': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_instead_of_refuse::test_an_unwatched_full_access_run_still_refuses_unasked",
+          "reason": "could not import 'gaia_agent.stdio': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_instead_of_refuse::test_the_auto_approve_env_still_refuses_even_on_a_watched_chat",
+          "reason": "could not import 'gaia_agent.stdio': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_instead_of_refuse::test_a_direct_call_on_a_full_access_chat_never_runs_a_gated_command",
+          "reason": "could not import 'gaia_agent.stdio': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_shell_prompt_instead_of_refuse::test_the_model_cannot_pass_the_needs_person_marker",
+          "reason": "could not import 'gaia_agent.stdio': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_shell_windows_tool_shadowing::test_find_count_runs_windows_find_even_with_gnu_find_first",
+          "reason": "cmd.exe tool resolution is Windows-only"
+        },
+        {
+          "node": "tests.unit.test_shell_windows_tool_shadowing::test_gnu_find_still_runs_for_gnu_spelling",
+          "reason": "cmd.exe tool resolution is Windows-only"
+        },
+        {
+          "node": "tests.unit.test_shell_windows_tool_shadowing::test_gnu_sort_and_windows_find_share_one_pipeline",
+          "reason": "cmd.exe tool resolution is Windows-only"
+        },
+        {
+          "node": "tests.unit.test_file_tools.TestSpreadsheetHeaderBelowATitle::test_the_table_header_is_found_below_the_title",
+          "reason": "could not import 'openpyxl': No module named 'openpyxl'"
+        },
+        {
+          "node": "tests.unit.test_file_tools.TestSpreadsheetHeaderBelowATitle::test_a_sheet_that_starts_with_its_header_is_unchanged",
+          "reason": "could not import 'openpyxl': No module named 'openpyxl'"
+        },
+        {
+          "node": "tests.unit.test_file_tools.TestSpreadsheetHeaderBelowATitle::test_a_narrower_text_header_keeps_its_first_data_row",
+          "reason": "could not import 'openpyxl': No module named 'openpyxl'"
+        },
+        {
+          "node": "tests.unit.eval.test_eval_lock::test_the_machine_is_kept_awake_while_an_eval_runs",
+          "reason": "Windows power requests"
+        },
+        {
+          "node": "tests.unit.eval.test_eval_lock::test_a_refused_power_request_fails_the_run_loudly",
+          "reason": "Windows power requests"
+        },
+        {
+          "node": "tests.unit.test_skill_binary_grants::test_the_exe_suffix_is_stripped_on_windows",
+          "reason": "the .exe suffix is Windows-only"
+        },
+        {
+          "node": "tests.unit.test_file_write_guardrails.TestBlockedDirectories::test_windows_blocked_dirs_include_system",
+          "reason": "Windows-specific test"
+        },
+        {
+          "node": "tests.unit.test_file_write_guardrails.TestBlockedDirectories::test_windows_blocked_dirs_include_program_files",
+          "reason": "Windows-specific test"
+        },
+        {
+          "node": "tests.unit.test_file_write_guardrails.TestBlockedDirectories::test_windows_blocked_dirs_include_ssh",
+          "reason": "Windows-specific test"
+        },
+        {
+          "node": "tests.unit.test_file_write_guardrails.TestIsWriteBlocked::test_windows_system32_is_blocked",
+          "reason": "Windows-specific test"
+        },
+        {
+          "node": "tests.unit.test_gaia_home::test_listed_write_sites_stay_out_of_real_home",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_model_unreachable_retry::test_tui_turn_survives_a_step_retry_and_ends_with_the_answer[non-streaming]",
+          "reason": "could not import 'gaia_agent.stdio': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.agents.test_model_unreachable_retry::test_tui_turn_survives_a_step_retry_and_ends_with_the_answer[streaming]",
+          "reason": "could not import 'gaia_agent.stdio': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.agents.test_model_unreachable_retry::test_tui_turn_gives_up_with_the_answer_not_an_error[non-streaming]",
+          "reason": "could not import 'gaia_agent.stdio': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.agents.test_model_unreachable_retry::test_tui_turn_gives_up_with_the_answer_not_an_error[streaming]",
+          "reason": "could not import 'gaia_agent.stdio': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.eval.test_flagship_tasks::test_the_live_judge_passes_every_reference_and_fails_every_wrong_answer",
+          "reason": "calls Claude; set GAIA_EVAL_LIVE_JUDGE=1 to check the judge's verdicts"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_registry_fixture_actually_registered_something",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[check-in]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[coding]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[daily-brief]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[data-explore]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[document-brief]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[file-ops]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[github-triage]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[image-gen]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[inbox-triage]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[price-watch]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[recommendations]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[research-report]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[rss-digest]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[source-watch]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[summarize]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_tools_required_are_real_tools[transcribe-meeting]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[check-in]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[coding]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[daily-brief]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[document-brief]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[file-ops]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[github-triage]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[image-gen]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[inbox-triage]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[price-watch]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[recommendations]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[research-report]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[rss-digest]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[source-watch]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[summarize]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_starter_skill_scratchpad_sql_uses_the_table_prefix[transcribe-meeting]",
+          "reason": "not a scratchpad skill"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_daily_brief_and_guide_do_not_underclaim_tts_or_scheduling",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_starter_skills::test_the_guides_run_a_skill_snippet_still_type_checks",
+          "reason": "could not import 'gaia_agent_chat.agent': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_read_file_documents::test_an_xlsx_is_read_sheet_by_sheet",
+          "reason": "could not import 'openpyxl': No module named 'openpyxl'"
+        },
+        {
+          "node": "tests.unit.agents.test_read_file_documents::test_formulas_without_saved_values_are_flagged_not_silently_blank",
+          "reason": "could not import 'openpyxl': No module named 'openpyxl'"
+        },
+        {
+          "node": "tests.unit.agents.test_read_file_documents.TestThePromptRule::test_profiles_that_can_index_say_so[chat-False]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_read_file_documents.TestThePromptRule::test_profiles_that_can_index_say_so[doc-True]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_read_file_documents.TestThePromptRule::test_profiles_that_can_index_say_so[file-False]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_read_file_documents.TestThePromptRule::test_profiles_that_can_index_say_so[full-True]",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_read_file_documents_adversarial::test_a_workbook_with_many_sheets_is_read_sheet_by_sheet",
+          "reason": "could not import 'openpyxl': No module named 'openpyxl'"
+        },
+        {
+          "node": "tests.unit.agents.test_read_file_documents_adversarial::test_a_workbook_past_the_text_cap_is_refused_not_cut",
+          "reason": "could not import 'openpyxl': No module named 'openpyxl'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_chat_registered_when_wheel_installed",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_chat_source_is_installed",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_chat_has_conversation_starters",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_list_returns_all_builtins",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_base_agents_declare_full_and_lite_tiers",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_base_agents_are_hidden_from_selection",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_legacy_chat_lite_create_agent_uses_lite_tier",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_legacy_gaia_lite_create_agent_uses_doc_profile",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_explicit_model_id_overrides_lite_tier",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_explicit_model_tier_selects_lite_on_base_id",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_base_chat_create_agent_uses_default_model",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_legacy_chat_lite_resolve_model_returns_4b",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_legacy_gaia_lite_resolve_model_returns_4b",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_base_chat_resolve_model_returns_none",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry.TestBuiltinRegistration::test_chat_has_no_memory_requirement_by_default",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry_python_factory.TestChatFactoryRegression::test_chat_agent_config_declares_session_fields",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_registry_python_factory.TestChatFactoryRegression::test_chat_factory_filters_unknown_kwargs_via_create_agent",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.agents.test_sidecar_card_drift::test_name_matches[gaia]",
+          "reason": "gaia_agent not importable; nothing to compare against"
+        },
+        {
+          "node": "tests.unit.agents.test_sidecar_card_drift::test_description_matches[gaia]",
+          "reason": "gaia_agent not importable; nothing to compare against"
+        },
+        {
+          "node": "tests.unit.agents.test_sidecar_card_drift::test_conversation_starters_match[gaia]",
+          "reason": "gaia_agent not importable; nothing to compare against"
+        },
+        {
+          "node": "tests.unit.agents.test_sidecar_card_drift::test_category_tags_and_icon_match[gaia]",
+          "reason": "gaia_agent not importable; nothing to compare against"
+        },
+        {
+          "node": "tests.unit.agents.test_sidecar_card_drift::test_card_is_actually_populated[gaia]",
+          "reason": "gaia_agent not importable; nothing to compare against"
+        },
+        {
+          "node": "tests.unit.agents.test_step_budget_adversarial::test_the_flagship_limit_follows_the_same_rules",
+          "reason": "could not import 'gaia_agent.agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_lemonade_asr.TestRealServer::test_real_transcription_round_trip",
+          "reason": "Lemonade server not available - skipping integration test"
+        },
+        {
+          "node": "tests.unit.eval.test_skill_scenario_coverage::test_the_flagship_actually_provides_load_skill",
+          "reason": "could not import 'gaia_agent.agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_lemonade_embedded.TestVulkanWorkarounds::test_the_real_registry_reads_without_raising",
+          "reason": "reads the Windows registry"
+        },
+        {
+          "node": "tests.unit.test_lemonade_embedded_ownership.TestPortProbe::test_a_live_loopback_listener_is_taken[exclusive]",
+          "reason": "Windows socket rules"
+        },
+        {
+          "node": "tests.unit.test_lemonade_embedded_ownership.TestPortProbe::test_windows_never_probes_with_reuse_options",
+          "reason": "Windows socket rules"
+        },
+        {
+          "node": "tests.unit.test_lemonade_follows_restart::test_a_new_chat_agent_waits_for_the_port_the_server_starts_on",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_lemonade_orphaned_backends::test_a_dead_lemonds_backends_are_reaped_when_status_finds_it_gone",
+          "reason": "copies the interpreter under another name; the layout is Windows'"
+        },
+        {
+          "node": "tests.unit.test_lemonade_orphaned_backends::test_a_start_reaps_backends_an_earlier_lemond_left",
+          "reason": "copies the interpreter under another name; the layout is Windows'"
+        },
+        {
+          "node": "tests.unit.test_lemonade_orphaned_backends::test_a_running_lemonds_backends_are_left_alone",
+          "reason": "copies the interpreter under another name; the layout is Windows'"
+        },
+        {
+          "node": "tests.unit.test_lemonade_orphaned_backends::test_a_tool_the_user_runs_from_a_terminal_is_left_alone",
+          "reason": "copies the interpreter under another name; the layout is Windows'"
+        },
+        {
+          "node": "tests.unit.test_lemonade_orphaned_backends::test_backends_outside_this_install_are_never_touched",
+          "reason": "copies the interpreter under another name; the layout is Windows'"
+        },
+        {
+          "node": "tests.unit.agents.test_tool_schema_array_items::test_the_flagship_sends_items_on_every_array",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_parses_without_errors",
+          "reason": "pwsh not installed"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_a_failed_iex_install_leaves_the_session_alive_and_clean",
+          "reason": "no pwsh"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_a_failed_file_install_still_exits_non_zero",
+          "reason": "no pwsh"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_install_tui_installs_the_latest_release[wget]",
+          "reason": "wget not installed"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_installs_the_latest_release_and_the_agent",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_a_pinned_tag_installs_that_release",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_installs_nothing_on_a_checksum_mismatch",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_refuses_a_binary_missing_from_the_checksums",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_refuses_a_malformed_tag[v0.25.0;id]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_refuses_a_malformed_tag[0.25.0]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_refuses_a_malformed_tag[v0.25.0/../x]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_a_tampered_agent_fails_the_install",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_pins_the_core_to_the_tag[--amd-gaia[api]]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_pins_the_core_to_the_tag[v0.25.0-final-amd-gaia[api]==0.25.0]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_pins_the_core_to_the_tag[v0.25.1-rc2-rc-amd-gaia[api]==0.25.1rc2]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_pins_the_core_to_the_tag[v1.10.20-rc13-rc-amd-gaia[api]==1.10.20rc13]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_refuses_a_tag_it_cannot_pin[0.25.0]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_refuses_a_tag_it_cannot_pin[v0.25]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_refuses_a_tag_it_cannot_pin[v0.25.1-rc0]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_refuses_a_tag_it_cannot_pin[v0.25.1-beta1]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_refuses_a_tag_it_cannot_pin[v0.25.0;id]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_refuses_a_tag_it_cannot_pin[latest]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_an_rc_pin_installs_the_candidates_own_agent",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_an_rc_pin_never_installs_a_tampered_agent",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_fails_when_github_is_unreachable",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_refuses_a_release_without_its_checksum_file",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_refuses_latest_redirecting_to_something_other_than_a_tag",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_refuses_what_install_sh_refuses[duplicate]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_install_scripts_terminal_hub::test_ps1_refuses_what_install_sh_refuses[uppercase]",
+          "reason": "no PowerShell"
+        },
+        {
+          "node": "tests.unit.installer.test_uninstall_command.TestWindowsJunctions::test_is_link_detects_a_junction",
+          "reason": "junctions are Windows-only"
+        },
+        {
+          "node": "tests.unit.installer.test_uninstall_command.TestWindowsJunctions::test_junctioned_documents_is_removed_without_touching_the_target",
+          "reason": "junctions are Windows-only"
+        },
+        {
+          "node": "tests.unit.installer.test_uninstall_command.TestWindowsJunctions::test_purge_completes_past_a_junctioned_documents",
+          "reason": "junctions are Windows-only"
+        },
+        {
+          "node": "tests.unit.agents.tools.test_email_tools::test_email_tools_are_bundled_for_the_loader",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_tls_trust_store::test_hub_agent_sidecars_inject[gaia_agent.entry]",
+          "reason": "could not import 'gaia_agent.entry': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_lemonade_server_process_lifecycle::test_launch_server_leaves_a_non_gaia_listener_running",
+          "reason": "needs nc for a listener"
+        },
+        {
+          "node": "tests.unit.chat.ui.test_chat_helpers.TestStampBuiltinChatIdentity::test_stamps_field_on_fresh_config",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.chat.ui.test_chat_helpers.TestStampBuiltinChatIdentity::test_is_idempotent_no_overwrite_when_already_set",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_ui_no_stdin_prompts::test_chat_agent_validator_asks_its_console_before_prompting",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_ui_warmup::test_ui_warm_up_primes_a_new_chats_first_turn",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_web_client_fetch_deadline::test_fetches_through_a_socks_proxy_still_work",
+          "reason": "SOCKS proxies need PySocks"
+        },
+        {
+          "node": "tests.unit.test_web_client_fetch_deadline::test_a_socks_proxied_trickle_still_stops_at_the_deadline",
+          "reason": "SOCKS proxies need PySocks"
+        },
+        {
+          "node": "tests.unit.test_windows_hidden_console::test_literal_flags_match_the_windows_constants",
+          "reason": "Windows-only constants"
+        },
+        {
+          "node": "tests.unit.test_asr.TestProcessAudioWrapper::test_silence_detection_triggers_processing",
+          "reason": "Audio dependencies (sounddevice) not available"
+        },
+        {
+          "node": "tests.unit.test_asr.TestProcessAudioWrapper::test_stop_command",
+          "reason": "Audio dependencies (sounddevice) not available"
+        },
+        {
+          "node": "tests.unit.test_asr.TestProcessAudioWrapper::test_transcription_to_response_flow",
+          "reason": "Audio dependencies (sounddevice) not available"
+        },
+        {
+          "node": "tests.unit.test_awake_clock::test_on_windows_it_is_the_unbiased_interrupt_time",
+          "reason": "Windows clock source"
+        },
+        {
+          "node": "tests.unit.test_awake_clock::test_on_windows_it_reads_the_unbiased_interrupt_time_and_nothing_else",
+          "reason": "Windows clock source"
+        },
+        {
+          "node": "tests.unit.test_awake_clock::test_a_clock_windows_refuses_fails_every_limit_loudly",
+          "reason": "Windows clock source"
+        },
+        {
+          "node": "tests.unit.test_background_spawn_leaves_job::test_a_server_started_in_the_tuis_kind_of_job_outlives_it",
+          "reason": "Windows job objects"
+        },
+        {
+          "node": "tests.unit.test_background_spawn_leaves_job::test_a_job_that_forbids_leaving_still_takes_it_down",
+          "reason": "Windows job objects"
+        },
+        {
+          "node": "tests.unit.test_browser_tools.TestChatAgentBrowserIntegration::test_web_client_initialized_when_enabled",
+          "reason": "gaia-agent-chat wheel not installed (#1102)"
+        },
+        {
+          "node": "tests.unit.test_browser_tools.TestChatAgentBrowserIntegration::test_web_client_none_when_disabled",
+          "reason": "gaia-agent-chat wheel not installed (#1102)"
+        },
+        {
+          "node": "tests.unit.test_browser_tools.TestChatAgentBrowserIntegration::test_browser_config_fields_passed_to_webclient",
+          "reason": "gaia-agent-chat wheel not installed (#1102)"
+        },
+        {
+          "node": "tests.unit.test_browser_tools.TestChatAgentBrowserIntegration::test_browser_tools_in_registered_tools",
+          "reason": "gaia-agent-chat wheel not installed (#1102)"
+        },
+        {
+          "node": "tests.unit.test_browser_tools.TestChatAgentBrowserIntegration::test_system_prompt_includes_browser_section",
+          "reason": "gaia-agent-chat wheel not installed (#1102)"
+        },
+        {
+          "node": "tests.unit.chat.ui.test_sidecar_relay_profiles.TestGaiaToolMapsMatchTheFlagship::test_the_registry_was_actually_read",
+          "reason": "flagship package required to read its real tool registry"
+        },
+        {
+          "node": "tests.unit.chat.ui.test_sidecar_relay_profiles.TestGaiaToolMapsMatchTheFlagship::test_every_registered_tool_has_a_label",
+          "reason": "flagship package required to read its real tool registry"
+        },
+        {
+          "node": "tests.unit.chat.ui.test_sidecar_relay_profiles.TestGaiaToolMapsMatchTheFlagship::test_the_memory_writes_are_marked_mutating",
+          "reason": "flagship package required to read its real tool registry"
+        },
+        {
+          "node": "tests.unit.chat.ui.test_skills_router::test_real_discovery_hides_the_engineering_skill",
+          "reason": "could not import 'gaia_agent.agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_real_partial_lock_is_reported_as_file_locked",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_real_lock_on_an_office_file_is_reported_as_file_locked[whole-docx]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_real_lock_on_an_office_file_is_reported_as_file_locked[whole-pptx]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_real_lock_on_an_office_file_is_reported_as_file_locked[partial-docx]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_real_lock_on_an_office_file_is_reported_as_file_locked[partial-pptx]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_taken_after_the_hash_read_is_reported_as_file_locked[whole-.txt]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_taken_after_the_hash_read_is_reported_as_file_locked[whole-.pdf]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_taken_after_the_hash_read_is_reported_as_file_locked[whole-.docx]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_taken_after_the_hash_read_is_reported_as_file_locked[whole-.pptx]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_taken_after_the_hash_read_is_reported_as_file_locked[whole-.xlsx]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_taken_after_the_hash_read_is_reported_as_file_locked[whole-.csv]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_taken_after_the_hash_read_is_reported_as_file_locked[whole-.json]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_taken_after_the_hash_read_is_reported_as_file_locked[partial-.txt]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_taken_after_the_hash_read_is_reported_as_file_locked[partial-.pdf]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_taken_after_the_hash_read_is_reported_as_file_locked[partial-.docx]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_taken_after_the_hash_read_is_reported_as_file_locked[partial-.pptx]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_taken_after_the_hash_read_is_reported_as_file_locked[partial-.xlsx]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_taken_after_the_hash_read_is_reported_as_file_locked[partial-.csv]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_taken_after_the_hash_read_is_reported_as_file_locked[partial-.json]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_each_parser_logs_a_lock_as_a_warning_not_an_error[xlsx]",
+          "reason": "could not import 'openpyxl': No module named 'openpyxl'"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_real_lock_taken_just_before_the_library_opens_is_reported_as_locked[pptx-pptx-Presentation-range]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_real_lock_taken_just_before_the_library_opens_is_reported_as_locked[pptx-pptx-Presentation-share-none]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_real_lock_taken_just_before_the_library_opens_is_reported_as_locked[docx-docx-Document-range]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_real_lock_taken_just_before_the_library_opens_is_reported_as_locked[docx-docx-Document-share-none]",
+          "reason": "Windows mandatory locks"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_naming_the_document_in_another_spelling_is_its_lock[upper-case]",
+          "reason": "Windows path spellings"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_naming_the_document_in_another_spelling_is_its_lock[8.3]",
+          "reason": "Windows path spellings"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_naming_the_document_in_another_spelling_is_its_lock[unc]",
+          "reason": "Windows path spellings"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_lock_naming_the_document_in_another_spelling_is_its_lock[extended]",
+          "reason": "Windows path spellings"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_the_fallback_compare_handles_case_and_short_names[upper-case]",
+          "reason": "Windows path spellings"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_the_fallback_compare_handles_case_and_short_names[8.3]",
+          "reason": "Windows path spellings"
+        },
+        {
+          "node": "tests.unit.rag.test_locked_read::test_a_missing_file_is_compared_ignoring_case",
+          "reason": "Windows paths ignore case"
+        },
+        {
+          "node": "tests.unit.rag.test_retrieval_bench_harness::test_both_pipelines_find_the_labelled_evidence",
+          "reason": "runs in test_chat_agent.yml, with the chat wheel"
+        },
+        {
+          "node": "tests.unit.rag.test_retrieval_bench_harness::test_answers_are_classified_by_whether_evidence_reached_the_model",
+          "reason": "runs in test_chat_agent.yml, with the chat wheel"
+        },
+        {
+          "node": "tests.unit.rag.test_retrieval_bench_harness::test_a_refused_document_is_recorded_and_its_questions_miss",
+          "reason": "runs in test_chat_agent.yml, with the chat wheel"
+        },
+        {
+          "node": "tests.unit.rag.test_retrieval_bench_harness::test_exact_duplicates_are_measured_in_both_pipelines",
+          "reason": "runs in test_chat_agent.yml, with the chat wheel"
+        },
+        {
+          "node": "tests.unit.test_adaptive_skills::test_the_broken_command_really_fails_on_this_platform",
+          "reason": "the cmd.exe quoting failure is Windows-only by construction"
+        },
+        {
+          "node": "tests.unit.test_agent_hub_api.TestBuiltinAgentHubMetadata::test_chat_agent_metadata",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_agent_hub_api.TestBuiltinAgentHubMetadata::test_gaia_lite_resolves_to_doc_with_lite_tier",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_agent_hub_api.TestConsumesMcpServersExposure::test_reg_to_info_exposes_flag_for_chat",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_agent_hub_api.TestConsumesMcpServersExposure::test_reg_to_info_defaults_false_for_non_consumer",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_claude_account_switch_step::test_harness_flags_only_refusals_and_budget_errors[result0-true]",
+          "reason": "runs the step under a POSIX bash with jq, as Actions does"
+        },
+        {
+          "node": "tests.unit.test_claude_account_switch_step::test_harness_flags_only_refusals_and_budget_errors[result1-true]",
+          "reason": "runs the step under a POSIX bash with jq, as Actions does"
+        },
+        {
+          "node": "tests.unit.test_claude_account_switch_step::test_harness_flags_only_refusals_and_budget_errors[result2-false]",
+          "reason": "runs the step under a POSIX bash with jq, as Actions does"
+        },
+        {
+          "node": "tests.unit.test_claude_account_switch_step::test_harness_flags_only_refusals_and_budget_errors[result3-false]",
+          "reason": "runs the step under a POSIX bash with jq, as Actions does"
+        },
+        {
+          "node": "tests.unit.test_claude_account_switch_step::test_harness_flags_only_refusals_and_budget_errors[result4-true]",
+          "reason": "runs the step under a POSIX bash with jq, as Actions does"
+        },
+        {
+          "node": "tests.unit.test_claude_account_switch_step::test_harness_flags_only_refusals_and_budget_errors[result5-false]",
+          "reason": "runs the step under a POSIX bash with jq, as Actions does"
+        },
+        {
+          "node": "tests.unit.test_claude_provider::test_stdio_flag_literals_match_tui_contract",
+          "reason": "could not import 'gaia_agent.stdio': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_agent_required_connectors.TestConsumesMcpServers::test_builtin_chat_consumes_mcp_servers",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_agent_required_connectors.TestConsumesMcpServers::test_builtin_chat_registration_matches_class",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_the_classifier_reads_a_real_execution_log[real outage-records0-not_started]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_the_classifier_reads_a_real_execution_log[review that ran-records1-ok]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_the_classifier_reads_a_real_execution_log[subscription run, zero cost-records2-ok]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_the_classifier_reads_a_real_execution_log[subscription run that errored-records3-errored]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_the_classifier_reads_a_real_execution_log[errored after reaching the model-records4-errored]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_the_classifier_reads_a_real_execution_log[billed but no usage map-records5-errored]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_the_classifier_reads_a_real_execution_log[tool error then outage-records6-not_started]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_the_classifier_reads_a_real_execution_log[tool error and nothing else-records7-no_output]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_an_unusable_log_is_a_crash_not_a_clean_review[None]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_an_unusable_log_is_a_crash_not_a_clean_review[]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_an_unusable_log_is_a_crash_not_a_clean_review[not json at all]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_the_ok_verdict_requires_the_pinned_model[--max-turns 100\\n--model claude-opus-5-5\\n--allowedTools Read,Bash\\n-claude-haiku-4-5-20251001,claude-opus-5-5-True]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_the_ok_verdict_requires_the_pinned_model[--max-turns 100\\n--model claude-opus-5-5\\n--allowedTools Read,Bash\\n-claude-opus-5-5[1m]-True]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_the_ok_verdict_requires_the_pinned_model[--max-turns 100\\n--model claude-opus-5-5\\n--allowedTools Read,Bash\\n-claude-haiku-4-5-20251001,claude-sonnet-4-6-False]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_the_ok_verdict_requires_the_pinned_model[--max-turns 100\\n--model claude-opus-5-5\\n--allowedTools Read,Bash\\n-claude-opus-5-50-False]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_the_ok_verdict_requires_the_pinned_model[--max-turns 100\\n--model claude-opus-5-5\\n--allowedTools Read,Bash\\n--False]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.test_claude_review_posting::test_the_ok_verdict_requires_the_pinned_model[--max-turns 3\\n-claude-opus-5-5-False]",
+          "reason": "needs a working bash + jq (both present on the GitHub runner)"
+        },
+        {
+          "node": "tests.unit.cli.test_cli_backend_flags::test_non_agent_commands_reject_backend_flags[api status---stream]",
+          "reason": "argparse reads --stream as an abbreviation of api's --streaming"
+        },
+        {
+          "node": "tests.unit.test_agent_sidecar_manager::test_dev_mode_real_spawn_health_and_treekill",
+          "reason": "email agent + uvicorn required for live dev-mode spawn"
+        },
+        {
+          "node": "tests.unit.test_agent_sidecar_manager::test_gaia_spec_literals_match_the_installed_caller_auth_module",
+          "reason": "could not import 'gaia_agent.caller_auth': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp.TestOpenSessionInBrowser::test_returns_hash_url_on_open",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp.TestSendMessageDocstring::test_docstring_honest",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp.TestErrorEnvelopeCallers::test_get_messages_surfaces_backend_error",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp.TestErrorEnvelopeCallers::test_index_document_does_not_falsely_report_link",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp.TestErrorEnvelopeCallers::test_index_document_outlasts_a_slow_index",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_memory_omp_guard::test_both_runtimes_resident_raises_rather_than_killing_the_interpreter",
+          "reason": "the abort is macOS dyld's"
+        },
+        {
+          "node": "tests.unit.test_local_http_guard::test_unauthenticated_loopback_call_is_refused_once_auth_is_mandatory",
+          "reason": "Caller auth for --api consumers is a breaking change; this release only warns when GAIA_API_KEY is unset (report section 10 item 7)."
+        },
+        {
+          "node": "tests.unit.test_local_http_guard::test_chat_completions_requires_a_key_once_auth_is_mandatory",
+          "reason": "Mandatory caller auth on gaia api is deferred; unset GAIA_API_KEY only warns in this release (report section 10 item 7)."
+        },
+        {
+          "node": "tests.unit.test_memory_router.TestRebuildEmbeddingsEndpoint::test_rebuild_embeddings_returns_500_when_backfill_not_implemented",
+          "reason": "MemoryStore now implements backfill_embeddings"
+        },
+        {
+          "node": "tests.unit.test_memory_router.TestEmbeddingCoverageEndpoint::test_embedding_coverage_returns_501_when_not_implemented",
+          "reason": "MemoryStore now implements get_embedding_coverage"
+        },
+        {
+          "node": "tests.unit.test_logger_home_unresolvable::test_import_gaia_without_windows_home_env_vars",
+          "reason": "POSIX resolves home from pwd without env vars"
+        },
+        {
+          "node": "tests.unit.test_allowed_paths_env.TestEscapes::test_junction_inside_the_task_pointing_out",
+          "reason": "junctions are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_allowed_paths_env.TestEscapes::test_case_variations",
+          "reason": "Windows path forms"
+        },
+        {
+          "node": "tests.unit.test_allowed_paths_env.TestEscapes::test_unc_and_device_paths",
+          "reason": "Windows path forms"
+        },
+        {
+          "node": "tests.unit.test_allowed_paths_env.TestEscapes::test_short_name_of_the_lookalike_sibling",
+          "reason": "8.3 short names are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_allowed_paths_env.TestEscapes::test_short_name_env_entry_still_matches",
+          "reason": "8.3 short names are Windows-only"
+        },
+        {
+          "node": "tests.unit.test_allowed_paths_env.TestChatAgentInheritsTheNarrowedScope::test_validator_rag_and_config_agree",
+          "reason": "could not import 'gaia_agent_chat': No module named 'gaia_agent_chat'"
+        },
+        {
+          "node": "tests.unit.test_allowed_paths_env.TestHostsRefuseToStart::test_flagship_sidecar",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_allowed_paths_env.TestNothingLeftInScope::test_flagship_code_search_start_survives_an_empty_scope",
+          "reason": "could not import 'gaia_agent': No module named 'gaia_agent'"
+        },
+        {
+          "node": "tests.unit.test_llm.TestLlmCli::test_llm_command_with_server",
+          "reason": "Lemonade server is not running or no chat model is loaded"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_new_tools_registered_and_old_ones_kept",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_settings_tools_hit_the_ui_endpoints",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_cross_origin_requests_are_refused[http://evil.example]",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_cross_origin_requests_are_refused[http://localhost:3000]",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_cross_origin_requests_are_refused[http://127.0.0.1:4200]",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_cross_origin_requests_are_refused[null]",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_cross_origin_requests_are_refused[file://]",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_rebinding_host_is_refused",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_an_mcp_client_without_origin_is_served",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_run_http_cannot_be_called_around_the_check",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_missing_wrong_or_empty_token_is_refused[None]",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_missing_wrong_or_empty_token_is_refused[]",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_missing_wrong_or_empty_token_is_refused[Bearer ]",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_missing_wrong_or_empty_token_is_refused[Bearer wrong-token]",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_missing_wrong_or_empty_token_is_refused[Bearer s3cr3t-kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk]",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_missing_wrong_or_empty_token_is_refused[Bearer s3cr3t-kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkx]",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_missing_wrong_or_empty_token_is_refused[s3cr3t-kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk]",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_missing_wrong_or_empty_token_is_refused[Basic s3cr3t-kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk]",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_missing_wrong_or_empty_token_is_refused[bearer s3cr3t-kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk]",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_right_token_is_served_and_never_logged",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_agent_ui_mcp_control::test_main_serves_a_network_bind_only_with_opt_in_and_token",
+          "reason": "could not import 'mcp': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_mcp_bridge_protocol.TestInitialize::test_validates_against_mcp_sdk_types",
+          "reason": "could not import 'mcp.types': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_mcp_bridge_protocol.TestToolsList::test_validates_against_mcp_sdk_types",
+          "reason": "could not import 'mcp.types': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_mcp_bridge_protocol.TestToolsCall::test_call_result_validates_against_mcp_sdk_types",
+          "reason": "could not import 'mcp.types': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_media.TestRealDecode::test_converts_to_16k_mono_pcm_s16le",
+          "reason": "ffmpeg not installed - skipping real decode test"
+        },
+        {
+          "node": "tests.unit.test_media.TestRealDecode::test_handles_windows_paths_with_spaces",
+          "reason": "ffmpeg not installed - skipping real decode test"
+        },
+        {
+          "node": "tests.unit.test_media.TestRealDecode::test_default_dest_is_a_fresh_temp_file",
+          "reason": "ffmpeg not installed - skipping real decode test"
+        },
+        {
+          "node": "tests.unit.test_media.TestRealDecode::test_probe_duration_matches_real_length",
+          "reason": "ffmpeg not installed - skipping real decode test"
+        },
+        {
+          "node": "tests.unit.test_media.TestRealDecode::test_progress_callback_is_monotonic_and_completes",
+          "reason": "ffmpeg not installed - skipping real decode test"
+        },
+        {
+          "node": "tests.unit.test_media.TestRealDecode::test_undecodable_input_raises_with_exit_code",
+          "reason": "ffmpeg not installed - skipping real decode test"
+        },
+        {
+          "node": "tests.unit.test_media.TestRealDecode::test_probe_duration_on_undecodable_input_raises",
+          "reason": "ffmpeg not installed - skipping real decode test"
+        },
+        {
+          "node": "tests.unit.test_lemonade_speech.TestRealServer::test_speech_round_trip_through_talk_and_file_paths",
+          "reason": "Lemonade server not available - skipping integration test"
+        },
+        {
+          "node": "tests.unit.test_mcp_bridge_protocol.TestProtocolErrorsRideA200::test_unknown_method_error_validates_against_mcp_sdk_types",
+          "reason": "could not import 'mcp.types': No module named 'mcp'"
+        },
+        {
+          "node": "tests.unit.test_mcp_bridge_auth::test_bridge_requires_a_token_by_default",
+          "reason": "Requiring a token by default would break every existing gaia mcp consumer; the bridge still defaults to no auth and warns at startup."
+        }
+      ]
+    },
+    "final-sidecar-contract.xml": {
+      "junitTests": 208,
+      "failures": 0,
+      "errors": 0,
+      "skipped": [
+        {
+          "node": "tests.integration.test_gaia_sidecar_relay_live::test_query_relays_to_a_terminal_answer",
+          "reason": "Lemonade server not available - skipping integration test"
+        },
+        {
+          "node": "tests.unit.agents.test_file_snapshots.TestReviewFixes::test_short_and_long_windows_names_are_one_entry",
+          "reason": "8.3 short names are Windows-only"
+        }
+      ]
+    },
+    "final-flagship-bound-child-source.xml": {
+      "junitTests": 799,
+      "failures": 0,
+      "errors": 0,
+      "skipped": [
+        {
+          "node": "hub.agents.gaia.python.tests.test_sd_tools_do_not_rewrite_the_prompt::test_an_image_request_selects_the_tools_without_any_skill_loaded[draw me a picture of a red bicycle]",
+          "reason": "semantic tool selection needs a reachable embedder"
+        },
+        {
+          "node": "hub.agents.gaia.python.tests.test_sd_tools_do_not_rewrite_the_prompt::test_an_image_request_selects_the_tools_without_any_skill_loaded[generate an image of a mountain at sunset]",
+          "reason": "semantic tool selection needs a reachable embedder"
+        },
+        {
+          "node": "hub.agents.gaia.python.tests.test_sd_tools_do_not_rewrite_the_prompt::test_a_document_question_does_not_drag_in_the_image_tools",
+          "reason": "semantic tool selection needs a reachable embedder"
+        }
+      ]
+    },
+    "windows-flagship": {
+      "junitTests": 799,
+      "failures": 0,
+      "errors": 0,
+      "skipped": [
+        {
+          "node": "hub.agents.gaia.python.tests.test_sd_tools_do_not_rewrite_the_prompt::test_an_image_request_selects_the_tools_without_any_skill_loaded[draw me a picture of a red bicycle]",
+          "reason": "semantic tool selection needs a reachable embedder"
+        },
+        {
+          "node": "hub.agents.gaia.python.tests.test_sd_tools_do_not_rewrite_the_prompt::test_an_image_request_selects_the_tools_without_any_skill_loaded[generate an image of a mountain at sunset]",
+          "reason": "semantic tool selection needs a reachable embedder"
+        },
+        {
+          "node": "hub.agents.gaia.python.tests.test_sd_tools_do_not_rewrite_the_prompt::test_a_document_question_does_not_drag_in_the_image_tools",
+          "reason": "semantic tool selection needs a reachable embedder"
+        }
+      ]
+    },
+    "optional-live-candidate": {
+      "junitTests": 4,
+      "failures": 1,
+      "errors": 0,
+      "skipped": []
+    },
+    "optional-live-baseline": {
+      "junitTests": 4,
+      "failures": 1,
+      "errors": 0,
+      "skipped": []
+    }
+  },
+  "runtime": {
+    "baseline": {
+      "events": 14,
+      "terminal": {
+        "type": "done",
+        "message_id": 8,
+        "content": "The agent finished without producing an answer. This is a bug \u2014 please report it with the daemon log (https://amd-gaia.ai/docs/guides/gaia).",
+        "failed": true,
+        "stats": {
+          "tokens_per_second": 1000,
+          "time_to_first_token": 0.001,
+          "place": "on this PC",
+          "measured_model": "Gemma-4-E4B-it-GGUF",
+          "model": "Gemma-4-E4B-it-GGUF"
+        },
+        "turn_summary": {
+          "pages": [],
+          "documents": [],
+          "files": [
+            {
+              "path": "/documents/proof.txt",
+              "name": "proof.txt",
+              "openable": true,
+              "mtime": 1792895947.2464843
+            }
+          ],
+          "sites": [],
+          "outputs": [],
+          "live_data": {
+            "attempted": 0,
+            "failed": 0
+          },
+          "cost": {
+            "kind": "local"
+          },
+          "model": {
+            "remote": false,
+            "provider": "lemonade",
+            "provider_name": "Lemonade on this machine",
+            "name": "Gemma-4-E4B-it-GGUF"
+          }
+        }
+      },
+      "undoWarnings": 1
+    },
+    "baseline-success": {
+      "events": 15,
+      "terminal": {
+        "type": "done",
+        "message_id": 16,
+        "content": "The file was written successfully (model boundary fixture).\n\nI couldn't confirm all of this:\n\n- `/documents/proof.txt` has not been read back completely after its latest write.",
+        "stats": {
+          "tokens_per_second": 1000,
+          "time_to_first_token": 0.001,
+          "steps": 3,
+          "place": "on this PC",
+          "measured_model": "Gemma-4-E4B-it-GGUF",
+          "model": "Gemma-4-E4B-it-GGUF"
+        },
+        "turn_summary": {
+          "pages": [],
+          "documents": [],
+          "files": [
+            {
+              "path": "/documents/proof.txt",
+              "name": "proof.txt",
+              "openable": true,
+              "mtime": 1792896192.517611
+            }
+          ],
+          "sites": [],
+          "outputs": [],
+          "live_data": {
+            "attempted": 0,
+            "failed": 0
+          },
+          "cost": {
+            "kind": "local"
+          },
+          "model": {
+            "remote": false,
+            "provider": "lemonade",
+            "provider_name": "Lemonade on this machine",
+            "name": "Gemma-4-E4B-it-GGUF"
+          }
+        }
+      },
+      "undoWarnings": 1
+    },
+    "baseline-process-only": {
+      "events": 12,
+      "terminal": {
+        "type": "done",
+        "message_id": 18,
+        "content": "AttributeError: 'str' object has no attribute 'get'",
+        "failed": true,
+        "stats": {
+          "tokens_per_second": 1000,
+          "time_to_first_token": 0.001,
+          "place": "on this PC",
+          "measured_model": "Gemma-4-E4B-it-GGUF",
+          "model": "Gemma-4-E4B-it-GGUF"
+        },
+        "turn_summary": {
+          "pages": [],
+          "documents": [],
+          "files": [
+            {
+              "path": "/documents/proof.txt",
+              "name": "proof.txt",
+              "openable": true,
+              "mtime": 1792896194.3004618
+            }
+          ],
+          "sites": [],
+          "outputs": [],
+          "live_data": {
+            "attempted": 0,
+            "failed": 0
+          },
+          "cost": {
+            "kind": "local"
+          },
+          "model": {
+            "remote": false,
+            "provider": "lemonade",
+            "provider_name": "Lemonade on this machine",
+            "name": "Gemma-4-E4B-it-GGUF"
+          }
+        }
+      },
+      "undoWarnings": 0
+    },
+    "candidate": {
+      "events": 15,
+      "terminal": {
+        "type": "done",
+        "message_id": 24,
+        "content": "AttributeError: 'str' object has no attribute 'get'",
+        "failed": true,
+        "stats": {
+          "tokens_per_second": 1000,
+          "time_to_first_token": 0.001,
+          "place": "on this PC",
+          "measured_model": "Gemma-4-E4B-it-GGUF",
+          "model": "Gemma-4-E4B-it-GGUF"
+        },
+        "turn_summary": {
+          "pages": [],
+          "documents": [],
+          "files": [
+            {
+              "path": "/documents/proof.txt",
+              "name": "proof.txt",
+              "openable": true,
+              "mtime": 1792896831.2499428
+            }
+          ],
+          "sites": [],
+          "outputs": [],
+          "live_data": {
+            "attempted": 0,
+            "failed": 0
+          },
+          "cost": {
+            "kind": "local"
+          },
+          "model": {
+            "remote": false,
+            "provider": "lemonade",
+            "provider_name": "Lemonade on this machine",
+            "name": "Gemma-4-E4B-it-GGUF"
+          }
+        }
+      },
+      "undoWarnings": 2
+    },
+    "candidate-success": {
+      "events": 15,
+      "terminal": {
+        "type": "done",
+        "message_id": 26,
+        "content": "The file was written successfully (model boundary fixture).\n\nI couldn't confirm all of this:\n\n- `/documents/proof.txt` has not been read back completely after its latest write.",
+        "stats": {
+          "tokens_per_second": 1000,
+          "time_to_first_token": 0.001,
+          "steps": 3,
+          "place": "on this PC",
+          "measured_model": "Gemma-4-E4B-it-GGUF",
+          "model": "Gemma-4-E4B-it-GGUF"
+        },
+        "turn_summary": {
+          "pages": [],
+          "documents": [],
+          "files": [
+            {
+              "path": "/documents/proof.txt",
+              "name": "proof.txt",
+              "openable": true,
+              "mtime": 1792896832.9620697
+            }
+          ],
+          "sites": [],
+          "outputs": [],
+          "live_data": {
+            "attempted": 0,
+            "failed": 0
+          },
+          "cost": {
+            "kind": "local"
+          },
+          "model": {
+            "remote": false,
+            "provider": "lemonade",
+            "provider_name": "Lemonade on this machine",
+            "name": "Gemma-4-E4B-it-GGUF"
+          }
+        }
+      },
+      "undoWarnings": 1
+    },
+    "candidate-process-only": {
+      "events": 12,
+      "terminal": {
+        "type": "done",
+        "message_id": 28,
+        "content": "AttributeError: 'str' object has no attribute 'get'",
+        "failed": true,
+        "stats": {
+          "tokens_per_second": 1000,
+          "time_to_first_token": 0.001,
+          "place": "on this PC",
+          "measured_model": "Gemma-4-E4B-it-GGUF",
+          "model": "Gemma-4-E4B-it-GGUF"
+        },
+        "turn_summary": {
+          "pages": [],
+          "documents": [],
+          "files": [
+            {
+              "path": "/documents/proof.txt",
+              "name": "proof.txt",
+              "openable": true,
+              "mtime": 1792896834.6501951
+            }
+          ],
+          "sites": [],
+          "outputs": [],
+          "live_data": {
+            "attempted": 0,
+            "failed": 0
+          },
+          "cost": {
+            "kind": "local"
+          },
+          "model": {
+            "remote": false,
+            "provider": "lemonade",
+            "provider_name": "Lemonade on this machine",
+            "name": "Gemma-4-E4B-it-GGUF"
+          }
+        }
+      },
+      "undoWarnings": 0
+    },
+    "baseline-ui.png": "81407c38781cca4b052eaf85e56096df640f0f12ed6650aa56c1d453dc31b66d",
+    "baseline-ui-reloaded.png": "b360bfd6c0dfae8b5fb2fb4824c1d3b0120692ef644d0b066c795f56ff7a9a5f",
+    "candidate-ui.png": "cb960c76c1fdd19c97d905584d8a6cdf4029dd33f46dc3436e6a74d4c9f52838",
+    "candidate-ui-reloaded.png": "9a388b0b49f6861efcfff05d59a8304df541e19f32d6b4cbf83d09d007c13b03"
+  },
+  "boundaries": [
+    "Actual production UI/daemon/dev sidecar/GaiaAgent/file tool; receipt fixture, scripted external model HTTP and bounded real tmpfs ENOSPC disclosed.",
+    "Independent target-installed wheel import parity only.",
+    "No real model inference/eval/GPU, frozen binary certification, paid judge, human review or hosted CI claim.",
+    "Additional fixture-enabled relay diagnostic is1FAIL on both revisions from old fake handler; normal conditional CI query skip retained."
+  ],
+  "testCountNote": "Human-readable pytest summaries are authoritative passed counts; JUnit includes41 passing subtests in the core count.",
+  "completeLogSha256": {
+    "final-core-unit.log": "6a245fb8dedb6ce80320bb5d930e59d17990c3b0a90b1e622828d190cee54306",
+    "final-flagship-bound-child-source.log": "af295511918135adfe988e55a5abf552a11952c07a8c05b6a71c195ade360c9b",
+    "gaia-5666-flagship-windows-final.log": "cec8de3458f236304a2935e300d17f2c6b06f5d03f23ba217e58e986e581d2ca"
+  },
+  "pytestSummaries": {
+    "final-core-unit.log": "= 27508 passed, 478 skipped, 3 xfailed, 7 warnings, 41 subtests passed in 422.56s (0:07:02) =",
+    "final-flagship-bound-child-source.log": "======================= 796 passed, 3 skipped in 48.24s ========================",
+    "gaia-5666-flagship-windows-final.log": "796 passed, 3 skipped in 487.07s (0:08:07)"
+  }
+}

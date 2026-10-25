@@ -1,0 +1,270 @@
+{
+  "baseline": {
+    "events": 14,
+    "terminal": {
+      "type": "done",
+      "message_id": 8,
+      "content": "The agent finished without producing an answer. This is a bug \u2014 please report it with the daemon log (https://amd-gaia.ai/docs/guides/gaia).",
+      "failed": true,
+      "stats": {
+        "tokens_per_second": 1000,
+        "time_to_first_token": 0.001,
+        "place": "on this PC",
+        "measured_model": "Gemma-4-E4B-it-GGUF",
+        "model": "Gemma-4-E4B-it-GGUF"
+      },
+      "turn_summary": {
+        "pages": [],
+        "documents": [],
+        "files": [
+          {
+            "path": "/documents/proof.txt",
+            "name": "proof.txt",
+            "openable": true,
+            "mtime": 1792895947.2464843
+          }
+        ],
+        "sites": [],
+        "outputs": [],
+        "live_data": {
+          "attempted": 0,
+          "failed": 0
+        },
+        "cost": {
+          "kind": "local"
+        },
+        "model": {
+          "remote": false,
+          "provider": "lemonade",
+          "provider_name": "Lemonade on this machine",
+          "name": "Gemma-4-E4B-it-GGUF"
+        }
+      }
+    },
+    "undoWarnings": 1
+  },
+  "baseline-success": {
+    "events": 15,
+    "terminal": {
+      "type": "done",
+      "message_id": 16,
+      "content": "The file was written successfully (model boundary fixture).\n\nI couldn't confirm all of this:\n\n- `/documents/proof.txt` has not been read back completely after its latest write.",
+      "stats": {
+        "tokens_per_second": 1000,
+        "time_to_first_token": 0.001,
+        "steps": 3,
+        "place": "on this PC",
+        "measured_model": "Gemma-4-E4B-it-GGUF",
+        "model": "Gemma-4-E4B-it-GGUF"
+      },
+      "turn_summary": {
+        "pages": [],
+        "documents": [],
+        "files": [
+          {
+            "path": "/documents/proof.txt",
+            "name": "proof.txt",
+            "openable": true,
+            "mtime": 1792896192.517611
+          }
+        ],
+        "sites": [],
+        "outputs": [],
+        "live_data": {
+          "attempted": 0,
+          "failed": 0
+        },
+        "cost": {
+          "kind": "local"
+        },
+        "model": {
+          "remote": false,
+          "provider": "lemonade",
+          "provider_name": "Lemonade on this machine",
+          "name": "Gemma-4-E4B-it-GGUF"
+        }
+      }
+    },
+    "undoWarnings": 1
+  },
+  "baseline-process-only": {
+    "events": 12,
+    "terminal": {
+      "type": "done",
+      "message_id": 18,
+      "content": "AttributeError: 'str' object has no attribute 'get'",
+      "failed": true,
+      "stats": {
+        "tokens_per_second": 1000,
+        "time_to_first_token": 0.001,
+        "place": "on this PC",
+        "measured_model": "Gemma-4-E4B-it-GGUF",
+        "model": "Gemma-4-E4B-it-GGUF"
+      },
+      "turn_summary": {
+        "pages": [],
+        "documents": [],
+        "files": [
+          {
+            "path": "/documents/proof.txt",
+            "name": "proof.txt",
+            "openable": true,
+            "mtime": 1792896194.3004618
+          }
+        ],
+        "sites": [],
+        "outputs": [],
+        "live_data": {
+          "attempted": 0,
+          "failed": 0
+        },
+        "cost": {
+          "kind": "local"
+        },
+        "model": {
+          "remote": false,
+          "provider": "lemonade",
+          "provider_name": "Lemonade on this machine",
+          "name": "Gemma-4-E4B-it-GGUF"
+        }
+      }
+    },
+    "undoWarnings": 0
+  },
+  "candidate": {
+    "events": 15,
+    "terminal": {
+      "type": "done",
+      "message_id": 24,
+      "content": "AttributeError: 'str' object has no attribute 'get'",
+      "failed": true,
+      "stats": {
+        "tokens_per_second": 1000,
+        "time_to_first_token": 0.001,
+        "place": "on this PC",
+        "measured_model": "Gemma-4-E4B-it-GGUF",
+        "model": "Gemma-4-E4B-it-GGUF"
+      },
+      "turn_summary": {
+        "pages": [],
+        "documents": [],
+        "files": [
+          {
+            "path": "/documents/proof.txt",
+            "name": "proof.txt",
+            "openable": true,
+            "mtime": 1792896831.2499428
+          }
+        ],
+        "sites": [],
+        "outputs": [],
+        "live_data": {
+          "attempted": 0,
+          "failed": 0
+        },
+        "cost": {
+          "kind": "local"
+        },
+        "model": {
+          "remote": false,
+          "provider": "lemonade",
+          "provider_name": "Lemonade on this machine",
+          "name": "Gemma-4-E4B-it-GGUF"
+        }
+      }
+    },
+    "undoWarnings": 2
+  },
+  "candidate-success": {
+    "events": 15,
+    "terminal": {
+      "type": "done",
+      "message_id": 26,
+      "content": "The file was written successfully (model boundary fixture).\n\nI couldn't confirm all of this:\n\n- `/documents/proof.txt` has not been read back completely after its latest write.",
+      "stats": {
+        "tokens_per_second": 1000,
+        "time_to_first_token": 0.001,
+        "steps": 3,
+        "place": "on this PC",
+        "measured_model": "Gemma-4-E4B-it-GGUF",
+        "model": "Gemma-4-E4B-it-GGUF"
+      },
+      "turn_summary": {
+        "pages": [],
+        "documents": [],
+        "files": [
+          {
+            "path": "/documents/proof.txt",
+            "name": "proof.txt",
+            "openable": true,
+            "mtime": 1792896832.9620697
+          }
+        ],
+        "sites": [],
+        "outputs": [],
+        "live_data": {
+          "attempted": 0,
+          "failed": 0
+        },
+        "cost": {
+          "kind": "local"
+        },
+        "model": {
+          "remote": false,
+          "provider": "lemonade",
+          "provider_name": "Lemonade on this machine",
+          "name": "Gemma-4-E4B-it-GGUF"
+        }
+      }
+    },
+    "undoWarnings": 1
+  },
+  "candidate-process-only": {
+    "events": 12,
+    "terminal": {
+      "type": "done",
+      "message_id": 28,
+      "content": "AttributeError: 'str' object has no attribute 'get'",
+      "failed": true,
+      "stats": {
+        "tokens_per_second": 1000,
+        "time_to_first_token": 0.001,
+        "place": "on this PC",
+        "measured_model": "Gemma-4-E4B-it-GGUF",
+        "model": "Gemma-4-E4B-it-GGUF"
+      },
+      "turn_summary": {
+        "pages": [],
+        "documents": [],
+        "files": [
+          {
+            "path": "/documents/proof.txt",
+            "name": "proof.txt",
+            "openable": true,
+            "mtime": 1792896834.6501951
+          }
+        ],
+        "sites": [],
+        "outputs": [],
+        "live_data": {
+          "attempted": 0,
+          "failed": 0
+        },
+        "cost": {
+          "kind": "local"
+        },
+        "model": {
+          "remote": false,
+          "provider": "lemonade",
+          "provider_name": "Lemonade on this machine",
+          "name": "Gemma-4-E4B-it-GGUF"
+        }
+      }
+    },
+    "undoWarnings": 0
+  },
+  "baseline-ui.png": "81407c38781cca4b052eaf85e56096df640f0f12ed6650aa56c1d453dc31b66d",
+  "baseline-ui-reloaded.png": "b360bfd6c0dfae8b5fb2fb4824c1d3b0120692ef644d0b066c795f56ff7a9a5f",
+  "candidate-ui.png": "cb960c76c1fdd19c97d905584d8a6cdf4029dd33f46dc3436e6a74d4c9f52838",
+  "candidate-ui-reloaded.png": "9a388b0b49f6861efcfff05d59a8304df541e19f32d6b4cbf83d09d007c13b03"
+}

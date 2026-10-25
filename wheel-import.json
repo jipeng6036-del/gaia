@@ -1,0 +1,19 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 01:17:55) [GCC 14.2.0]",
+  "paths": {
+    "gaia": "/5666-wheel/gaia/__init__.py",
+    "gaia_agent": "/5666-wheel/gaia_agent/__init__.py",
+    "gaia_agent_chat": "/5666-wheel/gaia_agent_chat/__init__.py",
+    "server": "/5666-wheel/gaia_agent/server.py"
+  },
+  "serverNormalizedSha256": "1d126fc747bf78bac62712e3fc6900b979b57405acce5449d252684c6d951cb0",
+  "sysPath": [
+    "/evidence",
+    "/5666-wheel",
+    "/hub-venv/lib/python3.12/site-packages",
+    "/usr/local/lib/python312.zip",
+    "/usr/local/lib/python3.12",
+    "/usr/local/lib/python3.12/lib-dynload"
+  ],
+  "boundary": "Independent target-installed core/chat/flagship wheels; dependencies reused from hub env without activating its editable .pth files. Import parity only, not another runtime/eval."
+}

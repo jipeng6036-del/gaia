@@ -1,0 +1,62 @@
+{
+  "started": "2026-10-25T02:56:29.957445+00:00",
+  "init": "docker-init",
+  "stage": "final-sidecar-contract",
+  "final-core-unit": {
+    "exit": 0,
+    "command": [
+      "/usr/sbin/runuser",
+      "-u",
+      "gaia-runner",
+      "--",
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/",
+      "-n",
+      "4",
+      "--dist=worksteal",
+      "--timeout=180",
+      "-v",
+      "--tb=short",
+      "--durations=50",
+      "--basetemp=/tmp/gaia-snapshot-core",
+      "--junitxml=/evidence/final-core-unit.xml"
+    ]
+  },
+  "final-sidecar-contract": {
+    "exit": 0,
+    "command": [
+      "/usr/sbin/runuser",
+      "-u",
+      "gaia-runner",
+      "--",
+      "/hub-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/agents/test_binary_install_dispatch.py",
+      "tests/unit/agents/test_sidecar_card_drift.py",
+      "tests/unit/chat/ui/test_sidecar_dispatch_coverage.py",
+      "tests/unit/chat/ui/test_sidecar_relay_profiles.py",
+      "tests/integration/test_gaia_sidecar_relay_live.py",
+      "tests/unit/chat/ui/test_turn_changes_recording.py",
+      "tests/unit/chat/ui/test_changes_router.py",
+      "tests/unit/agents/test_file_snapshots.py",
+      "-v",
+      "--tb=short",
+      "--timeout=180",
+      "--basetemp=/tmp/gaia-query-contract",
+      "--junitxml=/evidence/final-sidecar-contract.xml"
+    ],
+    "childImportPaths": [
+      "/5666/candidate/src",
+      "/5666/candidate/hub/agents/chat/python",
+      "/5666/candidate/hub/agents/gaia/python"
+    ]
+  },
+  "contract-temp-baseline-forbidden-word": 1,
+  "contract-temp-baseline-plain": 0,
+  "contract-temp-candidate-forbidden-word": 1,
+  "contract-temp-candidate-plain": 0,
+  "finished": "2026-10-25T03:05:20.761839+00:00"
+}

@@ -1,0 +1,72 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0 -- /hub-venv/bin/python
+cachedir: .pytest_cache
+benchmark: 5.3.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /5666/baseline
+configfile: pyproject.toml
+plugins: anyio-4.15.1, rerunfailures-16.7, timeout-2.4.0, platformdirs-4.13.5, xdist-3.8.0, cov-7.1.0, asyncio-1.4.0, mock-3.17.0, benchmark-5.3.0, respx-0.23.1, pyfakefs-6.2.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 13 items
+
+hub/agents/gaia/python/tests/test_server_changes.py::test_the_contract_advertises_changes PASSED [  7%]
+hub/agents/gaia/python/tests/test_server_changes.py::test_a_turns_changes_are_recorded_before_it_ends PASSED [ 15%]
+hub/agents/gaia/python/tests/test_server_changes.py::test_nothing_is_recorded_unless_asked PASSED [ 23%]
+hub/agents/gaia/python/tests/test_server_changes.py::test_changes_need_a_session PASSED [ 30%]
+hub/agents/gaia/python/tests/test_server_changes.py::test_a_turn_id_that_is_not_one_is_refused[../escape] PASSED [ 38%]
+hub/agents/gaia/python/tests/test_server_changes.py::test_a_turn_id_that_is_not_one_is_refused[20260101000000] PASSED [ 46%]
+hub/agents/gaia/python/tests/test_server_changes.py::test_a_turn_id_that_is_not_one_is_refused[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx] PASSED [ 53%]
+hub/agents/gaia/python/tests/test_server_changes.py::test_a_refused_confirmation_still_finishes_the_recording PASSED [ 61%]
+hub/agents/gaia/python/tests/test_server_changes.py::test_an_unsaved_recording_is_reported_before_the_end PASSED [ 69%]
+hub/agents/gaia/python/tests/test_server_changes.py::test_a_failed_turn_keeps_its_error_when_undo_cannot_finish[RuntimeError] FAILED [ 76%]
+hub/agents/gaia/python/tests/test_server_changes.py::test_a_failed_turn_keeps_its_error_when_undo_cannot_finish[ValueError] FAILED [ 84%]
+hub/agents/gaia/python/tests/test_server_changes.py::test_a_failed_turn_keeps_its_error_when_undo_cannot_finish[OSError] FAILED [ 92%]
+hub/agents/gaia/python/tests/test_server_changes.py::test_a_failed_turn_keeps_its_error_when_undo_cannot_finish[SnapshotError] FAILED [100%]
+
+=================================== FAILURES ===================================
+___ test_a_failed_turn_keeps_its_error_when_undo_cannot_finish[RuntimeError] ___
+hub/agents/gaia/python/tests/test_server_changes.py:225: in test_a_failed_turn_keeps_its_error_when_undo_cannot_finish
+    assert original in errors[0]["detail"]
+E   AssertionError: assert 'the original turn failure' in 'The agent finished without producing an answer. This is a bug — please report it with the daemon log (https://amd-gaia.ai/docs/guides/gaia).'
+----------------------------- Captured stderr call -----------------------------
+[2026-10-25 03:01:29] | [37mINFO[0m | httpx2._send_single_request | _client.py:1084 | HTTP Request: POST http://127.0.0.1:8141/v1/gaia/query "HTTP/1.1 200 OK"
+[2026-10-25 03:01:29] | [31mERROR[0m | gaia_agent.server._run_agent | server.py:1384 | Undo history for run_id=10ab10c5-486a-4cf6-92e4-7ff6655f6cab: Could not save the end state of turn 20261025030129-84a5b7df: undo volume is full. Undo for this turn may refuse; check free space under /tmp/gaia-snapshot-baseline-regressions/test_a_failed_turn_keeps_its_e0/home/snapshots.
+------------------------------ Captured log call -------------------------------
+INFO     httpx2:_client.py:1084 HTTP Request: POST http://127.0.0.1:8141/v1/gaia/query "HTTP/1.1 200 OK"
+ERROR    gaia_agent.server:server.py:1384 Undo history for run_id=10ab10c5-486a-4cf6-92e4-7ff6655f6cab: Could not save the end state of turn 20261025030129-84a5b7df: undo volume is full. Undo for this turn may refuse; check free space under /tmp/gaia-snapshot-baseline-regressions/test_a_failed_turn_keeps_its_e0/home/snapshots.
+____ test_a_failed_turn_keeps_its_error_when_undo_cannot_finish[ValueError] ____
+hub/agents/gaia/python/tests/test_server_changes.py:225: in test_a_failed_turn_keeps_its_error_when_undo_cannot_finish
+    assert original in errors[0]["detail"]
+E   AssertionError: assert 'the original turn failure' in 'The agent finished without producing an answer. This is a bug — please report it with the daemon log (https://amd-gaia.ai/docs/guides/gaia).'
+----------------------------- Captured stderr call -----------------------------
+[2026-10-25 03:01:29] | [37mINFO[0m | httpx2._send_single_request | _client.py:1084 | HTTP Request: POST http://127.0.0.1:8141/v1/gaia/query "HTTP/1.1 200 OK"
+[2026-10-25 03:01:29] | [31mERROR[0m | gaia_agent.server._run_agent | server.py:1384 | Undo history for run_id=bb3dac56-ce0e-42a4-8f4b-2ceb459265e1: Could not save the end state of turn 20261025030129-2be59126: undo volume is full. Undo for this turn may refuse; check free space under /tmp/gaia-snapshot-baseline-regressions/test_a_failed_turn_keeps_its_e1/home/snapshots.
+------------------------------ Captured log call -------------------------------
+INFO     httpx2:_client.py:1084 HTTP Request: POST http://127.0.0.1:8141/v1/gaia/query "HTTP/1.1 200 OK"
+ERROR    gaia_agent.server:server.py:1384 Undo history for run_id=bb3dac56-ce0e-42a4-8f4b-2ceb459265e1: Could not save the end state of turn 20261025030129-2be59126: undo volume is full. Undo for this turn may refuse; check free space under /tmp/gaia-snapshot-baseline-regressions/test_a_failed_turn_keeps_its_e1/home/snapshots.
+_____ test_a_failed_turn_keeps_its_error_when_undo_cannot_finish[OSError] ______
+hub/agents/gaia/python/tests/test_server_changes.py:225: in test_a_failed_turn_keeps_its_error_when_undo_cannot_finish
+    assert original in errors[0]["detail"]
+E   AssertionError: assert 'the original turn failure' in 'The agent finished without producing an answer. This is a bug — please report it with the daemon log (https://amd-gaia.ai/docs/guides/gaia).'
+----------------------------- Captured stderr call -----------------------------
+[2026-10-25 03:01:29] | [37mINFO[0m | httpx2._send_single_request | _client.py:1084 | HTTP Request: POST http://127.0.0.1:8141/v1/gaia/query "HTTP/1.1 200 OK"
+[2026-10-25 03:01:29] | [31mERROR[0m | gaia_agent.server._run_agent | server.py:1384 | Undo history for run_id=23277075-891c-4486-a0f2-0c520b2a111d: Could not save the end state of turn 20261025030129-a85edc89: undo volume is full. Undo for this turn may refuse; check free space under /tmp/gaia-snapshot-baseline-regressions/test_a_failed_turn_keeps_its_e2/home/snapshots.
+------------------------------ Captured log call -------------------------------
+INFO     httpx2:_client.py:1084 HTTP Request: POST http://127.0.0.1:8141/v1/gaia/query "HTTP/1.1 200 OK"
+ERROR    gaia_agent.server:server.py:1384 Undo history for run_id=23277075-891c-4486-a0f2-0c520b2a111d: Could not save the end state of turn 20261025030129-a85edc89: undo volume is full. Undo for this turn may refuse; check free space under /tmp/gaia-snapshot-baseline-regressions/test_a_failed_turn_keeps_its_e2/home/snapshots.
+__ test_a_failed_turn_keeps_its_error_when_undo_cannot_finish[SnapshotError] ___
+hub/agents/gaia/python/tests/test_server_changes.py:225: in test_a_failed_turn_keeps_its_error_when_undo_cannot_finish
+    assert original in errors[0]["detail"]
+E   AssertionError: assert 'the original turn failure' in 'The agent finished without producing an answer. This is a bug — please report it with the daemon log (https://amd-gaia.ai/docs/guides/gaia).'
+----------------------------- Captured stderr call -----------------------------
+[2026-10-25 03:01:29] | [37mINFO[0m | httpx2._send_single_request | _client.py:1084 | HTTP Request: POST http://127.0.0.1:8141/v1/gaia/query "HTTP/1.1 200 OK"
+[2026-10-25 03:01:29] | [31mERROR[0m | gaia_agent.server._run_agent | server.py:1384 | Undo history for run_id=f3def818-aa6f-4291-a4b4-09739ff27324: Could not save the end state of turn 20261025030129-38ffea91: undo volume is full. Undo for this turn may refuse; check free space under /tmp/gaia-snapshot-baseline-regressions/test_a_failed_turn_keeps_its_e3/home/snapshots.
+------------------------------ Captured log call -------------------------------
+INFO     httpx2:_client.py:1084 HTTP Request: POST http://127.0.0.1:8141/v1/gaia/query "HTTP/1.1 200 OK"
+ERROR    gaia_agent.server:server.py:1384 Undo history for run_id=f3def818-aa6f-4291-a4b4-09739ff27324: Could not save the end state of turn 20261025030129-38ffea91: undo volume is full. Undo for this turn may refuse; check free space under /tmp/gaia-snapshot-baseline-regressions/test_a_failed_turn_keeps_its_e3/home/snapshots.
+--------- generated xml file: /evidence/final-baseline-regressions.xml ---------
+=========================== short test summary info ============================
+FAILED hub/agents/gaia/python/tests/test_server_changes.py::test_a_failed_turn_keeps_its_error_when_undo_cannot_finish[RuntimeError]
+FAILED hub/agents/gaia/python/tests/test_server_changes.py::test_a_failed_turn_keeps_its_error_when_undo_cannot_finish[ValueError]
+FAILED hub/agents/gaia/python/tests/test_server_changes.py::test_a_failed_turn_keeps_its_error_when_undo_cannot_finish[OSError]
+FAILED hub/agents/gaia/python/tests/test_server_changes.py::test_a_failed_turn_keeps_its_error_when_undo_cannot_finish[SnapshotError]
+========================= 4 failed, 9 passed in 1.17s ==========================

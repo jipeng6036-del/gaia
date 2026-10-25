@@ -1,0 +1,120 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0 -- /hub-venv/bin/python
+cachedir: .pytest_cache
+benchmark: 5.3.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /5666/baseline
+configfile: pyproject.toml
+plugins: anyio-4.15.1, rerunfailures-16.7, timeout-2.4.0, platformdirs-4.13.5, xdist-3.8.0, cov-7.1.0, asyncio-1.4.0, mock-3.17.0, benchmark-5.3.0, respx-0.23.1, pyfakefs-6.2.0
+timeout: 180.0s
+timeout method: signal
+timeout func_only: False
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 3 items
+
+hub/agents/gaia/python/tests/test_full_tool_bundles.py::test_core_and_bundles_cover_the_flagship_registry_exactly FAILED [ 33%]
+hub/agents/gaia/python/tests/test_full_tool_bundles.py::test_optional_tools_are_present_on_a_full_install FAILED [ 66%]
+hub/agents/gaia/python/tests/test_gaia_agent.py::test_manifest_tools_count_matches_real_registry FAILED [100%]
+
+=================================== FAILURES ===================================
+__________ test_core_and_bundles_cover_the_flagship_registry_exactly ___________
+hub/agents/gaia/python/tests/test_full_tool_bundles.py:106: in test_core_and_bundles_cover_the_flagship_registry_exactly
+    assert not dangling, (
+E   AssertionError: FULL_CORE_TOOLS/FULL_BUNDLES names absent from the flagship registry: ['search_documentation']. Remove them, fix the name, or — if the tool is absent by construction on some installs — declare it in FULL_OPTIONAL_TOOLS.
+E   assert not ['search_documentation']
+---------------------------- Captured stderr setup -----------------------------
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.database.mixin.init_db | mixin.py:117 | Database initialized: /tmp/gaia-test-state-6u1v35ot/gaia-home/file_index.db
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.filesystem.index._ensure_schema | index.py:279 | Schema created at version 2
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.filesystem.index.__init__ | index.py:242 | FileSystemIndexService initialized: /tmp/gaia-test-state-6u1v35ot/gaia-home/file_index.db
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:570 | File system index service initialized
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.database.mixin.init_db | mixin.py:117 | Database initialized: /tmp/gaia-test-state-6u1v35ot/gaia-home/scratchpad.db
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:585 | Scratchpad service initialized
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:607 | Web client initialized for browser tools
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.agents.base.project_map.resolve_project_root | project_map.py:517 | [project-map] /5666/baseline is GAIA's own source tree — no map. Set GAIA_PROJECT_ROOT to the project you want mapped.
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.agents.base.memory.init_memory | memory.py:873 | [MemoryMixin] memory disabled via GAIA_MEMORY_DISABLED=1; skipping init
+[2026-10-25 02:54:38] | [33mWARNING[0m | gaia.llm.lemonade_client.fit_ctx_to_free_memory | lemonade_client.py:893 | Cannot read free memory (Request failed: HTTPConnectionPool(host='localhost', port=13305): Max retries exceeded with url: /api/v1/system-info (Caused by NewConnectionError("HTTPConnection(host='localhost', port=13305): Failed to establish a new connection: [Errno 111] Connection refused"))); asking for a 65536-token window for user.ggml-gpt-oss-20b-MXFP4-GGUF.
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.llm.lemonade_manager._autostart | lemonade_manager.py:1296 | Lemonade server is not running at http://localhost:13305/api/v1 — starting it
+[2026-10-25 02:54:38] | [31mERROR[0m | gaia.llm.lemonade_manager._autostart | lemonade_manager.py:1311 | Could not start the local model server: The local model server is not running, and neither is the GAIA background service that owns it — so nothing can start it.
+To fix: run `gaia daemon start`, then retry.
+Where to look: `gaia daemon logs`
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.agents.base.memory.register_memory_tools | memory.py:4575 | [MemoryMixin] memory disabled — skipping memory tool registration
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.skills.manager.discover | manager.py:235 | Discovered 36 skill(s) across 5 root(s); 0 shadowed, 0 invalid
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.agents.base.agent.load_skill | agent.py:4030 | Loaded skill 'gaia-voice' (tier=community, root=agent-bundled, 0 tool(s), 0 connector requirement(s), binaries=none)
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.agents.base.agent.load_skill_set | agent.py:4339 | Skill set '(none)' active (chosen by: none) — loaded 1 of 1 declared skill(s): gaia-voice
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.agents.base.memory.register_memory_tools | memory.py:5190 | [MemoryMixin] registered 5 memory tools (v2)
+------------------------------ Captured log setup ------------------------------
+INFO     gaia.database.mixin:mixin.py:117 Database initialized: /tmp/gaia-test-state-6u1v35ot/gaia-home/file_index.db
+INFO     gaia.filesystem.index:index.py:279 Schema created at version 2
+INFO     gaia.filesystem.index:index.py:242 FileSystemIndexService initialized: /tmp/gaia-test-state-6u1v35ot/gaia-home/file_index.db
+INFO     gaia_agent_chat.agent:agent.py:570 File system index service initialized
+INFO     gaia.database.mixin:mixin.py:117 Database initialized: /tmp/gaia-test-state-6u1v35ot/gaia-home/scratchpad.db
+INFO     gaia_agent_chat.agent:agent.py:585 Scratchpad service initialized
+INFO     gaia_agent_chat.agent:agent.py:607 Web client initialized for browser tools
+INFO     gaia.agents.base.project_map:project_map.py:517 [project-map] /5666/baseline is GAIA's own source tree — no map. Set GAIA_PROJECT_ROOT to the project you want mapped.
+INFO     gaia.agents.base.memory:memory.py:873 [MemoryMixin] memory disabled via GAIA_MEMORY_DISABLED=1; skipping init
+WARNING  gaia.llm.lemonade_client:lemonade_client.py:893 Cannot read free memory (Request failed: HTTPConnectionPool(host='localhost', port=13305): Max retries exceeded with url: /api/v1/system-info (Caused by NewConnectionError("HTTPConnection(host='localhost', port=13305): Failed to establish a new connection: [Errno 111] Connection refused"))); asking for a 65536-token window for user.ggml-gpt-oss-20b-MXFP4-GGUF.
+INFO     gaia.llm.lemonade_manager:lemonade_manager.py:1296 Lemonade server is not running at http://localhost:13305/api/v1 — starting it
+ERROR    gaia.llm.lemonade_manager:lemonade_manager.py:1311 Could not start the local model server: The local model server is not running, and neither is the GAIA background service that owns it — so nothing can start it.
+To fix: run `gaia daemon start`, then retry.
+Where to look: `gaia daemon logs`
+INFO     gaia.agents.base.memory:memory.py:4575 [MemoryMixin] memory disabled — skipping memory tool registration
+INFO     gaia.skills.manager:manager.py:235 Discovered 36 skill(s) across 5 root(s); 0 shadowed, 0 invalid
+INFO     gaia.agents.base.agent:agent.py:4030 Loaded skill 'gaia-voice' (tier=community, root=agent-bundled, 0 tool(s), 0 connector requirement(s), binaries=none)
+INFO     gaia.agents.base.agent:agent.py:4339 Skill set '(none)' active (chosen by: none) — loaded 1 of 1 declared skill(s): gaia-voice
+INFO     gaia.agents.base.memory:memory.py:5190 [MemoryMixin] registered 5 memory tools (v2)
+______________ test_optional_tools_are_present_on_a_full_install _______________
+hub/agents/gaia/python/tests/test_full_tool_bundles.py:231: in test_optional_tools_are_present_on_a_full_install
+    assert not missing, (
+E   AssertionError: declared optional but absent even on a full install: ['search_documentation']. Either the tool was renamed/removed, or it never belonged in FULL_OPTIONAL_TOOLS.
+E   assert not ['search_documentation']
+_______________ test_manifest_tools_count_matches_real_registry ________________
+hub/agents/gaia/python/tests/test_gaia_agent.py:159: in test_manifest_tools_count_matches_real_registry
+    assert manifest["tools_count"] == len(registered_tools), (
+E   AssertionError: gaia-agent.yaml tools_count=95 but the real registry has 94. Hand-typed drift — the hub page would over- or under-claim what this agent can do.
+E   assert 95 == 94
+E    +  where 94 = len(['add_watch_directory', 'analyze_data_file', 'analyze_image', 'answer_question_about_image', 'bookmark', 'browse_directory', ...])
+---------------------------- Captured stderr setup -----------------------------
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.database.mixin.init_db | mixin.py:117 | Database initialized: /tmp/gaia-test-state-6u1v35ot/gaia-home/file_index.db
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.filesystem.index.__init__ | index.py:242 | FileSystemIndexService initialized: /tmp/gaia-test-state-6u1v35ot/gaia-home/file_index.db
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:570 | File system index service initialized
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.database.mixin.init_db | mixin.py:117 | Database initialized: /tmp/gaia-test-state-6u1v35ot/gaia-home/scratchpad.db
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:585 | Scratchpad service initialized
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:607 | Web client initialized for browser tools
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.agents.base.memory.init_memory | memory.py:873 | [MemoryMixin] memory disabled via GAIA_MEMORY_DISABLED=1; skipping init
+[2026-10-25 02:54:38] | [33mWARNING[0m | gaia.llm.lemonade_client.fit_ctx_to_free_memory | lemonade_client.py:893 | Cannot read free memory (Request failed: HTTPConnectionPool(host='localhost', port=13305): Max retries exceeded with url: /api/v1/system-info (Caused by NewConnectionError("HTTPConnection(host='localhost', port=13305): Failed to establish a new connection: [Errno 111] Connection refused"))); asking for a 65536-token window for Gemma-4-E4B-it-GGUF.
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.llm.lemonade_manager._autostart | lemonade_manager.py:1296 | Lemonade server is not running at http://localhost:13305/api/v1 — starting it
+[2026-10-25 02:54:38] | [31mERROR[0m | gaia.llm.lemonade_manager._autostart | lemonade_manager.py:1311 | Could not start the local model server: The local model server is not running, and neither is the GAIA background service that owns it — so nothing can start it.
+To fix: run `gaia daemon start`, then retry.
+Where to look: `gaia daemon logs`
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.agents.base.project_map.resolve_project_root | project_map.py:517 | [project-map] /5666/baseline is GAIA's own source tree — no map. Set GAIA_PROJECT_ROOT to the project you want mapped.
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.agents.base.memory.register_memory_tools | memory.py:4575 | [MemoryMixin] memory disabled — skipping memory tool registration
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.skills.manager.discover | manager.py:235 | Discovered 36 skill(s) across 5 root(s); 0 shadowed, 0 invalid
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.agents.base.agent.load_skill | agent.py:4030 | Loaded skill 'gaia-voice' (tier=community, root=agent-bundled, 0 tool(s), 0 connector requirement(s), binaries=none)
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.agents.base.agent.load_skill_set | agent.py:4339 | Skill set '(none)' active (chosen by: none) — loaded 1 of 1 declared skill(s): gaia-voice
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.agents.base.memory.register_memory_tools | memory.py:4575 | [MemoryMixin] memory disabled — skipping memory tool registration
+[2026-10-25 02:54:38] | [37mINFO[0m | gaia.agents.base.memory.register_memory_tools | memory.py:5190 | [MemoryMixin] registered 5 memory tools (v2)
+------------------------------ Captured log setup ------------------------------
+INFO     gaia.database.mixin:mixin.py:117 Database initialized: /tmp/gaia-test-state-6u1v35ot/gaia-home/file_index.db
+INFO     gaia.filesystem.index:index.py:242 FileSystemIndexService initialized: /tmp/gaia-test-state-6u1v35ot/gaia-home/file_index.db
+INFO     gaia_agent_chat.agent:agent.py:570 File system index service initialized
+INFO     gaia.database.mixin:mixin.py:117 Database initialized: /tmp/gaia-test-state-6u1v35ot/gaia-home/scratchpad.db
+INFO     gaia_agent_chat.agent:agent.py:585 Scratchpad service initialized
+INFO     gaia_agent_chat.agent:agent.py:607 Web client initialized for browser tools
+INFO     gaia.agents.base.memory:memory.py:873 [MemoryMixin] memory disabled via GAIA_MEMORY_DISABLED=1; skipping init
+WARNING  gaia.llm.lemonade_client:lemonade_client.py:893 Cannot read free memory (Request failed: HTTPConnectionPool(host='localhost', port=13305): Max retries exceeded with url: /api/v1/system-info (Caused by NewConnectionError("HTTPConnection(host='localhost', port=13305): Failed to establish a new connection: [Errno 111] Connection refused"))); asking for a 65536-token window for Gemma-4-E4B-it-GGUF.
+INFO     gaia.llm.lemonade_manager:lemonade_manager.py:1296 Lemonade server is not running at http://localhost:13305/api/v1 — starting it
+ERROR    gaia.llm.lemonade_manager:lemonade_manager.py:1311 Could not start the local model server: The local model server is not running, and neither is the GAIA background service that owns it — so nothing can start it.
+To fix: run `gaia daemon start`, then retry.
+Where to look: `gaia daemon logs`
+INFO     gaia.agents.base.project_map:project_map.py:517 [project-map] /5666/baseline is GAIA's own source tree — no map. Set GAIA_PROJECT_ROOT to the project you want mapped.
+INFO     gaia.agents.base.memory:memory.py:4575 [MemoryMixin] memory disabled — skipping memory tool registration
+INFO     gaia.skills.manager:manager.py:235 Discovered 36 skill(s) across 5 root(s); 0 shadowed, 0 invalid
+INFO     gaia.agents.base.agent:agent.py:4030 Loaded skill 'gaia-voice' (tier=community, root=agent-bundled, 0 tool(s), 0 connector requirement(s), binaries=none)
+INFO     gaia.agents.base.agent:agent.py:4339 Skill set '(none)' active (chosen by: none) — loaded 1 of 1 declared skill(s): gaia-voice
+INFO     gaia.agents.base.memory:memory.py:4575 [MemoryMixin] memory disabled — skipping memory tool registration
+INFO     gaia.agents.base.memory:memory.py:5190 [MemoryMixin] registered 5 memory tools (v2)
+----------- generated xml file: /evidence/baseline-no-node-path.xml ------------
+=========================== short test summary info ============================
+FAILED hub/agents/gaia/python/tests/test_full_tool_bundles.py::test_core_and_bundles_cover_the_flagship_registry_exactly
+FAILED hub/agents/gaia/python/tests/test_full_tool_bundles.py::test_optional_tools_are_present_on_a_full_install
+FAILED hub/agents/gaia/python/tests/test_gaia_agent.py::test_manifest_tools_count_matches_real_registry
+============================== 3 failed in 1.48s ===============================

@@ -1,0 +1,23 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_ TestPlainUserCopy.test_a_failed_start_shows_plain_words_and_logs_the_detail __
+tests/unit/chat/ui/test_sidecar_relay_profiles.py:833: in test_a_failed_start_shows_plain_words_and_logs_the_detail
+    assert word not in visible, word
+E   AssertionError: sidecar
+E   assert 'sidecar' not in "gaia couldn...ts/gaia/logs"
+E     
+E     'sidecar' is contained here:
+E       -snapshot-sidecar/test_a_failed_start_shows_plai0/agents/gaia/logs
+E     ?           +++++++
+----------------------------- Captured stderr call -----------------------------
+[2026-10-25 03:05:03] | [31mERROR[0m | gaia.ui._chat_helpers._dispatch_sidecar_query | _chat_helpers.py:2257 | chat: could not start the gaia agent: the daemon refused to ensure the 'gaia' sidecar: gaia sidecar failed to start after 3 attempts. Last failure: gaia sidecar exited early (code 1) before becoming healthy. Last log output: [37mINFO[0m | faiss.loader
+Traceback (most recent call last):
+  File "server.py", line 55, in <module>
+
+------------------------------ Captured log call -------------------------------
+ERROR    gaia.ui._chat_helpers:_chat_helpers.py:2257 chat: could not start the gaia agent: the daemon refused to ensure the 'gaia' sidecar: gaia sidecar failed to start after 3 attempts. Last failure: gaia sidecar exited early (code 1) before becoming healthy. Last log output: [37mINFO[0m | faiss.loader
+Traceback (most recent call last):
+  File "server.py", line 55, in <module>
+=========================== short test summary info ============================
+FAILED tests/unit/chat/ui/test_sidecar_relay_profiles.py::TestPlainUserCopy::test_a_failed_start_shows_plain_words_and_logs_the_detail
+1 failed in 0.69s

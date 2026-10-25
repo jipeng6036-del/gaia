@@ -1,0 +1,8 @@
+{
+  "base": "82ad2a771c7ed5b6b26f4521b3e4eaad40820f85",
+  "files": {
+    "docs/spec/agent-ui-query-sse-contract.md": "22454ab434cc3480ec21fab10cb31ef25d8075a1353a1ebbf4f7c17a4d789977",
+    "hub/agents/gaia/python/gaia_agent/server.py": "1d126fc747bf78bac62712e3fc6900b979b57405acce5449d252684c6d951cb0",
+    "hub/agents/gaia/python/tests/test_server_changes.py": "102cbf51f877582ef729fed4c8cc6566f02243416632aee2c954119d7386c7b3"
+  }
+}

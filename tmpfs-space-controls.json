@@ -1,0 +1,37 @@
+{
+  "before": {
+    "total": 4294967296,
+    "used": 4294324224,
+    "free": 643072
+  },
+  "baseline-full-tmpfs-control": 1,
+  "candidate-full-tmpfs-control": 1,
+  "removedOwnedScratch": [
+    "/tmp/gaia-5666-core",
+    "/tmp/gaia-5666-hub",
+    "/tmp/gaia-snapshot-hub",
+    "/tmp/gaia-snapshot-hub-path",
+    "/tmp/gaia-5666-controls"
+  ],
+  "after": {
+    "total": 4294967296,
+    "used": 1892352,
+    "free": 4293074944
+  },
+  "finalCommand": [
+    "/usr/sbin/runuser",
+    "-u",
+    "gaia-runner",
+    "--",
+    "/hub-venv/bin/python",
+    "-m",
+    "pytest",
+    "hub/agents/gaia/python/tests/",
+    "-v",
+    "--tb=short",
+    "--timeout=180",
+    "--basetemp=/tmp/gaia-snapshot-hub",
+    "--junitxml=/evidence/final-flagship-complete.xml"
+  ],
+  "finalExit": 0
+}

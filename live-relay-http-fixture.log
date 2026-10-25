@@ -1,0 +1,40 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0 -- /hub-venv/bin/python
+cachedir: .pytest_cache
+benchmark: 5.3.0 (defaults: timer=time.perf_counter disable_gc=False min_rounds=5 min_time=0.000005 max_time=1.0 calibration_precision=10 warmup=False warmup_iterations=100000)
+rootdir: /5666/candidate
+configfile: pyproject.toml
+plugins: anyio-4.15.1, rerunfailures-16.7, timeout-2.4.0, platformdirs-4.13.5, xdist-3.8.0, cov-7.1.0, asyncio-1.4.0, mock-3.17.0, benchmark-5.3.0, respx-0.23.1, pyfakefs-6.2.0
+timeout: 180.0s
+timeout method: signal
+timeout func_only: False
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 4 items
+
+tests/integration/test_gaia_sidecar_relay_live.py::test_health_is_the_flagship_not_email PASSED [ 25%]
+tests/integration/test_gaia_sidecar_relay_live.py::test_shipped_contract_clears_the_profile_floor PASSED [ 50%]
+tests/integration/test_gaia_sidecar_relay_live.py::test_init_answers_the_readiness_contract PASSED [ 75%]
+tests/integration/test_gaia_sidecar_relay_live.py::test_query_relays_to_a_terminal_answer FAILED [100%]
+
+=================================== FAILURES ===================================
+____________________ test_query_relays_to_a_terminal_answer ____________________
+tests/integration/test_gaia_sidecar_relay_live.py:106: in test_query_relays_to_a_terminal_answer
+    relay_query(
+src/gaia/ui/email_sidecar/relay.py:655: in relay_query
+    handler.set_relay_question(None)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: '_Handler' object has no attribute 'set_relay_question'
+----------------------------- Captured stderr call -----------------------------
+[2026-10-25 03:03:09] | [33mWARNING[0m | gaia.ui.email_sidecar.relay.relay_query | relay.py:646 | gaia relay: stream failed for run_id=df3a61c5-aa86-4c14-9a5f-c715c3de672b: '_Handler' object has no attribute 'set_relay_question'
+------------------------------ Captured log call -------------------------------
+WARNING  gaia.ui.email_sidecar.relay:relay.py:646 gaia relay: stream failed for run_id=df3a61c5-aa86-4c14-9a5f-c715c3de672b: '_Handler' object has no attribute 'set_relay_question'
+--------------------------- Captured stderr teardown ---------------------------
+[2026-10-25 03:03:09] | [37mINFO[0m | gaia.daemon.sidecars.manager._shutdown_locked | manager.py:911 | gaia sidecar: tree-killing pid=26027
+[2026-10-25 03:03:09] | [37mINFO[0m | gaia.daemon.sidecars.manager._shutdown_locked | manager.py:955 | gaia sidecar: shut down
+---------------------------- Captured log teardown -----------------------------
+INFO     gaia.daemon.sidecars.manager:manager.py:911 gaia sidecar: tree-killing pid=26027
+INFO     gaia.daemon.sidecars.manager:manager.py:955 gaia sidecar: shut down
+---------- generated xml file: /evidence/live-relay-http-fixture.xml -----------
+=========================== short test summary info ============================
+FAILED tests/integration/test_gaia_sidecar_relay_live.py::test_query_relays_to_a_terminal_answer
+========================= 1 failed, 3 passed in 3.50s ==========================

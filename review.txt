@@ -1,0 +1,10 @@
+Native independent code/architecture review completed for the final patch.
+
+Final reviewer result: Approved, no material findings. Explicit exc_info preserves
+the original processing traceback when the undo error suppresses exception context.
+The revised regression exercises that case; the contract note matches behavior.
+Independent focused rerun: 13 passed in 1.39s. Architectural impact Low; cleanup,
+terminal ordering, dependencies and wire schema remain intact.
+
+The reviewer did not attest to runtime proof, full suites, publication or human
+review. Those gates are separately evidenced by the execution records here.

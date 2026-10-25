@@ -1,0 +1,216 @@
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=70.0
+* Getting build dependencies for sdist...
+running egg_info
+creating gaia_agent_gaia.egg-info
+writing gaia_agent_gaia.egg-info/PKG-INFO
+writing dependency_links to gaia_agent_gaia.egg-info/dependency_links.txt
+writing entry points to gaia_agent_gaia.egg-info/entry_points.txt
+writing requirements to gaia_agent_gaia.egg-info/requires.txt
+writing top-level names to gaia_agent_gaia.egg-info/top_level.txt
+writing manifest file 'gaia_agent_gaia.egg-info/SOURCES.txt'
+reading manifest file 'gaia_agent_gaia.egg-info/SOURCES.txt'
+writing manifest file 'gaia_agent_gaia.egg-info/SOURCES.txt'
+WARNING File '/5666/baseline/hub/agents/gaia/python/README.md' cannot be found
+* Installed build dependency versions:
+  - setuptools==84.2.1
+* Building sdist...
+running sdist
+running egg_info
+writing gaia_agent_gaia.egg-info/PKG-INFO
+writing dependency_links to gaia_agent_gaia.egg-info/dependency_links.txt
+writing entry points to gaia_agent_gaia.egg-info/entry_points.txt
+writing requirements to gaia_agent_gaia.egg-info/requires.txt
+writing top-level names to gaia_agent_gaia.egg-info/top_level.txt
+reading manifest file 'gaia_agent_gaia.egg-info/SOURCES.txt'
+writing manifest file 'gaia_agent_gaia.egg-info/SOURCES.txt'
+warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
+
+running check
+creating gaia_agent_gaia-0.3.1
+creating gaia_agent_gaia-0.3.1/gaia_agent
+creating gaia_agent_gaia-0.3.1/gaia_agent/skills/document-extract
+creating gaia_agent_gaia-0.3.1/gaia_agent/skills/gaia-harness-engineering
+creating gaia_agent_gaia-0.3.1/gaia_agent/skills/gaia-voice
+creating gaia_agent_gaia-0.3.1/gaia_agent_gaia.egg-info
+creating gaia_agent_gaia-0.3.1/tests
+copying files to gaia_agent_gaia-0.3.1...
+copying pyproject.toml -> gaia_agent_gaia-0.3.1
+copying gaia_agent/__init__.py -> gaia_agent_gaia-0.3.1/gaia_agent
+copying gaia_agent/agent.py -> gaia_agent_gaia-0.3.1/gaia_agent
+copying gaia_agent/caller_auth.py -> gaia_agent_gaia-0.3.1/gaia_agent
+copying gaia_agent/connectors.py -> gaia_agent_gaia-0.3.1/gaia_agent
+copying gaia_agent/engineering_tools.py -> gaia_agent_gaia-0.3.1/gaia_agent
+copying gaia_agent/entry.py -> gaia_agent_gaia-0.3.1/gaia_agent
+copying gaia_agent/export_openapi.py -> gaia_agent_gaia-0.3.1/gaia_agent
+copying gaia_agent/memory_dump.py -> gaia_agent_gaia-0.3.1/gaia_agent
+copying gaia_agent/server.py -> gaia_agent_gaia-0.3.1/gaia_agent
+copying gaia_agent/session_registry.py -> gaia_agent_gaia-0.3.1/gaia_agent
+copying gaia_agent/skill_tools.py -> gaia_agent_gaia-0.3.1/gaia_agent
+copying gaia_agent/stdio.py -> gaia_agent_gaia-0.3.1/gaia_agent
+copying gaia_agent/skills/document-extract/SKILL.md -> gaia_agent_gaia-0.3.1/gaia_agent/skills/document-extract
+copying gaia_agent/skills/gaia-harness-engineering/SKILL.md -> gaia_agent_gaia-0.3.1/gaia_agent/skills/gaia-harness-engineering
+copying gaia_agent/skills/gaia-voice/SKILL.md -> gaia_agent_gaia-0.3.1/gaia_agent/skills/gaia-voice
+copying gaia_agent_gaia.egg-info/PKG-INFO -> gaia_agent_gaia-0.3.1/gaia_agent_gaia.egg-info
+copying gaia_agent_gaia.egg-info/SOURCES.txt -> gaia_agent_gaia-0.3.1/gaia_agent_gaia.egg-info
+copying gaia_agent_gaia.egg-info/dependency_links.txt -> gaia_agent_gaia-0.3.1/gaia_agent_gaia.egg-info
+copying gaia_agent_gaia.egg-info/entry_points.txt -> gaia_agent_gaia-0.3.1/gaia_agent_gaia.egg-info
+copying gaia_agent_gaia.egg-info/requires.txt -> gaia_agent_gaia-0.3.1/gaia_agent_gaia.egg-info
+copying gaia_agent_gaia.egg-info/top_level.txt -> gaia_agent_gaia-0.3.1/gaia_agent_gaia.egg-info
+copying tests/test_api_construction.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_binary_gate.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_bridge_no_arg_tool.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_bundled_skill_roots.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_caller_auth.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_capability_matrix.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_context_eviction_wiring.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_engineering_mode.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_eval_summary.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_freeze_required_modules.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_full_tool_bundles.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_gaia_agent.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_gen_binaries_lock.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_github_skill_visible.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_init_version_floor.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_lazy_skill_activation.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_lemonade_start_hint.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_linux_glibc_floor.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_memory_dump.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_npm_doc_min_version.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_openapi_artifact.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_probe_lemonade_auth.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_prompt_prefix_stability.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_prompt_prefix_stability_project_deps.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_prompt_prefix_stability_sd_off.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_prompt_prefix_stability_working_dir.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_publish_to_r2_by_reference.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_relayed_answer_streams.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_sd_tools_do_not_rewrite_the_prompt.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_server_changes.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_server_documents.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_server_event_loop.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_server_followup.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_server_memory.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_server_memory_mode.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_server_pushed_history.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_server_query.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_server_respond.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_server_scope.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_server_skills.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_server_surface.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_session_registry.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_shell_in_code_repos.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_skill_learning_reachability.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_skill_library_tools.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_skill_prompt_budget.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_skill_set_startup.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_stdio.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_stdio_host_close.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_stdio_lemonade_reconnect.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_stdio_wire_contract.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_transport_dispatch.py -> gaia_agent_gaia-0.3.1/tests
+copying tests/test_warmup_no_download.py -> gaia_agent_gaia-0.3.1/tests
+Writing gaia_agent_gaia-0.3.1/setup.cfg
+Creating tar archive
+removing 'gaia_agent_gaia-0.3.1' (and everything under it)
+WARNING File '/5666/baseline/hub/agents/gaia/python/README.md' cannot be found
+* Building wheel from sdist
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=70.0
+* Getting build dependencies for wheel...
+running egg_info
+writing gaia_agent_gaia.egg-info/PKG-INFO
+writing dependency_links to gaia_agent_gaia.egg-info/dependency_links.txt
+writing entry points to gaia_agent_gaia.egg-info/entry_points.txt
+writing requirements to gaia_agent_gaia.egg-info/requires.txt
+writing top-level names to gaia_agent_gaia.egg-info/top_level.txt
+reading manifest file 'gaia_agent_gaia.egg-info/SOURCES.txt'
+writing manifest file 'gaia_agent_gaia.egg-info/SOURCES.txt'
+WARNING File '/tmp/build-via-sdist-b1krro7t/gaia_agent_gaia-0.3.1/README.md' cannot be found
+* Installed build dependency versions:
+  - setuptools==84.2.1
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build/lib/gaia_agent
+copying gaia_agent/stdio.py -> build/lib/gaia_agent
+copying gaia_agent/skill_tools.py -> build/lib/gaia_agent
+copying gaia_agent/session_registry.py -> build/lib/gaia_agent
+copying gaia_agent/server.py -> build/lib/gaia_agent
+copying gaia_agent/memory_dump.py -> build/lib/gaia_agent
+copying gaia_agent/export_openapi.py -> build/lib/gaia_agent
+copying gaia_agent/entry.py -> build/lib/gaia_agent
+copying gaia_agent/engineering_tools.py -> build/lib/gaia_agent
+copying gaia_agent/connectors.py -> build/lib/gaia_agent
+copying gaia_agent/caller_auth.py -> build/lib/gaia_agent
+copying gaia_agent/agent.py -> build/lib/gaia_agent
+copying gaia_agent/__init__.py -> build/lib/gaia_agent
+running egg_info
+writing gaia_agent_gaia.egg-info/PKG-INFO
+writing dependency_links to gaia_agent_gaia.egg-info/dependency_links.txt
+writing entry points to gaia_agent_gaia.egg-info/entry_points.txt
+writing requirements to gaia_agent_gaia.egg-info/requires.txt
+writing top-level names to gaia_agent_gaia.egg-info/top_level.txt
+reading manifest file 'gaia_agent_gaia.egg-info/SOURCES.txt'
+writing manifest file 'gaia_agent_gaia.egg-info/SOURCES.txt'
+creating build/lib/gaia_agent/skills/gaia-voice
+copying gaia_agent/skills/gaia-voice/SKILL.md -> build/lib/gaia_agent/skills/gaia-voice
+creating build/lib/gaia_agent/skills/gaia-harness-engineering
+copying gaia_agent/skills/gaia-harness-engineering/SKILL.md -> build/lib/gaia_agent/skills/gaia-harness-engineering
+creating build/lib/gaia_agent/skills/document-extract
+copying gaia_agent/skills/document-extract/SKILL.md -> build/lib/gaia_agent/skills/document-extract
+installing to build/bdist.linux-x86_64/wheel
+running install
+running install_lib
+creating build/bdist.linux-x86_64/wheel
+creating build/bdist.linux-x86_64/wheel/gaia_agent
+creating build/bdist.linux-x86_64/wheel/gaia_agent/skills
+creating build/bdist.linux-x86_64/wheel/gaia_agent/skills/document-extract
+copying build/lib/gaia_agent/skills/document-extract/SKILL.md -> build/bdist.linux-x86_64/wheel/./gaia_agent/skills/document-extract
+creating build/bdist.linux-x86_64/wheel/gaia_agent/skills/gaia-harness-engineering
+copying build/lib/gaia_agent/skills/gaia-harness-engineering/SKILL.md -> build/bdist.linux-x86_64/wheel/./gaia_agent/skills/gaia-harness-engineering
+creating build/bdist.linux-x86_64/wheel/gaia_agent/skills/gaia-voice
+copying build/lib/gaia_agent/skills/gaia-voice/SKILL.md -> build/bdist.linux-x86_64/wheel/./gaia_agent/skills/gaia-voice
+copying build/lib/gaia_agent/__init__.py -> build/bdist.linux-x86_64/wheel/./gaia_agent
+copying build/lib/gaia_agent/agent.py -> build/bdist.linux-x86_64/wheel/./gaia_agent
+copying build/lib/gaia_agent/caller_auth.py -> build/bdist.linux-x86_64/wheel/./gaia_agent
+copying build/lib/gaia_agent/connectors.py -> build/bdist.linux-x86_64/wheel/./gaia_agent
+copying build/lib/gaia_agent/engineering_tools.py -> build/bdist.linux-x86_64/wheel/./gaia_agent
+copying build/lib/gaia_agent/entry.py -> build/bdist.linux-x86_64/wheel/./gaia_agent
+copying build/lib/gaia_agent/export_openapi.py -> build/bdist.linux-x86_64/wheel/./gaia_agent
+copying build/lib/gaia_agent/memory_dump.py -> build/bdist.linux-x86_64/wheel/./gaia_agent
+copying build/lib/gaia_agent/server.py -> build/bdist.linux-x86_64/wheel/./gaia_agent
+copying build/lib/gaia_agent/session_registry.py -> build/bdist.linux-x86_64/wheel/./gaia_agent
+copying build/lib/gaia_agent/skill_tools.py -> build/bdist.linux-x86_64/wheel/./gaia_agent
+copying build/lib/gaia_agent/stdio.py -> build/bdist.linux-x86_64/wheel/./gaia_agent
+running install_egg_info
+Copying gaia_agent_gaia.egg-info to build/bdist.linux-x86_64/wheel/./gaia_agent_gaia-0.3.1-py3.12.egg-info
+running install_scripts
+creating build/bdist.linux-x86_64/wheel/gaia_agent_gaia-0.3.1.dist-info/WHEEL
+creating '/evidence/baseline-agent-dist/.tmp-tpj616en/gaia_agent_gaia-0.3.1-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+adding 'gaia_agent/__init__.py'
+adding 'gaia_agent/agent.py'
+adding 'gaia_agent/caller_auth.py'
+adding 'gaia_agent/connectors.py'
+adding 'gaia_agent/engineering_tools.py'
+adding 'gaia_agent/entry.py'
+adding 'gaia_agent/export_openapi.py'
+adding 'gaia_agent/memory_dump.py'
+adding 'gaia_agent/server.py'
+adding 'gaia_agent/session_registry.py'
+adding 'gaia_agent/skill_tools.py'
+adding 'gaia_agent/stdio.py'
+adding 'gaia_agent/skills/document-extract/SKILL.md'
+adding 'gaia_agent/skills/gaia-harness-engineering/SKILL.md'
+adding 'gaia_agent/skills/gaia-voice/SKILL.md'
+adding 'gaia_agent_gaia-0.3.1.dist-info/METADATA'
+adding 'gaia_agent_gaia-0.3.1.dist-info/WHEEL'
+adding 'gaia_agent_gaia-0.3.1.dist-info/entry_points.txt'
+adding 'gaia_agent_gaia-0.3.1.dist-info/top_level.txt'
+adding 'gaia_agent_gaia-0.3.1.dist-info/RECORD'
+removing build/bdist.linux-x86_64/wheel
+WARNING File '/tmp/build-via-sdist-b1krro7t/gaia_agent_gaia-0.3.1/README.md' cannot be found
+Successfully built gaia_agent_gaia-0.3.1.tar.gz and gaia_agent_gaia-0.3.1-py3-none-any.whl

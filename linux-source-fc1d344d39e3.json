@@ -1,0 +1,31 @@
+{
+  "baseline": {
+    "docs/spec/agent-ui-query-sse-contract.md": {
+      "normalizedSha256": "d968455ebcfec48735da157518ff262a04e25e93009b165d56941cf2301d0b4c",
+      "gitBlob": "4d5e83b6626864c4b024b58f7b9e0b345377d42e"
+    },
+    "hub/agents/gaia/python/gaia_agent/server.py": {
+      "normalizedSha256": "a6dcc269d4525e7b9fbca70a89c0909554ae71d8c3226bc74cfdc13ccfcf3f9f",
+      "gitBlob": "0f7d50842fdb7fe5c374f79bc1631477116af241"
+    },
+    "hub/agents/gaia/python/tests/test_server_changes.py": {
+      "normalizedSha256": "102cbf51f877582ef729fed4c8cc6566f02243416632aee2c954119d7386c7b3",
+      "gitBlob": "3dd10e6de0502cf56b74128c18285ad623138f43"
+    }
+  },
+  "candidate": {
+    "docs/spec/agent-ui-query-sse-contract.md": {
+      "normalizedSha256": "22454ab434cc3480ec21fab10cb31ef25d8075a1353a1ebbf4f7c17a4d789977",
+      "gitBlob": "7aa91483c635c4340e5f83976feab1055037fa66"
+    },
+    "hub/agents/gaia/python/gaia_agent/server.py": {
+      "normalizedSha256": "1d126fc747bf78bac62712e3fc6900b979b57405acce5449d252684c6d951cb0",
+      "gitBlob": "66482e97ccb61de1af9ef3f77204d64a6b589dd1"
+    },
+    "hub/agents/gaia/python/tests/test_server_changes.py": {
+      "normalizedSha256": "102cbf51f877582ef729fed4c8cc6566f02243416632aee2c954119d7386c7b3",
+      "gitBlob": "3dd10e6de0502cf56b74128c18285ad623138f43"
+    }
+  },
+  "baselineTestOverlay": "Only the final regression test file is copied onto baseline production for RED; the production baseline is unchanged."
+}

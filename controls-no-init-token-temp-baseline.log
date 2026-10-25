@@ -1,0 +1,197 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0 -- /core-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /5666/baseline
+configfile: pyproject.toml
+plugins: anyio-4.15.1, timeout-2.4.0, xdist-3.8.0, cov-7.1.0, asyncio-1.4.0, mock-3.17.0, respx-0.23.1, pyfakefs-6.2.0
+timeout: 180.0s
+timeout method: signal
+timeout func_only: False
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+created: 4/4 workers
+4 workers [12 items]
+
+scheduling tests via WorkStealingScheduling
+
+tests/unit/agents/test_document_extraction.py::test_existing_memory_hook_records_source_summary_and_recall 
+tests/unit/test_hub_installer_pip_timeout.py::test_a_grandchild_orphaned_before_the_first_sample_is_killed 
+tests/unit/test_sidecar_orphan_group_kill.py::test_registry_stop_reaps_the_orphaned_child 
+tests/unit/mcp/client/test_stdio_hung_server.py::test_children_of_an_exited_server_are_still_stopped 
+[gw0] [  8%] FAILED tests/unit/agents/test_document_extraction.py::test_existing_memory_hook_records_source_summary_and_recall 
+tests/unit/test_sidecar_orphan_group_kill.py::test_shutdown_kills_the_child_the_dead_leader_left 
+[gw2] [ 16%] FAILED tests/unit/test_hub_installer_pip_timeout.py::test_a_grandchild_orphaned_before_the_first_sample_is_killed 
+tests/unit/test_hub_installer_pip_timeout.py::test_a_success_whose_leftover_holds_the_output_is_still_a_success 
+[gw1] [ 25%] FAILED tests/unit/test_sidecar_orphan_group_kill.py::test_registry_stop_reaps_the_orphaned_child 
+tests/unit/test_hub_installer_pip_timeout.py::test_an_idle_frontend_is_stopped_as_stuck[grandchild] 
+[gw0] [ 33%] FAILED tests/unit/test_sidecar_orphan_group_kill.py::test_shutdown_kills_the_child_the_dead_leader_left 
+tests/unit/test_sidecar_orphan_group_kill.py::test_shutdown_escalates_to_sigkill_for_a_term_ignoring_child[True] 
+[gw0] [ 41%] FAILED tests/unit/test_sidecar_orphan_group_kill.py::test_shutdown_escalates_to_sigkill_for_a_term_ignoring_child[True] 
+tests/unit/chat/ui/test_tunnel_stop_wrapper.py::test_stop_returns_promptly_and_ends_the_wrapped_agent 
+[gw1] [ 50%] FAILED tests/unit/test_hub_installer_pip_timeout.py::test_an_idle_frontend_is_stopped_as_stuck[grandchild] 
+tests/unit/test_hub_installer_pip_timeout.py::test_an_orphaned_grandchild_is_killed_too 
+[gw3] [ 58%] FAILED tests/unit/mcp/client/test_stdio_hung_server.py::test_children_of_an_exited_server_are_still_stopped 
+tests/unit/mcp/client/test_stdio_hung_server.py::test_a_launcher_that_dies_during_the_startup_check_has_its_child_stopped 
+[gw2] [ 66%] FAILED tests/unit/test_hub_installer_pip_timeout.py::test_a_success_whose_leftover_holds_the_output_is_still_a_success 
+tests/unit/mcp/client/test_stdio_hung_server.py::test_disconnect_stops_the_servers_children 
+[gw1] [ 75%] FAILED tests/unit/test_hub_installer_pip_timeout.py::test_an_orphaned_grandchild_is_killed_too 
+[gw0] [ 83%] FAILED tests/unit/chat/ui/test_tunnel_stop_wrapper.py::test_stop_returns_promptly_and_ends_the_wrapped_agent 
+[gw2] [ 91%] FAILED tests/unit/mcp/client/test_stdio_hung_server.py::test_disconnect_stops_the_servers_children 
+[gw3] [100%] FAILED tests/unit/mcp/client/test_stdio_hung_server.py::test_a_launcher_that_dies_during_the_startup_check_has_its_child_stopped 
+
+=================================== FAILURES ===================================
+_________ test_existing_memory_hook_records_source_summary_and_recall __________
+[gw0] linux -- Python 3.12.14 /core-venv/bin/python
+/5666/baseline/tests/unit/agents/test_document_extraction.py:685: in test_existing_memory_hook_records_source_summary_and_recall
+    assert any(
+E   assert False
+E    +  where False = any(<generator object test_existing_memory_hook_records_source_summary_and_recall.<locals>.<genexpr> at 0x76e52566e7a0>)
+----------------------------- Captured stderr call -----------------------------
+[2026-10-25 02:47:31] | [37mINFO[0m | gaia.agents.base.memory.register_memory_tools | memory.py:5190 | [MemoryMixin] registered 5 memory tools (v2)
+------------------------------ Captured log call -------------------------------
+INFO     gaia.agents.base.memory:memory.py:5190 [MemoryMixin] registered 5 memory tools (v2)
+_________ test_a_grandchild_orphaned_before_the_first_sample_is_killed _________
+[gw2] linux -- Python 3.12.14 /core-venv/bin/python
+tests/unit/test_hub_installer_pip_timeout.py:367: in test_a_grandchild_orphaned_before_the_first_sample_is_killed
+    assert isinstance(error, InstallError), error
+E   AssertionError: OSError(22, 'Invalid argument')
+E   assert False
+E    +  where False = isinstance(OSError(22, 'Invalid argument'), InstallError)
+_________________ test_registry_stop_reaps_the_orphaned_child __________________
+[gw1] linux -- Python 3.12.14 /core-venv/bin/python
+tests/unit/test_sidecar_orphan_group_kill.py:140: in test_registry_stop_reaps_the_orphaned_child
+    assert reg.stop("toy") == {"agent_id": "toy", "state": "stopped"}
+           ^^^^^^^^^^^^^^^
+src/gaia/daemon/sidecars/registry.py:412: in stop
+    self._stop_locked(agent_id, manager)
+src/gaia/daemon/sidecars/registry.py:431: in _stop_locked
+    raise StopFailedError(
+E   gaia.daemon.sidecars.errors.StopFailedError: agent 'toy' sidecar pid 22047 exited but a child in its process group 22047 survived the tree-kill. Kill that process group manually before retrying.
+----------------------------- Captured stderr call -----------------------------
+[2026-10-25 02:47:31] | [37mINFO[0m | gaia.daemon.sidecars.manager._shutdown_locked | manager.py:911 | toy sidecar: tree-killing pid=22047
+[2026-10-25 02:47:36] | [33mWARNING[0m | gaia.daemon.sidecars.manager._shutdown_locked | manager.py:914 | toy sidecar did not exit in 5.0s; SIGKILL
+[2026-10-25 02:47:41] | [33mWARNING[0m | gaia.daemon.sidecars.manager._shutdown_locked | manager.py:942 | toy sidecar: pid=22047 or a child in its process group is still alive after SIGKILL -- not reporting it as shut down. Kill process group 22047 manually, then run `gaia daemon stop-agent toy`.
+------------------------------ Captured log call -------------------------------
+INFO     gaia.daemon.sidecars.manager:manager.py:911 toy sidecar: tree-killing pid=22047
+WARNING  gaia.daemon.sidecars.manager:manager.py:914 toy sidecar did not exit in 5.0s; SIGKILL
+WARNING  gaia.daemon.sidecars.manager:manager.py:942 toy sidecar: pid=22047 or a child in its process group is still alive after SIGKILL -- not reporting it as shut down. Kill process group 22047 manually, then run `gaia daemon stop-agent toy`.
+______________ test_shutdown_kills_the_child_the_dead_leader_left ______________
+[gw0] linux -- Python 3.12.14 /core-venv/bin/python
+tests/unit/test_sidecar_orphan_group_kill.py:105: in test_shutdown_kills_the_child_the_dead_leader_left
+    assert seen == [False], "ledger entry must be removed only once the child is gone"
+E   AssertionError: ledger entry must be removed only once the child is gone
+E   assert [] == [False]
+E     
+E     Right contains one more item: False
+E     
+E     Full diff:
+E     + []
+E     - [
+E     -     False,
+E     - ]
+----------------------------- Captured stderr call -----------------------------
+[2026-10-25 02:47:31] | [37mINFO[0m | gaia.daemon.sidecars.manager._shutdown_locked | manager.py:911 | toy sidecar: tree-killing pid=22062
+[2026-10-25 02:47:36] | [33mWARNING[0m | gaia.daemon.sidecars.manager._shutdown_locked | manager.py:914 | toy sidecar did not exit in 5.0s; SIGKILL
+[2026-10-25 02:47:41] | [33mWARNING[0m | gaia.daemon.sidecars.manager._shutdown_locked | manager.py:942 | toy sidecar: pid=22062 or a child in its process group is still alive after SIGKILL -- not reporting it as shut down. Kill process group 22062 manually, then run `gaia daemon stop-agent toy`.
+------------------------------ Captured log call -------------------------------
+INFO     gaia.daemon.sidecars.manager:manager.py:911 toy sidecar: tree-killing pid=22062
+WARNING  gaia.daemon.sidecars.manager:manager.py:914 toy sidecar did not exit in 5.0s; SIGKILL
+WARNING  gaia.daemon.sidecars.manager:manager.py:942 toy sidecar: pid=22062 or a child in its process group is still alive after SIGKILL -- not reporting it as shut down. Kill process group 22062 manually, then run `gaia daemon stop-agent toy`.
+______ test_shutdown_escalates_to_sigkill_for_a_term_ignoring_child[True] ______
+[gw0] linux -- Python 3.12.14 /core-venv/bin/python
+tests/unit/test_sidecar_orphan_group_kill.py:115: in test_shutdown_escalates_to_sigkill_for_a_term_ignoring_child
+    assert seen == [False]
+E   assert [] == [False]
+E     
+E     Right contains one more item: False
+E     
+E     Full diff:
+E     + []
+E     - [
+E     -     False,
+E     - ]
+----------------------------- Captured stderr call -----------------------------
+[2026-10-25 02:47:42] | [37mINFO[0m | gaia.daemon.sidecars.manager._shutdown_locked | manager.py:911 | toy sidecar: tree-killing pid=22081
+[2026-10-25 02:47:43] | [33mWARNING[0m | gaia.daemon.sidecars.manager._shutdown_locked | manager.py:914 | toy sidecar did not exit in 1.0s; SIGKILL
+[2026-10-25 02:47:44] | [33mWARNING[0m | gaia.daemon.sidecars.manager._shutdown_locked | manager.py:942 | toy sidecar: pid=22081 or a child in its process group is still alive after SIGKILL -- not reporting it as shut down. Kill process group 22081 manually, then run `gaia daemon stop-agent toy`.
+------------------------------ Captured log call -------------------------------
+INFO     gaia.daemon.sidecars.manager:manager.py:911 toy sidecar: tree-killing pid=22081
+WARNING  gaia.daemon.sidecars.manager:manager.py:914 toy sidecar did not exit in 1.0s; SIGKILL
+WARNING  gaia.daemon.sidecars.manager:manager.py:942 toy sidecar: pid=22081 or a child in its process group is still alive after SIGKILL -- not reporting it as shut down. Kill process group 22081 manually, then run `gaia daemon stop-agent toy`.
+____________ test_an_idle_frontend_is_stopped_as_stuck[grandchild] _____________
+[gw1] linux -- Python 3.12.14 /core-venv/bin/python
+tests/unit/test_hub_installer_pip_timeout.py:86: in test_an_idle_frontend_is_stopped_as_stuck
+    assert isinstance(error, InstallError), error
+E   AssertionError: OSError(22, 'Invalid argument')
+E   assert False
+E    +  where False = isinstance(OSError(22, 'Invalid argument'), InstallError)
+_____________ test_children_of_an_exited_server_are_still_stopped ______________
+[gw3] linux -- Python 3.12.14 /core-venv/bin/python
+tests/unit/mcp/client/test_stdio_hung_server.py:694: in test_children_of_an_exited_server_are_still_stopped
+    assert not psutil.pid_exists(child_pid), "an exited server's child kept running"
+E   AssertionError: an exited server's child kept running
+E   assert not True
+E    +  where True = <function pid_exists at 0x7656863ebd80>(22060)
+E    +    where <function pid_exists at 0x7656863ebd80> = <module 'psutil' from '/core-venv/lib/python3.12/site-packages/psutil/__init__.py'>.pid_exists
+______ test_a_success_whose_leftover_holds_the_output_is_still_a_success _______
+[gw2] linux -- Python 3.12.14 /core-venv/bin/python
+tests/unit/test_hub_installer_pip_timeout.py:441: in test_a_success_whose_leftover_holds_the_output_is_still_a_success
+    assert not psutil.pid_exists(pid)
+E   assert not True
+E    +  where True = <function pid_exists at 0x7840d7e977e0>(22071)
+E    +    where <function pid_exists at 0x7840d7e977e0> = psutil.pid_exists
+----------------------------- Captured stderr call -----------------------------
+[2026-10-25 02:47:38] | [33mWARNING[0m | gaia.hub.installer._run_frontend | installer.py:883 | installer: a process left behind by /core-venv/bin/python kept its output open; stopped it
+------------------------------ Captured log call -------------------------------
+WARNING  gaia.hub.installer:installer.py:883 installer: a process left behind by /core-venv/bin/python kept its output open; stopped it
+__________________ test_an_orphaned_grandchild_is_killed_too ___________________
+[gw1] linux -- Python 3.12.14 /core-venv/bin/python
+tests/unit/test_hub_installer_pip_timeout.py:247: in test_an_orphaned_grandchild_is_killed_too
+    assert isinstance(error, InstallError), error
+E   AssertionError: OSError(22, 'Invalid argument')
+E   assert False
+E    +  where False = isinstance(OSError(22, 'Invalid argument'), InstallError)
+____________ test_stop_returns_promptly_and_ends_the_wrapped_agent _____________
+[gw0] linux -- Python 3.12.14 /core-venv/bin/python
+tests/unit/chat/ui/test_tunnel_stop_wrapper.py:79: in test_stop_returns_promptly_and_ends_the_wrapped_agent
+    assert elapsed < 2, f"stop() took {elapsed:.1f}s"
+E   AssertionError: stop() took 8.0s
+E   assert 8.038581935979892 < 2
+----------------------------- Captured stderr call -----------------------------
+[2026-10-25 02:47:44] | [37mINFO[0m | gaia.ui.tunnel.stop | tunnel.py:645 | Stopping ngrok tunnel...
+[2026-10-25 02:47:52] | [33mWARNING[0m | gaia.ui.tunnel._terminate_tree | tunnel.py:363 | ngrok child process(es) 22085 survived a kill
+[2026-10-25 02:47:52] | [37mINFO[0m | gaia.ui.tunnel.stop | tunnel.py:656 | Tunnel stopped
+------------------------------ Captured log call -------------------------------
+INFO     gaia.ui.tunnel:tunnel.py:645 Stopping ngrok tunnel...
+WARNING  gaia.ui.tunnel:tunnel.py:363 ngrok child process(es) 22085 survived a kill
+INFO     gaia.ui.tunnel:tunnel.py:656 Tunnel stopped
+__________________ test_disconnect_stops_the_servers_children __________________
+[gw2] linux -- Python 3.12.14 /core-venv/bin/python
+tests/unit/mcp/client/test_stdio_hung_server.py:607: in test_disconnect_stops_the_servers_children
+    assert not psutil.pid_exists(child_pid), "the server's child outlived disconnect"
+E   AssertionError: the server's child outlived disconnect
+E   assert not True
+E    +  where True = <function pid_exists at 0x7840d7e977e0>(22108)
+E    +    where <function pid_exists at 0x7840d7e977e0> = <module 'psutil' from '/core-venv/lib/python3.12/site-packages/psutil/__init__.py'>.pid_exists
+___ test_a_launcher_that_dies_during_the_startup_check_has_its_child_stopped ___
+[gw3] linux -- Python 3.12.14 /core-venv/bin/python
+tests/unit/mcp/client/test_stdio_hung_server.py:999: in test_a_launcher_that_dies_during_the_startup_check_has_its_child_stopped
+    assert not psutil.pid_exists(child_pid), "the dead launcher's child kept running"
+E   AssertionError: the dead launcher's child kept running
+E   assert not True
+E    +  where True = <function pid_exists at 0x7656863ebd80>(22103)
+E    +    where <function pid_exists at 0x7656863ebd80> = <module 'psutil' from '/core-venv/lib/python3.12/site-packages/psutil/__init__.py'>.pid_exists
+---- generated xml file: /evidence/controls-no-init-token-temp-baseline.xml ----
+=========================== short test summary info ============================
+FAILED tests/unit/agents/test_document_extraction.py::test_existing_memory_hook_records_source_summary_and_recall
+FAILED tests/unit/test_hub_installer_pip_timeout.py::test_a_grandchild_orphaned_before_the_first_sample_is_killed
+FAILED tests/unit/test_sidecar_orphan_group_kill.py::test_registry_stop_reaps_the_orphaned_child
+FAILED tests/unit/test_sidecar_orphan_group_kill.py::test_shutdown_kills_the_child_the_dead_leader_left
+FAILED tests/unit/test_sidecar_orphan_group_kill.py::test_shutdown_escalates_to_sigkill_for_a_term_ignoring_child[True]
+FAILED tests/unit/test_hub_installer_pip_timeout.py::test_an_idle_frontend_is_stopped_as_stuck[grandchild]
+FAILED tests/unit/mcp/client/test_stdio_hung_server.py::test_children_of_an_exited_server_are_still_stopped
+FAILED tests/unit/test_hub_installer_pip_timeout.py::test_a_success_whose_leftover_holds_the_output_is_still_a_success
+FAILED tests/unit/test_hub_installer_pip_timeout.py::test_an_orphaned_grandchild_is_killed_too
+FAILED tests/unit/chat/ui/test_tunnel_stop_wrapper.py::test_stop_returns_promptly_and_ends_the_wrapped_agent
+FAILED tests/unit/mcp/client/test_stdio_hung_server.py::test_disconnect_stops_the_servers_children
+FAILED tests/unit/mcp/client/test_stdio_hung_server.py::test_a_launcher_that_dies_during_the_startup_check_has_its_child_stopped
+============================= 12 failed in 37.09s ==============================

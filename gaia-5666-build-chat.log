@@ -1,0 +1,141 @@
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=70.0
+* Getting build dependencies for sdist...
+running egg_info
+creating gaia_agent_chat.egg-info
+writing gaia_agent_chat.egg-info\PKG-INFO
+writing dependency_links to gaia_agent_chat.egg-info\dependency_links.txt
+writing entry points to gaia_agent_chat.egg-info\entry_points.txt
+writing requirements to gaia_agent_chat.egg-info\requires.txt
+writing top-level names to gaia_agent_chat.egg-info\top_level.txt
+writing manifest file 'gaia_agent_chat.egg-info\SOURCES.txt'
+reading manifest file 'gaia_agent_chat.egg-info\SOURCES.txt'
+writing manifest file 'gaia_agent_chat.egg-info\SOURCES.txt'
+* Installed build dependency versions:
+  - setuptools==84.2.1
+* Building sdist...
+running sdist
+running egg_info
+writing gaia_agent_chat.egg-info\PKG-INFO
+writing dependency_links to gaia_agent_chat.egg-info\dependency_links.txt
+writing entry points to gaia_agent_chat.egg-info\entry_points.txt
+writing requirements to gaia_agent_chat.egg-info\requires.txt
+writing top-level names to gaia_agent_chat.egg-info\top_level.txt
+reading manifest file 'gaia_agent_chat.egg-info\SOURCES.txt'
+writing manifest file 'gaia_agent_chat.egg-info\SOURCES.txt'
+running check
+creating gaia_agent_chat-0.2.0
+creating gaia_agent_chat-0.2.0\gaia_agent_chat
+creating gaia_agent_chat-0.2.0\gaia_agent_chat.egg-info
+creating gaia_agent_chat-0.2.0\tests
+copying files to gaia_agent_chat-0.2.0...
+copying README.md -> gaia_agent_chat-0.2.0
+copying pyproject.toml -> gaia_agent_chat-0.2.0
+copying gaia_agent_chat\__init__.py -> gaia_agent_chat-0.2.0\gaia_agent_chat
+copying gaia_agent_chat\agent.py -> gaia_agent_chat-0.2.0\gaia_agent_chat
+copying gaia_agent_chat\app.py -> gaia_agent_chat-0.2.0\gaia_agent_chat
+copying gaia_agent_chat\lite_agent.py -> gaia_agent_chat-0.2.0\gaia_agent_chat
+copying gaia_agent_chat\profiles.py -> gaia_agent_chat-0.2.0\gaia_agent_chat
+copying gaia_agent_chat\python_jobs.py -> gaia_agent_chat-0.2.0\gaia_agent_chat
+copying gaia_agent_chat\python_runner.py -> gaia_agent_chat-0.2.0\gaia_agent_chat
+copying gaia_agent_chat\session.py -> gaia_agent_chat-0.2.0\gaia_agent_chat
+copying gaia_agent_chat\tool_bundles.py -> gaia_agent_chat-0.2.0\gaia_agent_chat
+copying gaia_agent_chat\tool_requests.py -> gaia_agent_chat-0.2.0\gaia_agent_chat
+copying gaia_agent_chat.egg-info\PKG-INFO -> gaia_agent_chat-0.2.0\gaia_agent_chat.egg-info
+copying gaia_agent_chat.egg-info\SOURCES.txt -> gaia_agent_chat-0.2.0\gaia_agent_chat.egg-info
+copying gaia_agent_chat.egg-info\dependency_links.txt -> gaia_agent_chat-0.2.0\gaia_agent_chat.egg-info
+copying gaia_agent_chat.egg-info\entry_points.txt -> gaia_agent_chat-0.2.0\gaia_agent_chat.egg-info
+copying gaia_agent_chat.egg-info\requires.txt -> gaia_agent_chat-0.2.0\gaia_agent_chat.egg-info
+copying gaia_agent_chat.egg-info\top_level.txt -> gaia_agent_chat-0.2.0\gaia_agent_chat.egg-info
+copying tests\test_chat_agent.py -> gaia_agent_chat-0.2.0\tests
+copying tests\test_chat_agent_rag_offline.py -> gaia_agent_chat-0.2.0\tests
+copying tests\test_chat_dependency_floor.py -> gaia_agent_chat-0.2.0\tests
+copying tests\test_chat_file_tools_allowed_folders.py -> gaia_agent_chat-0.2.0\tests
+copying tests\test_chat_reindex_locked.py -> gaia_agent_chat-0.2.0\tests
+copying tests\test_chat_stop_watching.py -> gaia_agent_chat-0.2.0\tests
+copying tests\test_dependency_floor.py -> gaia_agent_chat-0.2.0\tests
+copying tests\test_memory_incognito_config.py -> gaia_agent_chat-0.2.0\tests
+copying tests\test_model_service_label.py -> gaia_agent_chat-0.2.0\tests
+copying tests\test_no_documents_message.py -> gaia_agent_chat-0.2.0\tests
+copying tests\test_provider_migration.py -> gaia_agent_chat-0.2.0\tests
+copying tests\test_request_user_input_window.py -> gaia_agent_chat-0.2.0\tests
+copying tests\test_session_storage.py -> gaia_agent_chat-0.2.0\tests
+Writing gaia_agent_chat-0.2.0\setup.cfg
+Creating tar archive
+removing 'gaia_agent_chat-0.2.0' (and everything under it)
+* Building wheel from sdist
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools>=70.0
+* Getting build dependencies for wheel...
+running egg_info
+writing gaia_agent_chat.egg-info\PKG-INFO
+writing dependency_links to gaia_agent_chat.egg-info\dependency_links.txt
+writing entry points to gaia_agent_chat.egg-info\entry_points.txt
+writing requirements to gaia_agent_chat.egg-info\requires.txt
+writing top-level names to gaia_agent_chat.egg-info\top_level.txt
+reading manifest file 'gaia_agent_chat.egg-info\SOURCES.txt'
+writing manifest file 'gaia_agent_chat.egg-info\SOURCES.txt'
+* Installed build dependency versions:
+  - setuptools==84.2.1
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build\lib\gaia_agent_chat
+copying gaia_agent_chat\agent.py -> build\lib\gaia_agent_chat
+copying gaia_agent_chat\app.py -> build\lib\gaia_agent_chat
+copying gaia_agent_chat\lite_agent.py -> build\lib\gaia_agent_chat
+copying gaia_agent_chat\profiles.py -> build\lib\gaia_agent_chat
+copying gaia_agent_chat\python_jobs.py -> build\lib\gaia_agent_chat
+copying gaia_agent_chat\python_runner.py -> build\lib\gaia_agent_chat
+copying gaia_agent_chat\session.py -> build\lib\gaia_agent_chat
+copying gaia_agent_chat\tool_bundles.py -> build\lib\gaia_agent_chat
+copying gaia_agent_chat\tool_requests.py -> build\lib\gaia_agent_chat
+copying gaia_agent_chat\__init__.py -> build\lib\gaia_agent_chat
+running egg_info
+writing gaia_agent_chat.egg-info\PKG-INFO
+writing dependency_links to gaia_agent_chat.egg-info\dependency_links.txt
+writing entry points to gaia_agent_chat.egg-info\entry_points.txt
+writing requirements to gaia_agent_chat.egg-info\requires.txt
+writing top-level names to gaia_agent_chat.egg-info\top_level.txt
+reading manifest file 'gaia_agent_chat.egg-info\SOURCES.txt'
+writing manifest file 'gaia_agent_chat.egg-info\SOURCES.txt'
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\gaia_agent_chat
+copying build\lib\gaia_agent_chat\agent.py -> build\bdist.win-amd64\wheel\.\gaia_agent_chat
+copying build\lib\gaia_agent_chat\app.py -> build\bdist.win-amd64\wheel\.\gaia_agent_chat
+copying build\lib\gaia_agent_chat\lite_agent.py -> build\bdist.win-amd64\wheel\.\gaia_agent_chat
+copying build\lib\gaia_agent_chat\profiles.py -> build\bdist.win-amd64\wheel\.\gaia_agent_chat
+copying build\lib\gaia_agent_chat\python_jobs.py -> build\bdist.win-amd64\wheel\.\gaia_agent_chat
+copying build\lib\gaia_agent_chat\python_runner.py -> build\bdist.win-amd64\wheel\.\gaia_agent_chat
+copying build\lib\gaia_agent_chat\session.py -> build\bdist.win-amd64\wheel\.\gaia_agent_chat
+copying build\lib\gaia_agent_chat\tool_bundles.py -> build\bdist.win-amd64\wheel\.\gaia_agent_chat
+copying build\lib\gaia_agent_chat\tool_requests.py -> build\bdist.win-amd64\wheel\.\gaia_agent_chat
+copying build\lib\gaia_agent_chat\__init__.py -> build\bdist.win-amd64\wheel\.\gaia_agent_chat
+running install_egg_info
+Copying gaia_agent_chat.egg-info to build\bdist.win-amd64\wheel\.\gaia_agent_chat-0.2.0-py3.12.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\gaia_agent_chat-0.2.0.dist-info\WHEEL
+creating 'F:\\Github-PR\\ci-evidence\\gaia-5666-runtime\\chat-dist\\.tmp-kmf7xsa0\\gaia_agent_chat-0.2.0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
+adding 'gaia_agent_chat/__init__.py'
+adding 'gaia_agent_chat/agent.py'
+adding 'gaia_agent_chat/app.py'
+adding 'gaia_agent_chat/lite_agent.py'
+adding 'gaia_agent_chat/profiles.py'
+adding 'gaia_agent_chat/python_jobs.py'
+adding 'gaia_agent_chat/python_runner.py'
+adding 'gaia_agent_chat/session.py'
+adding 'gaia_agent_chat/tool_bundles.py'
+adding 'gaia_agent_chat/tool_requests.py'
+adding 'gaia_agent_chat-0.2.0.dist-info/METADATA'
+adding 'gaia_agent_chat-0.2.0.dist-info/WHEEL'
+adding 'gaia_agent_chat-0.2.0.dist-info/entry_points.txt'
+adding 'gaia_agent_chat-0.2.0.dist-info/top_level.txt'
+adding 'gaia_agent_chat-0.2.0.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+Successfully built gaia_agent_chat-0.2.0.tar.gz and gaia_agent_chat-0.2.0-py3-none-any.whl

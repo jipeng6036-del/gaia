@@ -1,0 +1,42 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0 -- /core-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /5666/baseline
+configfile: pyproject.toml
+plugins: anyio-4.15.1, timeout-2.4.0, xdist-3.8.0, cov-7.1.0, asyncio-1.4.0, mock-3.17.0, respx-0.23.1, pyfakefs-6.2.0
+timeout: 180.0s
+timeout method: signal
+timeout func_only: False
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+created: 4/4 workers
+4 workers [12 items]
+
+scheduling tests via WorkStealingScheduling
+
+tests/unit/test_sidecar_orphan_group_kill.py::test_registry_stop_reaps_the_orphaned_child 
+tests/unit/agents/test_document_extraction.py::test_existing_memory_hook_records_source_summary_and_recall 
+tests/unit/mcp/client/test_stdio_hung_server.py::test_children_of_an_exited_server_are_still_stopped 
+tests/unit/test_hub_installer_pip_timeout.py::test_a_grandchild_orphaned_before_the_first_sample_is_killed 
+[gw0] [  8%] PASSED tests/unit/agents/test_document_extraction.py::test_existing_memory_hook_records_source_summary_and_recall 
+tests/unit/test_sidecar_orphan_group_kill.py::test_shutdown_kills_the_child_the_dead_leader_left 
+[gw1] [ 16%] PASSED tests/unit/test_sidecar_orphan_group_kill.py::test_registry_stop_reaps_the_orphaned_child 
+tests/unit/test_hub_installer_pip_timeout.py::test_an_idle_frontend_is_stopped_as_stuck[grandchild] 
+[gw0] [ 25%] PASSED tests/unit/test_sidecar_orphan_group_kill.py::test_shutdown_kills_the_child_the_dead_leader_left 
+tests/unit/test_sidecar_orphan_group_kill.py::test_shutdown_escalates_to_sigkill_for_a_term_ignoring_child[True] 
+[gw3] [ 33%] PASSED tests/unit/mcp/client/test_stdio_hung_server.py::test_children_of_an_exited_server_are_still_stopped 
+tests/unit/mcp/client/test_stdio_hung_server.py::test_a_launcher_that_dies_during_the_startup_check_has_its_child_stopped 
+[gw0] [ 41%] PASSED tests/unit/test_sidecar_orphan_group_kill.py::test_shutdown_escalates_to_sigkill_for_a_term_ignoring_child[True] 
+tests/unit/mcp/client/test_stdio_hung_server.py::test_disconnect_stops_the_servers_children 
+[gw1] [ 50%] PASSED tests/unit/test_hub_installer_pip_timeout.py::test_an_idle_frontend_is_stopped_as_stuck[grandchild] 
+tests/unit/test_hub_installer_pip_timeout.py::test_an_orphaned_grandchild_is_killed_too 
+[gw2] [ 58%] PASSED tests/unit/test_hub_installer_pip_timeout.py::test_a_grandchild_orphaned_before_the_first_sample_is_killed 
+tests/unit/test_hub_installer_pip_timeout.py::test_a_success_whose_leftover_holds_the_output_is_still_a_success 
+[gw0] [ 66%] PASSED tests/unit/mcp/client/test_stdio_hung_server.py::test_disconnect_stops_the_servers_children 
+[gw2] [ 75%] PASSED tests/unit/test_hub_installer_pip_timeout.py::test_a_success_whose_leftover_holds_the_output_is_still_a_success 
+[gw1] [ 83%] PASSED tests/unit/test_hub_installer_pip_timeout.py::test_an_orphaned_grandchild_is_killed_too 
+[gw3] [ 91%] PASSED tests/unit/mcp/client/test_stdio_hung_server.py::test_a_launcher_that_dies_during_the_startup_check_has_its_child_stopped 
+tests/unit/chat/ui/test_tunnel_stop_wrapper.py::test_stop_returns_promptly_and_ends_the_wrapped_agent 
+[gw3] [100%] PASSED tests/unit/chat/ui/test_tunnel_stop_wrapper.py::test_stop_returns_promptly_and_ends_the_wrapped_agent 
+
+----- generated xml file: /evidence/controls-init-plain-temp-baseline.xml ------
+============================== 12 passed in 9.68s ==============================

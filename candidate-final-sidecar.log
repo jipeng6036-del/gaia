@@ -1,0 +1,290 @@
+INFO:     Started server process [23453]
+INFO:     Waiting for application startup.
+[2026-10-25 02:52:29] | [37mINFO[0m | gaia_agent.server._log_caller_auth_state | server.py:1722 | GAIA sidecar: caller authentication ENABLED via 0600 secret file (GAIA_GAIA_SIDECAR_TOKEN_FILE) (per-session bearer token required on /v1/gaia/* requests).
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:45937 (Press CTRL+C to quit)
+INFO:     127.0.0.1:54258 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54260 - "GET /version HTTP/1.1" 200 OK
+[2026-10-25 02:52:29] | [37mINFO[0m | faiss.loader.<module> | loader.py:189 | Successfully loaded faiss.
+[2026-10-25 02:52:30] | [33mWARNING[0m | gaia.security._intersect_scopes | security.py:637 | GAIA_ALLOWED_PATHS entry '/documents' is outside the agent's scope ['/root'] and is ignored: the setting can only narrow file access, never widen it.
+[2026-10-25 02:52:30] | [33mWARNING[0m | gaia.security._intersect_scopes | security.py:637 | GAIA_ALLOWED_PATHS entry '/documents' is outside the agent's scope [] and is ignored: the setting can only narrow file access, never widen it.
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.security.__init__ | security.py:769 | GAIA_ALLOWED_PATHS confines file access to []
+INFO:     127.0.0.1:54272 - "GET /v1/gaia/init HTTP/1.1" 200 OK
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.database.mixin.init_db | mixin.py:117 | Database initialized: /state/file_index.db
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.filesystem.index.__init__ | index.py:242 | FileSystemIndexService initialized: /state/file_index.db
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:570 | File system index service initialized
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.database.mixin.init_db | mixin.py:117 | Database initialized: /state/scratchpad.db
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:585 | Scratchpad service initialized
+INFO:     127.0.0.1:54272 - "POST /v1/gaia/sessions/6bc49df8-8fd6-4a78-b86e-9c178aa4845a/bypass HTTP/1.1" 404 Not Found
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:607 | Web client initialized for browser tools
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.agents.base.memory.init_memory | memory.py:873 | [MemoryMixin] memory disabled via GAIA_MEMORY_DISABLED=1; skipping init
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.agents.base.project_map.resolve_project_root | project_map.py:517 | [project-map] /5666/candidate/hub/agents/gaia/python is GAIA's own source tree — no map. Set GAIA_PROJECT_ROOT to the project you want mapped.
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.agents.base.memory.register_memory_tools | memory.py:4575 | [MemoryMixin] memory disabled — skipping memory tool registration
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.agents.tools.browser_use_tools.register_browser_use_tools | browser_use_tools.py:375 | Browser-use tools not registered: Playwright is not installed. Install with: pip install 'amd-gaia[browser]' && python -m playwright install chromium
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.skills.manager.discover | manager.py:235 | Discovered 18 skill(s) across 5 root(s); 0 shadowed, 0 invalid
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.agents.base.agent.load_skill | agent.py:4030 | Loaded skill 'gaia-voice' (tier=community, root=agent-bundled, 0 tool(s), 0 connector requirement(s), binaries=none)
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.agents.base.agent.load_skill_set | agent.py:4339 | Skill set '(none)' active (chosen by: none) — loaded 1 of 1 declared skill(s): gaia-voice
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia_agent.agent._dynamic_skills_active | agent.py:585 | [skills] dynamic per-turn selection off: memory store is disabled, every loaded skill's body renders in full
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.security.__init__ | security.py:769 | GAIA_ALLOWED_PATHS confines file access to ['/documents']
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.database.mixin.init_db | mixin.py:117 | Database initialized: /state/file_index.db
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.filesystem.index.__init__ | index.py:242 | FileSystemIndexService initialized: /state/file_index.db
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:570 | File system index service initialized
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.database.mixin.init_db | mixin.py:117 | Database initialized: /state/scratchpad.db
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:585 | Scratchpad service initialized
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:607 | Web client initialized for browser tools
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.agents.base.memory.init_memory | memory.py:873 | [MemoryMixin] memory disabled via GAIA_MEMORY_DISABLED=1; skipping init
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.agents.base.project_map.resolve_project_root | project_map.py:517 | [project-map] /5666/candidate/hub/agents/gaia/python is GAIA's own source tree — no map. Set GAIA_PROJECT_ROOT to the project you want mapped.
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.agents.base.memory.register_memory_tools | memory.py:4575 | [MemoryMixin] memory disabled — skipping memory tool registration
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.agents.tools.browser_use_tools.register_browser_use_tools | browser_use_tools.py:375 | Browser-use tools not registered: Playwright is not installed. Install with: pip install 'amd-gaia[browser]' && python -m playwright install chromium
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia_agent.server._warmup_blocking | server.py:1865 | GAIA sidecar: warmed Gemma-4-E4B-it-GGUF in 0.0s (None of 1 prompt tokens cached)
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.skills.manager.discover | manager.py:235 | Discovered 18 skill(s) across 5 root(s); 0 shadowed, 0 invalid
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.agents.base.agent.load_skill | agent.py:4030 | Loaded skill 'gaia-voice' (tier=community, root=agent-bundled, 0 tool(s), 0 connector requirement(s), binaries=none)
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia.agents.base.agent.load_skill_set | agent.py:4339 | Skill set '(none)' active (chosen by: none) — loaded 1 of 1 declared skill(s): gaia-voice
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia_agent_chat.session.cleanup_old_sessions | session.py:544 | Session cleanup complete: deleted 0 sessions (0 old, 0 excess), 0 remaining
+[2026-10-25 02:52:30] | [33mWARNING[0m | gaia_agent_chat.session.load_session | session.py:392 | Session not found: 6bc49df8-8fd6-4a78-b86e-9c178aa4845a
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia_agent_chat.session.create_session | session.py:338 | Created new session: 6bc49df8-8fd6-4a78-b86e-9c178aa4845a
+[2026-10-25 02:52:30] | [37mINFO[0m | gaia_agent.agent._dynamic_skills_active | agent.py:585 | [skills] dynamic per-turn selection off: memory store is disabled, every loaded skill's body renders in full
+INFO:     127.0.0.1:54272 - "POST /v1/gaia/query HTTP/1.1" 200 OK
+[2026-10-25 02:52:30] | [37mINFO[0m | httpx._send_single_request | _client.py:1025 | HTTP Request: POST http://127.0.0.1:18802/api/v1/chat/completions "HTTP/1.0 200 OK"
+INFO:     127.0.0.1:33892 - "POST /v1/gaia/query/c4b44855-fcc2-416e-924c-64b87373e49a/tool_decision HTTP/1.1" 200 OK
+[2026-10-25 02:52:53] | [37mINFO[0m | gaia.security.audit.audit_write | security.py:1671 | WRITE | success | /documents/proof.txt | 47 B
+[2026-10-25 02:52:53] | [37mINFO[0m | httpx._send_single_request | _client.py:1025 | HTTP Request: POST http://127.0.0.1:18802/api/v1/chat/completions "HTTP/1.0 200 OK"
+[2026-10-25 02:52:53] | [33mWARNING[0m | gaia.ui.sse_handler.pretty_print_json | sse_handler.py:797 | Tool file_info was called with str arguments, not an object: 'oops'
+[2026-10-25 02:52:53] | [31mERROR[0m | gaia_agent.server._run_agent | server.py:1389 | Undo history for run_id=c4b44855-fcc2-416e-924c-64b87373e49a: Could not save the end state of turn 20261025025230-9926e2c9: [Errno 28] No space left on device: '/documents/proof.txt' -> '/state/snapshots/6bc49df8-8fd6-4a78-b86e-9c178aa4845a/20261025025230-9926e2c9/blobs/0000.after'. Undo for this turn may refuse; check free space under /state/snapshots.
+Traceback (most recent call last):
+  File "/5666/candidate/src/gaia/agents/base/file_snapshots.py", line 355, in recording_turn
+    recorder.finish()
+  File "/5666/candidate/src/gaia/agents/base/file_snapshots.py", line 299, in finish
+    shutil.copyfile(target, self.dir / "blobs" / blob)
+  File "/usr/local/lib/python3.12/shutil.py", line 273, in copyfile
+    _fastcopy_sendfile(fsrc, fdst)
+  File "/usr/local/lib/python3.12/shutil.py", line 164, in _fastcopy_sendfile
+    raise err from None
+  File "/usr/local/lib/python3.12/shutil.py", line 150, in _fastcopy_sendfile
+    sent = os.sendfile(outfd, infd, offset, blocksize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device: '/documents/proof.txt' -> '/state/snapshots/6bc49df8-8fd6-4a78-b86e-9c178aa4845a/20261025025230-9926e2c9/blobs/0000.after'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/5666/candidate/hub/agents/gaia/python/gaia_agent/server.py", line 1379, in _run_agent
+    with file_snapshots.recording_turn(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/5666/candidate/src/gaia/agents/base/file_snapshots.py", line 357, in recording_turn
+    raise SnapshotError(
+gaia.agents.base.file_snapshots.SnapshotError: Could not save the end state of turn 20261025025230-9926e2c9: [Errno 28] No space left on device: '/documents/proof.txt' -> '/state/snapshots/6bc49df8-8fd6-4a78-b86e-9c178aa4845a/20261025025230-9926e2c9/blobs/0000.after'. Undo for this turn may refuse; check free space under /state/snapshots.
+[2026-10-25 02:52:53] | [31mERROR[0m | gaia_agent.server._run_agent | server.py:1394 | gaia /query run failed for run_id=c4b44855-fcc2-416e-924c-64b87373e49a
+Traceback (most recent call last):
+  File "/5666/candidate/src/gaia/agents/base/file_snapshots.py", line 351, in recording_turn
+    yield recorder
+  File "/5666/candidate/hub/agents/gaia/python/gaia_agent/server.py", line 1384, in _run_agent
+    _process()
+  File "/5666/candidate/hub/agents/gaia/python/gaia_agent/server.py", line 1370, in _process
+    run.result = agent.process_query(request.query)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/memory.py", line 3601, in process_query
+    return super().process_query(augmented, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/agent.py", line 8962, in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/agent.py", line 11017, in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/agent.py", line 6415, in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/agent.py", line 6383, in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+[2026-10-25 02:52:53] | [31mERROR[0m | gaia_agent.server._finish_changes | server.py:1097 | Undo history for run_id=c4b44855-fcc2-416e-924c-64b87373e49a: [Errno 28] No space left on device: '/documents/proof.txt' -> '/state/snapshots/6bc49df8-8fd6-4a78-b86e-9c178aa4845a/20261025025230-9926e2c9/blobs/0000.after'
+INFO:     127.0.0.1:56632 - "GET /v1/gaia/init HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56632 - "POST /v1/gaia/sessions/d6d0121b-324c-484b-8aea-9d1353898a55/bypass HTTP/1.1" 404 Not Found
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia.security.__init__ | security.py:769 | GAIA_ALLOWED_PATHS confines file access to ['/documents']
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia.database.mixin.init_db | mixin.py:117 | Database initialized: /state/file_index.db
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia.filesystem.index.__init__ | index.py:242 | FileSystemIndexService initialized: /state/file_index.db
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:570 | File system index service initialized
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia.database.mixin.init_db | mixin.py:117 | Database initialized: /state/scratchpad.db
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:585 | Scratchpad service initialized
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:607 | Web client initialized for browser tools
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia.agents.base.memory.init_memory | memory.py:873 | [MemoryMixin] memory disabled via GAIA_MEMORY_DISABLED=1; skipping init
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia.agents.base.project_map.resolve_project_root | project_map.py:517 | [project-map] /5666/candidate/hub/agents/gaia/python is GAIA's own source tree — no map. Set GAIA_PROJECT_ROOT to the project you want mapped.
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia.agents.base.memory.register_memory_tools | memory.py:4575 | [MemoryMixin] memory disabled — skipping memory tool registration
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia.agents.tools.browser_use_tools.register_browser_use_tools | browser_use_tools.py:375 | Browser-use tools not registered: Playwright is not installed. Install with: pip install 'amd-gaia[browser]' && python -m playwright install chromium
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia.skills.manager.discover | manager.py:235 | Discovered 18 skill(s) across 5 root(s); 0 shadowed, 0 invalid
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia.agents.base.agent.load_skill | agent.py:4030 | Loaded skill 'gaia-voice' (tier=community, root=agent-bundled, 0 tool(s), 0 connector requirement(s), binaries=none)
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia.agents.base.agent.load_skill_set | agent.py:4339 | Skill set '(none)' active (chosen by: none) — loaded 1 of 1 declared skill(s): gaia-voice
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia_agent_chat.session.cleanup_old_sessions | session.py:544 | Session cleanup complete: deleted 0 sessions (0 old, 0 excess), 0 remaining
+[2026-10-25 02:53:51] | [33mWARNING[0m | gaia_agent_chat.session.load_session | session.py:392 | Session not found: d6d0121b-324c-484b-8aea-9d1353898a55
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia_agent_chat.session.create_session | session.py:338 | Created new session: d6d0121b-324c-484b-8aea-9d1353898a55
+INFO:     127.0.0.1:56632 - "POST /v1/gaia/query HTTP/1.1" 200 OK
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia_agent.agent._dynamic_skills_active | agent.py:585 | [skills] dynamic per-turn selection off: memory store is disabled, every loaded skill's body renders in full
+[2026-10-25 02:53:51] | [33mWARNING[0m | gaia_agent.stdio.audit.set_full_access | stdio.py:263 | Full access ENABLED (shell gates still on)
+INFO:     127.0.0.1:56646 - "POST /v1/gaia/sessions/d6d0121b-324c-484b-8aea-9d1353898a55/bypass HTTP/1.1" 200 OK
+[2026-10-25 02:53:51] | [37mINFO[0m | httpx._send_single_request | _client.py:1025 | HTTP Request: POST http://127.0.0.1:18802/api/v1/chat/completions "HTTP/1.0 200 OK"
+[2026-10-25 02:53:51] | [33mWARNING[0m | gaia.agents.base.console.log_auto_approval | console.py:687 | Auto-approved confirmation-gated tool 'write_file' — unattended approval is enabled for this run (GAIA_AUTO_APPROVE_TOOLS or an explicit host opt-in).
+[2026-10-25 02:53:51] | [37mINFO[0m | gaia.security.audit.audit_write | security.py:1671 | WRITE | success | /documents/proof.txt | 47 B
+[2026-10-25 02:53:51] | [37mINFO[0m | httpx._send_single_request | _client.py:1025 | HTTP Request: POST http://127.0.0.1:18802/api/v1/chat/completions "HTTP/1.0 200 OK"
+[2026-10-25 02:53:51] | [33mWARNING[0m | gaia.ui.sse_handler.pretty_print_json | sse_handler.py:797 | Tool file_info was called with str arguments, not an object: 'oops'
+[2026-10-25 02:53:51] | [31mERROR[0m | gaia_agent.server._run_agent | server.py:1389 | Undo history for run_id=d007ec9b-bc5e-4f79-a255-3f75b85bbc08: Could not save the end state of turn 20261025025351-da7ff23c: [Errno 28] No space left on device: '/documents/proof.txt' -> '/state/snapshots/d6d0121b-324c-484b-8aea-9d1353898a55/20261025025351-da7ff23c/blobs/0000.after'. Undo for this turn may refuse; check free space under /state/snapshots.
+Traceback (most recent call last):
+  File "/5666/candidate/src/gaia/agents/base/file_snapshots.py", line 355, in recording_turn
+    recorder.finish()
+  File "/5666/candidate/src/gaia/agents/base/file_snapshots.py", line 299, in finish
+    shutil.copyfile(target, self.dir / "blobs" / blob)
+  File "/usr/local/lib/python3.12/shutil.py", line 273, in copyfile
+    _fastcopy_sendfile(fsrc, fdst)
+  File "/usr/local/lib/python3.12/shutil.py", line 164, in _fastcopy_sendfile
+    raise err from None
+  File "/usr/local/lib/python3.12/shutil.py", line 150, in _fastcopy_sendfile
+    sent = os.sendfile(outfd, infd, offset, blocksize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device: '/documents/proof.txt' -> '/state/snapshots/d6d0121b-324c-484b-8aea-9d1353898a55/20261025025351-da7ff23c/blobs/0000.after'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/5666/candidate/hub/agents/gaia/python/gaia_agent/server.py", line 1379, in _run_agent
+    with file_snapshots.recording_turn(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/5666/candidate/src/gaia/agents/base/file_snapshots.py", line 357, in recording_turn
+    raise SnapshotError(
+gaia.agents.base.file_snapshots.SnapshotError: Could not save the end state of turn 20261025025351-da7ff23c: [Errno 28] No space left on device: '/documents/proof.txt' -> '/state/snapshots/d6d0121b-324c-484b-8aea-9d1353898a55/20261025025351-da7ff23c/blobs/0000.after'. Undo for this turn may refuse; check free space under /state/snapshots.
+[2026-10-25 02:53:51] | [31mERROR[0m | gaia_agent.server._run_agent | server.py:1394 | gaia /query run failed for run_id=d007ec9b-bc5e-4f79-a255-3f75b85bbc08
+Traceback (most recent call last):
+  File "/5666/candidate/src/gaia/agents/base/file_snapshots.py", line 351, in recording_turn
+    yield recorder
+  File "/5666/candidate/hub/agents/gaia/python/gaia_agent/server.py", line 1384, in _run_agent
+    _process()
+  File "/5666/candidate/hub/agents/gaia/python/gaia_agent/server.py", line 1370, in _process
+    run.result = agent.process_query(request.query)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/memory.py", line 3601, in process_query
+    return super().process_query(augmented, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/agent.py", line 8962, in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/agent.py", line 11017, in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/agent.py", line 6415, in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/agent.py", line 6383, in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
+[2026-10-25 02:53:51] | [31mERROR[0m | gaia_agent.server._finish_changes | server.py:1097 | Undo history for run_id=d007ec9b-bc5e-4f79-a255-3f75b85bbc08: [Errno 28] No space left on device: '/documents/proof.txt' -> '/state/snapshots/d6d0121b-324c-484b-8aea-9d1353898a55/20261025025351-da7ff23c/blobs/0000.after'
+INFO:     127.0.0.1:56658 - "GET /v1/gaia/init HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56658 - "POST /v1/gaia/sessions/f8ad1371-ac0e-40df-9ad8-78533d80076a/bypass HTTP/1.1" 404 Not Found
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia.security.__init__ | security.py:769 | GAIA_ALLOWED_PATHS confines file access to ['/documents']
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia.database.mixin.init_db | mixin.py:117 | Database initialized: /state/file_index.db
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia.filesystem.index.__init__ | index.py:242 | FileSystemIndexService initialized: /state/file_index.db
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:570 | File system index service initialized
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia.database.mixin.init_db | mixin.py:117 | Database initialized: /state/scratchpad.db
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:585 | Scratchpad service initialized
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:607 | Web client initialized for browser tools
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia.agents.base.memory.init_memory | memory.py:873 | [MemoryMixin] memory disabled via GAIA_MEMORY_DISABLED=1; skipping init
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia.agents.base.project_map.resolve_project_root | project_map.py:517 | [project-map] /5666/candidate/hub/agents/gaia/python is GAIA's own source tree — no map. Set GAIA_PROJECT_ROOT to the project you want mapped.
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia.agents.base.memory.register_memory_tools | memory.py:4575 | [MemoryMixin] memory disabled — skipping memory tool registration
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia.agents.tools.browser_use_tools.register_browser_use_tools | browser_use_tools.py:375 | Browser-use tools not registered: Playwright is not installed. Install with: pip install 'amd-gaia[browser]' && python -m playwright install chromium
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia.skills.manager.discover | manager.py:235 | Discovered 18 skill(s) across 5 root(s); 0 shadowed, 0 invalid
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia.agents.base.agent.load_skill | agent.py:4030 | Loaded skill 'gaia-voice' (tier=community, root=agent-bundled, 0 tool(s), 0 connector requirement(s), binaries=none)
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia.agents.base.agent.load_skill_set | agent.py:4339 | Skill set '(none)' active (chosen by: none) — loaded 1 of 1 declared skill(s): gaia-voice
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia_agent_chat.session.cleanup_old_sessions | session.py:544 | Session cleanup complete: deleted 0 sessions (0 old, 0 excess), 0 remaining
+[2026-10-25 02:53:52] | [33mWARNING[0m | gaia_agent_chat.session.load_session | session.py:392 | Session not found: f8ad1371-ac0e-40df-9ad8-78533d80076a
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia_agent_chat.session.create_session | session.py:338 | Created new session: f8ad1371-ac0e-40df-9ad8-78533d80076a
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia_agent.agent._dynamic_skills_active | agent.py:585 | [skills] dynamic per-turn selection off: memory store is disabled, every loaded skill's body renders in full
+INFO:     127.0.0.1:56658 - "POST /v1/gaia/query HTTP/1.1" 200 OK
+[2026-10-25 02:53:52] | [33mWARNING[0m | gaia_agent.stdio.audit.set_full_access | stdio.py:263 | Full access ENABLED (shell gates still on)
+INFO:     127.0.0.1:56674 - "POST /v1/gaia/sessions/f8ad1371-ac0e-40df-9ad8-78533d80076a/bypass HTTP/1.1" 200 OK
+[2026-10-25 02:53:52] | [37mINFO[0m | httpx._send_single_request | _client.py:1025 | HTTP Request: POST http://127.0.0.1:18802/api/v1/chat/completions "HTTP/1.0 200 OK"
+[2026-10-25 02:53:52] | [33mWARNING[0m | gaia.agents.base.console.log_auto_approval | console.py:687 | Auto-approved confirmation-gated tool 'write_file' — unattended approval is enabled for this run (GAIA_AUTO_APPROVE_TOOLS or an explicit host opt-in).
+[2026-10-25 02:53:52] | [37mINFO[0m | gaia.security.audit.audit_write | security.py:1671 | WRITE | success | /documents/proof.txt | 47 B
+[2026-10-25 02:53:52] | [37mINFO[0m | httpx._send_single_request | _client.py:1025 | HTTP Request: POST http://127.0.0.1:18802/api/v1/chat/completions "HTTP/1.0 200 OK"
+[2026-10-25 02:53:53] | [37mINFO[0m | httpx._send_single_request | _client.py:1025 | HTTP Request: POST http://127.0.0.1:18802/api/v1/chat/completions "HTTP/1.0 200 OK"
+[2026-10-25 02:53:53] | [31mERROR[0m | gaia_agent.server._finish_changes | server.py:1097 | Undo history for run_id=1f329ab6-288f-4420-aa95-f0696f314451: [Errno 28] No space left on device: '/documents/proof.txt' -> '/state/snapshots/f8ad1371-ac0e-40df-9ad8-78533d80076a/20261025025352-db3e594c/blobs/0000.after'
+[2026-10-25 02:53:53] | [31mERROR[0m | gaia_agent.server._run_agent | server.py:1389 | Undo history for run_id=1f329ab6-288f-4420-aa95-f0696f314451: Could not save the end state of turn 20261025025352-db3e594c: [Errno 28] No space left on device: '/documents/proof.txt' -> '/state/snapshots/f8ad1371-ac0e-40df-9ad8-78533d80076a/20261025025352-db3e594c/blobs/0000.after'. Undo for this turn may refuse; check free space under /state/snapshots.
+Traceback (most recent call last):
+  File "/5666/candidate/src/gaia/agents/base/file_snapshots.py", line 355, in recording_turn
+    recorder.finish()
+  File "/5666/candidate/src/gaia/agents/base/file_snapshots.py", line 299, in finish
+    shutil.copyfile(target, self.dir / "blobs" / blob)
+  File "/usr/local/lib/python3.12/shutil.py", line 273, in copyfile
+    _fastcopy_sendfile(fsrc, fdst)
+  File "/usr/local/lib/python3.12/shutil.py", line 164, in _fastcopy_sendfile
+    raise err from None
+  File "/usr/local/lib/python3.12/shutil.py", line 150, in _fastcopy_sendfile
+    sent = os.sendfile(outfd, infd, offset, blocksize)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device: '/documents/proof.txt' -> '/state/snapshots/f8ad1371-ac0e-40df-9ad8-78533d80076a/20261025025352-db3e594c/blobs/0000.after'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/5666/candidate/hub/agents/gaia/python/gaia_agent/server.py", line 1379, in _run_agent
+    with file_snapshots.recording_turn(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/contextlib.py", line 144, in __exit__
+    next(self.gen)
+  File "/5666/candidate/src/gaia/agents/base/file_snapshots.py", line 357, in recording_turn
+    raise SnapshotError(
+gaia.agents.base.file_snapshots.SnapshotError: Could not save the end state of turn 20261025025352-db3e594c: [Errno 28] No space left on device: '/documents/proof.txt' -> '/state/snapshots/f8ad1371-ac0e-40df-9ad8-78533d80076a/20261025025352-db3e594c/blobs/0000.after'. Undo for this turn may refuse; check free space under /state/snapshots.
+INFO:     127.0.0.1:56676 - "GET /v1/gaia/init HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56676 - "POST /v1/gaia/sessions/5070dc4f-ccd8-454b-aaa4-0462153ef74d/bypass HTTP/1.1" 404 Not Found
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia.security.__init__ | security.py:769 | GAIA_ALLOWED_PATHS confines file access to ['/documents']
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia.database.mixin.init_db | mixin.py:117 | Database initialized: /state/file_index.db
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia.filesystem.index.__init__ | index.py:242 | FileSystemIndexService initialized: /state/file_index.db
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:570 | File system index service initialized
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia.database.mixin.init_db | mixin.py:117 | Database initialized: /state/scratchpad.db
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:585 | Scratchpad service initialized
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia_agent_chat.agent.__init__ | agent.py:607 | Web client initialized for browser tools
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia.agents.base.memory.init_memory | memory.py:873 | [MemoryMixin] memory disabled via GAIA_MEMORY_DISABLED=1; skipping init
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia.agents.base.project_map.resolve_project_root | project_map.py:517 | [project-map] /5666/candidate/hub/agents/gaia/python is GAIA's own source tree — no map. Set GAIA_PROJECT_ROOT to the project you want mapped.
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia.agents.base.memory.register_memory_tools | memory.py:4575 | [MemoryMixin] memory disabled — skipping memory tool registration
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia.agents.tools.browser_use_tools.register_browser_use_tools | browser_use_tools.py:375 | Browser-use tools not registered: Playwright is not installed. Install with: pip install 'amd-gaia[browser]' && python -m playwright install chromium
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia.skills.manager.discover | manager.py:235 | Discovered 18 skill(s) across 5 root(s); 0 shadowed, 0 invalid
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia.agents.base.agent.load_skill | agent.py:4030 | Loaded skill 'gaia-voice' (tier=community, root=agent-bundled, 0 tool(s), 0 connector requirement(s), binaries=none)
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia.agents.base.agent.load_skill_set | agent.py:4339 | Skill set '(none)' active (chosen by: none) — loaded 1 of 1 declared skill(s): gaia-voice
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia_agent_chat.session.cleanup_old_sessions | session.py:544 | Session cleanup complete: deleted 0 sessions (0 old, 0 excess), 0 remaining
+[2026-10-25 02:53:54] | [33mWARNING[0m | gaia_agent_chat.session.load_session | session.py:392 | Session not found: 5070dc4f-ccd8-454b-aaa4-0462153ef74d
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia_agent_chat.session.create_session | session.py:338 | Created new session: 5070dc4f-ccd8-454b-aaa4-0462153ef74d
+INFO:     127.0.0.1:56676 - "POST /v1/gaia/query HTTP/1.1" 200 OK
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia_agent.agent._dynamic_skills_active | agent.py:585 | [skills] dynamic per-turn selection off: memory store is disabled, every loaded skill's body renders in full
+[2026-10-25 02:53:54] | [33mWARNING[0m | gaia_agent.stdio.audit.set_full_access | stdio.py:263 | Full access ENABLED (shell gates still on)
+INFO:     127.0.0.1:56678 - "POST /v1/gaia/sessions/5070dc4f-ccd8-454b-aaa4-0462153ef74d/bypass HTTP/1.1" 200 OK
+[2026-10-25 02:53:54] | [37mINFO[0m | httpx._send_single_request | _client.py:1025 | HTTP Request: POST http://127.0.0.1:18802/api/v1/chat/completions "HTTP/1.0 200 OK"
+[2026-10-25 02:53:54] | [33mWARNING[0m | gaia.agents.base.console.log_auto_approval | console.py:687 | Auto-approved confirmation-gated tool 'write_file' — unattended approval is enabled for this run (GAIA_AUTO_APPROVE_TOOLS or an explicit host opt-in).
+[2026-10-25 02:53:54] | [37mINFO[0m | gaia.security.audit.audit_write | security.py:1671 | WRITE | success | /documents/proof.txt | 47 B
+[2026-10-25 02:53:54] | [37mINFO[0m | httpx._send_single_request | _client.py:1025 | HTTP Request: POST http://127.0.0.1:18802/api/v1/chat/completions "HTTP/1.0 200 OK"
+[2026-10-25 02:53:54] | [33mWARNING[0m | gaia.ui.sse_handler.pretty_print_json | sse_handler.py:797 | Tool file_info was called with str arguments, not an object: 'oops'
+[2026-10-25 02:53:54] | [31mERROR[0m | gaia_agent.server._run_agent | server.py:1406 | gaia /query run failed for run_id=b2af03b2-1553-4600-930b-fb01d21ecc74
+Traceback (most recent call last):
+  File "/5666/candidate/hub/agents/gaia/python/gaia_agent/server.py", line 1384, in _run_agent
+    _process()
+  File "/5666/candidate/hub/agents/gaia/python/gaia_agent/server.py", line 1370, in _process
+    run.result = agent.process_query(request.query)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/memory.py", line 3601, in process_query
+    return super().process_query(augmented, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/agent.py", line 8962, in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/agent.py", line 11017, in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/agent.py", line 6415, in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/5666/candidate/src/gaia/agents/base/agent.py", line 6383, in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'get'
