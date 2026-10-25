@@ -1,0 +1,36 @@
+{
+  "owned_containers": {
+    "ghpr-gaia-5482-ui": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 143,
+      "Error": "",
+      "StartedAt": "2026-10-25T06:10:16.271048092Z",
+      "FinishedAt": "2026-10-25T06:16:56.568624722Z"
+    },
+    "ghpr-gaia-5482-ui-ram": {
+      "Status": "exited",
+      "Running": false,
+      "Paused": false,
+      "Restarting": false,
+      "OOMKilled": false,
+      "Dead": false,
+      "Pid": 0,
+      "ExitCode": 143,
+      "Error": "",
+      "StartedAt": "2026-10-25T06:17:06.777782783Z",
+      "FinishedAt": "2026-10-25T06:31:47.159657272Z"
+    }
+  },
+  "published_ports_connect_ex": {
+    "18913": 10035,
+    "18933": 10035
+  },
+  "owned_browser_session": "gaia5482 closed",
+  "other_containers_modified": false
+}

@@ -1,0 +1,13 @@
+{
+  "repository": "F:\\Github-PR\\inspection\\sol-high-agent-gaia5482",
+  "baseline": "82ad2a771c7ed5b6b26f4521b3e4eaad40820f85",
+  "files": {
+    "docs/guides/memory.mdx": "ba2e97f1d91707e7b00ec6dadfd7c0bf3402687d8ed0cd6489fb955298e19040",
+    "src/gaia/ui/_chat_helpers.py": "0317ff2acc2c70ea3bd0804431f620601be3980b79780456f766cbe98bdbbdf5",
+    "src/gaia/ui/email_sidecar/profiles.py": "9acbdfba3b02e57119fc454c8d5f5455fa0ea36ac66f3eff8fd46ba30a5d7153",
+    "tests/unit/test_sidecar_relay_fidelity.py": "d884c85aa6ab99a55f4437593407d6528cefe263561e077cd0b9e2371c4449e9"
+  },
+  "tracked_diff": " docs/guides/memory.mdx                    |  2 ++\n src/gaia/ui/_chat_helpers.py              | 30 ++++++++++++-------------\n src/gaia/ui/email_sidecar/profiles.py     |  5 +++++\n tests/unit/test_sidecar_relay_fidelity.py | 37 +++++++++++++++++++++++++++----\n 4 files changed, 54 insertions(+), 20 deletions(-)\n",
+  "status": " M docs/guides/memory.mdx\n M src/gaia/ui/_chat_helpers.py\n M src/gaia/ui/email_sidecar/profiles.py\n M tests/unit/test_sidecar_relay_fidelity.py\n",
+  "docOnlyClarification": "Current Agent UI email composer is retired. Existing public chat HTTP clients pass flagship_only unchanged. Document HTTP refusal, not composer action; three Python files unchanged."
+}

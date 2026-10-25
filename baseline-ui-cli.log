@@ -1,0 +1,258 @@
+[2026-10-25 06:17:13] | [37mINFO[0m | matplotlib.font_manager._load_fontmanager | font_manager.py:1848 | generated new fontManager
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.cli.ensure_webui_built | build.py:214 | Agent UI frontend has not been built yet
+[2026-10-25 06:17:13] | [33mWARNING[0m | gaia.cli.ensure_webui_built | build.py:220 | Warning: Node.js not found. Cannot auto-rebuild Agent UI frontend.
+[2026-10-25 06:17:13] | [33mWARNING[0m | gaia.cli.ensure_webui_built | build.py:221 |   The UI may be stale. Install Node.js from https://nodejs.org/
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.cli._launch_agent_ui | cli.py:903 | Using remote Lemonade server: http://127.0.0.1:18902/api/v1
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.cli._launch_agent_ui | cli.py:908 | Starting GAIA Agent UI on http://127.0.0.1:18903
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated messages table: added model_messages column
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated messages table: added inference_stats column
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated messages table: added turn_summary column
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated documents table: added indexing_status column
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated documents table: added file_mtime column
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated documents table: added indexing_owner column
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added private column
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added agent_type column
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added pinned column
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added unread column
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added last_run_status column
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added kind column
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.database.__init__ | database.py:241 | Chat database initialized: /tmp/gaia5482-homes/baseline/.gaia/chat/gaia_chat.db
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.server.create_app | server.py:1000 | Email REST surface served by the daemon-supervised sidecar (GAIA_EMAIL_AGENT_MODE=user).
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.server.create_app | server.py:1044 | Serving frontend from /webui
+INFO:     Started server process [15]
+INFO:     Waiting for application startup.
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.agents.registry.discover | registry.py:627 | registry: Starting agent discovery
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.agents.registry.discover | registry.py:638 | registry: Found 1 agent directories: ['email']
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.agents.registry.discover | registry.py:669 | registry: Agent discovery complete. 0 agents registered: []
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.agents.registry.register_sidecar | registry.py:1267 | registry: Registered sidecar agent: email (namespaced installed:email)
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:574 | server: Agent registry initialized with 1 agents: ['email']
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.agent_loop.start | agent_loop.py:161 | AgentLoop started (tick_interval=60s)
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:739 | AgentLoop started
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.scheduler.__init__ | scheduler.py:909 | Scheduler initialized
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.scheduler.start | scheduler.py:934 | Scheduler started with 0 task(s)
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:774 | Task scheduler started (timeout=300.0s)
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.document_monitor.start | document_monitor.py:98 | Document monitor started (interval=30s)
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:785 | Document file monitor started (30s polling interval)
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.connectors.activation_watcher.start | activation_watcher.py:82 | activation-watcher: started (poll=1.0s)
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:795 | Connector activation watcher started
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:809 | connections: tripwire sweep complete
+[2026-10-25 06:17:13] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:831 | connectors: McpServerHandler reload_callback wired to reload_all_session_agents_mcp
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:18903 (Press CTRL+C to quit)
+[2026-10-25 06:17:14] | [37mINFO[0m | faiss.loader.<module> | loader.py:189 | Successfully loaded faiss.
+[2026-10-25 06:17:14] | [37mINFO[0m | gaia.ui.server._import_modules | server.py:619 | faiss: loaded (generic — no AVX2/AVX-512 SWIG module in this wheel; vector search still works, just slower)
+[2026-10-25 06:17:14] | [37mINFO[0m | gaia.ui.dispatch._run | dispatch.py:166 | Boot init: Loading ML libraries → done (0.1s)
+[2026-10-25 06:17:14] | [37mINFO[0m | gaia.ui.dispatch._run | dispatch.py:166 | Boot init: Checking LLM server → done (0.1s)
+[2026-10-25 06:17:14] | [37mINFO[0m | httpx._send_single_request | _client.py:1025 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:17:14] | [37mINFO[0m | httpx._send_single_request | _client.py:1025 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:17:14] | [37mINFO[0m | gaia.ui.dispatch._run | dispatch.py:166 | Boot init: Loading AI model → done (0.3s)
+[2026-10-25 06:17:14] | [37mINFO[0m | gaia.ui.warmup.request_warm_up | warmup.py:349 | Warm-up (startup) not started: first-run setup has not finished
+[2026-10-25 06:17:14] | [37mINFO[0m | gaia.ui.dispatch._run | dispatch.py:166 | Boot init: Priming the first prompt → done (0.4s)
+[2026-10-25 06:18:11] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:18:11] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:18:11] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:18:11] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:18:12] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:18:16] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:18:16] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:18:16] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:18:16] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:18:21] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:18:21] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:18:21] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:18:21] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:18:26] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:18:26] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:18:26] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:18:26] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:18:28] | [37mINFO[0m | gaia.ui._chat_helpers._stream_chat_impl | _chat_helpers.py:3693 | chat: Session 8b570689 using agent type: email (streaming)
+[2026-10-25 06:18:28] | [37mINFO[0m | gaia.ui._chat_helpers._run_agent | _chat_helpers.py:3896 | chat: relaying email query (sidecar) for session 8b570689
+[2026-10-25 06:18:30] | [37mINFO[0m | gaia.daemon.client._spawn_and_wait | client.py:449 | daemon: started pid=159 port=34423
+[2026-10-25 06:18:31] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:18:31] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:18:31] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:18:31] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:18:38] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:18:38] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:18:38] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:18:38] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:18:38] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:18:38] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:18:44] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:18:44] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:18:44] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:18:45] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:18:46] | [37mINFO[0m | gaia.ui._chat_helpers._stream_chat_impl | _chat_helpers.py:3693 | chat: Session 11829a4e using agent type: email (streaming)
+[2026-10-25 06:18:46] | [37mINFO[0m | gaia.ui._chat_helpers._run_agent | _chat_helpers.py:3896 | chat: relaying email query (sidecar) for session 11829a4e
+[2026-10-25 06:18:47] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:18:47] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:18:47] | [37mINFO[0m | gaia.ui._chat_helpers._stream_chat_impl | _chat_helpers.py:3693 | chat: Session b3d1621e using agent type: email (streaming)
+[2026-10-25 06:18:47] | [37mINFO[0m | gaia.ui._chat_helpers._run_agent | _chat_helpers.py:3896 | chat: relaying email query (sidecar) for session b3d1621e
+[2026-10-25 06:18:47] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:18:47] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:18:51] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:18:51] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:18:51] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:18:51] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:18:56] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:18:56] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:18:56] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:18:56] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:19:01] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:19:01] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:19:01] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:19:01] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:19:03] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:19:06] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:19:06] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:19:06] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:19:06] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:19:11] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:19:11] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:19:11] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:19:11] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:19:16] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:19:16] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:19:16] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:19:16] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:19:21] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:19:21] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:19:21] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:19:21] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:19:26] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:19:26] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:19:26] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:19:26] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:19:31] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:19:31] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:19:31] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:19:31] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:19:40] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:19:40] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:19:40] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:19:40] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:19:46] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:19:46] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:19:46] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:19:46] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:19:51] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:19:51] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:19:51] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:19:51] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:19:56] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:19:56] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:19:56] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:19:56] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:20:01] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:20:01] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:20:01] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:20:01] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:20:09] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:20:09] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:20:09] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:20:09] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:20:14] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:20:14] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:20:15] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:20:15] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:20:20] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:20:20] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:20:20] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:20:20] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:20:25] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:20:25] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:20:25] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:20:25] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:20:29] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:20:29] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:20:29] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:20:29] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:20:30] | [37mINFO[0m | gaia.ui.warmup._warm_new_chat_prefix | warmup.py:246 | Warm-up skipped: the gaia agent is not registered
+[2026-10-25 06:20:30] | [33mWARNING[0m | gaia.ui.routers.onboarding.new_chat_start | onboarding.py:240 | New-chat cards unavailable: The GAIA agent could not be started to list its skills: the daemon refused to ensure the 'gaia' sidecar: Cannot start the GAIA agent: no verified sidecar binary is available in user mode. the binary lock has a placeholder sha256 for 'linux-x64' (PENDING-1648-replace-with-real-sha256); this lock publishes no verifiable binary for it. Fetch is blocked so an unverifiable binary can never be trusted. Install it with `gaia init` (or Install in the Agent UI), which downloads the published binary and verifies its SHA-256 against the published manifest — independent of this lock. The background service reads the install from disk on the agent's next start. To run from source instead, use dev mode.
+Fix it one of these ways:
+  * Install 'gaia' — run `gaia init` (or click Install in the Agent UI). It downloads and verifies the binary and records the install this resolver reads.
+  * Or, from a GAIA source checkout, set GAIA_GAIA_AGENT_MODE=dev to run the agent from source.
+Sidecar logs: /tmp/gaia5482-homes/baseline/.gaia/agents/gaia/logs. Docs: https://amd-gaia.ai/docs/guides/gaia.
+[2026-10-25 06:20:31] | [33mWARNING[0m | gaia.ui.start_screen._mail_connected | start_screen.py:159 | New-chat inbox card skipped: can't read connections: Keyring get_password failed: No recommended backend was available. Install a recommended 3rd party backend package; or, install the keyrings.alt package if you want to use the non-recommended backends. See https://pypi.org/project/keyring for details.. Install a system credential store (gnome-keyring on Linux, or rely on the macOS Keychain / Windows Credential Locker), configure it, and restart GAIA. See docs/security/connections.mdx.
+[2026-10-25 06:20:34] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:20:34] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:20:34] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:20:34] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:20:39] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:20:39] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:20:39] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:20:39] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:20:44] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:20:44] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:20:44] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:20:44] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:20:46] | [33mWARNING[0m | gaia.ui.routers.onboarding.new_chat_start | onboarding.py:240 | New-chat cards unavailable: The GAIA agent could not be started to list its skills: the daemon refused to ensure the 'gaia' sidecar: Cannot start the GAIA agent: no verified sidecar binary is available in user mode. the binary lock has a placeholder sha256 for 'linux-x64' (PENDING-1648-replace-with-real-sha256); this lock publishes no verifiable binary for it. Fetch is blocked so an unverifiable binary can never be trusted. Install it with `gaia init` (or Install in the Agent UI), which downloads the published binary and verifies its SHA-256 against the published manifest — independent of this lock. The background service reads the install from disk on the agent's next start. To run from source instead, use dev mode.
+Fix it one of these ways:
+  * Install 'gaia' — run `gaia init` (or click Install in the Agent UI). It downloads and verifies the binary and records the install this resolver reads.
+  * Or, from a GAIA source checkout, set GAIA_GAIA_AGENT_MODE=dev to run the agent from source.
+Sidecar logs: /tmp/gaia5482-homes/baseline/.gaia/agents/gaia/logs. Docs: https://amd-gaia.ai/docs/guides/gaia.
+[2026-10-25 06:20:46] | [33mWARNING[0m | gaia.ui.start_screen._mail_connected | start_screen.py:159 | New-chat inbox card skipped: can't read connections: Keyring get_password failed: No recommended backend was available. Install a recommended 3rd party backend package; or, install the keyrings.alt package if you want to use the non-recommended backends. See https://pypi.org/project/keyring for details.. Install a system credential store (gnome-keyring on Linux, or rely on the macOS Keychain / Windows Credential Locker), configure it, and restart GAIA. See docs/security/connections.mdx.
+[2026-10-25 06:20:49] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:20:49] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:20:49] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:20:49] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:20:54] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:20:54] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:20:54] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:20:54] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:20:59] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:20:59] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:20:59] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:20:59] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:21:04] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:21:04] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:21:04] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:21:04] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:21:09] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:21:09] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:21:09] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:21:09] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:21:14] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:21:14] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:21:14] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:21:14] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:21:19] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:21:19] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:21:19] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:21:19] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:21:24] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:21:24] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:21:24] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:21:24] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:21:29] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:21:29] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:21:29] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:21:29] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:21:34] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:21:34] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:21:34] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:21:34] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:21:39] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:21:39] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:21:40] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:21:40] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+[2026-10-25 06:21:45] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:21:45] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/models "HTTP/1.0 200 OK"
+[2026-10-25 06:21:45] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:21:45] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18902/api/v1/system-info "HTTP/1.0 200 OK"
+INFO:     Shutting down
+INFO:     Waiting for connections to close. (CTRL+C to force quit)
+INFO:     Waiting for application shutdown.
+[2026-10-25 06:22:00] | [37mINFO[0m | gaia.ui.scheduler.shutdown | scheduler.py:948 | Scheduler shut down, all timers cancelled
+[2026-10-25 06:22:00] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:853 | Task scheduler stopped
+[2026-10-25 06:22:00] | [37mINFO[0m | gaia.ui.agent_loop.stop | agent_loop.py:176 | AgentLoop stopped
+[2026-10-25 06:22:00] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:855 | AgentLoop stopped
+[2026-10-25 06:22:00] | [37mINFO[0m | gaia.ui.document_monitor.stop | document_monitor.py:108 | Document monitor stopped (checked 10 times, re-indexed 0 docs)
+[2026-10-25 06:22:00] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:858 | Document file monitor stopped
+[2026-10-25 06:22:00] | [37mINFO[0m | gaia.connectors.activation_watcher.stop | activation_watcher.py:93 | activation-watcher: stopped
+[2026-10-25 06:22:00] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:862 | Connector activation watcher stopped
+[2026-10-25 06:22:00] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:865 | Database connection closed
+[2026-10-25 06:22:00] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:867 | Memory store connection closed
+[2026-10-25 06:22:00] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:869 | Goal store connection closed
+INFO:     Application shutdown complete.
+INFO:     Finished server process [15]

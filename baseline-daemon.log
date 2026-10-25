@@ -1,0 +1,56 @@
+[2026-10-25 06:18:29] | [37mINFO[0m | gaia.daemon.migrate._migrate_v0_to_v1 | migrate.py:261 | migrate: snapshotted legacy sessions /tmp/gaia5482-homes/baseline/.gaia/chat/gaia_chat.db -> /tmp/gaia5482-homes/baseline/.gaia/host/custody/agents/chat/sessions.db
+[2026-10-25 06:18:29] | [37mINFO[0m | gaia.daemon.migrate._migrate_v0_to_v1 | migrate.py:250 | migrate: no legacy memory at /tmp/gaia5482-homes/baseline/.gaia/memory.db; skipping
+[2026-10-25 06:18:29] | [37mINFO[0m | gaia.daemon.migrate.run_migrations | migrate.py:327 | migrate: stamped custody schema version 1
+[2026-10-25 06:18:29] | [37mINFO[0m | gaia.daemon.server.run | server.py:282 | daemon: custody schema {'status': 'migrated', 'from_version': 0, 'to_version': 1, 'applied': ['sessions:gaia_chat.db']}
+[2026-10-25 06:18:30] | [37mINFO[0m | gaia.daemon.server.run | server.py:438 | daemon: starting on http://127.0.0.1:34423 (pid=159)
+[2026-10-25 06:18:30] | [37mINFO[0m | gaia.daemon.forward_refresh.start | forward_refresh.py:167 | forward-refresh: started (interval=300s)
+[2026-10-25 06:18:30] | [37mINFO[0m | gaia.daemon.server._register | server.py:204 | daemon: registered instance pid=159 port=34423
+[2026-10-25 06:18:30] | [37mINFO[0m | gaia.daemon.lemonade._run | lemonade.py:309 | daemon: not starting embedded Lemonade: LEMONADE_BASE_URL is set to http://127.0.0.1:18902/api/v1, so GAIA does not start its own. Start that server, or unset LEMONADE_BASE_URL to use GAIA's own instead.
+[2026-10-25 06:18:30] | [37mINFO[0m | gaia.daemon.sidecars.fetch._hub_installed_binary | fetch.py:174 | sidecar fetch: using hub-installed verified binary /tmp/gaia5482-homes/baseline/.gaia/agents/email/email-agent (v0.6.0)
+[2026-10-25 06:18:30] | [37mINFO[0m | gaia.daemon.sidecars.manager._start_locked | manager.py:759 | email sidecar: spawning (user mode, attempt 1/3) /tmp/gaia5482-homes/baseline/.gaia/agents/email/email-agent --host 127.0.0.1 --port 38867
+[2026-10-25 06:18:30] | [37mINFO[0m | gaia.daemon.sidecars.manager._apply_secret_delivery | manager.py:642 | email sidecar: delivering launch secret via 0600 file /tmp/gaia-email-secret-uazi8fhl/launch-secret (installed binary 0.6.0 >= 0.6.0)
+[2026-10-25 06:18:30] | [37mINFO[0m | gaia.daemon.sidecars.manager._wait_for_health | manager.py:823 | email sidecar healthy at http://127.0.0.1:38867
+[2026-10-25 06:18:30] | [37mINFO[0m | gaia.daemon.sidecars.manager._check_version | manager.py:864 | email sidecar contract: apiVersion=2.7 agentVersion=0.6.0
+[2026-10-25 06:18:30] | [33mWARNING[0m | gaia.daemon.sidecars.registry._fire_started | registry.py:246 | registry: post-start hook for 'email' raised; the sidecar is healthy but credential forward-out may be incomplete — it will surface loudly at mailbox-use time
+Traceback (most recent call last):
+  File "/tmp/gaia5482/baseline/src/gaia/connectors/store.py", line 149, in inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/tmp/gaia5482/baseline/src/gaia/connectors/store.py", line 208, in _get
+    return keyring.get_password(SERVICE_NAME, username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/core-venv/lib/python3.12/site-packages/keyring/core.py", line 65, in get_password
+    return get_keyring().get_password(service_name, username)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/core-venv/lib/python3.12/site-packages/keyring/backends/fail.py", line 28, in get_password
+    raise NoKeyringError(msg)
+keyring.errors.NoKeyringError: No recommended backend was available. Install a recommended 3rd party backend package; or, install the keyrings.alt package if you want to use the non-recommended backends. See https://pypi.org/project/keyring for details.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/tmp/gaia5482/baseline/src/gaia/daemon/sidecars/registry.py", line 244, in _fire_started
+    self._on_started(agent_id, manager)
+  File "/tmp/gaia5482/baseline/src/gaia/daemon/server.py", line 120, in _on_started
+    forwarder.forward_all(
+  File "/tmp/gaia5482/baseline/src/gaia/daemon/forward.py", line 367, in forward_all
+    connected = set(self._connected_providers())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/gaia5482/baseline/src/gaia/daemon/forward.py", line 137, in _default_connected_providers
+    return connected_mailbox_providers()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/gaia5482/baseline/src/gaia/connectors/api.py", line 906, in connected_mailbox_providers
+    if peek_connection(spec.id) is not None:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/gaia5482/baseline/src/gaia/connectors/store.py", line 502, in peek_connection
+    raw = _kr_get(username)
+          ^^^^^^^^^^^^^^^^^
+  File "/tmp/gaia5482/baseline/src/gaia/connectors/store.py", line 275, in _kr_get
+    raw = _kr_raw_get(username)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/gaia5482/baseline/src/gaia/connectors/store.py", line 210, in _kr_raw_get
+    return _get()
+           ^^^^^^
+  File "/tmp/gaia5482/baseline/src/gaia/connectors/store.py", line 151, in inner
+    raise ConnectorsError(
+gaia.connectors.errors.ConnectorsError: Keyring get_password failed: No recommended backend was available. Install a recommended 3rd party backend package; or, install the keyrings.alt package if you want to use the non-recommended backends. See https://pypi.org/project/keyring for details.. Install a system credential store (gnome-keyring on Linux, or rely on the macOS Keychain / Windows Credential Locker), configure it, and restart GAIA. See docs/security/connections.mdx.

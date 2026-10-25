@@ -1,0 +1,30 @@
+[
+  {
+    "file": "clean-core-0.log.gz",
+    "matches": 30,
+    "reason": "Credential-shaped parametrized authentication-test IDs; no result or assertion removed",
+    "originalDecompressedSha256": "35edb20052e790e3e14f1fbe3cfbcf9b359eef686cf56cb51364455842cf6a4f",
+    "publishedDecompressedSha256": "31fea234de6bf19c2977328ea2af3e5b2b5b372f6bb77a1fe765447acf3100f2"
+  },
+  {
+    "file": "clean-core.xml.gz",
+    "matches": 15,
+    "reason": "Credential-shaped parametrized authentication-test IDs; no result or assertion removed",
+    "originalDecompressedSha256": "e29a63709c5f1b6f14b8ba3a0af6adb39949170fa784c9cb8364cf20e00f3091",
+    "publishedDecompressedSha256": "754bd475910e97a9bb48ce8575e719ec4bc231d745cbacac76354b5ee3787f50"
+  },
+  {
+    "file": "final-core-0.log.gz",
+    "matches": 30,
+    "reason": "Credential-shaped parametrized authentication-test IDs; no result or assertion removed",
+    "originalDecompressedSha256": "d1fcf7f2211a25348b43c15209b6be8a1b86356f3da322b09ac4e8adc2b392c0",
+    "publishedDecompressedSha256": "a01cd05dfd47be149bfbff22d46f38fe10ff60a953d65d7034c8d30c5c92057d"
+  },
+  {
+    "file": "ram-core-0.log.gz",
+    "matches": 30,
+    "reason": "Credential-shaped parametrized authentication-test IDs; no result or assertion removed",
+    "originalDecompressedSha256": "42bf8d2f62a81f5d99b575a80890d44760b356255a3135b4fb82b51e4c365e59",
+    "publishedDecompressedSha256": "ac780a3ffc5824a2878245f37408e0f2334b106fd1d3603ad9a11c786c92110d"
+  }
+]

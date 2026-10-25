@@ -1,0 +1,6 @@
+{
+  "docs/guides/memory.mdx": "ba2e97f1d91707e7b00ec6dadfd7c0bf3402687d8ed0cd6489fb955298e19040",
+  "src/gaia/ui/_chat_helpers.py": "0317ff2acc2c70ea3bd0804431f620601be3980b79780456f766cbe98bdbbdf5",
+  "src/gaia/ui/email_sidecar/profiles.py": "9acbdfba3b02e57119fc454c8d5f5455fa0ea36ac66f3eff8fd46ba30a5d7153",
+  "tests/unit/test_sidecar_relay_fidelity.py": "d884c85aa6ab99a55f4437593407d6528cefe263561e077cd0b9e2371c4449e9"
+}

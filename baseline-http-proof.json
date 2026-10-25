@@ -1,0 +1,137 @@
+[
+  {
+    "mode": "on",
+    "session": "8b570689-e3cc-4a36-99b1-156b298e8334",
+    "http_status": 200,
+    "email_init_count": 1,
+    "email_query_count": 1,
+    "query_memory_present": [
+      false
+    ],
+    "errors": [],
+    "done": [
+      {
+        "type": "done",
+        "message_id": 2,
+        "content": "Receipt-only email fixture: your request reached the sidecar without a memory field. No email or model was accessed.",
+        "stats": {
+          "tokens_per_second": 0,
+          "time_to_first_token": 0,
+          "place": "on this PC",
+          "measured_model": "Gemma-4-E4B-it-GGUF",
+          "model": "Gemma-4-E4B-it-GGUF"
+        },
+        "turn_summary": {
+          "pages": [],
+          "documents": [],
+          "files": [],
+          "sites": [],
+          "outputs": [],
+          "live_data": {
+            "attempted": 0,
+            "failed": 0
+          },
+          "cost": {
+            "kind": "local"
+          },
+          "model": {
+            "remote": false,
+            "provider": "lemonade",
+            "provider_name": "Lemonade on this machine",
+            "name": "Gemma-4-E4B-it-GGUF"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "mode": "private",
+    "session": "11829a4e-1c3a-4453-a260-b9bee0a639d8",
+    "http_status": 200,
+    "email_init_count": 1,
+    "email_query_count": 1,
+    "query_memory_present": [
+      false
+    ],
+    "errors": [],
+    "done": [
+      {
+        "type": "done",
+        "message_id": 4,
+        "content": "Receipt-only email fixture: your request reached the sidecar without a memory field. No email or model was accessed.",
+        "stats": {
+          "tokens_per_second": 0,
+          "time_to_first_token": 0,
+          "place": "on this PC",
+          "measured_model": "Gemma-4-E4B-it-GGUF",
+          "model": "Gemma-4-E4B-it-GGUF"
+        },
+        "turn_summary": {
+          "pages": [],
+          "documents": [],
+          "files": [],
+          "sites": [],
+          "outputs": [],
+          "live_data": {
+            "attempted": 0,
+            "failed": 0
+          },
+          "cost": {
+            "kind": "local"
+          },
+          "model": {
+            "remote": false,
+            "provider": "lemonade",
+            "provider_name": "Lemonade on this machine",
+            "name": "Gemma-4-E4B-it-GGUF"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "mode": "off",
+    "session": "b3d1621e-b0cc-4ead-a33e-f68b73b82a40",
+    "http_status": 200,
+    "email_init_count": 1,
+    "email_query_count": 1,
+    "query_memory_present": [
+      false
+    ],
+    "errors": [],
+    "done": [
+      {
+        "type": "done",
+        "message_id": 6,
+        "content": "Receipt-only email fixture: your request reached the sidecar without a memory field. No email or model was accessed.",
+        "stats": {
+          "tokens_per_second": 0,
+          "time_to_first_token": 0,
+          "place": "on this PC",
+          "measured_model": "Gemma-4-E4B-it-GGUF",
+          "model": "Gemma-4-E4B-it-GGUF"
+        },
+        "turn_summary": {
+          "pages": [],
+          "documents": [],
+          "files": [],
+          "sites": [],
+          "outputs": [],
+          "live_data": {
+            "attempted": 0,
+            "failed": 0
+          },
+          "cost": {
+            "kind": "local"
+          },
+          "model": {
+            "remote": false,
+            "provider": "lemonade",
+            "provider_name": "Lemonade on this machine",
+            "name": "Gemma-4-E4B-it-GGUF"
+          }
+        }
+      }
+    ]
+  }
+]

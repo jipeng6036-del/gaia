@@ -1,0 +1,50 @@
+[
+  {
+    "phase": "baseline-ram-home",
+    "source": "/tmp/gaia5482-ram/baseline",
+    "HOME": "/tmp/gaia5482-ram/home",
+    "command": [
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/agents/test_denied_effects.py::test_render_call_names_a_file_change_in_words",
+      "tests/unit/test_scratch_dir.py::TestDenialNamesTheScratchDir::test_denial_outside_temp_does_not_mention_scratch",
+      "-v",
+      "--tb=short"
+    ],
+    "code": 1,
+    "seconds": 2.6
+  },
+  {
+    "phase": "baseline-standard-home",
+    "source": "/tmp/gaia5482-ram/baseline",
+    "HOME": "/home/gaia-runner",
+    "command": [
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/agents/test_denied_effects.py::test_render_call_names_a_file_change_in_words",
+      "tests/unit/test_scratch_dir.py::TestDenialNamesTheScratchDir::test_denial_outside_temp_does_not_mention_scratch",
+      "-v",
+      "--tb=short"
+    ],
+    "code": 0,
+    "seconds": 2.03
+  },
+  {
+    "phase": "candidate-standard-home",
+    "source": "/tmp/gaia5482-ram/candidate",
+    "HOME": "/home/gaia-runner",
+    "command": [
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/agents/test_denied_effects.py::test_render_call_names_a_file_change_in_words",
+      "tests/unit/test_scratch_dir.py::TestDenialNamesTheScratchDir::test_denial_outside_temp_does_not_mention_scratch",
+      "-v",
+      "--tb=short"
+    ],
+    "code": 0,
+    "seconds": 1.74
+  }
+]

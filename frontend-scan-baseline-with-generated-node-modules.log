@@ -1,0 +1,29 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0 -- /core-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /tmp/gaia5482-ram/baseline
+configfile: pyproject.toml
+plugins: anyio-4.15.1, timeout-2.4.0, xdist-3.8.0, cov-7.1.0, asyncio-1.4.0, mock-3.17.0, respx-0.23.1, pyfakefs-6.2.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests/unit/test_skills_cli.py::test_skills_package_ships_in_the_wheel FAILED [100%]
+
+=================================== FAILURES ===================================
+____________________ test_skills_package_ships_in_the_wheel ____________________
+tests/unit/test_skills_cli.py:452: in test_skills_package_ships_in_the_wheel
+    assert on_disk == declared, (
+E   AssertionError: src/gaia packages and setup.py's explicit list have drifted; add the new package(s) to setup.py: ['gaia.apps.webui.node_modules.node-gyp.gyp.pylib.gyp', 'gaia.apps.webui.node_modules.node-gyp.gyp.pylib.gyp.generator', 'gaia.apps.webui.node_modules.node-gyp.gyp.pylib.packaging']
+E   assert {'gaia', 'gai...s.tools', ...} == {'gaia', 'gai...s.tools', ...}
+E     
+E     Extra items in the left set:
+E     'gaia.apps.webui.node_modules.node-gyp.gyp.pylib.gyp'
+E     'gaia.apps.webui.node_modules.node-gyp.gyp.pylib.packaging'
+E     'gaia.apps.webui.node_modules.node-gyp.gyp.pylib.gyp.generator'
+E     
+E     Full diff:...
+E     
+E     ...Full output truncated (63 lines hidden), use '-vv' to show
+=========================== short test summary info ============================
+FAILED tests/unit/test_skills_cli.py::test_skills_package_ships_in_the_wheel
+============================== 1 failed in 0.56s ===============================

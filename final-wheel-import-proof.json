@@ -1,0 +1,12 @@
+[
+  {
+    "module": "gaia.ui._chat_helpers",
+    "path": "/tmp/gaia5482-final-wheel/gaia/ui/_chat_helpers.py",
+    "sha256": "0317ff2acc2c70ea3bd0804431f620601be3980b79780456f766cbe98bdbbdf5"
+  },
+  {
+    "module": "gaia.ui.email_sidecar.profiles",
+    "path": "/tmp/gaia5482-final-wheel/gaia/ui/email_sidecar/profiles.py",
+    "sha256": "9acbdfba3b02e57119fc454c8d5f5455fa0ea36ac66f3eff8fd46ba30a5d7153"
+  }
+]

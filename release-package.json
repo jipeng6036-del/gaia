@@ -1,0 +1,52 @@
+{
+  "checks": [
+    {
+      "command": [
+        "/core-venv/bin/python",
+        "util/verify_wheel_dist.py",
+        "src/gaia/apps/webui/dist"
+      ],
+      "code": 0
+    },
+    {
+      "command": [
+        "/hub-venv/bin/python",
+        "-m",
+        "build",
+        "--outdir",
+        "/tmp/gaia5482-ram/release-dist"
+      ],
+      "code": 0
+    },
+    {
+      "command": [
+        "/hub-venv/bin/python",
+        "-m",
+        "twine",
+        "check",
+        "/tmp/gaia5482-ram/release-dist/amd_gaia-0.25.1-py3-none-any.whl",
+        "/tmp/gaia5482-ram/release-dist/amd_gaia-0.25.1.tar.gz"
+      ],
+      "code": 0
+    },
+    {
+      "command": [
+        "/core-venv/bin/python",
+        "util/verify_wheel_dist.py",
+        "--wheel",
+        "/tmp/gaia5482-ram/release-dist/amd_gaia-0.25.1-py3-none-any.whl"
+      ],
+      "code": 0
+    }
+  ],
+  "files": {
+    "amd_gaia-0.25.1-py3-none-any.whl": "79be6b201ec16223f0b3e2407514b3a38e36aea0bc7a981ba979c466e99d5e8a",
+    "amd_gaia-0.25.1.tar.gz": "012fa0168adb06da2f51b4bcf01e9e59b2e7577600dda83aaf30564ddca2e971"
+  },
+  "sourceModuleParity": {
+    "gaia/ui/_chat_helpers.py": "0317ff2acc2c70ea3bd0804431f620601be3980b79780456f766cbe98bdbbdf5",
+    "gaia/ui/email_sidecar/profiles.py": "9acbdfba3b02e57119fc454c8d5f5455fa0ea36ac66f3eff8fd46ba30a5d7153"
+  },
+  "wheelFrontendFiles": 29,
+  "docSourceSha256": "ba2e97f1d91707e7b00ec6dadfd7c0bf3402687d8ed0cd6489fb955298e19040"
+}

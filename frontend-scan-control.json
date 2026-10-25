@@ -1,0 +1,41 @@
+[
+  {
+    "phase": "baseline-with-generated-node-modules",
+    "source": "/tmp/gaia5482-ram/baseline",
+    "code": 1,
+    "command": [
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/test_skills_cli.py::test_skills_package_ships_in_the_wheel",
+      "-v",
+      "--tb=short"
+    ]
+  },
+  {
+    "phase": "baseline-clean",
+    "source": "/tmp/gaia5482-ram/baseline",
+    "code": 0,
+    "command": [
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/test_skills_cli.py::test_skills_package_ships_in_the_wheel",
+      "-v",
+      "--tb=short"
+    ]
+  },
+  {
+    "phase": "candidate-clean",
+    "source": "/tmp/gaia5482-ram/candidate",
+    "code": 0,
+    "command": [
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/test_skills_cli.py::test_skills_package_ships_in_the_wheel",
+      "-v",
+      "--tb=short"
+    ]
+  }
+]

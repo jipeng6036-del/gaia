@@ -1,0 +1,5 @@
+cwd: /tmp/gaia5482-ram/candidate/src/gaia/apps/webui
+command: ["node", "--version"]
+v24.14.0
+
+exit_code: 0

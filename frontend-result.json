@@ -1,0 +1,235 @@
+{
+  "cwd": "/tmp/gaia5482-ram/candidate/src/gaia/apps/webui",
+  "container": "ghpr-gaia-5482-validation",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "start": "electron .",
+    "package": "npm run build && electron-builder --config electron-builder.yml",
+    "make": "npm run package",
+    "package:win": "npm run build && electron-builder --win --config electron-builder.yml",
+    "package:mac": "npm run build && electron-builder --mac --config electron-builder.yml",
+    "package:linux": "npm run build && electron-builder --linux --config electron-builder.yml",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:visual": "vite build && playwright test -c visual/playwright.config.ts",
+    "gen:api-types": "node scripts/gen-api-types.mjs"
+  },
+  "environment": {
+    "PATH": "/opt/node-download/node-v24.14.0-linux-x64/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "HOME": "/tmp/gaia5482-ram/frontend-home",
+    "TMPDIR": "/tmp/gaia5482-ram/frontend-tmp",
+    "npm_config_cache": "/tmp/gaia5482-ram/frontend-cache",
+    "XDG_CACHE_HOME": "/tmp/gaia5482-ram/frontend-cache",
+    "ELECTRON_CACHE": "/tmp/gaia5482-ram/frontend-electron-cache",
+    "ELECTRON_SKIP_BINARY_DOWNLOAD": "1",
+    "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD": "1"
+  },
+  "source_before": {
+    "package.json": "b7194f446550912407144f3e61c51a26e2734804c1d365327b8e61047356c4bc",
+    "package-lock.json": "f0dd41b0f303851d7fca9b8df09a10bd785001f23970c1a323806bfd0a3a15de"
+  },
+  "commands": [
+    {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.003,
+      "log": "/tmp/gaia5482-ram/logs/frontend-node-version.log"
+    },
+    {
+      "command": [
+        "npm",
+        "--version"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.098,
+      "log": "/tmp/gaia5482-ram/logs/frontend-npm-version.log"
+    },
+    {
+      "command": [
+        "npm",
+        "ci",
+        "--cache",
+        "/tmp/gaia5482-ram/frontend-cache"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 13.908,
+      "log": "/tmp/gaia5482-ram/logs/frontend-npm-ci.log"
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.902,
+      "log": "/tmp/gaia5482-ram/logs/frontend-build.log"
+    }
+  ],
+  "node_version": "v24.14.0",
+  "npm_version": "11.9.0",
+  "install_exit_code": 0,
+  "build_exit_code": 0,
+  "passed": true,
+  "source_after": {
+    "package.json": "b7194f446550912407144f3e61c51a26e2734804c1d365327b8e61047356c4bc",
+    "package-lock.json": "f0dd41b0f303851d7fca9b8df09a10bd785001f23970c1a323806bfd0a3a15de"
+  },
+  "source_unchanged": true,
+  "dist": "/tmp/gaia5482-ram/candidate/src/gaia/apps/webui/dist",
+  "dist_files": [
+    {
+      "path": "assets/AdvancedSettings-D5VKpkPY.css",
+      "bytes": 3809,
+      "sha256": "903e95a927e16daad42ea2159352b5fd622bcef58a4ac0331dec3a135c84ad8d"
+    },
+    {
+      "path": "assets/AdvancedSettings-D7jNZncZ.js",
+      "bytes": 24195,
+      "sha256": "837d443d4a86e554fa9e40234df8b6b23957b2625f3674baf9b66612d4b90263"
+    },
+    {
+      "path": "assets/ConnectorsPane-CtDroHfp.js",
+      "bytes": 25057,
+      "sha256": "b5f6d07c81b784263d12760c0de4fa50299a776bceb393b77a90a99cb0ddfc1f"
+    },
+    {
+      "path": "assets/ConnectorsPane-Dzu2DRTc.css",
+      "bytes": 11427,
+      "sha256": "a453cbba35aecd05799c5edee44e1ebf815c45312f6e3866b01d3417afe634d6"
+    },
+    {
+      "path": "assets/DocumentLibrary-CIKp6qld.css",
+      "bytes": 5029,
+      "sha256": "1b47c53c8896b93dee0436ed5654803ba999badeeabcbf6b2b6fae79a4c06f6f"
+    },
+    {
+      "path": "assets/DocumentLibrary-gE-tZarr.js",
+      "bytes": 16189,
+      "sha256": "8db51246d4ac4a4a69f69841121e439a4bc7b10c31a4df398673d8b89fdd820a"
+    },
+    {
+      "path": "assets/FileBrowser-CUJCMcVf.js",
+      "bytes": 14153,
+      "sha256": "3d2fe3997c4fb1f5db9dcbe9ecf3dc45e1de9e3b57fb9e63540c06e7b8f53db5"
+    },
+    {
+      "path": "assets/FileBrowser-D04I8Pvv.css",
+      "bytes": 8676,
+      "sha256": "3c5ebec0edcfc0288663b54a63dd7bef7f203b14426184e17a12d64c43939c08"
+    },
+    {
+      "path": "assets/MemoryDashboard-Cxr_1R_c.js",
+      "bytes": 72816,
+      "sha256": "d0269c3e2b96d643c48c4642b72abb6fc207e4a6cd1977df1a6ccc5340fc0c80"
+    },
+    {
+      "path": "assets/MemoryDashboard-Mo721-BI.css",
+      "bytes": 42513,
+      "sha256": "287d20f00142d555e4e5531d29a547d8db2d27efc91d04886818445b6662e02b"
+    },
+    {
+      "path": "assets/MobileAccessModal-CUqaV_OH.js",
+      "bytes": 5215,
+      "sha256": "f19fdbb5270a0bfbd5962c43cdfac1040f99aa59eabb6d5527c60498804c31c1"
+    },
+    {
+      "path": "assets/MobileAccessModal-DuVy9F1u.css",
+      "bytes": 4234,
+      "sha256": "66cc8b82d463f0aaac7a85b25b462676faafee33f1ff37aceb1f061a904dd003"
+    },
+    {
+      "path": "assets/ScheduleManager-DgFrZse_.js",
+      "bytes": 10783,
+      "sha256": "102fc6f0cd655bd6129f2c8f477797ecab17a3d2c90e3711e2d46e093e994258"
+    },
+    {
+      "path": "assets/ScheduleManager-DotJl5JW.css",
+      "bytes": 6411,
+      "sha256": "8ec29a806590225f7f5b169adf00bcc51c36b7c75f31ae0299d259c6c841c22a"
+    },
+    {
+      "path": "assets/apiBase-BmPG2Rib.js",
+      "bytes": 14427,
+      "sha256": "d5a3f5c22f77f1c2854928466824e8946f667f930f06f5a71d0392932e83cc02"
+    },
+    {
+      "path": "assets/browser-KnDALPx_.js",
+      "bytes": 23475,
+      "sha256": "23cd5ac81b2702634cdcf96960d5e141451b71817d06487d0eeaf33061f09bf5"
+    },
+    {
+      "path": "assets/eye-CwjwlxR5.js",
+      "bytes": 287,
+      "sha256": "810397b72be28dba8a6e991800bce28da13f095ed126bdf15b9a05f3835ca98d"
+    },
+    {
+      "path": "assets/fraunces-latin-BwwriW9Y.woff2",
+      "bytes": 34552,
+      "sha256": "1abdc506a6aab1b0020fe27694b076212a1017c3e6aaeb4c528f392c21449803"
+    },
+    {
+      "path": "assets/gaia-robot-NKaQnEIp.png",
+      "bytes": 10970,
+      "sha256": "46b602c4d2aa1db2d3afc72118ecd6a3c2a2bcbc72e4e9e724c3aa5ca35a8014"
+    },
+    {
+      "path": "assets/index-CtsaRdvF.css",
+      "bytes": 158347,
+      "sha256": "9942e271ce95ae20e2a7855969330519870b0c822ac6c3d262f255a1a7948332"
+    },
+    {
+      "path": "assets/index-D-noqAc3.js",
+      "bytes": 769660,
+      "sha256": "4d08f3f5e696cd32532476a4313592d858ba8efe8eea7bb71d8b694af2b023db"
+    },
+    {
+      "path": "assets/inter-latin-C2S99t-D.woff2",
+      "bytes": 48444,
+      "sha256": "f052ee44c3728dfd23aba8a4567150bc314d23903026fbb6ad089422c2df56af"
+    },
+    {
+      "path": "assets/inter-latin-ext-CFHvXkgd.woff2",
+      "bytes": 74328,
+      "sha256": "48f540fb71166bf65a0fe187a71fad500c43143d3e2e42038f527e38c786e90f"
+    },
+    {
+      "path": "assets/jetbrains-mono-latin-6fWv1k7M.woff2",
+      "bytes": 31432,
+      "sha256": "83c005d49d8a6a50474c73a5a36ac0468076e9c4a29da7bdb14995d80560a5be"
+    },
+    {
+      "path": "assets/message-square-DuVoNniw.js",
+      "bytes": 264,
+      "sha256": "e1b9ae6d3de14203661ba5a608d9140fc7b2544bb296587dbfaa9bbbed3422e0"
+    },
+    {
+      "path": "assets/rolldown-runtime-XKyaHtl9.js",
+      "bytes": 726,
+      "sha256": "548d1dbf321e7d2ae804fcc158b588706a7c52f8ca175de1490c6ccb4dbe55b7"
+    },
+    {
+      "path": "favicon.png",
+      "bytes": 3288,
+      "sha256": "8ffa272a19ca6b0a7f3aee728ec0ca3cb51971d2296372a3b6d05832f7d235e3"
+    },
+    {
+      "path": "fonts-OFL.txt",
+      "bytes": 4659,
+      "sha256": "f0e60e4fdf72d2569a624acd54a8b23b0cfbb3521278837b86b9d345153fde91"
+    },
+    {
+      "path": "index.html",
+      "bytes": 816,
+      "sha256": "ae9dfcabbf82599f0b10bc3056a471cae176ba03080d08379ba9ef75eda89b88"
+    }
+  ],
+  "dist_file_count": 29,
+  "manifest_sha256": "875b78ecc10e31ebbc9d874b507b71a98d7d5ef849e594f3d9eb251235748b96"
+}

@@ -1,0 +1,18 @@
+{
+  "pid": 580,
+  "receiptPid": 579,
+  "command": [
+    "/core-venv/bin/gaia",
+    "chat",
+    "--ui",
+    "--ui-port",
+    "18923",
+    "--base-url",
+    "http://127.0.0.1:18922/api/v1",
+    "--ui-dist",
+    "/webui"
+  ],
+  "source": "/tmp/gaia5482/candidate",
+  "fixture": "receipt-only executable registered through isolated hash-verified .installed metadata; actual daemon owns startup/handshake, unmodified handle/proxy/relay/UI",
+  "home": "/tmp/gaia5482-homes/candidate/.gaia"
+}

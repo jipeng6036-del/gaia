@@ -1,0 +1,119 @@
+[
+  {
+    "mode": "on",
+    "session": "b855aa14-d8df-4156-b44f-32d4b7fef33f",
+    "http_status": 200,
+    "email_init_count": 1,
+    "email_query_count": 1,
+    "query_memory_present": [
+      false
+    ],
+    "errors": [],
+    "done": [
+      {
+        "type": "done",
+        "message_id": 2,
+        "content": "Receipt-only email fixture: your request reached the sidecar without a memory field. No email or model was accessed.",
+        "stats": {
+          "tokens_per_second": 0,
+          "time_to_first_token": 0,
+          "place": "on this PC",
+          "measured_model": "Gemma-4-E4B-it-GGUF",
+          "model": "Gemma-4-E4B-it-GGUF"
+        },
+        "turn_summary": {
+          "pages": [],
+          "documents": [],
+          "files": [],
+          "sites": [],
+          "outputs": [],
+          "live_data": {
+            "attempted": 0,
+            "failed": 0
+          },
+          "cost": {
+            "kind": "local"
+          },
+          "model": {
+            "remote": false,
+            "provider": "lemonade",
+            "provider_name": "Lemonade on this machine",
+            "name": "Gemma-4-E4B-it-GGUF"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "mode": "private",
+    "session": "96736f00-32f7-4983-882a-440a2a821050",
+    "http_status": 200,
+    "email_init_count": 0,
+    "email_query_count": 0,
+    "query_memory_present": [],
+    "errors": [
+      {
+        "type": "agent_error",
+        "content": "The email agent does not support private chats or chats with memory turned off yet. Your message was not sent to the email agent. Use the GAIA agent for this chat instead."
+      }
+    ],
+    "done": [
+      {
+        "type": "done",
+        "message_id": 4,
+        "content": "",
+        "failed": true,
+        "turn_summary": {
+          "pages": [],
+          "documents": [],
+          "files": [],
+          "sites": [],
+          "outputs": [],
+          "live_data": {
+            "attempted": 0,
+            "failed": 0
+          },
+          "cost": {
+            "kind": "unknown"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "mode": "off",
+    "session": "95c27501-3cdb-48eb-af4e-de396b8edf24",
+    "http_status": 200,
+    "email_init_count": 0,
+    "email_query_count": 0,
+    "query_memory_present": [],
+    "errors": [
+      {
+        "type": "agent_error",
+        "content": "The email agent does not support private chats or chats with memory turned off yet. Your message was not sent to the email agent. Use the GAIA agent for this chat instead."
+      }
+    ],
+    "done": [
+      {
+        "type": "done",
+        "message_id": 6,
+        "content": "",
+        "failed": true,
+        "turn_summary": {
+          "pages": [],
+          "documents": [],
+          "files": [],
+          "sites": [],
+          "outputs": [],
+          "live_data": {
+            "attempted": 0,
+            "failed": 0
+          },
+          "cost": {
+            "kind": "unknown"
+          }
+        }
+      }
+    ]
+  }
+]

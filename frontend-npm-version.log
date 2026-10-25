@@ -1,0 +1,5 @@
+cwd: /tmp/gaia5482-ram/candidate/src/gaia/apps/webui
+command: ["npm", "--version"]
+11.9.0
+
+exit_code: 0

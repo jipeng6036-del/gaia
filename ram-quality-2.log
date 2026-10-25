@@ -1,0 +1,3 @@
+CWD /tmp/gaia5482-ram/candidate
+COMMAND ["/core-venv/bin/python", "hub/agents/gaia/python/packaging/capability_matrix.py", "--check"]
+Capability matrix up to date: /tmp/gaia5482-ram/candidate/hub/agents/gaia/CAPABILITY_MATRIX.md

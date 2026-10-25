@@ -1,0 +1,51 @@
+[
+  {
+    "name": "ram-quality-0",
+    "command": [
+      "/core-venv/bin/python",
+      "util/lint.py",
+      "--all"
+    ],
+    "code": 0,
+    "seconds": 203.52,
+    "utc": "2026-10-25T06:19:28.608997+00:00"
+  },
+  {
+    "name": "ram-quality-1",
+    "command": [
+      "/core-venv/bin/python",
+      "util/check_module_skips.py",
+      "--workflow",
+      "test_unit.yml",
+      "--job",
+      "unit-tests"
+    ],
+    "code": 0,
+    "seconds": 46.47,
+    "utc": "2026-10-25T06:20:15.100689+00:00"
+  },
+  {
+    "name": "ram-quality-2",
+    "command": [
+      "/core-venv/bin/python",
+      "hub/agents/gaia/python/packaging/capability_matrix.py",
+      "--check"
+    ],
+    "code": 0,
+    "seconds": 0.06,
+    "utc": "2026-10-25T06:20:15.170217+00:00"
+  },
+  {
+    "name": "ram-quality-3",
+    "command": [
+      "/hub-venv/bin/python",
+      "-m",
+      "build",
+      "--outdir",
+      "/tmp/gaia5482-ram/core-dist"
+    ],
+    "code": 0,
+    "seconds": 8.32,
+    "utc": "2026-10-25T06:20:23.507300+00:00"
+  }
+]

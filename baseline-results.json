@@ -1,0 +1,20 @@
+[
+  {
+    "name": "baseline-0",
+    "command": [
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/test_sidecar_relay_fidelity.py",
+      "-k",
+      "test_email_refuses_private_turns_before_init_or_query or test_email_with_memory_on_still_runs_without_an_unsupported_field",
+      "-v",
+      "--tb=short",
+      "--junitxml=/evidence/baseline-regression.xml"
+    ],
+    "code": 1,
+    "elapsed_seconds": 38.83,
+    "log": "/evidence/baseline-0.log",
+    "utc": "2026-10-25T06:06:44.116119+00:00"
+  }
+]

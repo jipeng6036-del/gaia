@@ -1,0 +1,15 @@
+{"time": 1792909855.7358408, "method": "GET", "path": "/api/v1/health", "body": null}
+{"time": 1792909855.7393599, "method": "GET", "path": "/api/v1/models", "body": null}
+{"time": 1792909855.9187033, "method": "GET", "path": "/api/v1/health", "body": null}
+{"time": 1792909855.9280589, "method": "GET", "path": "/api/v1/health", "body": null}
+{"time": 1792909855.9331968, "method": "GET", "path": "/api/v1/models?show_all=true", "body": null}
+{"time": 1792909855.9374146, "method": "GET", "path": "/api/v1/system-info", "body": null}
+{"time": 1792909855.9411051, "method": "GET", "path": "/api/v1/health", "body": null}
+{"time": 1792909855.946194, "method": "GET", "path": "/api/v1/health", "body": null}
+{"time": 1792909855.9531014, "method": "POST", "path": "/api/v1/load", "body": {"model_name": "Gemma-4-E4B-it-GGUF", "llamacpp_args": "--parallel 2 --kv-unified --cache-ram 0 --slot-prompt-similarity 0.5", "ctx_size": 65536}}
+{"time": 1792909857.8278654, "method": "GET", "path": "/health", "body": null}
+{"time": 1792909857.8305936, "method": "GET", "path": "/version", "body": null}
+{"time": 1792909857.8869295, "method": "GET", "path": "/v1/email/init", "body": null}
+{"time": 1792909857.9798505, "method": "POST", "path": "/v1/email/query", "body": {"query": "EMAIL_PRIVACY_ON: acknowledge this synthetic test request. Local receipt fixture only; no mail or model access.", "run_id": "d3d617ac-aa91-4aec-9949-959a2f077b3c", "context": [], "can_answer_questions": true, "model": "Gemma-4-E4B-it-GGUF"}}
+{"time": 1792909857.9881592, "method": "GET", "path": "/api/v1/stats", "body": null}
+{"time": 1792909857.9923604, "method": "GET", "path": "/api/v1/health", "body": null}

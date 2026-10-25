@@ -1,0 +1,19 @@
+{
+  "wheel_sha256": "bcd7403f1015cc9833469dbd3122af4926cf82cd7ca01d94940b1a118675520f",
+  "modules": [
+    {
+      "module": "gaia.ui._chat_helpers",
+      "path": "/tmp/gaia5482-wheel/gaia/ui/_chat_helpers.py",
+      "sha256": "0317ff2acc2c70ea3bd0804431f620601be3980b79780456f766cbe98bdbbdf5",
+      "source": "F:\\Github-PR\\inspection\\sol-high-agent-gaia5482\\src\\gaia\\ui\\_chat_helpers.py",
+      "matches_checkout_and_wheel": true
+    },
+    {
+      "module": "gaia.ui.email_sidecar.profiles",
+      "path": "/tmp/gaia5482-wheel/gaia/ui/email_sidecar/profiles.py",
+      "sha256": "9acbdfba3b02e57119fc454c8d5f5455fa0ea36ac66f3eff8fd46ba30a5d7153",
+      "source": "F:\\Github-PR\\inspection\\sol-high-agent-gaia5482\\src\\gaia\\ui\\email_sidecar\\profiles.py",
+      "matches_checkout_and_wheel": true
+    }
+  ]
+}

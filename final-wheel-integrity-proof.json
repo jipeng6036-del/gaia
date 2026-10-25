@@ -1,0 +1,23 @@
+{
+  "wheel": "amd_gaia-0.25.1-py3-none-any.whl",
+  "sha256": "79be6b201ec16223f0b3e2407514b3a38e36aea0bc7a981ba979c466e99d5e8a",
+  "release_gates_all_zero": true,
+  "wheel_frontend_files": 29,
+  "served_frontend_index_status": 200,
+  "served_frontend_matches_wheel": true,
+  "index_sha256": "ae9dfcabbf82599f0b10bc3056a471cae176ba03080d08379ba9ef75eda89b88",
+  "imports": [
+    {
+      "module": "gaia.ui._chat_helpers",
+      "path": "/tmp/gaia5482-final-wheel/gaia/ui/_chat_helpers.py",
+      "sha256": "0317ff2acc2c70ea3bd0804431f620601be3980b79780456f766cbe98bdbbdf5",
+      "matches_release_source_and_wheel": true
+    },
+    {
+      "module": "gaia.ui.email_sidecar.profiles",
+      "path": "/tmp/gaia5482-final-wheel/gaia/ui/email_sidecar/profiles.py",
+      "sha256": "9acbdfba3b02e57119fc454c8d5f5455fa0ea36ac66f3eff8fd46ba30a5d7153",
+      "matches_release_source_and_wheel": true
+    }
+  ]
+}

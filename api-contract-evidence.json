@@ -1,0 +1,42 @@
+[
+  {
+    "path": "src/gaia/ui/security.py",
+    "lines": [
+      195,
+      226
+    ],
+    "source": "195: def flagship_only(\n196:     request: Request, agent_type: Optional[str], stored: Optional[str] = None\n197: ) -> Optional[str]:\n198:     \"\"\"Hold Agent UI requests to the flagship; return the agent type to use.\n199: \n200:     Requests from other clients pass through unchanged. From the Agent UI, a\n201:     requested non-flagship agent is a 422, and a chat stored under a retired\n202:     agent is a 409 that says to start a new chat -- never a silent reroute.\n203:     \"\"\"\n204:     if request.headers.get(CLIENT_HEADER_NAME) != AGENT_UI_CLIENT:\n205:         return agent_type\n206:     if agent_type and agent_type != FLAGSHIP_AGENT_ID:\n207:         raise HTTPException(\n208:             status_code=422,\n209:             detail=(\n210:                 f\"The Agent UI runs the GAIA agent only; agent_type {agent_type!r} \"\n211:                 \"is not available here. Use `gaia eval agent --agent-type` or the \"\n212:                 \"CLI to run another agent.\"\n213:             ),\n214:         )\n215:     if stored is not None and stored != FLAGSHIP_AGENT_ID:\n216:         raise HTTPException(\n217:             status_code=409,\n218:             detail=(\n219:                 f\"This chat was made with the retired {stored!r} agent, so it is \"\n220:                 \"read-only. Start a new chat; GAIA covers what that agent did.\"\n221:             ),\n222:         )\n223:     return FLAGSHIP_AGENT_ID\n224: \n225: \n226: # \u2500\u2500 Middleware \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500"
+  },
+  {
+    "path": "src/gaia/ui/routers/sessions.py",
+    "lines": [
+      214,
+      242
+    ],
+    "source": "214:     sessions = db.list_sessions(limit=limit, offset=offset)\n215:     total = db.count_sessions()\n216:     return SessionListResponse(\n217:         sessions=await _session_responses(db, sessions),\n218:         total=total,\n219:     )\n220: \n221: \n222: @router.post(\"/api/sessions\", response_model=SessionResponse)\n223: async def create_session(\n224:     request: CreateSessionRequest,\n225:     http_request: Request,\n226:     db: ChatDatabase = Depends(get_db),\n227: ):\n228:     \"\"\"Create a new chat session.\"\"\"\n229:     request.agent_type = flagship_only(http_request, request.agent_type)\n230:     _reject_unknown_agent_type(request.agent_type)\n231:     try:\n232:         # Read before the chat exists, so a bad config leaves no chat behind.\n233:         start_mode = session_permissions.default_mode()\n234:         session = db.create_session(\n235:             title=request.title,\n236:             model=request.model,\n237:             system_prompt=request.system_prompt,\n238:             document_ids=request.document_ids,\n239:             private=request.private,\n240:             agent_type=request.agent_type,\n241:             device=request.device,\n242:             mail_provider=request.mail_provider,"
+  },
+  {
+    "path": "src/gaia/ui/routers/chat.py",
+    "lines": [
+      88,
+      115
+    ],
+    "source": "88: @router.post(\"/api/chat/send\")\n89: async def send_message(\n90:     request: ChatRequest,\n91:     http_request: Request,\n92:     db: ChatDatabase = Depends(get_db),\n93: ):\n94:     \"\"\"Send a message and get a response (streaming or non-streaming).\n95: \n96:     Concurrency is controlled at two levels:\n97:     1. Every turn on a local model waits in one visible line for it\n98:        (``turn_queue``); a cloud turn doesn't.\n99:        A streamed turn waits inside its detached run and reports its place\n100:        in line; a non-streamed one waits here, its message already saved,\n101:        until it reaches the model or is stopped with ``/api/chat/cancel``.\n102:     2. A per-session lock (session_locks) prevents the same session\n103:        from having overlapping requests that would corrupt conversation\n104:        state.\n105:     \"\"\"\n106:     # Verify session exists\n107:     session = db.get_session(request.session_id)\n108:     if not session:\n109:         raise HTTPException(status_code=404, detail=\"Session not found\")\n110:     request.agent_type = flagship_only(\n111:         http_request, request.agent_type, session.get(\"agent_type\") or \"chat\"\n112:     )\n113: \n114:     # \u2500\u2500 Per-session lock \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n115:     # setdefault is atomic: safe under concurrent requests for the same session"
+  },
+  {
+    "path": "src/gaia/ui/models.py",
+    "lines": [
+      380,
+      392
+    ],
+    "source": "380: \n381: \n382: class CreateSessionRequest(BaseModel):\n383:     \"\"\"Request to create a new chat session.\"\"\"\n384: \n385:     title: Optional[str] = Field(None, max_length=MAX_SESSION_TITLE_CHARS)\n386:     model: Optional[str] = None\n387:     system_prompt: Optional[str] = None\n388:     document_ids: List[str] = Field(default_factory=list)\n389:     private: bool = False\n390:     agent_type: Optional[str] = Field(None, max_length=64, pattern=r\"^[a-zA-Z0-9_-]+$\")\n391:     device: Optional[str] = None\n392:     # Mailbox provider for email-backed agents. Gmail by default; \"microsoft\""
+  },
+  {
+    "path": "src/gaia/apps/webui/src/components/ChatView.tsx",
+    "lines": [
+      273,
+      278
+    ],
+    "source": "273:     const [pendingReceiptScroll, setPendingReceiptScroll] = useState<string | null>(null);\n274:     const { exportChat, exportError, clearExportError } = useChatExport(sessionId, session?.title);\n275:     // A chat made by a retired agent (chat/doc/file) can be read but not continued.\n276:     const retiredAgent = session?.agent_type && session.agent_type !== FLAGSHIP_AGENT_ID ? session.agent_type : null;\n277: \n278:     // Smooth streaming exit \u2014 snapshot last content so fade-out shows real text"
+  }
+]

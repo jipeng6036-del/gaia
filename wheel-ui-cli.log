@@ -1,0 +1,60 @@
+[2026-10-25 06:23:33] | [37mINFO[0m | matplotlib.font_manager._load_fontmanager | font_manager.py:1848 | generated new fontManager
+[2026-10-25 06:23:34] | [37mINFO[0m | gaia.cli._launch_agent_ui | cli.py:903 | Using remote Lemonade server: http://127.0.0.1:18942/api/v1
+[2026-10-25 06:23:34] | [37mINFO[0m | gaia.cli._launch_agent_ui | cli.py:908 | Starting GAIA Agent UI on http://127.0.0.1:18943
+[2026-10-25 06:23:34] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated messages table: added model_messages column
+[2026-10-25 06:23:34] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated messages table: added inference_stats column
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated messages table: added turn_summary column
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated documents table: added indexing_status column
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated documents table: added file_mtime column
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated documents table: added indexing_owner column
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added private column
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added agent_type column
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added pinned column
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added unread column
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added last_run_status column
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added kind column
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.database.__init__ | database.py:241 | Chat database initialized: /tmp/gaia5482-homes/wheel/.gaia/chat/gaia_chat.db
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.server.create_app | server.py:1000 | Email REST surface served by the daemon-supervised sidecar (GAIA_EMAIL_AGENT_MODE=user).
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.server.create_app | server.py:1044 | Serving frontend from /webui
+INFO:     Started server process [910]
+INFO:     Waiting for application startup.
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.agents.registry.discover | registry.py:627 | registry: Starting agent discovery
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.agents.registry.discover | registry.py:638 | registry: Found 1 agent directories: ['email']
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.agents.registry.discover | registry.py:669 | registry: Agent discovery complete. 0 agents registered: []
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.agents.registry.register_sidecar | registry.py:1267 | registry: Registered sidecar agent: email (namespaced installed:email)
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:574 | server: Agent registry initialized with 1 agents: ['email']
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.agent_loop.start | agent_loop.py:161 | AgentLoop started (tick_interval=60s)
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:739 | AgentLoop started
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.scheduler.__init__ | scheduler.py:909 | Scheduler initialized
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.scheduler.start | scheduler.py:934 | Scheduler started with 0 task(s)
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:774 | Task scheduler started (timeout=300.0s)
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.document_monitor.start | document_monitor.py:98 | Document monitor started (interval=30s)
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:785 | Document file monitor started (30s polling interval)
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.connectors.activation_watcher.start | activation_watcher.py:82 | activation-watcher: started (poll=1.0s)
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:795 | Connector activation watcher started
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:809 | connections: tripwire sweep complete
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:831 | connectors: McpServerHandler reload_callback wired to reload_all_session_agents_mcp
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:18943 (Press CTRL+C to quit)
+[2026-10-25 06:23:35] | [37mINFO[0m | faiss.loader.<module> | loader.py:189 | Successfully loaded faiss.
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.server._import_modules | server.py:619 | faiss: loaded (generic — no AVX2/AVX-512 SWIG module in this wheel; vector search still works, just slower)
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.dispatch._run | dispatch.py:166 | Boot init: Loading ML libraries → done (0.1s)
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.dispatch._run | dispatch.py:166 | Boot init: Checking LLM server → done (0.1s)
+[2026-10-25 06:23:35] | [37mINFO[0m | httpx._send_single_request | _client.py:1025 | HTTP Request: GET http://127.0.0.1:18942/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:23:35] | [37mINFO[0m | httpx._send_single_request | _client.py:1025 | HTTP Request: GET http://127.0.0.1:18942/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.dispatch._run | dispatch.py:166 | Boot init: Loading AI model → done (0.3s)
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.warmup.request_warm_up | warmup.py:349 | Warm-up (startup) not started: first-run setup has not finished
+[2026-10-25 06:23:35] | [37mINFO[0m | gaia.ui.dispatch._run | dispatch.py:166 | Boot init: Priming the first prompt → done (0.4s)
+[2026-10-25 06:23:42] | [37mINFO[0m | gaia.ui._chat_helpers._stream_chat_impl | _chat_helpers.py:3691 | chat: Session cb408a64 using agent type: email (streaming)
+[2026-10-25 06:23:42] | [37mINFO[0m | gaia.ui._chat_helpers._run_agent | _chat_helpers.py:3894 | chat: relaying email query (sidecar) for session cb408a64
+[2026-10-25 06:23:43] | [37mINFO[0m | gaia.daemon.client._spawn_and_wait | client.py:449 | daemon: started pid=985 port=47729
+[2026-10-25 06:23:45] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18942/api/v1/stats "HTTP/1.0 200 OK"
+[2026-10-25 06:23:45] | [37mINFO[0m | httpx._send_single_request | _client.py:1740 | HTTP Request: GET http://127.0.0.1:18942/api/v1/health "HTTP/1.0 200 OK"
+[2026-10-25 06:23:46] | [37mINFO[0m | gaia.ui._chat_helpers._stream_chat_impl | _chat_helpers.py:3691 | chat: Session 1b51f7aa using agent type: email (streaming)
+[2026-10-25 06:23:46] | [37mINFO[0m | gaia.ui._chat_helpers._run_agent | _chat_helpers.py:3894 | chat: relaying email query (sidecar) for session 1b51f7aa
+[2026-10-25 06:23:46] | [33mWARNING[0m | gaia.ui._chat_helpers._dispatch_sidecar_query | _chat_helpers.py:2299 | email agent at contract 2.7 can't take memory=private
+[2026-10-25 06:23:46] | [33mWARNING[0m | gaia.ui._chat_helpers._stream_chat_impl | _chat_helpers.py:4675 | Empty response for session 1b51f7aa — cancelled=False result_holder answer=None error=None captured_steps=1
+[2026-10-25 06:23:46] | [37mINFO[0m | gaia.ui._chat_helpers._stream_chat_impl | _chat_helpers.py:3691 | chat: Session 9ea333d1 using agent type: email (streaming)
+[2026-10-25 06:23:46] | [37mINFO[0m | gaia.ui._chat_helpers._run_agent | _chat_helpers.py:3894 | chat: relaying email query (sidecar) for session 9ea333d1
+[2026-10-25 06:23:46] | [33mWARNING[0m | gaia.ui._chat_helpers._dispatch_sidecar_query | _chat_helpers.py:2299 | email agent at contract 2.7 can't take memory=off
+[2026-10-25 06:23:46] | [33mWARNING[0m | gaia.ui._chat_helpers._stream_chat_impl | _chat_helpers.py:4675 | Empty response for session 9ea333d1 — cancelled=False result_holder answer=None error=None captured_steps=1
