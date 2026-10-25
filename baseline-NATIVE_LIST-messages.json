@@ -1,0 +1,88 @@
+{
+  "messages": [
+    {
+      "id": 9,
+      "session_id": "f7d62c9b-00b2-4edc-b021-44e28d5cc981",
+      "role": "user",
+      "content": "Read metadata for proof.txt. Deterministic HTTP fixture test: NATIVE_LIST",
+      "created_at": "2026-10-25T00:35:27.359401+00:00",
+      "rag_sources": null,
+      "agent_steps": null,
+      "stats": null,
+      "turn_summary": null
+    },
+    {
+      "id": 10,
+      "session_id": "f7d62c9b-00b2-4edc-b021-44e28d5cc981",
+      "role": "assistant",
+      "content": "Agent error: 'list' object has no attribute 'get'",
+      "created_at": "2026-10-25T00:35:27.829276+00:00",
+      "rag_sources": null,
+      "agent_steps": [
+        {
+          "id": 1,
+          "type": "tool",
+          "label": "Using file_info",
+          "detail": "",
+          "tool": "file_info",
+          "decision": null,
+          "reason": null,
+          "ruleIds": null,
+          "policyVersion": null,
+          "receiptId": null,
+          "result": null,
+          "success": null,
+          "active": false,
+          "planSteps": null,
+          "planNarrations": null,
+          "currentStep": null,
+          "narration": "Running file info",
+          "timestamp": 5934381359,
+          "commandOutput": null,
+          "fileList": null,
+          "mcpServer": null,
+          "mcpServerLabel": null,
+          "mcpTool": null,
+          "mcpOutput": null,
+          "latencyMs": null,
+          "render": null,
+          "data": null
+        }
+      ],
+      "stats": {
+        "tokens_per_second": 1000.0,
+        "time_to_first_token": 0.001,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "steps": null,
+        "model": "Gemma-4-E4B-it-GGUF",
+        "seconds": null,
+        "retried": null,
+        "place": "on this PC"
+      },
+      "turn_summary": {
+        "pages": [],
+        "documents": [],
+        "files": [],
+        "sites": [],
+        "outputs": [],
+        "live_data": {
+          "attempted": 0,
+          "failed": 0
+        },
+        "cost": {
+          "kind": "local",
+          "usd": null
+        },
+        "model": {
+          "remote": false,
+          "provider": "lemonade",
+          "provider_name": "Lemonade on this machine",
+          "name": "Gemma-4-E4B-it-GGUF"
+        },
+        "error": null
+      }
+    }
+  ],
+  "total": 2
+}

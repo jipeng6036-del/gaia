@@ -1,0 +1,53 @@
+{
+  "hub-chat": {
+    "passed": 109,
+    "skips": [
+      {
+        "test": "hub.agents.chat.python.tests.test_chat_reindex_locked::test_a_document_another_handle_has_locked_is_not_handed_to_rag",
+        "reason": "Windows mandatory locks"
+      },
+      {
+        "test": "hub.agents.chat.python.tests.test_chat_reindex_locked::test_a_partial_lock_the_probe_misses_is_raised_through_real_rag",
+        "reason": "Windows mandatory locks"
+      }
+    ]
+  },
+  "hub-gaia": {
+    "passed": 792,
+    "skips": [
+      {
+        "test": "hub.agents.gaia.python.tests.test_sd_tools_do_not_rewrite_the_prompt::test_an_image_request_selects_the_tools_without_any_skill_loaded[draw me a picture of a red bicycle]",
+        "reason": "semantic tool selection needs a reachable embedder"
+      },
+      {
+        "test": "hub.agents.gaia.python.tests.test_sd_tools_do_not_rewrite_the_prompt::test_an_image_request_selects_the_tools_without_any_skill_loaded[generate an image of a mountain at sunset]",
+        "reason": "semantic tool selection needs a reachable embedder"
+      },
+      {
+        "test": "hub.agents.gaia.python.tests.test_sd_tools_do_not_rewrite_the_prompt::test_a_document_question_does_not_drag_in_the_image_tools",
+        "reason": "semantic tool selection needs a reachable embedder"
+      }
+    ]
+  },
+  "hub": {
+    "passed": 3524,
+    "skips": [
+      {
+        "test": "hub.agents.email.python.tests.test_doc_consistency::test_json_examples_use_the_current_version[email-integration.mdx]",
+        "reason": "email-integration.mdx not present in this checkout"
+      },
+      {
+        "test": "hub.agents.email.python.tests.test_email_slm_config.TestConfiguredCheckpointsPull::test_triage_checkpoint_predicts_a_taxonomy_category",
+        "reason": "Lemonade Server not reachable at http://localhost:13305: HTTPConnectionPool(host='localhost', port=13305): Max retries exceeded with url: /api/v1/health (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=13305): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+      },
+      {
+        "test": "hub.agents.email.python.tests.test_email_slm_config.TestConfiguredCheckpointsPull::test_phishing_checkpoint_predicts_a_boolean",
+        "reason": "Lemonade Server not reachable at http://localhost:13305: HTTPConnectionPool(host='localhost', port=13305): Max retries exceeded with url: /api/v1/health (Caused by NewConnectionError(\"HTTPConnection(host='localhost', port=13305): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+      },
+      {
+        "test": "tests.unit.agents.test_email_agent.TestRegistryIntegration::test_connectors_demo_required_connections_are_proper_objects",
+        "reason": "connectors-demo not loaded"
+      }
+    ]
+  }
+}

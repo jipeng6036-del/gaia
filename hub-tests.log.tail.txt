@@ -1,0 +1,101 @@
+Tail excerpt of complete local log; SHA-256 in manifest.
+tests/unit/agents/test_email_llm_triage.py::TestBoundaryArchetypes::test_system_prompt_distinguishes_fyi_from_needs_response PASSED [ 98%]
+tests/unit/agents/test_email_llm_triage.py::TestUsageAggregation::test_build_result_llm_populates_usage PASSED [ 98%]
+tests/unit/agents/test_email_llm_triage.py::TestUsageAggregation::test_build_result_heuristic_only_usage_is_none PASSED [ 98%]
+tests/unit/agents/test_email_llm_triage.py::TestSuggestedAction::test_suggested_action_extracted_when_present PASSED [ 98%]
+tests/unit/agents/test_email_llm_triage.py::TestSuggestedAction::test_suggested_action_defaults_via_precedence_when_absent PASSED [ 98%]
+tests/unit/agents/test_email_llm_triage.py::TestSuggestedAction::test_suggested_action_defaults_when_invalid PASSED [ 98%]
+tests/unit/agents/test_email_llm_triage.py::TestSuggestedAction::test_urgent_gets_reply_action PASSED [ 98%]
+tests/unit/agents/test_email_llm_triage.py::TestSuggestedAction::test_needs_response_gets_reply_action PASSED [ 98%]
+tests/unit/agents/test_email_llm_triage.py::TestContextThreading::test_context_present_appears_in_prompt PASSED [ 98%]
+tests/unit/agents/test_email_llm_triage.py::TestContextThreading::test_no_context_prompt_unchanged PASSED [ 98%]
+tests/unit/agents/test_email_llm_triage.py::TestContextThreading::test_empty_context_prompt_unchanged PASSED [ 98%]
+tests/unit/test_email_cli.py::TestDispatch::test_email_subcommand_dispatches_to_handle_email_command PASSED [ 98%]
+tests/unit/test_email_cli.py::TestDispatch::test_email_subcommand_does_not_pass_use_claude PASSED [ 98%]
+tests/unit/test_email_cli.py::TestDispatch::test_handle_email_command_relays_query_through_daemon PASSED [ 98%]
+tests/unit/test_email_cli.py::TestDispatch::test_handle_email_command_relays_trace_flag PASSED [ 98%]
+tests/unit/test_email_cli.py::TestDispatch::test_base_url_is_rejected_instead_of_only_reaching_the_health_check[after-subcommand] PASSED [ 98%]
+tests/unit/test_email_cli.py::TestDispatch::test_base_url_is_rejected_instead_of_only_reaching_the_health_check[before-subcommand] PASSED [ 98%]
+tests/unit/test_email_cli.py::TestDispatch::test_base_url_is_rejected_instead_of_only_reaching_the_health_check[before-subcommand-equals] PASSED [ 98%]
+tests/integration/test_never_auto_send.py::TestAgentLayerGate::test_real_send_tools_are_gated[send_draft] PASSED [ 98%]
+tests/integration/test_never_auto_send.py::TestAgentLayerGate::test_real_send_tools_are_gated[send_now] PASSED [ 98%]
+tests/integration/test_never_auto_send.py::TestAgentLayerGate::test_real_send_tools_are_gated[forward_message] PASSED [ 98%]
+tests/integration/test_never_auto_send.py::TestAgentLayerGate::test_denied_confirmation_blocks_the_send PASSED [ 99%]
+tests/integration/test_never_auto_send.py::TestAgentLayerGate::test_non_gated_tool_runs_without_confirmation PASSED [ 99%]
+tests/integration/test_never_auto_send.py::TestRestLayerGate::test_send_without_token_is_403 PASSED [ 99%]
+tests/integration/test_never_auto_send.py::TestRestLayerGate::test_draft_then_send_with_token_succeeds PASSED [ 99%]
+tests/integration/test_never_auto_send.py::TestRestLayerGate::test_token_does_not_authorize_a_different_payload PASSED [ 99%]
+tests/integration/test_never_auto_send.py::TestMcpLayerGate::test_send_without_token_is_rejected PASSED [ 99%]
+tests/integration/test_never_auto_send.py::TestMcpLayerGate::test_draft_then_send_handshake_succeeds PASSED [ 99%]
+tests/integration/test_never_auto_send.py::TestMcpLayerGate::test_token_does_not_authorize_a_different_payload PASSED [ 99%]
+tests/integration/test_never_auto_send.py::TestCrossSurfaceInvariant::test_tokenless_send_is_refused_on_every_surface PASSED [ 99%]
+tests/integration/test_email_rest_api_e2e.py::TestEmailPipelineE2E::test_pre_scan_stage_returns_structured_buckets PASSED [ 99%]
+tests/integration/test_email_rest_api_e2e.py::TestEmailPipelineE2E::test_categorize_stage_uses_frozen_taxonomy PASSED [ 99%]
+tests/integration/test_email_rest_api_e2e.py::TestEmailPipelineE2E::test_summarize_stage_produces_contract_result_per_message PASSED [ 99%]
+tests/integration/test_email_rest_api_e2e.py::TestEmailPipelineE2E::test_draft_stage_creates_proposal_without_sending PASSED [ 99%]
+tests/integration/test_email_rest_api_e2e.py::TestEmailPipelineE2E::test_send_gate_blocks_without_confirmation_then_allows PASSED [ 99%]
+tests/integration/test_email_rest_api_e2e.py::TestEmailPipelineE2E::test_full_pipeline_one_run PASSED [ 99%]
+tests/integration/test_email_rest_http_corpus.py::test_search_over_http_returns_corpus_derived_count PASSED [ 99%]
+tests/integration/test_email_rest_http_corpus.py::test_prescan_over_http_sees_the_full_corpus PASSED [ 99%]
+tests/integration/test_email_rest_http_corpus.py::test_archive_over_http_removes_message_from_inbox_search PASSED [ 99%]
+tests/integration/test_email_corpus_alignment.py::test_committed_corpus_exists PASSED [ 99%]
+tests/integration/test_email_corpus_alignment.py::test_ground_truth_aligns_1to1_with_mbox PASSED [ 99%]
+tests/integration/test_email_corpus_alignment.py::test_no_duplicate_messages_in_mbox PASSED [ 99%]
+tests/test_api.py::TestEmailTriageEndpoint::test_single_email_in_structured_out PASSED [ 99%]
+tests/test_api.py::TestEmailTriageEndpoint::test_thread_in_structured_out PASSED [ 99%]
+tests/test_api.py::TestEmailTriageEndpoint::test_single_email_proposes_draft_to_sender PASSED [ 99%]
+tests/test_api.py::TestEmailTriageEndpoint::test_promotional_email_is_low_priority PASSED [ 99%]
+tests/test_api.py::TestEmailTriageEndpoint::test_response_matches_contract_schema_shape PASSED [ 99%]
+tests/test_api.py::TestEmailTriageEndpoint::test_unknown_field_rejected_422 PASSED [ 99%]
+tests/test_api.py::TestEmailTriageEndpoint::test_empty_thread_rejected_422 PASSED [ 99%]
+tests/test_api.py::TestEmailTriageEndpoint::test_missing_payload_rejected_422 PASSED [ 99%]
+tests/test_api.py::TestEmailSendConfirmationGate::test_send_without_confirmation_token_is_4xx PASSED [ 99%]
+tests/test_api.py::TestEmailSendConfirmationGate::test_send_with_empty_confirmation_token_is_4xx PASSED [ 99%]
+tests/test_api.py::TestEmailSendConfirmationGate::test_send_with_invalid_confirmation_token_is_4xx PASSED [ 99%]
+tests/test_api.py::TestEmailSendConfirmationGate::test_draft_then_send_with_valid_token_succeeds PASSED [ 99%]
+tests/test_api.py::TestEmailSendConfirmationGate::test_token_does_not_authorize_a_different_payload PASSED [ 99%]
+tests/test_api.py::TestEmailSendConfirmationGate::test_confirmation_token_is_single_use PASSED [ 99%]
+tests/test_api.py::TestEmailSendConfirmationGate::test_gate_fires_before_backend_resolution PASSED [100%]
+
+=============================== warnings summary ===============================
+hub/agents/email/python/tests/test_email_agent_routes.py::TestWorkerDiesWithoutTerminalEvent::test_dead_worker_streams_an_error_before_completing
+  /hub-venv/lib/python3.12/site-packages/_pytest/threadexception.py:58: PytestUnhandledThreadExceptionWarning: Exception in thread Thread-189 (_run_agent)
+  
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+      self.run()
+    File "/usr/local/lib/python3.12/threading.py", line 1012, in run
+      self._target(*self._args, **self._kwargs)
+    File "/current/hub/agents/email/python/gaia_agent_email/agent_routes.py", line 779, in _run_agent
+      result = session.agent.process_query(request.message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/current/hub/agents/email/python/tests/test_email_agent_routes.py", line 796, in process_query
+      raise KeyboardInterrupt("worker killed outside the error path")
+  KeyboardInterrupt: worker killed outside the error path
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnhandledThreadExceptionWarning(msg))
+
+hub/agents/email/python/tests/test_email_agent_routes.py::TestWorkerDiesWithoutTerminalEvent::test_dead_worker_still_frees_the_session_lock
+  /hub-venv/lib/python3.12/site-packages/_pytest/threadexception.py:58: PytestUnhandledThreadExceptionWarning: Exception in thread Thread-192 (_run_agent)
+  
+  Traceback (most recent call last):
+    File "/usr/local/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+      self.run()
+    File "/usr/local/lib/python3.12/threading.py", line 1012, in run
+      self._target(*self._args, **self._kwargs)
+    File "/current/hub/agents/email/python/gaia_agent_email/agent_routes.py", line 779, in _run_agent
+      result = session.agent.process_query(request.message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    File "/current/hub/agents/email/python/tests/test_email_agent_routes.py", line 822, in process_query
+      raise KeyboardInterrupt("boom")
+  KeyboardInterrupt: boom
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnhandledThreadExceptionWarning(msg))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+-------------------- generated xml file: /evidence/hub.xml ---------------------
+============ 3524 passed, 4 skipped, 2 warnings in 65.79s (0:01:05) ============

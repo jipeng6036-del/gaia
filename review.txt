@@ -1,0 +1,16 @@
+Native independent review, gaia_tool_args_review, 2026-10-25.
+Roles required by current GAIA AGENTS: code-reviewer and architecture-reviewer.
+
+Initial review identified two regressions in the proposed centralized validation:
+1. A null/empty tool name with non-object args must remain a conversational answer.
+2. A malformed call in the step-cap closing reply must still retry without tools.
+Both were corrected, and both received process_query tests in streaming and
+non-streaming modes. Reviewer independently reran16 cases; all passed.
+
+Final verdict: No remaining material correctness findings. Architecture impact
+Low; correctly in agents/base, no dependencies or upward edges, no subclass parser
+overrides found. Existing plan-only non-object arguments remain outside5471;
+documentation is explicitly limited to direct JSON/native calls.
+
+This is a native agent source review, not human approval. The source reviewer did
+not certify the full core suite or browser proof. Root is responsible for those separate validation gates.

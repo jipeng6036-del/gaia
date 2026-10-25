@@ -1,0 +1,101 @@
+Tail excerpt of complete local log; SHA-256 in manifest.
+src/gaia/ui/routers/skills.py                      33      0   100%
+src/gaia/ui/routers/spending.py                    35      0   100%
+src/gaia/ui/routers/system.py                     637    146    77%   94-113, 192-207, 223-232, 303-321, 350-455, 625, 641-643, 649, 669-672, 710, 752, 800-808, 858-861, 905-914, 941-944, 956, 968-969, 975, 982, 1001, 1015-1022, 1027-1039, 1134-1146, 1253, 1263-1264, 1294, 1366, 1481-1488
+src/gaia/ui/routers/tunnel.py                      27     15    44%   24-30, 39-45, 54
+src/gaia/ui/run_manager.py                        151      3    98%   163, 330-332
+src/gaia/ui/scheduler.py                          747     33    96%   225, 263, 268, 283, 299, 334, 366, 398-404, 524, 532, 550, 607, 709, 754, 764, 775, 786-787, 1101, 1197, 1218, 1278, 1291, 1462-1465, 1489-1490, 1521-1522, 1576-1577
+src/gaia/ui/scripted_user.py                       25      0   100%
+src/gaia/ui/security.py                           119      4    97%   138, 153, 173, 176
+src/gaia/ui/server.py                             471     27    94%   217, 338, 340-341, 372, 381, 407, 432, 440, 442, 617, 658, 685-688, 729-730, 764, 810-811, 836-842, 1030-1031, 1290-1291
+src/gaia/ui/session_environment.py                134      9    93%   53, 60-61, 108-109, 145, 151, 153, 161
+src/gaia/ui/session_git.py                        192     23    88%   40, 71-76, 87-88, 94-96, 103, 157, 167-168, 204, 236, 239-240, 285, 301, 338, 347, 352
+src/gaia/ui/session_outputs.py                     66      5    92%   33, 35, 130, 132, 153
+src/gaia/ui/setup_plan.py                         108     17    84%   40-41, 55-61, 176-179, 241-242, 253-254
+src/gaia/ui/setup_runner.py                       336     13    96%   143, 259-260, 298-300, 330-335, 515, 570, 575
+src/gaia/ui/spending.py                           102      0   100%
+src/gaia/ui/sse_handler.py                       1319    105    92%   167, 180, 182, 316, 338, 450, 477-479, 1057, 1060, 1191, 1211, 1236, 1262, 1313, 1500, 1546-1547, 1559, 1592-1595, 1598-1601, 1608-1612, 1633, 1637-1639, 1647-1663, 1669-1691, 1696-1700, 1707-1709, 2022-2026, 2035, 2038, 2158, 2160-2161, 2270, 2286-2296, 2309, 2373-2375, 2430, 2512, 2518-2519, 2573-2581, 2660
+src/gaia/ui/sse_translation.py                    439     43    90%   249-256, 318, 325, 370, 385, 396, 477-488, 500, 502, 510, 587, 593, 599, 612, 622, 672, 675, 708-725, 810, 812, 821, 972, 1008-1009
+src/gaia/ui/start_screen.py                        75      0   100%
+src/gaia/ui/tunnel.py                             413     67    84%   106, 132-153, 196-198, 341-342, 347-348, 351-354, 357-360, 363, 379-380, 391-392, 396-397, 400-401, 518, 592-594, 601, 621-632, 667, 671-673, 779-789, 810-812, 920-921, 941-942
+src/gaia/ui/turn_changes.py                        54     11    80%   51, 55-57, 66-68, 81, 88-90
+src/gaia/ui/turn_insights.py                      275     50    82%   44-53, 112, 117, 147-151, 159-161, 166-168, 290, 315, 533-576
+src/gaia/ui/turn_queue.py                         166      9    95%   80, 151, 181-183, 263, 267-268, 278-279
+src/gaia/ui/turn_summary.py                       211      7    97%   114-115, 121, 124, 214, 308, 417
+src/gaia/ui/utils.py                              286     34    88%   241, 243-244, 254-255, 317, 324, 389, 453, 573, 751, 772, 799, 803-813, 819, 834-849, 858-872
+src/gaia/ui/warmup.py                             201     32    84%   138-139, 246-247, 263-265, 282-324, 347, 357-358
+src/gaia/utils/__init__.py                          3      0   100%
+src/gaia/utils/archive.py                         176      5    97%   139, 267, 351, 355, 358
+src/gaia/utils/awake_clock.py                      19     12    37%   32-56
+src/gaia/utils/file_lock.py                       378     44    88%   158-161, 165-166, 221-222, 244-247, 263, 269, 275-277, 283-285, 316-317, 364-370, 448, 465-477, 484, 762-779, 783-787
+src/gaia/utils/file_watcher.py                    352     50    86%   42-55, 144-146, 341, 363, 380, 390, 464, 471, 499-501, 509, 560, 572, 598, 609, 700, 852-872, 876-879, 884-886, 891, 896-912
+src/gaia/utils/json_string.py                     115      6    95%   49, 52, 112-114, 132
+src/gaia/utils/parsing.py                          91     22    76%   38, 40, 149-172, 216
+src/gaia/utils/paths.py                            30      4    87%   73, 81, 86, 96
+src/gaia/utils/perf_trace.py                       29      0   100%
+src/gaia/utils/power.py                            33     18    45%   43-68
+src/gaia/utils/process_owner.py                    61     17    72%   50-51, 62-65, 72, 89, 93-94, 102-103, 105, 108-111
+src/gaia/utils/terminal.py                         43      6    86%   99, 106-111
+src/gaia/utils/tiktoken_bundle.py                  25      0   100%
+src/gaia/version.py                                55     27    51%   54-60, 73-82, 92-96, 102-121, 131, 135
+src/gaia/vlm/__init__.py                            3      0   100%
+src/gaia/vlm/mixin.py                              75     22    71%   89-113, 155, 199, 227, 248, 256-262
+src/gaia/vlm/structured_extraction.py             154      0   100%
+src/gaia/web/__init__.py                            2      0   100%
+src/gaia/web/client.py                            700     36    95%   42-44, 158-164, 223, 288, 291, 299, 451, 481, 486, 506, 653-655, 657, 784-785, 847, 933-934, 1001, 1066, 1076, 1080, 1128, 1138, 1300, 1318, 1377, 1510, 1522
+src/gaia/web/tavily.py                            250     44    82%   127-129, 132, 153-155, 158, 345, 401, 479-493, 498-518, 548, 600-625
+-----------------------------------------------------------------------------
+TOTAL                                          115170  20445    82%
+Coverage XML written to file /evidence/full-lf-baseline-coverage.xml
+============================= slowest 50 durations =============================
+21.49s call     tests/unit/test_starter_skills.py::test_cli_imports_every_starter_skill
+10.56s call     tests/unit/test_agent_sidecar_manager.py::test_health_rejects_foreign_server_on_port
+10.53s call     tests/unit/test_agent_sidecar_manager.py::test_start_does_not_retry_on_health_timeout
+10.06s call     tests/unit/test_agent_sidecar_manager.py::test_start_retries_on_early_exit_then_succeeds
+10.03s call     tests/unit/test_sidecar_orphan_group_kill.py::test_registry_stop_is_loud_when_the_group_survives
+10.02s call     tests/unit/test_lemonade_shared_server.py::test_initialize_reports_a_busy_remote_server_as_busy
+10.02s call     tests/unit/test_lemonade_shared_server.py::test_ensure_ready_reports_a_stalled_server_as_busy
+9.41s call     tests/unit/test_remote_disconnected_handling.py::test_every_urlerror_handler_also_handles_a_dropped_connection
+8.44s call     tests/unit/agents/test_step_budget_adversarial.py::test_notices_never_reach_a_later_turn_across_three_turns
+8.14s call     tests/unit/test_daemon_status_under_load.py::test_status_answers_while_lease_waiters_fill_the_thread_pool
+8.02s call     tests/unit/test_stream_stall_watchdog.py::test_hosted_reply_silent_on_every_attempt_fails_loudly
+8.01s call     tests/unit/test_lemonade_shared_lifecycle.py::TestSlowButAliveEmbeddedServer::test_a_server_answering_nothing_is_still_reported_stalled
+7.83s call     tests/unit/mcp/client/test_stdio_hung_server.py::test_redaction_stays_fast_on_dense_escapes
+7.10s call     tests/unit/test_file_watcher_settle.py::test_a_new_change_to_a_locked_file_restarts_its_retries
+7.05s call     tests/unit/test_file_watcher_settle.py::test_a_file_locked_for_good_is_given_up_on_loudly
+6.55s call     tests/unit/test_skills_cli.py::test_real_cli_create_list_info_export_import
+6.53s call     tests/unit/eval/test_scenario_backend.py::test_a_backend_that_will_not_go_idle_stops_the_run_with_a_named_error
+6.52s call     tests/unit/test_gaia_home_ratchet.py::test_no_new_hard_coded_gaia_home_paths
+6.51s call     tests/unit/test_stream_stall_watchdog.py::test_trickle_just_under_the_idle_limit_is_not_killed
+6.12s call     tests/unit/eval/test_scenario_backend.py::test_a_timed_out_turn_is_stopped_and_the_next_scenario_starts_at_once
+6.10s call     tests/unit/test_daemon_broker_queue.py::test_cancelling_an_upload_queued_behind_a_chat_leaves_the_queue
+6.06s call     tests/unit/mcp/client/test_stdio_hung_server.py::test_a_launcher_that_dies_during_the_startup_check_has_its_child_stopped
+6.03s call     tests/unit/eval/test_scenario_backend.py::test_a_timeout_keeps_the_turns_that_finished
+6.01s call     tests/unit/test_lemonade_shared_lifecycle.py::TestSlowButAliveEmbeddedServer::test_a_busy_server_is_running_and_reused
+6.01s call     tests/unit/test_stream_stall_watchdog.py::test_local_non_streaming_keeps_its_prefill_budget
+5.31s call     tests/unit/chat/ui/test_document_monitor.py::TestDocumentMonitor::test_reindex_zero_chunks_sets_failed
+5.17s call     tests/unit/test_hub_imports_are_guarded.py::test_hub_package_imports_in_unit_tests_are_guarded
+5.12s call     tests/unit/mcp/client/test_stdio_hung_server.py::test_secrets_are_found_once_not_per_stderr_line
+5.11s call     tests/unit/chat/ui/test_document_monitor.py::TestDocumentMonitor::test_detects_file_change
+5.01s call     tests/unit/test_lemonade_shared_server.py::test_launch_server_does_not_take_over_a_busy_server
+5.01s call     tests/unit/test_lemonade_shared_server.py::test_cloud_model_agent_builds_on_a_busy_server
+5.01s call     tests/unit/test_lemonade_shared_server.py::test_auto_start_does_not_launch_over_a_busy_server
+5.01s call     tests/unit/test_filesystem_index_locked.py::test_a_real_exclusive_lock_raises_and_keeps_the_index
+5.01s call     tests/unit/test_lemonade_shared_server.py::test_health_check_default_is_a_short_probe
+5.01s call     tests/unit/test_lemonade_shared_server.py::test_get_status_flags_busy_not_down
+5.01s call     tests/unit/test_hub_installer_pip_timeout.py::test_an_orphaned_grandchild_is_killed_too
+5.01s call     tests/unit/test_lemonade_shared_server.py::test_initialize_does_not_start_over_a_busy_server
+5.00s call     tests/unit/test_lemonade_client_http.py::TestLaunchServerModernLegacyDispatch::test_launch_server_uses_resolved_modern_command
+5.00s call     tests/unit/test_lemonade_client_http.py::TestLaunchServerModernLegacyDispatch::test_launch_server_legacy_fallback_unchanged
+5.00s call     tests/unit/test_mic_failure_reporting.py::TestTheLivePlaybackPathIsBounded::test_speak_text_survives_a_consumer_that_never_reads
+4.78s call     tests/unit/eval/test_scenario_backend.py::test_a_prompt_nobody_could_answer_is_an_infra_error_naming_the_tool
+4.51s call     tests/unit/test_stream_stall_watchdog.py::test_hosted_reply_that_never_comes_is_retried
+4.09s call     tests/unit/test_daemon_broker_queue.py::test_cancelling_a_streaming_wait_leaves_the_queue
+4.09s call     tests/unit/test_daemon_broker_queue.py::test_a_scoped_wait_limit_caps_work_that_must_not_wait_forever
+4.08s call     tests/unit/test_hub_installer.py::test_hung_pip_fails_the_install_and_frees_the_slot
+4.02s call     tests/unit/test_stream_stall_watchdog.py::test_bounded_time_counts_real_seconds
+4.02s call     tests/unit/test_stream_stall_watchdog.py::test_stall_on_every_attempt_fails_loudly_in_bounded_time
+4.01s call     tests/unit/test_stream_stall_watchdog.py::test_slow_local_prefill_is_not_killed[prefill_after_headers]
+4.01s call     tests/unit/test_lemonade_shared_server.py::test_a_server_that_never_answers_fails_loudly
+4.01s call     tests/unit/test_stream_stall_watchdog.py::test_slow_local_prefill_is_not_killed[prefill_before_headers]
+= 27508 passed, 478 skipped, 3 xfailed, 7 warnings, 41 subtests passed in 506.06s (0:08:26) =

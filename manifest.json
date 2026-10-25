@@ -1,0 +1,247 @@
+{
+  "createdAtUtc": "2026-10-25T01:42:03.863265+00:00",
+  "repository": "amd/gaia",
+  "issue": 5471,
+  "baseline": "82ad2a771c7ed5b6b26f4521b3e4eaad40820f85",
+  "candidate": "ada550c412069392b14df926401d4fcadcf15cb3",
+  "branch": "fix/recover-non-object-tool-arguments",
+  "files": {
+    "src/gaia/agents/base/agent.py": {
+      "git_blob": "fb072841dca5deab2107d1aa878fc973aec696b9",
+      "working_sha256": "97a9acf8ddab532b194ca970cc7e548813b73a3583877c71fe479e312ae5e28c"
+    },
+    "tests/unit/agents/test_tool_args_object.py": {
+      "git_blob": "b8f9c590ffa0a52a5c33e7edcd45ef91575df8eb",
+      "working_sha256": "3a6ed6610e94e106d1d15e76b962215c8e6ee1fd57e348f67b6a62d218f792f1"
+    },
+    "docs/spec/agent-base.mdx": {
+      "git_blob": "d0bc4939ffc29cea8f2ad66101b46a402978ac82",
+      "working_sha256": "26302435a1ef957cfb677a9be99442e9e89cfa75a852523d9a817ab287189976"
+    }
+  },
+  "linux": {
+    "started": "2026-10-25T01:00:52.618055+00:00",
+    "source": "Exact LF archive; only candidate three-file overlay is different.",
+    "phase": "candidate",
+    "baseline_command": [
+      "/usr/sbin/runuser",
+      "-u",
+      "gaia-runner",
+      "--",
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/",
+      "-n",
+      "4",
+      "--dist=worksteal",
+      "--timeout=180",
+      "-v",
+      "--tb=long",
+      "--showlocals",
+      "--durations=50",
+      "--basetemp=/tmp/gaia-tool-args-baseline",
+      "--cov=src/gaia",
+      "--cov-report=term-missing",
+      "--cov-report=xml:/evidence/full-lf-baseline-coverage.xml",
+      "--junitxml=/evidence/full-lf-baseline.xml"
+    ],
+    "baseline_exit_code": 0,
+    "candidate_command": [
+      "/usr/sbin/runuser",
+      "-u",
+      "gaia-runner",
+      "--",
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/",
+      "-n",
+      "4",
+      "--dist=worksteal",
+      "--timeout=180",
+      "-v",
+      "--tb=long",
+      "--showlocals",
+      "--durations=50",
+      "--basetemp=/tmp/gaia-tool-args-candidate",
+      "--cov=src/gaia",
+      "--cov-report=term-missing",
+      "--cov-report=xml:/evidence/full-lf-candidate-coverage.xml",
+      "--junitxml=/evidence/full-lf-candidate.xml"
+    ],
+    "candidate_exit_code": 0,
+    "finished": "2026-10-25T01:18:01.070189+00:00"
+  },
+  "integration": {
+    "started": "2026-10-25T01:18:01.100593+00:00",
+    "command": [
+      "/usr/sbin/runuser",
+      "-u",
+      "gaia-runner",
+      "--",
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/integration/test_cli_tool_confirmation.py",
+      "tests/integration/test_database_mixin_integration.py",
+      "tests/integration/test_database_agent.py",
+      "tests/integration/test_context_override_reload.py",
+      "-v",
+      "--tb=short",
+      "--timeout=300",
+      "--junitxml=/evidence/integration.xml"
+    ],
+    "exit_code": 0,
+    "finished": "2026-10-25T01:18:11.263807+00:00"
+  },
+  "hub": {
+    "started": "2026-10-25T01:20:18.977600+00:00",
+    "stage": "hub-tests",
+    "hub-create": 0,
+    "hub-install": 0,
+    "hub-ensurepip": 0,
+    "hub-guard-test-email-agent": 0,
+    "hub-guard-test-chat-agent": 0,
+    "hub-guard-test-gaia-agent": 0,
+    "hub-capability-matrix": 0,
+    "harnessCorrection": "Run independent Hub package suites separately, as their CI workflows do. Combining un-packaged tests directories caused six duplicate Python module basenames during collection; no production or test files changed.",
+    "hub-chat-tests": 0,
+    "scratchCorrection": "The isolated 4GiB /tmp tmpfs retained 3.2GiB from completed full-core runs. Large artifact tests exhausted its remaining space. Removed only the three verified, generated pytest basetemps inside this container; retained all logs/XML/source. Serial Hub runs now reuse one basetemp so pytest reclaims the previous package scratch files. No host disk, source, tests or assertions changed.",
+    "hub-gaia-tests": 0,
+    "command": [
+      "/usr/sbin/runuser",
+      "-u",
+      "gaia-runner",
+      "--",
+      "/hub-venv/bin/python",
+      "-m",
+      "pytest",
+      "hub/agents/email/python/tests/",
+      "tests/test_email_openapi_conformance.py",
+      "tests/unit/agents/email/",
+      "tests/unit/email/",
+      "tests/unit/agents/test_email_agent.py",
+      "tests/unit/agents/test_email_agent_confirmation.py",
+      "tests/unit/agents/test_email_agent_local_llm_enforcement.py",
+      "tests/unit/agents/test_email_agent_prompt_injection.py",
+      "tests/unit/agents/test_email_agent_soft_delete.py",
+      "tests/unit/agents/test_email_agent_tools.py",
+      "tests/unit/agents/test_email_llm_triage.py",
+      "tests/unit/test_email_cli.py",
+      "tests/integration/test_never_auto_send.py",
+      "tests/integration/test_email_rest_api_e2e.py",
+      "tests/integration/test_email_rest_http_corpus.py",
+      "tests/integration/test_email_corpus_alignment.py",
+      "tests/test_api.py::TestEmailTriageEndpoint",
+      "tests/test_api.py::TestEmailSendConfirmationGate",
+      "-v",
+      "--tb=short",
+      "--timeout=180",
+      "--basetemp=/tmp/gaia-tool-args-hub",
+      "--junitxml=/evidence/hub.xml"
+    ],
+    "emailEnvironmentCorrection": "Match test_email_agent.yml: do not export GAIA_MEMORY_DISABLED for email tests, which explicitly verify enabled memory with local mocked embedders. The first email run incorrectly inherited the chat/flagship workflow flag and was interrupted, not counted as a pass. No production, test or assertion changed.",
+    "buildOwnershipCorrection": "Root uv installation created the ignored email egg-info metadata as root; nonroot pytest could not remove or update it during its real sdist test. Changed only that generated metadata ownership to the test user. The initial proper-email-env run was 3523 passed/1 permission failure/4 skips; it is not counted as a pass. Retrying the complete email lane without test changes.",
+    "hub-tests": 0,
+    "finished": "2026-10-25T01:41:25.934386+00:00"
+  },
+  "results": {
+    "full-lf-baseline.xml": {
+      "tests": "28030",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "481",
+      "time": "507.128"
+    },
+    "full-lf-candidate.xml": {
+      "tests": "28100",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "481",
+      "time": "515.919"
+    },
+    "integration.xml": {
+      "tests": "77",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "9.261"
+    },
+    "hub.xml": {
+      "tests": "3528",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "4",
+      "time": "66.447"
+    },
+    "hub-chat.xml": {
+      "tests": "111",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "2",
+      "time": "33.022"
+    },
+    "hub-gaia.xml": {
+      "tests": "795",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "3",
+      "time": "54.825"
+    },
+    "baseline-regressions.xml": {
+      "tests": "70",
+      "failures": "48",
+      "errors": "0",
+      "skipped": "0",
+      "time": "13.138"
+    },
+    "candidate-regressions.xml": {
+      "tests": "70",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "2.244"
+    }
+  },
+  "countNote": "Full-core JUnit tests include41 passing subtests; human-readable passed counts come from the final pytest summary, not tests-minus-skipped.",
+  "windows": {
+    "gaia-5471-focused-final.xml": {
+      "tests": "75",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "3.413"
+    },
+    "gaia-5471-agents-windows.xml": {
+      "tests": "4225",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "55",
+      "time": "236.839"
+    },
+    "gaia-5471-py310.xml": {
+      "tests": "72",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "11.160"
+    }
+  },
+  "lint": "18 configured checks:17 pass,1 explicitly nonblocking MyPy advisory; subsequent staged lane/path checks2pass",
+  "runtimeBoundary": "Actual CLI/AgentUI/HTTP/SSE/GaiaAgent/parser/real file_info; deterministic model HTTP only. No real inference/GPU/paid judge.",
+  "unrun": [
+    "Hosted CI (only after PR)",
+    "Real model eval: next-RC tool_selection/error_recovery per repository hardware exception"
+  ],
+  "initialAttempts": "First full8fail:6 CRLF shell failures matched on both revisions; initial identity failure not reproduced by paired module controls or final complete runs (no root cause claimed); memory failure reproduced on both revisions from credential-shaped --basetemp. Four matched path controls1/0/1/0; plain paths preserve credential protection and original assertions. Interrupted runs are not passes.",
+  "completeLogSha256": {
+    "full-lf-baseline.log": "c4be140d822e21f45413e90406f87b8758600c99fe6a6d766b8c3d961aca0fd7",
+    "full-lf-candidate.log": "a934f05ea731079993ca0410e046bf0a6aacbedfbd4bec01cb0341ebd990f59c",
+    "integration.log": "6ae2529463e7aeed9c725ec66578a29e1491ec6bae34d918f59e534596f1df4d",
+    "hub-chat-tests.log": "52a27c0135eef8eaacbdc58b2e9d401cb93f892747b1bfda811cbb74b95d0a7a",
+    "hub-gaia-tests.log": "c13792537791aa189d9e6681de82296b1481c9602a2f537e1848efd37bedae6d",
+    "hub-tests.log": "322a2734268628a0b0eee9d286ef2c9f07ac53910065fc67d078f6e3d7fb5ba7",
+    "gaia-5471-agents-windows.log": "0119bde10dc628f286714b312402d2a526635f7bb12bdf447698b9922abbd3c0"
+  }
+}

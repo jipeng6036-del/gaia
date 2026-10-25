@@ -1,0 +1,88 @@
+{
+  "messages": [
+    {
+      "id": 7,
+      "session_id": "9676228f-c729-475d-8e68-123a0a7d5515",
+      "role": "user",
+      "content": "Read metadata for proof.txt. Deterministic HTTP fixture test: NATIVE_LIST",
+      "created_at": "2026-10-25T00:35:29.623320+00:00",
+      "rag_sources": null,
+      "agent_steps": null,
+      "stats": null,
+      "turn_summary": null
+    },
+    {
+      "id": 8,
+      "session_id": "9676228f-c729-475d-8e68-123a0a7d5515",
+      "role": "assistant",
+      "content": "Metadata read successfully by the real GAIA file_info tool:\nFile: F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\documents\\proof.txt\n  Name:      proof.txt\n  Size:      37 B\n  Modified:  2026-10-24 17:30\n  Created:   2026-10-24 17:30\n  MIME Type: text/plain\n  Extension: .txt\n  Lines:     1\n  Chars:     36",
+      "created_at": "2026-10-25T00:35:30.186723+00:00",
+      "rag_sources": null,
+      "agent_steps": [
+        {
+          "id": 1,
+          "type": "tool",
+          "label": "Using file_info",
+          "detail": "path: F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\documents\\proof.txt",
+          "tool": "file_info",
+          "decision": null,
+          "reason": null,
+          "ruleIds": null,
+          "policyVersion": null,
+          "receiptId": null,
+          "result": "File: F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\documents\\proof.txt\n  Name:      proof.txt\n  Size:      37 B\n  Modified:  2026-10-24 17:30\n  Created:   2026-10-24 17:30\n  MIME Type: text/plain\n  Extension: .txt\n  Lines:     1\n  Chars:     36",
+          "success": true,
+          "active": false,
+          "planSteps": null,
+          "planNarrations": null,
+          "currentStep": null,
+          "narration": "Running file info: F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\documents\\proof.txt",
+          "timestamp": 5934383671,
+          "commandOutput": null,
+          "fileList": null,
+          "mcpServer": null,
+          "mcpServerLabel": null,
+          "mcpTool": null,
+          "mcpOutput": null,
+          "latencyMs": 15.0,
+          "render": null,
+          "data": null
+        }
+      ],
+      "stats": {
+        "tokens_per_second": 1000.0,
+        "time_to_first_token": 0.001,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "steps": 4,
+        "model": "Gemma-4-E4B-it-GGUF",
+        "seconds": null,
+        "retried": null,
+        "place": "on this PC"
+      },
+      "turn_summary": {
+        "pages": [],
+        "documents": [],
+        "files": [],
+        "sites": [],
+        "outputs": [],
+        "live_data": {
+          "attempted": 0,
+          "failed": 0
+        },
+        "cost": {
+          "kind": "local",
+          "usd": null
+        },
+        "model": {
+          "remote": false,
+          "provider": "lemonade",
+          "provider_name": "Lemonade on this machine",
+          "name": "Gemma-4-E4B-it-GGUF"
+        },
+        "error": null
+      }
+    }
+  ],
+  "total": 2
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "count": 50,
+    "type": null,
+    "reason": "collection skipped"
+  },
+  {
+    "count": 1,
+    "type": "pytest.skip",
+    "reason": "cannot create a symlink here: [WinError 1314] \u5ba2\u6237\u7aef\u6ca1\u6709\u6240\u9700\u7684\u7279\u6743\u3002: 'C:\\\\Users\\\\lyz\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-lyz\\\\pytest-1550\\\\popen-gw1\\\\test_relayed_full_access_does_0\\\\Elsewhere\\\\vault' -> 'C:\\\\Users\\\\lyz\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-lyz\\\\pytest-1550\\\\popen-gw1\\\\test_relayed_full_access_does_0\\\\scope\\\\innocent'"
+  },
+  {
+    "count": 2,
+    "type": "pytest.skip",
+    "reason": "symlink creation requires elevated privilege on this host"
+  },
+  {
+    "count": 1,
+    "type": "pytest.skip",
+    "reason": "creating a symlink needs a privilege this machine lacks"
+  },
+  {
+    "count": 1,
+    "type": "pytest.skip",
+    "reason": "/etc/hosts only exists as an absolute path on POSIX"
+  }
+]

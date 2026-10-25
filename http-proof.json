@@ -1,0 +1,58 @@
+[
+  {
+    "phase": "baseline",
+    "mode": "JSON_STRING",
+    "session": "8fdb6208-ba98-4ec5-b3dc-14e80f3a3c26",
+    "browser_url": "http://127.0.0.1:18804/#8fdb620",
+    "metadata_answer": false
+  },
+  {
+    "phase": "baseline",
+    "mode": "JSON_LIST",
+    "session": "1d305bdd-b868-411d-8859-414cf386a604",
+    "browser_url": "http://127.0.0.1:18804/#1d305bd",
+    "metadata_answer": false
+  },
+  {
+    "phase": "baseline",
+    "mode": "NATIVE_STRING",
+    "session": "f95939db-5e3c-4336-a319-bc8e292957fc",
+    "browser_url": "http://127.0.0.1:18804/#f95939d",
+    "metadata_answer": false
+  },
+  {
+    "phase": "baseline",
+    "mode": "NATIVE_LIST",
+    "session": "f7d62c9b-00b2-4edc-b021-44e28d5cc981",
+    "browser_url": "http://127.0.0.1:18804/#f7d62c9",
+    "metadata_answer": false
+  },
+  {
+    "phase": "candidate",
+    "mode": "JSON_STRING",
+    "session": "4fb52007-d90d-41ce-bc20-7dc7824e0eef",
+    "browser_url": "http://127.0.0.1:18803/#4fb5200",
+    "metadata_answer": true
+  },
+  {
+    "phase": "candidate",
+    "mode": "JSON_LIST",
+    "session": "70289bf3-1922-4a3a-a571-4d8711829da8",
+    "browser_url": "http://127.0.0.1:18803/#70289bf",
+    "metadata_answer": true
+  },
+  {
+    "phase": "candidate",
+    "mode": "NATIVE_STRING",
+    "session": "ead01aa8-6871-446c-bcf2-a002e75ee477",
+    "browser_url": "http://127.0.0.1:18803/#ead01aa",
+    "metadata_answer": true
+  },
+  {
+    "phase": "candidate",
+    "mode": "NATIVE_LIST",
+    "session": "9676228f-c729-475d-8e68-123a0a7d5515",
+    "browser_url": "http://127.0.0.1:18803/#9676228",
+    "metadata_answer": true
+  }
+]

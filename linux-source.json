@@ -1,0 +1,26 @@
+{
+  "/control": {
+    "src/gaia/agents/base/agent.py": {
+      "git_blob": "fd582e6bdf9db5d7751dcd6e0fc267a91ceaa369",
+      "sha256": "e38e6c7c8e66f86bebdeb3bdf06577cf76234207f478d8c24e54228b2afeab4a"
+    },
+    "docs/spec/agent-base.mdx": {
+      "git_blob": "97bbbed2d59e78381fb0c482f69837e280c426af",
+      "sha256": "bc7eb2b2f23cccff66e594520b61544e8233fb6330aaa9a30734e6190ce91831"
+    }
+  },
+  "/current": {
+    "src/gaia/agents/base/agent.py": {
+      "git_blob": "fb072841dca5deab2107d1aa878fc973aec696b9",
+      "sha256": "c94cc1099806c33d764f94dcd09f6dcce85a30a2cbcc51e101ab9e6a90bdc25a"
+    },
+    "tests/unit/agents/test_tool_args_object.py": {
+      "git_blob": "b8f9c590ffa0a52a5c33e7edcd45ef91575df8eb",
+      "sha256": "3a6ed6610e94e106d1d15e76b962215c8e6ee1fd57e348f67b6a62d218f792f1"
+    },
+    "docs/spec/agent-base.mdx": {
+      "git_blob": "d0bc4939ffc29cea8f2ad66101b46a402978ac82",
+      "sha256": "4f27e33e8bb0b9b6fef992050aa6fae4cd88e5907d8d7cdd1e7f0b1ccff7f07e"
+    }
+  }
+}

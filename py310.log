@@ -1,0 +1,9 @@
+........................................................................ [100%]
+============================== warnings summary ===============================
+..\..\ci-evidence\gaia-5471-runtime\py310-venv\lib\site-packages\_pytest\config\__init__.py:1464
+  F:\Github-PR\ci-evidence\gaia-5471-runtime\py310-venv\lib\site-packages\_pytest\config\__init__.py:1464: PytestConfigWarning: Unknown config option: asyncio_mode
+  
+    self._warn_or_fail_if_strict(f"Unknown config option: {key}\n")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+72 passed, 1 warning in 8.76s

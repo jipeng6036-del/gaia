@@ -1,0 +1,2145 @@
+Installed 4 packages in 41ms
+* Creating isolated environment: venv+pip...
+* Installing packages in isolated environment:
+  - setuptools >= 40.8.0
+* Getting build dependencies for wheel...
+running egg_info
+writing src\amd_gaia.egg-info\PKG-INFO
+writing dependency_links to src\amd_gaia.egg-info\dependency_links.txt
+writing entry points to src\amd_gaia.egg-info\entry_points.txt
+writing requirements to src\amd_gaia.egg-info\requires.txt
+writing top-level names to src\amd_gaia.egg-info\top_level.txt
+reading manifest file 'src\amd_gaia.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching 'src\gaia\interface\*.json'
+warning: no files found matching 'src\gaia\interface\img\*'
+warning: no files found matching 'LICENSE'
+warning: no files found matching '*.svg' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.jpg' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.jpeg' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.webp' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.ico' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.webmanifest' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.json' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.woff' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.ttf' under directory 'src\gaia\apps\webui\dist'
+no previously-included directories found matching 'src\gaia\apps\webui\dist\node_modules'
+warning: no previously-included files matching '*.map' found anywhere in distribution
+warning: no previously-included files matching '.DS_Store' found anywhere in distribution
+warning: no previously-included files matching '.env' found anywhere in distribution
+warning: no previously-included files matching '.env.*' found anywhere in distribution
+adding license file 'LICENSE.md'
+writing manifest file 'src\amd_gaia.egg-info\SOURCES.txt'
+WARNING License classifiers are deprecated.
+!!
+
+        ********************************************************************************
+        Please consider removing the following classifiers in favor of a SPDX license expression:
+
+        License :: OSI Approved :: MIT License
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+* Installed build dependency versions:
+  - setuptools==84.2.1
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build\lib\gaia
+copying src\gaia\cli.py -> build\lib\gaia
+copying src\gaia\cli_agent.py -> build\lib\gaia
+copying src\gaia\config.py -> build\lib\gaia
+copying src\gaia\device.py -> build\lib\gaia
+copying src\gaia\env.py -> build\lib\gaia
+copying src\gaia\logger.py -> build\lib\gaia
+copying src\gaia\log_rotation.py -> build\lib\gaia
+copying src\gaia\perf_analysis.py -> build\lib\gaia
+copying src\gaia\ports.py -> build\lib\gaia
+copying src\gaia\security.py -> build\lib\gaia
+copying src\gaia\stream_timeout.py -> build\lib\gaia
+copying src\gaia\tls.py -> build\lib\gaia
+copying src\gaia\tool_cancellation.py -> build\lib\gaia
+copying src\gaia\version.py -> build\lib\gaia
+copying src\gaia\__init__.py -> build\lib\gaia
+creating build\lib\gaia\llm
+copying src\gaia\llm\base_client.py -> build\lib\gaia\llm
+copying src\gaia\llm\cache_pricing.py -> build\lib\gaia\llm
+copying src\gaia\llm\cloud_keys.py -> build\lib\gaia\llm
+copying src\gaia\llm\context_choice.py -> build\lib\gaia\llm
+copying src\gaia\llm\embedding_cache.py -> build\lib\gaia\llm
+copying src\gaia\llm\exceptions.py -> build\lib\gaia\llm
+copying src\gaia\llm\factory.py -> build\lib\gaia\llm
+copying src\gaia\llm\gateway.py -> build\lib\gaia\llm
+copying src\gaia\llm\inference_location.py -> build\lib\gaia\llm
+copying src\gaia\llm\lemonade_choice.py -> build\lib\gaia\llm
+copying src\gaia\llm\lemonade_client.py -> build\lib\gaia\llm
+copying src\gaia\llm\lemonade_embedded.py -> build\lib\gaia\llm
+copying src\gaia\llm\lemonade_launcher.py -> build\lib\gaia\llm
+copying src\gaia\llm\lemonade_manager.py -> build\lib\gaia\llm
+copying src\gaia\llm\lemonade_service.py -> build\lib\gaia\llm
+copying src\gaia\llm\lemonade_supervisor.py -> build\lib\gaia\llm
+copying src\gaia\llm\model_device.py -> build\lib\gaia\llm
+copying src\gaia\llm\model_fit.py -> build\lib\gaia\llm
+copying src\gaia\llm\model_server_info.py -> build\lib\gaia\llm
+copying src\gaia\llm\recommended_models.py -> build\lib\gaia\llm
+copying src\gaia\llm\retry.py -> build\lib\gaia\llm
+copying src\gaia\llm\stream_watchdog.py -> build\lib\gaia\llm
+copying src\gaia\llm\surface_hints.py -> build\lib\gaia\llm
+copying src\gaia\llm\vlm_client.py -> build\lib\gaia\llm
+copying src\gaia\llm\__init__.py -> build\lib\gaia\llm
+creating build\lib\gaia\llm\providers
+copying src\gaia\llm\providers\claude.py -> build\lib\gaia\llm\providers
+copying src\gaia\llm\providers\fireworks.py -> build\lib\gaia\llm\providers
+copying src\gaia\llm\providers\lemonade.py -> build\lib\gaia\llm\providers
+copying src\gaia\llm\providers\__init__.py -> build\lib\gaia\llm\providers
+creating build\lib\gaia\audio
+copying src\gaia\audio\audio_client.py -> build\lib\gaia\audio
+copying src\gaia\audio\audio_recorder.py -> build\lib\gaia\audio
+copying src\gaia\audio\diarize.py -> build\lib\gaia\audio
+copying src\gaia\audio\kokoro_tts.py -> build\lib\gaia\audio
+copying src\gaia\audio\lemonade_asr.py -> build\lib\gaia\audio
+copying src\gaia\audio\lemonade_service.py -> build\lib\gaia\audio
+copying src\gaia\audio\lemonade_tts.py -> build\lib\gaia\audio
+copying src\gaia\audio\media.py -> build\lib\gaia\audio
+copying src\gaia\audio\whisper_asr.py -> build\lib\gaia\audio
+copying src\gaia\audio\__init__.py -> build\lib\gaia\audio
+creating build\lib\gaia\chat
+copying src\gaia\chat\app.py -> build\lib\gaia\chat
+copying src\gaia\chat\prompts.py -> build\lib\gaia\chat
+copying src\gaia\chat\sdk.py -> build\lib\gaia\chat
+copying src\gaia\chat\__init__.py -> build\lib\gaia\chat
+creating build\lib\gaia\schedule
+copying src\gaia\schedule\daemon.py -> build\lib\gaia\schedule
+copying src\gaia\schedule\lock.py -> build\lib\gaia\schedule
+copying src\gaia\schedule\runner.py -> build\lib\gaia\schedule
+copying src\gaia\schedule\sinks.py -> build\lib\gaia\schedule
+copying src\gaia\schedule\store.py -> build\lib\gaia\schedule
+copying src\gaia\schedule\__init__.py -> build\lib\gaia\schedule
+creating build\lib\gaia\daemon
+copying src\gaia\daemon\agent_control.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\agent_query.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\app.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\broker.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\broker_client.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\broker_routes.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\client.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\connections_routes.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\constants.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\errors.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\forward.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\forward_refresh.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\gateway_routes.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\instance.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\lemonade.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\lemonade_clients.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\lemonade_routes.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\lifetime.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\lock.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\migrate.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\paths.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\provider_key_routes.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\relay.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\server.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\strays.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\timeouts.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\__init__.py -> build\lib\gaia\daemon
+copying src\gaia\daemon\__main__.py -> build\lib\gaia\daemon
+creating build\lib\gaia\daemon\custody
+copying src\gaia\daemon\custody\auth.py -> build\lib\gaia\daemon\custody
+copying src\gaia\daemon\custody\constants.py -> build\lib\gaia\daemon\custody
+copying src\gaia\daemon\custody\errors.py -> build\lib\gaia\daemon\custody
+copying src\gaia\daemon\custody\provider.py -> build\lib\gaia\daemon\custody
+copying src\gaia\daemon\custody\routes.py -> build\lib\gaia\daemon\custody
+copying src\gaia\daemon\custody\store.py -> build\lib\gaia\daemon\custody
+copying src\gaia\daemon\custody\__init__.py -> build\lib\gaia\daemon\custody
+creating build\lib\gaia\daemon\scheduler
+copying src\gaia\daemon\scheduler\clock.py -> build\lib\gaia\daemon\scheduler
+copying src\gaia\daemon\scheduler\lease.py -> build\lib\gaia\daemon\scheduler
+copying src\gaia\daemon\scheduler\migration.py -> build\lib\gaia\daemon\scheduler
+copying src\gaia\daemon\scheduler\models.py -> build\lib\gaia\daemon\scheduler
+copying src\gaia\daemon\scheduler\store.py -> build\lib\gaia\daemon\scheduler
+copying src\gaia\daemon\scheduler\__init__.py -> build\lib\gaia\daemon\scheduler
+creating build\lib\gaia\daemon\sidecars
+copying src\gaia\daemon\sidecars\errors.py -> build\lib\gaia\daemon\sidecars
+copying src\gaia\daemon\sidecars\fetch.py -> build\lib\gaia\daemon\sidecars
+copying src\gaia\daemon\sidecars\install.py -> build\lib\gaia\daemon\sidecars
+copying src\gaia\daemon\sidecars\ledger.py -> build\lib\gaia\daemon\sidecars
+copying src\gaia\daemon\sidecars\manager.py -> build\lib\gaia\daemon\sidecars
+copying src\gaia\daemon\sidecars\platform.py -> build\lib\gaia\daemon\sidecars
+copying src\gaia\daemon\sidecars\registry.py -> build\lib\gaia\daemon\sidecars
+copying src\gaia\daemon\sidecars\routes.py -> build\lib\gaia\daemon\sidecars
+copying src\gaia\daemon\sidecars\spec.py -> build\lib\gaia\daemon\sidecars
+copying src\gaia\daemon\sidecars\__init__.py -> build\lib\gaia\daemon\sidecars
+creating build\lib\gaia\ui
+copying src\gaia\ui\agent_loop.py -> build\lib\gaia\ui
+copying src\gaia\ui\agent_threads.py -> build\lib\gaia\ui
+copying src\gaia\ui\answer_retry.py -> build\lib\gaia\ui
+copying src\gaia\ui\build.py -> build\lib\gaia\ui
+copying src\gaia\ui\database.py -> build\lib\gaia\ui
+copying src\gaia\ui\dependencies.py -> build\lib\gaia\ui
+copying src\gaia\ui\dispatch.py -> build\lib\gaia\ui
+copying src\gaia\ui\document_monitor.py -> build\lib\gaia\ui
+copying src\gaia\ui\event_narration.py -> build\lib\gaia\ui
+copying src\gaia\ui\export_openapi.py -> build\lib\gaia\ui
+copying src\gaia\ui\followups.py -> build\lib\gaia\ui
+copying src\gaia\ui\local_models.py -> build\lib\gaia\ui
+copying src\gaia\ui\memory_settings.py -> build\lib\gaia\ui
+copying src\gaia\ui\models.py -> build\lib\gaia\ui
+copying src\gaia\ui\permissions.py -> build\lib\gaia\ui
+copying src\gaia\ui\restart_recovery.py -> build\lib\gaia\ui
+copying src\gaia\ui\run_manager.py -> build\lib\gaia\ui
+copying src\gaia\ui\scheduler.py -> build\lib\gaia\ui
+copying src\gaia\ui\scripted_user.py -> build\lib\gaia\ui
+copying src\gaia\ui\security.py -> build\lib\gaia\ui
+copying src\gaia\ui\server.py -> build\lib\gaia\ui
+copying src\gaia\ui\session_environment.py -> build\lib\gaia\ui
+copying src\gaia\ui\session_git.py -> build\lib\gaia\ui
+copying src\gaia\ui\session_outputs.py -> build\lib\gaia\ui
+copying src\gaia\ui\setup_plan.py -> build\lib\gaia\ui
+copying src\gaia\ui\setup_runner.py -> build\lib\gaia\ui
+copying src\gaia\ui\spending.py -> build\lib\gaia\ui
+copying src\gaia\ui\sse_handler.py -> build\lib\gaia\ui
+copying src\gaia\ui\sse_translation.py -> build\lib\gaia\ui
+copying src\gaia\ui\start_screen.py -> build\lib\gaia\ui
+copying src\gaia\ui\tunnel.py -> build\lib\gaia\ui
+copying src\gaia\ui\turn_changes.py -> build\lib\gaia\ui
+copying src\gaia\ui\turn_insights.py -> build\lib\gaia\ui
+copying src\gaia\ui\turn_queue.py -> build\lib\gaia\ui
+copying src\gaia\ui\turn_summary.py -> build\lib\gaia\ui
+copying src\gaia\ui\utils.py -> build\lib\gaia\ui
+copying src\gaia\ui\warmup.py -> build\lib\gaia\ui
+copying src\gaia\ui\_chat_helpers.py -> build\lib\gaia\ui
+copying src\gaia\ui\__init__.py -> build\lib\gaia\ui
+creating build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\agents.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\changes.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\chat.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\connectors.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\documents.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\environment.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\files.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\goals.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\hub.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\lemonade.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\mcp.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\memory.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\onboarding.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\providers.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\schedules.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\sessions.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\setup.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\skills.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\spending.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\system.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\tunnel.py -> build\lib\gaia\ui\routers
+copying src\gaia\ui\routers\__init__.py -> build\lib\gaia\ui\routers
+creating build\lib\gaia\ui\email_sidecar
+copying src\gaia\ui\email_sidecar\daemon_client.py -> build\lib\gaia\ui\email_sidecar
+copying src\gaia\ui\email_sidecar\errors.py -> build\lib\gaia\ui\email_sidecar
+copying src\gaia\ui\email_sidecar\profiles.py -> build\lib\gaia\ui\email_sidecar
+copying src\gaia\ui\email_sidecar\proxy.py -> build\lib\gaia\ui\email_sidecar
+copying src\gaia\ui\email_sidecar\relay.py -> build\lib\gaia\ui\email_sidecar
+copying src\gaia\ui\email_sidecar\router.py -> build\lib\gaia\ui\email_sidecar
+copying src\gaia\ui\email_sidecar\__init__.py -> build\lib\gaia\ui\email_sidecar
+creating build\lib\gaia\sidecar
+copying src\gaia\sidecar\caller_auth.py -> build\lib\gaia\sidecar
+copying src\gaia\sidecar\__init__.py -> build\lib\gaia\sidecar
+creating build\lib\gaia\database
+copying src\gaia\database\agent.py -> build\lib\gaia\database
+copying src\gaia\database\mixin.py -> build\lib\gaia\database
+copying src\gaia\database\sql_safety.py -> build\lib\gaia\database
+copying src\gaia\database\testing.py -> build\lib\gaia\database
+copying src\gaia\database\__init__.py -> build\lib\gaia\database
+creating build\lib\gaia\talk
+copying src\gaia\talk\sdk.py -> build\lib\gaia\talk
+copying src\gaia\talk\__init__.py -> build\lib\gaia\talk
+creating build\lib\gaia\testing
+copying src\gaia\testing\assertions.py -> build\lib\gaia\testing
+copying src\gaia\testing\fixtures.py -> build\lib\gaia\testing
+copying src\gaia\testing\mocks.py -> build\lib\gaia\testing
+copying src\gaia\testing\__init__.py -> build\lib\gaia\testing
+creating build\lib\gaia\utils
+copying src\gaia\utils\archive.py -> build\lib\gaia\utils
+copying src\gaia\utils\awake_clock.py -> build\lib\gaia\utils
+copying src\gaia\utils\file_lock.py -> build\lib\gaia\utils
+copying src\gaia\utils\file_watcher.py -> build\lib\gaia\utils
+copying src\gaia\utils\json_string.py -> build\lib\gaia\utils
+copying src\gaia\utils\parsing.py -> build\lib\gaia\utils
+copying src\gaia\utils\paths.py -> build\lib\gaia\utils
+copying src\gaia\utils\perf_trace.py -> build\lib\gaia\utils
+copying src\gaia\utils\power.py -> build\lib\gaia\utils
+copying src\gaia\utils\process_owner.py -> build\lib\gaia\utils
+copying src\gaia\utils\terminal.py -> build\lib\gaia\utils
+copying src\gaia\utils\tiktoken_bundle.py -> build\lib\gaia\utils
+copying src\gaia\utils\__init__.py -> build\lib\gaia\utils
+creating build\lib\gaia\apps
+copying src\gaia\apps\__init__.py -> build\lib\gaia\apps
+creating build\lib\gaia\apps\llm
+copying src\gaia\apps\llm\app.py -> build\lib\gaia\apps\llm
+copying src\gaia\apps\llm\__init__.py -> build\lib\gaia\apps\llm
+creating build\lib\gaia\eval
+copying src\gaia\eval\action_item_quality.py -> build\lib\gaia\eval
+copying src\gaia\eval\analyze_failures.py -> build\lib\gaia\eval
+copying src\gaia\eval\audit.py -> build\lib\gaia\eval
+copying src\gaia\eval\benchmark.py -> build\lib\gaia\eval
+copying src\gaia\eval\briefing_quality.py -> build\lib\gaia\eval
+copying src\gaia\eval\claude.py -> build\lib\gaia\eval
+copying src\gaia\eval\claude_outage.py -> build\lib\gaia\eval
+copying src\gaia\eval\claude_usage.py -> build\lib\gaia\eval
+copying src\gaia\eval\code_bench.py -> build\lib\gaia\eval
+copying src\gaia\eval\code_bench_fixtures.py -> build\lib\gaia\eval
+copying src\gaia\eval\config.py -> build\lib\gaia\eval
+copying src\gaia\eval\draft_quality.py -> build\lib\gaia\eval
+copying src\gaia\eval\eval_lock.py -> build\lib\gaia\eval
+copying src\gaia\eval\fixture_paths.py -> build\lib\gaia\eval
+copying src\gaia\eval\flagship_tasks.py -> build\lib\gaia\eval
+copying src\gaia\eval\followup_quality.py -> build\lib\gaia\eval
+copying src\gaia\eval\integrity_gate.py -> build\lib\gaia\eval
+copying src\gaia\eval\judge_client.py -> build\lib\gaia\eval
+copying src\gaia\eval\judge_outage.py -> build\lib\gaia\eval
+copying src\gaia\eval\lane_summary.py -> build\lib\gaia\eval
+copying src\gaia\eval\model_comparison.py -> build\lib\gaia\eval
+copying src\gaia\eval\pdf_document_generator.py -> build\lib\gaia\eval
+copying src\gaia\eval\performance.py -> build\lib\gaia\eval
+copying src\gaia\eval\quality_metrics.py -> build\lib\gaia\eval
+copying src\gaia\eval\release_scorecard.py -> build\lib\gaia\eval
+copying src\gaia\eval\runner.py -> build\lib\gaia\eval
+copying src\gaia\eval\scenario_backend.py -> build\lib\gaia\eval
+copying src\gaia\eval\scorecard.py -> build\lib\gaia\eval
+copying src\gaia\eval\scorecard_gate.py -> build\lib\gaia\eval
+copying src\gaia\eval\session_dataset.py -> build\lib\gaia\eval
+copying src\gaia\eval\session_eval.py -> build\lib\gaia\eval
+copying src\gaia\eval\sidecar_harness.py -> build\lib\gaia\eval
+copying src\gaia\eval\statistics.py -> build\lib\gaia\eval
+copying src\gaia\eval\task_setups.py -> build\lib\gaia\eval
+copying src\gaia\eval\tool_cost.py -> build\lib\gaia\eval
+copying src\gaia\eval\tool_recall.py -> build\lib\gaia\eval
+copying src\gaia\eval\__init__.py -> build\lib\gaia\eval
+creating build\lib\gaia\engineering
+copying src\gaia\engineering\cli.py -> build\lib\gaia\engineering
+copying src\gaia\engineering\handoff.py -> build\lib\gaia\engineering
+copying src\gaia\engineering\identity.py -> build\lib\gaia\engineering
+copying src\gaia\engineering\repository.py -> build\lib\gaia\engineering
+copying src\gaia\engineering\service.py -> build\lib\gaia\engineering
+copying src\gaia\engineering\store.py -> build\lib\gaia\engineering
+copying src\gaia\engineering\__init__.py -> build\lib\gaia\engineering
+creating build\lib\gaia\eval\bench
+copying src\gaia\eval\bench\config.py -> build\lib\gaia\eval\bench
+copying src\gaia\eval\bench\controls.py -> build\lib\gaia\eval\bench
+copying src\gaia\eval\bench\gaia_child.py -> build\lib\gaia\eval\bench
+copying src\gaia\eval\bench\gateway.py -> build\lib\gaia\eval\bench
+copying src\gaia\eval\bench\ghstub.py -> build\lib\gaia\eval\bench
+copying src\gaia\eval\bench\harness.py -> build\lib\gaia\eval\bench
+copying src\gaia\eval\bench\leaks.py -> build\lib\gaia\eval\bench
+copying src\gaia\eval\bench\metering.py -> build\lib\gaia\eval\bench
+copying src\gaia\eval\bench\report.py -> build\lib\gaia\eval\bench
+copying src\gaia\eval\bench\sandbox.py -> build\lib\gaia\eval\bench
+copying src\gaia\eval\bench\swebench.py -> build\lib\gaia\eval\bench
+copying src\gaia\eval\bench\therock.py -> build\lib\gaia\eval\bench
+copying src\gaia\eval\bench\transcripts.py -> build\lib\gaia\eval\bench
+copying src\gaia\eval\bench\__init__.py -> build\lib\gaia\eval\bench
+creating build\lib\gaia\eval\retrieval
+copying src\gaia\eval\retrieval\corpus.py -> build\lib\gaia\eval\retrieval
+copying src\gaia\eval\retrieval\hard_cases.py -> build\lib\gaia\eval\retrieval
+copying src\gaia\eval\retrieval\harness.py -> build\lib\gaia\eval\retrieval
+copying src\gaia\eval\retrieval\locate.py -> build\lib\gaia\eval\retrieval
+copying src\gaia\eval\retrieval\runner.py -> build\lib\gaia\eval\retrieval
+copying src\gaia\eval\retrieval\scoring.py -> build\lib\gaia\eval\retrieval
+copying src\gaia\eval\retrieval\sources.py -> build\lib\gaia\eval\retrieval
+copying src\gaia\eval\retrieval\__init__.py -> build\lib\gaia\eval\retrieval
+creating build\lib\gaia\eval\memory
+copying src\gaia\eval\memory\clock.py -> build\lib\gaia\eval\memory
+copying src\gaia\eval\memory\harness.py -> build\lib\gaia\eval\memory
+copying src\gaia\eval\memory\runner.py -> build\lib\gaia\eval\memory
+copying src\gaia\eval\memory\scenario.py -> build\lib\gaia\eval\memory
+copying src\gaia\eval\memory\__init__.py -> build\lib\gaia\eval\memory
+creating build\lib\gaia\eval\code_retrieval
+copying src\gaia\eval\code_retrieval\common.py -> build\lib\gaia\eval\code_retrieval
+copying src\gaia\eval\code_retrieval\gold.py -> build\lib\gaia\eval\code_retrieval
+copying src\gaia\eval\code_retrieval\instances.py -> build\lib\gaia\eval\code_retrieval
+copying src\gaia\eval\code_retrieval\lexical.py -> build\lib\gaia\eval\code_retrieval
+copying src\gaia\eval\code_retrieval\metrics.py -> build\lib\gaia\eval\code_retrieval
+copying src\gaia\eval\code_retrieval\quality.py -> build\lib\gaia\eval\code_retrieval
+copying src\gaia\eval\code_retrieval\report.py -> build\lib\gaia\eval\code_retrieval
+copying src\gaia\eval\code_retrieval\repos.py -> build\lib\gaia\eval\code_retrieval
+copying src\gaia\eval\code_retrieval\robustness.py -> build\lib\gaia\eval\code_retrieval
+copying src\gaia\eval\code_retrieval\runner.py -> build\lib\gaia\eval\code_retrieval
+copying src\gaia\eval\code_retrieval\scale.py -> build\lib\gaia\eval\code_retrieval
+copying src\gaia\eval\code_retrieval\suites.py -> build\lib\gaia\eval\code_retrieval
+copying src\gaia\eval\code_retrieval\__init__.py -> build\lib\gaia\eval\code_retrieval
+creating build\lib\gaia\installer
+copying src\gaia\installer\export_import.py -> build\lib\gaia\installer
+copying src\gaia\installer\init_command.py -> build\lib\gaia\installer
+copying src\gaia\installer\lemonade_installer.py -> build\lib\gaia\installer
+copying src\gaia\installer\mcp_init.py -> build\lib\gaia\installer
+copying src\gaia\installer\uninstall_command.py -> build\lib\gaia\installer
+copying src\gaia\installer\_stdin.py -> build\lib\gaia\installer
+copying src\gaia\installer\__init__.py -> build\lib\gaia\installer
+creating build\lib\gaia\hub
+copying src\gaia\hub\catalog.py -> build\lib\gaia\hub
+copying src\gaia\hub\compatibility.py -> build\lib\gaia\hub
+copying src\gaia\hub\installer.py -> build\lib\gaia\hub
+copying src\gaia\hub\lifecycle.py -> build\lib\gaia\hub
+copying src\gaia\hub\manifest.py -> build\lib\gaia\hub
+copying src\gaia\hub\native_launcher.py -> build\lib\gaia\hub
+copying src\gaia\hub\packager.py -> build\lib\gaia\hub
+copying src\gaia\hub\prerelease.py -> build\lib\gaia\hub
+copying src\gaia\hub\publisher.py -> build\lib\gaia\hub
+copying src\gaia\hub\__init__.py -> build\lib\gaia\hub
+creating build\lib\gaia\rag
+copying src\gaia\rag\docx_utils.py -> build\lib\gaia\rag
+copying src\gaia\rag\pdf_utils.py -> build\lib\gaia\rag
+copying src\gaia\rag\pptx_utils.py -> build\lib\gaia\rag
+copying src\gaia\rag\sdk.py -> build\lib\gaia\rag
+copying src\gaia\rag\__init__.py -> build\lib\gaia\rag
+creating build\lib\gaia\mcp
+copying src\gaia\mcp\agent_mcp_server.py -> build\lib\gaia\mcp
+copying src\gaia\mcp\context7_cache.py -> build\lib\gaia\mcp
+copying src\gaia\mcp\external_services.py -> build\lib\gaia\mcp
+copying src\gaia\mcp\mcp_bridge.py -> build\lib\gaia\mcp
+copying src\gaia\mcp\mixin.py -> build\lib\gaia\mcp
+copying src\gaia\mcp\ports.py -> build\lib\gaia\mcp
+copying src\gaia\mcp\__init__.py -> build\lib\gaia\mcp
+creating build\lib\gaia\mcp\client
+copying src\gaia\mcp\client\config.py -> build\lib\gaia\mcp\client
+copying src\gaia\mcp\client\mcp_client.py -> build\lib\gaia\mcp\client
+copying src\gaia\mcp\client\mcp_client_manager.py -> build\lib\gaia\mcp\client
+copying src\gaia\mcp\client\redaction.py -> build\lib\gaia\mcp\client
+copying src\gaia\mcp\client\__init__.py -> build\lib\gaia\mcp\client
+creating build\lib\gaia\mcp\client\transports
+copying src\gaia\mcp\client\transports\base.py -> build\lib\gaia\mcp\client\transports
+copying src\gaia\mcp\client\transports\http.py -> build\lib\gaia\mcp\client\transports
+copying src\gaia\mcp\client\transports\stdio.py -> build\lib\gaia\mcp\client\transports
+copying src\gaia\mcp\client\transports\__init__.py -> build\lib\gaia\mcp\client\transports
+creating build\lib\gaia\mcp\servers
+copying src\gaia\mcp\servers\agent_ui_control.py -> build\lib\gaia\mcp\servers
+copying src\gaia\mcp\servers\agent_ui_mcp.py -> build\lib\gaia\mcp\servers
+copying src\gaia\mcp\servers\engineering_mcp.py -> build\lib\gaia\mcp\servers
+copying src\gaia\mcp\servers\tui_mcp.py -> build\lib\gaia\mcp\servers
+copying src\gaia\mcp\servers\__init__.py -> build\lib\gaia\mcp\servers
+creating build\lib\gaia\agents
+copying src\gaia\agents\install_hints.py -> build\lib\gaia\agents
+copying src\gaia\agents\registry.py -> build\lib\gaia\agents
+copying src\gaia\agents\__init__.py -> build\lib\gaia\agents
+creating build\lib\gaia\agents\base
+copying src\gaia\agents\base\agent.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\api_agent.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\artifacts.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\bootstrap.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\call_risk.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\checks.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\chunk_index.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\claims.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\command_facts.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\completion.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\console.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\context_eviction.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\deliverables.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\denied_effects.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\discovery.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\errors.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\extraction.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\file_snapshots.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\goal_store.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\grounding.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\history.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\look_first.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\mcp_agent.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\memory.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\memory_store.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\offline.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\procedural_memory.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\project_deps.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\project_map.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\readiness.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\server.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\skill_catalog.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\skill_deltas.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\skill_loader.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\skill_synthesis.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\step_timing.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\system_context.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\task_lessons.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\tools.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\tool_grants.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\tool_loader.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\tool_markup.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\tool_outcome.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\tool_output.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\turn_metrics.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\turn_scope.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\verification.py -> build\lib\gaia\agents\base
+copying src\gaia\agents\base\__init__.py -> build\lib\gaia\agents\base
+creating build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\audio_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\browser_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\browser_use_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\cli_setup_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\code_index_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\command_timeouts.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\document_text.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\edit_impact.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\email_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\filesystem_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\file_edit.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\file_io_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\file_monitor_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\file_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\package_installs.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\path_access.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\protected_folders.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\rag_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\reasoning_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\scratchpad_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\screenshot_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\search_scope.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\shell_deletes.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\shell_session.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\shell_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\skill_learning_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\skill_library_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\text_files.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\wait_tools.py -> build\lib\gaia\agents\tools
+copying src\gaia\agents\tools\__init__.py -> build\lib\gaia\agents\tools
+creating build\lib\gaia\agents\tools\_email
+copying src\gaia\agents\tools\_email\errors.py -> build\lib\gaia\agents\tools\_email
+copying src\gaia\agents\tools\_email\fixture.py -> build\lib\gaia\agents\tools\_email
+copying src\gaia\agents\tools\_email\gmail.py -> build\lib\gaia\agents\tools\_email
+copying src\gaia\agents\tools\_email\graph.py -> build\lib\gaia\agents\tools\_email
+copying src\gaia\agents\tools\_email\phishing.py -> build\lib\gaia\agents\tools\_email
+copying src\gaia\agents\tools\_email\scopes.py -> build\lib\gaia\agents\tools\_email
+copying src\gaia\agents\tools\_email\__init__.py -> build\lib\gaia\agents\tools\_email
+creating build\lib\gaia\agents\code_index
+copying src\gaia\agents\code_index\__init__.py -> build\lib\gaia\agents\code_index
+creating build\lib\gaia\agents\code_index\tools
+copying src\gaia\agents\code_index\tools\mixin.py -> build\lib\gaia\agents\code_index\tools
+copying src\gaia\agents\code_index\tools\__init__.py -> build\lib\gaia\agents\code_index\tools
+creating build\lib\gaia\governance
+copying src\gaia\governance\action_mapper.py -> build\lib\gaia\governance
+copying src\gaia\governance\adapter.py -> build\lib\gaia\governance
+copying src\gaia\governance\checkpoint_bridge.py -> build\lib\gaia\governance
+copying src\gaia\governance\config.py -> build\lib\gaia\governance
+copying src\gaia\governance\decorators.py -> build\lib\gaia\governance
+copying src\gaia\governance\exceptions.py -> build\lib\gaia\governance
+copying src\gaia\governance\mixin.py -> build\lib\gaia\governance
+copying src\gaia\governance\policy_binding.py -> build\lib\gaia\governance
+copying src\gaia\governance\protocols.py -> build\lib\gaia\governance
+copying src\gaia\governance\receipt_service.py -> build\lib\gaia\governance
+copying src\gaia\governance\schemas.py -> build\lib\gaia\governance
+copying src\gaia\governance\stubs.py -> build\lib\gaia\governance
+copying src\gaia\governance\__init__.py -> build\lib\gaia\governance
+creating build\lib\gaia\factory
+copying src\gaia\factory\__init__.py -> build\lib\gaia\factory
+creating build\lib\gaia\factory\harvest
+copying src\gaia\factory\harvest\analyze.py -> build\lib\gaia\factory\harvest
+copying src\gaia\factory\harvest\classify.py -> build\lib\gaia\factory\harvest
+copying src\gaia\factory\harvest\claude_cli.py -> build\lib\gaia\factory\harvest
+copying src\gaia\factory\harvest\context.py -> build\lib\gaia\factory\harvest
+copying src\gaia\factory\harvest\reader.py -> build\lib\gaia\factory\harvest
+copying src\gaia\factory\harvest\report.py -> build\lib\gaia\factory\harvest
+copying src\gaia\factory\harvest\savings.py -> build\lib\gaia\factory\harvest
+copying src\gaia\factory\harvest\scan.py -> build\lib\gaia\factory\harvest
+copying src\gaia\factory\harvest\synthesize.py -> build\lib\gaia\factory\harvest
+copying src\gaia\factory\harvest\__init__.py -> build\lib\gaia\factory\harvest
+creating build\lib\gaia\sd
+copying src\gaia\sd\mixin.py -> build\lib\gaia\sd
+copying src\gaia\sd\prompts.py -> build\lib\gaia\sd
+copying src\gaia\sd\__init__.py -> build\lib\gaia\sd
+creating build\lib\gaia\vlm
+copying src\gaia\vlm\mixin.py -> build\lib\gaia\vlm
+copying src\gaia\vlm\structured_extraction.py -> build\lib\gaia\vlm
+copying src\gaia\vlm\__init__.py -> build\lib\gaia\vlm
+creating build\lib\gaia\api
+copying src\gaia\api\agent_proxy.py -> build\lib\gaia\api
+copying src\gaia\api\agent_registry.py -> build\lib\gaia\api
+copying src\gaia\api\app.py -> build\lib\gaia\api
+copying src\gaia\api\local_http.py -> build\lib\gaia\api
+copying src\gaia\api\openai_server.py -> build\lib\gaia\api
+copying src\gaia\api\schemas.py -> build\lib\gaia\api
+copying src\gaia\api\sse_handler.py -> build\lib\gaia\api
+copying src\gaia\api\__init__.py -> build\lib\gaia\api
+creating build\lib\gaia\filesystem
+copying src\gaia\filesystem\categorizer.py -> build\lib\gaia\filesystem
+copying src\gaia\filesystem\index.py -> build\lib\gaia\filesystem
+copying src\gaia\filesystem\name_match.py -> build\lib\gaia\filesystem
+copying src\gaia\filesystem\__init__.py -> build\lib\gaia\filesystem
+creating build\lib\gaia\scratchpad
+copying src\gaia\scratchpad\service.py -> build\lib\gaia\scratchpad
+copying src\gaia\scratchpad\__init__.py -> build\lib\gaia\scratchpad
+creating build\lib\gaia\web
+copying src\gaia\web\client.py -> build\lib\gaia\web
+copying src\gaia\web\tavily.py -> build\lib\gaia\web
+copying src\gaia\web\__init__.py -> build\lib\gaia\web
+creating build\lib\gaia\browser
+copying src\gaia\browser\driver.py -> build\lib\gaia\browser
+copying src\gaia\browser\errors.py -> build\lib\gaia\browser
+copying src\gaia\browser\session.py -> build\lib\gaia\browser
+copying src\gaia\browser\snapshot.py -> build\lib\gaia\browser
+copying src\gaia\browser\__init__.py -> build\lib\gaia\browser
+creating build\lib\gaia\code_index
+copying src\gaia\code_index\parsers.py -> build\lib\gaia\code_index
+copying src\gaia\code_index\sdk.py -> build\lib\gaia\code_index
+copying src\gaia\code_index\__init__.py -> build\lib\gaia\code_index
+creating build\lib\gaia\apps\webui
+copying src\gaia\apps\webui\__init__.py -> build\lib\gaia\apps\webui
+creating build\lib\gaia\messaging
+copying src\gaia\messaging\bridge.py -> build\lib\gaia\messaging
+copying src\gaia\messaging\ingest.py -> build\lib\gaia\messaging
+copying src\gaia\messaging\telegram.py -> build\lib\gaia\messaging
+copying src\gaia\messaging\__init__.py -> build\lib\gaia\messaging
+creating build\lib\gaia\messaging\slack
+copying src\gaia\messaging\slack\adapter.py -> build\lib\gaia\messaging\slack
+copying src\gaia\messaging\slack\cli.py -> build\lib\gaia\messaging\slack
+copying src\gaia\messaging\slack\credentials.py -> build\lib\gaia\messaging\slack
+copying src\gaia\messaging\slack\manifest.py -> build\lib\gaia\messaging\slack
+copying src\gaia\messaging\slack\onboarding.py -> build\lib\gaia\messaging\slack
+copying src\gaia\messaging\slack\__init__.py -> build\lib\gaia\messaging\slack
+creating build\lib\gaia\connectors
+copying src\gaia\connectors\activations.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\activation_watcher.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\api.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\cli.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\context.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\credential_wait.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\errors.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\events.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\flow.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\formatting.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\grants.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\handler.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\mcp_server.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\oauth_pkce.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\pkce.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\prior_state.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\registry.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\setup_routes.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\spec.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\store.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\tokens.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\_keyring.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\_loop.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\_refresh_lock.py -> build\lib\gaia\connectors
+copying src\gaia\connectors\__init__.py -> build\lib\gaia\connectors
+creating build\lib\gaia\connectors\catalog
+copying src\gaia\connectors\catalog\google.py -> build\lib\gaia\connectors\catalog
+copying src\gaia\connectors\catalog\mcp_servers.py -> build\lib\gaia\connectors\catalog
+copying src\gaia\connectors\catalog\microsoft.py -> build\lib\gaia\connectors\catalog
+copying src\gaia\connectors\catalog\__init__.py -> build\lib\gaia\connectors\catalog
+creating build\lib\gaia\connectors\providers
+copying src\gaia\connectors\providers\base.py -> build\lib\gaia\connectors\providers
+copying src\gaia\connectors\providers\google.py -> build\lib\gaia\connectors\providers
+copying src\gaia\connectors\providers\microsoft.py -> build\lib\gaia\connectors\providers
+copying src\gaia\connectors\providers\__init__.py -> build\lib\gaia\connectors\providers
+creating build\lib\gaia\skills
+copying src\gaia\skills\audit_gate.py -> build\lib\gaia\skills
+copying src\gaia\skills\binaries.py -> build\lib\gaia\skills
+copying src\gaia\skills\binary_setup.py -> build\lib\gaia\skills
+copying src\gaia\skills\capture.py -> build\lib\gaia\skills
+copying src\gaia\skills\cli.py -> build\lib\gaia\skills
+copying src\gaia\skills\consume.py -> build\lib\gaia\skills
+copying src\gaia\skills\deltas_cli.py -> build\lib\gaia\skills
+copying src\gaia\skills\drift.py -> build\lib\gaia\skills
+copying src\gaia\skills\errors.py -> build\lib\gaia\skills
+copying src\gaia\skills\format.py -> build\lib\gaia\skills
+copying src\gaia\skills\hub.py -> build\lib\gaia\skills
+copying src\gaia\skills\install.py -> build\lib\gaia\skills
+copying src\gaia\skills\listing.py -> build\lib\gaia\skills
+copying src\gaia\skills\loader.py -> build\lib\gaia\skills
+copying src\gaia\skills\lock.py -> build\lib\gaia\skills
+copying src\gaia\skills\manager.py -> build\lib\gaia\skills
+copying src\gaia\skills\migrate.py -> build\lib\gaia\skills
+copying src\gaia\skills\naming.py -> build\lib\gaia\skills
+copying src\gaia\skills\permissions.py -> build\lib\gaia\skills
+copying src\gaia\skills\publish.py -> build\lib\gaia\skills
+copying src\gaia\skills\sections.py -> build\lib\gaia\skills
+copying src\gaia\skills\sets.py -> build\lib\gaia\skills
+copying src\gaia\skills\signing.py -> build\lib\gaia\skills
+copying src\gaia\skills\tiers.py -> build\lib\gaia\skills
+copying src\gaia\skills\versions.py -> build\lib\gaia\skills
+copying src\gaia\skills\__init__.py -> build\lib\gaia\skills
+creating build\lib\gaia\skills\audit
+copying src\gaia\skills\audit\code.py -> build\lib\gaia\skills\audit
+copying src\gaia\skills\audit\engine.py -> build\lib\gaia\skills\audit
+copying src\gaia\skills\audit\findings.py -> build\lib\gaia\skills\audit
+copying src\gaia\skills\audit\instructions.py -> build\lib\gaia\skills\audit
+copying src\gaia\skills\audit\permission_truth.py -> build\lib\gaia\skills\audit
+copying src\gaia\skills\audit\report.py -> build\lib\gaia\skills\audit
+copying src\gaia\skills\audit\supply.py -> build\lib\gaia\skills\audit
+copying src\gaia\skills\audit\verdict.py -> build\lib\gaia\skills\audit
+copying src\gaia\skills\audit\__init__.py -> build\lib\gaia\skills\audit
+running egg_info
+writing src\amd_gaia.egg-info\PKG-INFO
+writing dependency_links to src\amd_gaia.egg-info\dependency_links.txt
+writing entry points to src\amd_gaia.egg-info\entry_points.txt
+writing requirements to src\amd_gaia.egg-info\requires.txt
+writing top-level names to src\amd_gaia.egg-info\top_level.txt
+reading manifest file 'src\amd_gaia.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+warning: no files found matching 'src\gaia\interface\*.json'
+warning: no files found matching 'src\gaia\interface\img\*'
+warning: no files found matching 'LICENSE'
+warning: no files found matching '*.svg' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.jpg' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.jpeg' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.webp' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.ico' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.webmanifest' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.json' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.woff' under directory 'src\gaia\apps\webui\dist'
+warning: no files found matching '*.ttf' under directory 'src\gaia\apps\webui\dist'
+no previously-included directories found matching 'src\gaia\apps\webui\dist\node_modules'
+warning: no previously-included files matching '*.map' found anywhere in distribution
+warning: no previously-included files matching '.DS_Store' found anywhere in distribution
+warning: no previously-included files matching '.env' found anywhere in distribution
+adding license file 'LICENSE.md'
+warning: no previously-included files matching '.env.*' found anywhere in distribution
+writing manifest file 'src\amd_gaia.egg-info\SOURCES.txt'
+creating build\lib\gaia\eval\memory\scenarios
+copying src\gaia\eval\memory\scenarios\alex_three_months_of_life.yaml -> build\lib\gaia\eval\memory\scenarios
+copying src\gaia\eval\memory\scenarios\chen_learns_project_quirks.yaml -> build\lib\gaia\eval\memory\scenarios
+copying src\gaia\eval\memory\scenarios\jordan_reminders_change.yaml -> build\lib\gaia\eval\memory\scenarios
+copying src\gaia\eval\memory\scenarios\maya_moves_and_changes_jobs.yaml -> build\lib\gaia\eval\memory\scenarios
+copying src\gaia\eval\memory\scenarios\priya_work_documents_and_forgetting.yaml -> build\lib\gaia\eval\memory\scenarios
+copying src\gaia\eval\memory\scenarios\sam_family_health.yaml -> build\lib\gaia\eval\memory\scenarios
+creating build\lib\gaia\apps\webui\dist
+copying src\gaia\apps\webui\dist\favicon.png -> build\lib\gaia\apps\webui\dist
+copying src\gaia\apps\webui\dist\fonts-OFL.txt -> build\lib\gaia\apps\webui\dist
+copying src\gaia\apps\webui\dist\index.html -> build\lib\gaia\apps\webui\dist
+creating build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\AdvancedSettings-D5VKpkPY.css -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\AdvancedSettings-D7jNZncZ.js -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\ConnectorsPane-CtDroHfp.js -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\ConnectorsPane-Dzu2DRTc.css -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\DocumentLibrary-CIKp6qld.css -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\DocumentLibrary-gE-tZarr.js -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\FileBrowser-CUJCMcVf.js -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\FileBrowser-D04I8Pvv.css -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\MemoryDashboard-Cxr_1R_c.js -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\MemoryDashboard-Mo721-BI.css -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\MobileAccessModal-CUqaV_OH.js -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\MobileAccessModal-DuVy9F1u.css -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\ScheduleManager-DgFrZse_.js -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\ScheduleManager-DotJl5JW.css -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\apiBase-BmPG2Rib.js -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\browser-KnDALPx_.js -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\eye-CwjwlxR5.js -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\fraunces-latin-BwwriW9Y.woff2 -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\gaia-robot-NKaQnEIp.png -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\index-CtsaRdvF.css -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\index-D-noqAc3.js -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\inter-latin-C2S99t-D.woff2 -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\inter-latin-ext-CFHvXkgd.woff2 -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\jetbrains-mono-latin-6fWv1k7M.woff2 -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\message-square-DuVoNniw.js -> build\lib\gaia\apps\webui\dist\assets
+copying src\gaia\apps\webui\dist\assets\rolldown-runtime-XKyaHtl9.js -> build\lib\gaia\apps\webui\dist\assets
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\gaia
+creating build\bdist.win-amd64\wheel\gaia\agents
+creating build\bdist.win-amd64\wheel\gaia\agents\base
+copying build\lib\gaia\agents\base\agent.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\api_agent.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\artifacts.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\bootstrap.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\call_risk.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\checks.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\chunk_index.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\claims.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\command_facts.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\completion.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\console.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\context_eviction.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\deliverables.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\denied_effects.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\discovery.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\errors.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\extraction.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\file_snapshots.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\goal_store.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\grounding.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\history.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\look_first.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\mcp_agent.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\memory.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\memory_store.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\offline.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\procedural_memory.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\project_deps.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\project_map.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\readiness.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\server.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\skill_catalog.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\skill_deltas.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\skill_loader.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\skill_synthesis.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\step_timing.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\system_context.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\task_lessons.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\tool_grants.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\tool_loader.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\tool_markup.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\tool_outcome.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\tool_output.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\turn_metrics.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\turn_scope.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\verification.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+copying build\lib\gaia\agents\base\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\agents\base
+creating build\bdist.win-amd64\wheel\gaia\agents\code_index
+creating build\bdist.win-amd64\wheel\gaia\agents\code_index\tools
+copying build\lib\gaia\agents\code_index\tools\mixin.py -> build\bdist.win-amd64\wheel\.\gaia\agents\code_index\tools
+copying build\lib\gaia\agents\code_index\tools\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\agents\code_index\tools
+copying build\lib\gaia\agents\code_index\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\agents\code_index
+copying build\lib\gaia\agents\install_hints.py -> build\bdist.win-amd64\wheel\.\gaia\agents
+copying build\lib\gaia\agents\registry.py -> build\bdist.win-amd64\wheel\.\gaia\agents
+creating build\bdist.win-amd64\wheel\gaia\agents\tools
+copying build\lib\gaia\agents\tools\audio_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\browser_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\browser_use_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\cli_setup_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\code_index_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\command_timeouts.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\document_text.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\edit_impact.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\email_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\filesystem_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\file_edit.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\file_io_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\file_monitor_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\file_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\package_installs.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\path_access.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\protected_folders.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\rag_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\reasoning_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\scratchpad_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\screenshot_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\search_scope.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\shell_deletes.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\shell_session.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\shell_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\skill_learning_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\skill_library_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\text_files.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\tools\wait_tools.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+creating build\bdist.win-amd64\wheel\gaia\agents\tools\_email
+copying build\lib\gaia\agents\tools\_email\errors.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools\_email
+copying build\lib\gaia\agents\tools\_email\fixture.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools\_email
+copying build\lib\gaia\agents\tools\_email\gmail.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools\_email
+copying build\lib\gaia\agents\tools\_email\graph.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools\_email
+copying build\lib\gaia\agents\tools\_email\phishing.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools\_email
+copying build\lib\gaia\agents\tools\_email\scopes.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools\_email
+copying build\lib\gaia\agents\tools\_email\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools\_email
+copying build\lib\gaia\agents\tools\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\agents\tools
+copying build\lib\gaia\agents\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\agents
+creating build\bdist.win-amd64\wheel\gaia\api
+copying build\lib\gaia\api\agent_proxy.py -> build\bdist.win-amd64\wheel\.\gaia\api
+copying build\lib\gaia\api\agent_registry.py -> build\bdist.win-amd64\wheel\.\gaia\api
+copying build\lib\gaia\api\app.py -> build\bdist.win-amd64\wheel\.\gaia\api
+copying build\lib\gaia\api\local_http.py -> build\bdist.win-amd64\wheel\.\gaia\api
+copying build\lib\gaia\api\openai_server.py -> build\bdist.win-amd64\wheel\.\gaia\api
+copying build\lib\gaia\api\schemas.py -> build\bdist.win-amd64\wheel\.\gaia\api
+copying build\lib\gaia\api\sse_handler.py -> build\bdist.win-amd64\wheel\.\gaia\api
+copying build\lib\gaia\api\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\api
+creating build\bdist.win-amd64\wheel\gaia\apps
+creating build\bdist.win-amd64\wheel\gaia\apps\llm
+copying build\lib\gaia\apps\llm\app.py -> build\bdist.win-amd64\wheel\.\gaia\apps\llm
+copying build\lib\gaia\apps\llm\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\apps\llm
+creating build\bdist.win-amd64\wheel\gaia\apps\webui
+creating build\bdist.win-amd64\wheel\gaia\apps\webui\dist
+creating build\bdist.win-amd64\wheel\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\AdvancedSettings-D5VKpkPY.css -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\AdvancedSettings-D7jNZncZ.js -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\apiBase-BmPG2Rib.js -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\browser-KnDALPx_.js -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\ConnectorsPane-CtDroHfp.js -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\ConnectorsPane-Dzu2DRTc.css -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\DocumentLibrary-CIKp6qld.css -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\DocumentLibrary-gE-tZarr.js -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\eye-CwjwlxR5.js -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\FileBrowser-CUJCMcVf.js -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\FileBrowser-D04I8Pvv.css -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\fraunces-latin-BwwriW9Y.woff2 -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\gaia-robot-NKaQnEIp.png -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\index-CtsaRdvF.css -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\index-D-noqAc3.js -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\inter-latin-C2S99t-D.woff2 -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\inter-latin-ext-CFHvXkgd.woff2 -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\jetbrains-mono-latin-6fWv1k7M.woff2 -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\MemoryDashboard-Cxr_1R_c.js -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\MemoryDashboard-Mo721-BI.css -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\message-square-DuVoNniw.js -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\MobileAccessModal-CUqaV_OH.js -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\MobileAccessModal-DuVy9F1u.css -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\rolldown-runtime-XKyaHtl9.js -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\ScheduleManager-DgFrZse_.js -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\assets\ScheduleManager-DotJl5JW.css -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist\assets
+copying build\lib\gaia\apps\webui\dist\favicon.png -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist
+copying build\lib\gaia\apps\webui\dist\fonts-OFL.txt -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist
+copying build\lib\gaia\apps\webui\dist\index.html -> build\bdist.win-amd64\wheel\.\gaia\apps\webui\dist
+copying build\lib\gaia\apps\webui\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\apps\webui
+copying build\lib\gaia\apps\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\apps
+creating build\bdist.win-amd64\wheel\gaia\audio
+copying build\lib\gaia\audio\audio_client.py -> build\bdist.win-amd64\wheel\.\gaia\audio
+copying build\lib\gaia\audio\audio_recorder.py -> build\bdist.win-amd64\wheel\.\gaia\audio
+copying build\lib\gaia\audio\diarize.py -> build\bdist.win-amd64\wheel\.\gaia\audio
+copying build\lib\gaia\audio\kokoro_tts.py -> build\bdist.win-amd64\wheel\.\gaia\audio
+copying build\lib\gaia\audio\lemonade_asr.py -> build\bdist.win-amd64\wheel\.\gaia\audio
+copying build\lib\gaia\audio\lemonade_service.py -> build\bdist.win-amd64\wheel\.\gaia\audio
+copying build\lib\gaia\audio\lemonade_tts.py -> build\bdist.win-amd64\wheel\.\gaia\audio
+copying build\lib\gaia\audio\media.py -> build\bdist.win-amd64\wheel\.\gaia\audio
+copying build\lib\gaia\audio\whisper_asr.py -> build\bdist.win-amd64\wheel\.\gaia\audio
+copying build\lib\gaia\audio\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\audio
+creating build\bdist.win-amd64\wheel\gaia\browser
+copying build\lib\gaia\browser\driver.py -> build\bdist.win-amd64\wheel\.\gaia\browser
+copying build\lib\gaia\browser\errors.py -> build\bdist.win-amd64\wheel\.\gaia\browser
+copying build\lib\gaia\browser\session.py -> build\bdist.win-amd64\wheel\.\gaia\browser
+copying build\lib\gaia\browser\snapshot.py -> build\bdist.win-amd64\wheel\.\gaia\browser
+copying build\lib\gaia\browser\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\browser
+creating build\bdist.win-amd64\wheel\gaia\chat
+copying build\lib\gaia\chat\app.py -> build\bdist.win-amd64\wheel\.\gaia\chat
+copying build\lib\gaia\chat\prompts.py -> build\bdist.win-amd64\wheel\.\gaia\chat
+copying build\lib\gaia\chat\sdk.py -> build\bdist.win-amd64\wheel\.\gaia\chat
+copying build\lib\gaia\chat\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\chat
+copying build\lib\gaia\cli.py -> build\bdist.win-amd64\wheel\.\gaia
+copying build\lib\gaia\cli_agent.py -> build\bdist.win-amd64\wheel\.\gaia
+creating build\bdist.win-amd64\wheel\gaia\code_index
+copying build\lib\gaia\code_index\parsers.py -> build\bdist.win-amd64\wheel\.\gaia\code_index
+copying build\lib\gaia\code_index\sdk.py -> build\bdist.win-amd64\wheel\.\gaia\code_index
+copying build\lib\gaia\code_index\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\code_index
+copying build\lib\gaia\config.py -> build\bdist.win-amd64\wheel\.\gaia
+creating build\bdist.win-amd64\wheel\gaia\connectors
+copying build\lib\gaia\connectors\activations.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\activation_watcher.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\api.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+creating build\bdist.win-amd64\wheel\gaia\connectors\catalog
+copying build\lib\gaia\connectors\catalog\google.py -> build\bdist.win-amd64\wheel\.\gaia\connectors\catalog
+copying build\lib\gaia\connectors\catalog\mcp_servers.py -> build\bdist.win-amd64\wheel\.\gaia\connectors\catalog
+copying build\lib\gaia\connectors\catalog\microsoft.py -> build\bdist.win-amd64\wheel\.\gaia\connectors\catalog
+copying build\lib\gaia\connectors\catalog\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\connectors\catalog
+copying build\lib\gaia\connectors\cli.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\context.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\credential_wait.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\errors.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\events.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\flow.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\formatting.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\grants.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\handler.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\mcp_server.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\oauth_pkce.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\pkce.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\prior_state.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+creating build\bdist.win-amd64\wheel\gaia\connectors\providers
+copying build\lib\gaia\connectors\providers\base.py -> build\bdist.win-amd64\wheel\.\gaia\connectors\providers
+copying build\lib\gaia\connectors\providers\google.py -> build\bdist.win-amd64\wheel\.\gaia\connectors\providers
+copying build\lib\gaia\connectors\providers\microsoft.py -> build\bdist.win-amd64\wheel\.\gaia\connectors\providers
+copying build\lib\gaia\connectors\providers\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\connectors\providers
+copying build\lib\gaia\connectors\registry.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\setup_routes.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\spec.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\store.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\tokens.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\_keyring.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\_loop.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\_refresh_lock.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+copying build\lib\gaia\connectors\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\connectors
+creating build\bdist.win-amd64\wheel\gaia\daemon
+copying build\lib\gaia\daemon\agent_control.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\agent_query.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\app.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\broker.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\broker_client.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\broker_routes.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\client.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\connections_routes.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\constants.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+creating build\bdist.win-amd64\wheel\gaia\daemon\custody
+copying build\lib\gaia\daemon\custody\auth.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\custody
+copying build\lib\gaia\daemon\custody\constants.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\custody
+copying build\lib\gaia\daemon\custody\errors.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\custody
+copying build\lib\gaia\daemon\custody\provider.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\custody
+copying build\lib\gaia\daemon\custody\routes.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\custody
+copying build\lib\gaia\daemon\custody\store.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\custody
+copying build\lib\gaia\daemon\custody\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\custody
+copying build\lib\gaia\daemon\errors.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\forward.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\forward_refresh.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\gateway_routes.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\instance.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\lemonade.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\lemonade_clients.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\lemonade_routes.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\lifetime.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\lock.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\migrate.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\paths.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\provider_key_routes.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\relay.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+creating build\bdist.win-amd64\wheel\gaia\daemon\scheduler
+copying build\lib\gaia\daemon\scheduler\clock.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\scheduler
+copying build\lib\gaia\daemon\scheduler\lease.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\scheduler
+copying build\lib\gaia\daemon\scheduler\migration.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\scheduler
+copying build\lib\gaia\daemon\scheduler\models.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\scheduler
+copying build\lib\gaia\daemon\scheduler\store.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\scheduler
+copying build\lib\gaia\daemon\scheduler\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\scheduler
+copying build\lib\gaia\daemon\server.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+creating build\bdist.win-amd64\wheel\gaia\daemon\sidecars
+copying build\lib\gaia\daemon\sidecars\errors.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\sidecars
+copying build\lib\gaia\daemon\sidecars\fetch.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\sidecars
+copying build\lib\gaia\daemon\sidecars\install.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\sidecars
+copying build\lib\gaia\daemon\sidecars\ledger.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\sidecars
+copying build\lib\gaia\daemon\sidecars\manager.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\sidecars
+copying build\lib\gaia\daemon\sidecars\platform.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\sidecars
+copying build\lib\gaia\daemon\sidecars\registry.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\sidecars
+copying build\lib\gaia\daemon\sidecars\routes.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\sidecars
+copying build\lib\gaia\daemon\sidecars\spec.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\sidecars
+copying build\lib\gaia\daemon\sidecars\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\daemon\sidecars
+copying build\lib\gaia\daemon\strays.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\timeouts.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+copying build\lib\gaia\daemon\__main__.py -> build\bdist.win-amd64\wheel\.\gaia\daemon
+creating build\bdist.win-amd64\wheel\gaia\database
+copying build\lib\gaia\database\agent.py -> build\bdist.win-amd64\wheel\.\gaia\database
+copying build\lib\gaia\database\mixin.py -> build\bdist.win-amd64\wheel\.\gaia\database
+copying build\lib\gaia\database\sql_safety.py -> build\bdist.win-amd64\wheel\.\gaia\database
+copying build\lib\gaia\database\testing.py -> build\bdist.win-amd64\wheel\.\gaia\database
+copying build\lib\gaia\database\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\database
+copying build\lib\gaia\device.py -> build\bdist.win-amd64\wheel\.\gaia
+creating build\bdist.win-amd64\wheel\gaia\engineering
+copying build\lib\gaia\engineering\cli.py -> build\bdist.win-amd64\wheel\.\gaia\engineering
+copying build\lib\gaia\engineering\handoff.py -> build\bdist.win-amd64\wheel\.\gaia\engineering
+copying build\lib\gaia\engineering\identity.py -> build\bdist.win-amd64\wheel\.\gaia\engineering
+copying build\lib\gaia\engineering\repository.py -> build\bdist.win-amd64\wheel\.\gaia\engineering
+copying build\lib\gaia\engineering\service.py -> build\bdist.win-amd64\wheel\.\gaia\engineering
+copying build\lib\gaia\engineering\store.py -> build\bdist.win-amd64\wheel\.\gaia\engineering
+copying build\lib\gaia\engineering\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\engineering
+copying build\lib\gaia\env.py -> build\bdist.win-amd64\wheel\.\gaia
+creating build\bdist.win-amd64\wheel\gaia\eval
+copying build\lib\gaia\eval\action_item_quality.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\analyze_failures.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\audit.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+creating build\bdist.win-amd64\wheel\gaia\eval\bench
+copying build\lib\gaia\eval\bench\config.py -> build\bdist.win-amd64\wheel\.\gaia\eval\bench
+copying build\lib\gaia\eval\bench\controls.py -> build\bdist.win-amd64\wheel\.\gaia\eval\bench
+copying build\lib\gaia\eval\bench\gaia_child.py -> build\bdist.win-amd64\wheel\.\gaia\eval\bench
+copying build\lib\gaia\eval\bench\gateway.py -> build\bdist.win-amd64\wheel\.\gaia\eval\bench
+copying build\lib\gaia\eval\bench\ghstub.py -> build\bdist.win-amd64\wheel\.\gaia\eval\bench
+copying build\lib\gaia\eval\bench\harness.py -> build\bdist.win-amd64\wheel\.\gaia\eval\bench
+copying build\lib\gaia\eval\bench\leaks.py -> build\bdist.win-amd64\wheel\.\gaia\eval\bench
+copying build\lib\gaia\eval\bench\metering.py -> build\bdist.win-amd64\wheel\.\gaia\eval\bench
+copying build\lib\gaia\eval\bench\report.py -> build\bdist.win-amd64\wheel\.\gaia\eval\bench
+copying build\lib\gaia\eval\bench\sandbox.py -> build\bdist.win-amd64\wheel\.\gaia\eval\bench
+copying build\lib\gaia\eval\bench\swebench.py -> build\bdist.win-amd64\wheel\.\gaia\eval\bench
+copying build\lib\gaia\eval\bench\therock.py -> build\bdist.win-amd64\wheel\.\gaia\eval\bench
+copying build\lib\gaia\eval\bench\transcripts.py -> build\bdist.win-amd64\wheel\.\gaia\eval\bench
+copying build\lib\gaia\eval\bench\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\eval\bench
+copying build\lib\gaia\eval\benchmark.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\briefing_quality.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\claude.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\claude_outage.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\claude_usage.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\code_bench.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\code_bench_fixtures.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+creating build\bdist.win-amd64\wheel\gaia\eval\code_retrieval
+copying build\lib\gaia\eval\code_retrieval\common.py -> build\bdist.win-amd64\wheel\.\gaia\eval\code_retrieval
+copying build\lib\gaia\eval\code_retrieval\gold.py -> build\bdist.win-amd64\wheel\.\gaia\eval\code_retrieval
+copying build\lib\gaia\eval\code_retrieval\instances.py -> build\bdist.win-amd64\wheel\.\gaia\eval\code_retrieval
+copying build\lib\gaia\eval\code_retrieval\lexical.py -> build\bdist.win-amd64\wheel\.\gaia\eval\code_retrieval
+copying build\lib\gaia\eval\code_retrieval\metrics.py -> build\bdist.win-amd64\wheel\.\gaia\eval\code_retrieval
+copying build\lib\gaia\eval\code_retrieval\quality.py -> build\bdist.win-amd64\wheel\.\gaia\eval\code_retrieval
+copying build\lib\gaia\eval\code_retrieval\report.py -> build\bdist.win-amd64\wheel\.\gaia\eval\code_retrieval
+copying build\lib\gaia\eval\code_retrieval\repos.py -> build\bdist.win-amd64\wheel\.\gaia\eval\code_retrieval
+copying build\lib\gaia\eval\code_retrieval\robustness.py -> build\bdist.win-amd64\wheel\.\gaia\eval\code_retrieval
+copying build\lib\gaia\eval\code_retrieval\runner.py -> build\bdist.win-amd64\wheel\.\gaia\eval\code_retrieval
+copying build\lib\gaia\eval\code_retrieval\scale.py -> build\bdist.win-amd64\wheel\.\gaia\eval\code_retrieval
+copying build\lib\gaia\eval\code_retrieval\suites.py -> build\bdist.win-amd64\wheel\.\gaia\eval\code_retrieval
+copying build\lib\gaia\eval\code_retrieval\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\eval\code_retrieval
+copying build\lib\gaia\eval\config.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\draft_quality.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\eval_lock.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\fixture_paths.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\flagship_tasks.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\followup_quality.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\integrity_gate.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\judge_client.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\judge_outage.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\lane_summary.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+creating build\bdist.win-amd64\wheel\gaia\eval\memory
+copying build\lib\gaia\eval\memory\clock.py -> build\bdist.win-amd64\wheel\.\gaia\eval\memory
+copying build\lib\gaia\eval\memory\harness.py -> build\bdist.win-amd64\wheel\.\gaia\eval\memory
+copying build\lib\gaia\eval\memory\runner.py -> build\bdist.win-amd64\wheel\.\gaia\eval\memory
+copying build\lib\gaia\eval\memory\scenario.py -> build\bdist.win-amd64\wheel\.\gaia\eval\memory
+creating build\bdist.win-amd64\wheel\gaia\eval\memory\scenarios
+copying build\lib\gaia\eval\memory\scenarios\alex_three_months_of_life.yaml -> build\bdist.win-amd64\wheel\.\gaia\eval\memory\scenarios
+copying build\lib\gaia\eval\memory\scenarios\chen_learns_project_quirks.yaml -> build\bdist.win-amd64\wheel\.\gaia\eval\memory\scenarios
+copying build\lib\gaia\eval\memory\scenarios\jordan_reminders_change.yaml -> build\bdist.win-amd64\wheel\.\gaia\eval\memory\scenarios
+copying build\lib\gaia\eval\memory\scenarios\maya_moves_and_changes_jobs.yaml -> build\bdist.win-amd64\wheel\.\gaia\eval\memory\scenarios
+copying build\lib\gaia\eval\memory\scenarios\priya_work_documents_and_forgetting.yaml -> build\bdist.win-amd64\wheel\.\gaia\eval\memory\scenarios
+copying build\lib\gaia\eval\memory\scenarios\sam_family_health.yaml -> build\bdist.win-amd64\wheel\.\gaia\eval\memory\scenarios
+copying build\lib\gaia\eval\memory\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\eval\memory
+copying build\lib\gaia\eval\model_comparison.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\pdf_document_generator.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\performance.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\quality_metrics.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\release_scorecard.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+creating build\bdist.win-amd64\wheel\gaia\eval\retrieval
+copying build\lib\gaia\eval\retrieval\corpus.py -> build\bdist.win-amd64\wheel\.\gaia\eval\retrieval
+copying build\lib\gaia\eval\retrieval\hard_cases.py -> build\bdist.win-amd64\wheel\.\gaia\eval\retrieval
+copying build\lib\gaia\eval\retrieval\harness.py -> build\bdist.win-amd64\wheel\.\gaia\eval\retrieval
+copying build\lib\gaia\eval\retrieval\locate.py -> build\bdist.win-amd64\wheel\.\gaia\eval\retrieval
+copying build\lib\gaia\eval\retrieval\runner.py -> build\bdist.win-amd64\wheel\.\gaia\eval\retrieval
+copying build\lib\gaia\eval\retrieval\scoring.py -> build\bdist.win-amd64\wheel\.\gaia\eval\retrieval
+copying build\lib\gaia\eval\retrieval\sources.py -> build\bdist.win-amd64\wheel\.\gaia\eval\retrieval
+copying build\lib\gaia\eval\retrieval\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\eval\retrieval
+copying build\lib\gaia\eval\runner.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\scenario_backend.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\scorecard.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\scorecard_gate.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\session_dataset.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\session_eval.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\sidecar_harness.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\statistics.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\task_setups.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\tool_cost.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\tool_recall.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+copying build\lib\gaia\eval\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\eval
+creating build\bdist.win-amd64\wheel\gaia\factory
+creating build\bdist.win-amd64\wheel\gaia\factory\harvest
+copying build\lib\gaia\factory\harvest\analyze.py -> build\bdist.win-amd64\wheel\.\gaia\factory\harvest
+copying build\lib\gaia\factory\harvest\classify.py -> build\bdist.win-amd64\wheel\.\gaia\factory\harvest
+copying build\lib\gaia\factory\harvest\claude_cli.py -> build\bdist.win-amd64\wheel\.\gaia\factory\harvest
+copying build\lib\gaia\factory\harvest\context.py -> build\bdist.win-amd64\wheel\.\gaia\factory\harvest
+copying build\lib\gaia\factory\harvest\reader.py -> build\bdist.win-amd64\wheel\.\gaia\factory\harvest
+copying build\lib\gaia\factory\harvest\report.py -> build\bdist.win-amd64\wheel\.\gaia\factory\harvest
+copying build\lib\gaia\factory\harvest\savings.py -> build\bdist.win-amd64\wheel\.\gaia\factory\harvest
+copying build\lib\gaia\factory\harvest\scan.py -> build\bdist.win-amd64\wheel\.\gaia\factory\harvest
+copying build\lib\gaia\factory\harvest\synthesize.py -> build\bdist.win-amd64\wheel\.\gaia\factory\harvest
+copying build\lib\gaia\factory\harvest\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\factory\harvest
+copying build\lib\gaia\factory\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\factory
+creating build\bdist.win-amd64\wheel\gaia\filesystem
+copying build\lib\gaia\filesystem\categorizer.py -> build\bdist.win-amd64\wheel\.\gaia\filesystem
+copying build\lib\gaia\filesystem\index.py -> build\bdist.win-amd64\wheel\.\gaia\filesystem
+copying build\lib\gaia\filesystem\name_match.py -> build\bdist.win-amd64\wheel\.\gaia\filesystem
+copying build\lib\gaia\filesystem\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\filesystem
+creating build\bdist.win-amd64\wheel\gaia\governance
+copying build\lib\gaia\governance\action_mapper.py -> build\bdist.win-amd64\wheel\.\gaia\governance
+copying build\lib\gaia\governance\adapter.py -> build\bdist.win-amd64\wheel\.\gaia\governance
+copying build\lib\gaia\governance\checkpoint_bridge.py -> build\bdist.win-amd64\wheel\.\gaia\governance
+copying build\lib\gaia\governance\config.py -> build\bdist.win-amd64\wheel\.\gaia\governance
+copying build\lib\gaia\governance\decorators.py -> build\bdist.win-amd64\wheel\.\gaia\governance
+copying build\lib\gaia\governance\exceptions.py -> build\bdist.win-amd64\wheel\.\gaia\governance
+copying build\lib\gaia\governance\mixin.py -> build\bdist.win-amd64\wheel\.\gaia\governance
+copying build\lib\gaia\governance\policy_binding.py -> build\bdist.win-amd64\wheel\.\gaia\governance
+copying build\lib\gaia\governance\protocols.py -> build\bdist.win-amd64\wheel\.\gaia\governance
+copying build\lib\gaia\governance\receipt_service.py -> build\bdist.win-amd64\wheel\.\gaia\governance
+copying build\lib\gaia\governance\schemas.py -> build\bdist.win-amd64\wheel\.\gaia\governance
+copying build\lib\gaia\governance\stubs.py -> build\bdist.win-amd64\wheel\.\gaia\governance
+copying build\lib\gaia\governance\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\governance
+creating build\bdist.win-amd64\wheel\gaia\hub
+copying build\lib\gaia\hub\catalog.py -> build\bdist.win-amd64\wheel\.\gaia\hub
+copying build\lib\gaia\hub\compatibility.py -> build\bdist.win-amd64\wheel\.\gaia\hub
+copying build\lib\gaia\hub\installer.py -> build\bdist.win-amd64\wheel\.\gaia\hub
+copying build\lib\gaia\hub\lifecycle.py -> build\bdist.win-amd64\wheel\.\gaia\hub
+copying build\lib\gaia\hub\manifest.py -> build\bdist.win-amd64\wheel\.\gaia\hub
+copying build\lib\gaia\hub\native_launcher.py -> build\bdist.win-amd64\wheel\.\gaia\hub
+copying build\lib\gaia\hub\packager.py -> build\bdist.win-amd64\wheel\.\gaia\hub
+copying build\lib\gaia\hub\prerelease.py -> build\bdist.win-amd64\wheel\.\gaia\hub
+copying build\lib\gaia\hub\publisher.py -> build\bdist.win-amd64\wheel\.\gaia\hub
+copying build\lib\gaia\hub\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\hub
+creating build\bdist.win-amd64\wheel\gaia\installer
+copying build\lib\gaia\installer\export_import.py -> build\bdist.win-amd64\wheel\.\gaia\installer
+copying build\lib\gaia\installer\init_command.py -> build\bdist.win-amd64\wheel\.\gaia\installer
+copying build\lib\gaia\installer\lemonade_installer.py -> build\bdist.win-amd64\wheel\.\gaia\installer
+copying build\lib\gaia\installer\mcp_init.py -> build\bdist.win-amd64\wheel\.\gaia\installer
+copying build\lib\gaia\installer\uninstall_command.py -> build\bdist.win-amd64\wheel\.\gaia\installer
+copying build\lib\gaia\installer\_stdin.py -> build\bdist.win-amd64\wheel\.\gaia\installer
+copying build\lib\gaia\installer\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\installer
+creating build\bdist.win-amd64\wheel\gaia\llm
+copying build\lib\gaia\llm\base_client.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\cache_pricing.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\cloud_keys.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\context_choice.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\embedding_cache.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\exceptions.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\factory.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\gateway.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\inference_location.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\lemonade_choice.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\lemonade_client.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\lemonade_embedded.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\lemonade_launcher.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\lemonade_manager.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\lemonade_service.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\lemonade_supervisor.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\model_device.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\model_fit.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\model_server_info.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+creating build\bdist.win-amd64\wheel\gaia\llm\providers
+copying build\lib\gaia\llm\providers\claude.py -> build\bdist.win-amd64\wheel\.\gaia\llm\providers
+copying build\lib\gaia\llm\providers\fireworks.py -> build\bdist.win-amd64\wheel\.\gaia\llm\providers
+copying build\lib\gaia\llm\providers\lemonade.py -> build\bdist.win-amd64\wheel\.\gaia\llm\providers
+copying build\lib\gaia\llm\providers\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\llm\providers
+copying build\lib\gaia\llm\recommended_models.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\retry.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\stream_watchdog.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\surface_hints.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\vlm_client.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\llm\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\llm
+copying build\lib\gaia\logger.py -> build\bdist.win-amd64\wheel\.\gaia
+copying build\lib\gaia\log_rotation.py -> build\bdist.win-amd64\wheel\.\gaia
+creating build\bdist.win-amd64\wheel\gaia\mcp
+copying build\lib\gaia\mcp\agent_mcp_server.py -> build\bdist.win-amd64\wheel\.\gaia\mcp
+creating build\bdist.win-amd64\wheel\gaia\mcp\client
+copying build\lib\gaia\mcp\client\config.py -> build\bdist.win-amd64\wheel\.\gaia\mcp\client
+copying build\lib\gaia\mcp\client\mcp_client.py -> build\bdist.win-amd64\wheel\.\gaia\mcp\client
+copying build\lib\gaia\mcp\client\mcp_client_manager.py -> build\bdist.win-amd64\wheel\.\gaia\mcp\client
+copying build\lib\gaia\mcp\client\redaction.py -> build\bdist.win-amd64\wheel\.\gaia\mcp\client
+creating build\bdist.win-amd64\wheel\gaia\mcp\client\transports
+copying build\lib\gaia\mcp\client\transports\base.py -> build\bdist.win-amd64\wheel\.\gaia\mcp\client\transports
+copying build\lib\gaia\mcp\client\transports\http.py -> build\bdist.win-amd64\wheel\.\gaia\mcp\client\transports
+copying build\lib\gaia\mcp\client\transports\stdio.py -> build\bdist.win-amd64\wheel\.\gaia\mcp\client\transports
+copying build\lib\gaia\mcp\client\transports\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\mcp\client\transports
+copying build\lib\gaia\mcp\client\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\mcp\client
+copying build\lib\gaia\mcp\context7_cache.py -> build\bdist.win-amd64\wheel\.\gaia\mcp
+copying build\lib\gaia\mcp\external_services.py -> build\bdist.win-amd64\wheel\.\gaia\mcp
+copying build\lib\gaia\mcp\mcp_bridge.py -> build\bdist.win-amd64\wheel\.\gaia\mcp
+copying build\lib\gaia\mcp\mixin.py -> build\bdist.win-amd64\wheel\.\gaia\mcp
+copying build\lib\gaia\mcp\ports.py -> build\bdist.win-amd64\wheel\.\gaia\mcp
+creating build\bdist.win-amd64\wheel\gaia\mcp\servers
+copying build\lib\gaia\mcp\servers\agent_ui_control.py -> build\bdist.win-amd64\wheel\.\gaia\mcp\servers
+copying build\lib\gaia\mcp\servers\agent_ui_mcp.py -> build\bdist.win-amd64\wheel\.\gaia\mcp\servers
+copying build\lib\gaia\mcp\servers\engineering_mcp.py -> build\bdist.win-amd64\wheel\.\gaia\mcp\servers
+copying build\lib\gaia\mcp\servers\tui_mcp.py -> build\bdist.win-amd64\wheel\.\gaia\mcp\servers
+copying build\lib\gaia\mcp\servers\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\mcp\servers
+copying build\lib\gaia\mcp\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\mcp
+creating build\bdist.win-amd64\wheel\gaia\messaging
+copying build\lib\gaia\messaging\bridge.py -> build\bdist.win-amd64\wheel\.\gaia\messaging
+copying build\lib\gaia\messaging\ingest.py -> build\bdist.win-amd64\wheel\.\gaia\messaging
+creating build\bdist.win-amd64\wheel\gaia\messaging\slack
+copying build\lib\gaia\messaging\slack\adapter.py -> build\bdist.win-amd64\wheel\.\gaia\messaging\slack
+copying build\lib\gaia\messaging\slack\cli.py -> build\bdist.win-amd64\wheel\.\gaia\messaging\slack
+copying build\lib\gaia\messaging\slack\credentials.py -> build\bdist.win-amd64\wheel\.\gaia\messaging\slack
+copying build\lib\gaia\messaging\slack\manifest.py -> build\bdist.win-amd64\wheel\.\gaia\messaging\slack
+copying build\lib\gaia\messaging\slack\onboarding.py -> build\bdist.win-amd64\wheel\.\gaia\messaging\slack
+copying build\lib\gaia\messaging\slack\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\messaging\slack
+copying build\lib\gaia\messaging\telegram.py -> build\bdist.win-amd64\wheel\.\gaia\messaging
+copying build\lib\gaia\messaging\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\messaging
+copying build\lib\gaia\perf_analysis.py -> build\bdist.win-amd64\wheel\.\gaia
+copying build\lib\gaia\ports.py -> build\bdist.win-amd64\wheel\.\gaia
+creating build\bdist.win-amd64\wheel\gaia\rag
+copying build\lib\gaia\rag\docx_utils.py -> build\bdist.win-amd64\wheel\.\gaia\rag
+copying build\lib\gaia\rag\pdf_utils.py -> build\bdist.win-amd64\wheel\.\gaia\rag
+copying build\lib\gaia\rag\pptx_utils.py -> build\bdist.win-amd64\wheel\.\gaia\rag
+copying build\lib\gaia\rag\sdk.py -> build\bdist.win-amd64\wheel\.\gaia\rag
+copying build\lib\gaia\rag\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\rag
+creating build\bdist.win-amd64\wheel\gaia\schedule
+copying build\lib\gaia\schedule\daemon.py -> build\bdist.win-amd64\wheel\.\gaia\schedule
+copying build\lib\gaia\schedule\lock.py -> build\bdist.win-amd64\wheel\.\gaia\schedule
+copying build\lib\gaia\schedule\runner.py -> build\bdist.win-amd64\wheel\.\gaia\schedule
+copying build\lib\gaia\schedule\sinks.py -> build\bdist.win-amd64\wheel\.\gaia\schedule
+copying build\lib\gaia\schedule\store.py -> build\bdist.win-amd64\wheel\.\gaia\schedule
+copying build\lib\gaia\schedule\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\schedule
+creating build\bdist.win-amd64\wheel\gaia\scratchpad
+copying build\lib\gaia\scratchpad\service.py -> build\bdist.win-amd64\wheel\.\gaia\scratchpad
+copying build\lib\gaia\scratchpad\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\scratchpad
+creating build\bdist.win-amd64\wheel\gaia\sd
+copying build\lib\gaia\sd\mixin.py -> build\bdist.win-amd64\wheel\.\gaia\sd
+copying build\lib\gaia\sd\prompts.py -> build\bdist.win-amd64\wheel\.\gaia\sd
+copying build\lib\gaia\sd\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\sd
+copying build\lib\gaia\security.py -> build\bdist.win-amd64\wheel\.\gaia
+creating build\bdist.win-amd64\wheel\gaia\sidecar
+copying build\lib\gaia\sidecar\caller_auth.py -> build\bdist.win-amd64\wheel\.\gaia\sidecar
+copying build\lib\gaia\sidecar\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\sidecar
+creating build\bdist.win-amd64\wheel\gaia\skills
+creating build\bdist.win-amd64\wheel\gaia\skills\audit
+copying build\lib\gaia\skills\audit\code.py -> build\bdist.win-amd64\wheel\.\gaia\skills\audit
+copying build\lib\gaia\skills\audit\engine.py -> build\bdist.win-amd64\wheel\.\gaia\skills\audit
+copying build\lib\gaia\skills\audit\findings.py -> build\bdist.win-amd64\wheel\.\gaia\skills\audit
+copying build\lib\gaia\skills\audit\instructions.py -> build\bdist.win-amd64\wheel\.\gaia\skills\audit
+copying build\lib\gaia\skills\audit\permission_truth.py -> build\bdist.win-amd64\wheel\.\gaia\skills\audit
+copying build\lib\gaia\skills\audit\report.py -> build\bdist.win-amd64\wheel\.\gaia\skills\audit
+copying build\lib\gaia\skills\audit\supply.py -> build\bdist.win-amd64\wheel\.\gaia\skills\audit
+copying build\lib\gaia\skills\audit\verdict.py -> build\bdist.win-amd64\wheel\.\gaia\skills\audit
+copying build\lib\gaia\skills\audit\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\skills\audit
+copying build\lib\gaia\skills\audit_gate.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\binaries.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\binary_setup.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\capture.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\cli.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\consume.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\deltas_cli.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\drift.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\errors.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\format.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\hub.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\install.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\listing.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\loader.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\lock.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\manager.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\migrate.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\naming.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\permissions.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\publish.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\sections.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\sets.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\signing.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\tiers.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\versions.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\skills\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\skills
+copying build\lib\gaia\stream_timeout.py -> build\bdist.win-amd64\wheel\.\gaia
+creating build\bdist.win-amd64\wheel\gaia\talk
+copying build\lib\gaia\talk\sdk.py -> build\bdist.win-amd64\wheel\.\gaia\talk
+copying build\lib\gaia\talk\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\talk
+creating build\bdist.win-amd64\wheel\gaia\testing
+copying build\lib\gaia\testing\assertions.py -> build\bdist.win-amd64\wheel\.\gaia\testing
+copying build\lib\gaia\testing\fixtures.py -> build\bdist.win-amd64\wheel\.\gaia\testing
+copying build\lib\gaia\testing\mocks.py -> build\bdist.win-amd64\wheel\.\gaia\testing
+copying build\lib\gaia\testing\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\testing
+copying build\lib\gaia\tls.py -> build\bdist.win-amd64\wheel\.\gaia
+copying build\lib\gaia\tool_cancellation.py -> build\bdist.win-amd64\wheel\.\gaia
+creating build\bdist.win-amd64\wheel\gaia\ui
+copying build\lib\gaia\ui\agent_loop.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\agent_threads.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\answer_retry.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\build.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\database.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\dependencies.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\dispatch.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\document_monitor.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+creating build\bdist.win-amd64\wheel\gaia\ui\email_sidecar
+copying build\lib\gaia\ui\email_sidecar\daemon_client.py -> build\bdist.win-amd64\wheel\.\gaia\ui\email_sidecar
+copying build\lib\gaia\ui\email_sidecar\errors.py -> build\bdist.win-amd64\wheel\.\gaia\ui\email_sidecar
+copying build\lib\gaia\ui\email_sidecar\profiles.py -> build\bdist.win-amd64\wheel\.\gaia\ui\email_sidecar
+copying build\lib\gaia\ui\email_sidecar\proxy.py -> build\bdist.win-amd64\wheel\.\gaia\ui\email_sidecar
+copying build\lib\gaia\ui\email_sidecar\relay.py -> build\bdist.win-amd64\wheel\.\gaia\ui\email_sidecar
+copying build\lib\gaia\ui\email_sidecar\router.py -> build\bdist.win-amd64\wheel\.\gaia\ui\email_sidecar
+copying build\lib\gaia\ui\email_sidecar\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\ui\email_sidecar
+copying build\lib\gaia\ui\event_narration.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\export_openapi.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\followups.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\local_models.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\memory_settings.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\models.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\permissions.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\restart_recovery.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+creating build\bdist.win-amd64\wheel\gaia\ui\routers
+copying build\lib\gaia\ui\routers\agents.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\changes.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\chat.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\connectors.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\documents.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\environment.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\files.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\goals.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\hub.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\lemonade.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\mcp.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\memory.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\onboarding.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\providers.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\schedules.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\sessions.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\setup.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\skills.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\spending.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\system.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\tunnel.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\routers\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\ui\routers
+copying build\lib\gaia\ui\run_manager.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\scheduler.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\scripted_user.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\security.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\server.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\session_environment.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\session_git.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\session_outputs.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\setup_plan.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\setup_runner.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\spending.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\sse_handler.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\sse_translation.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\start_screen.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\tunnel.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\turn_changes.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\turn_insights.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\turn_queue.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\turn_summary.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\utils.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\warmup.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\_chat_helpers.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+copying build\lib\gaia\ui\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\ui
+creating build\bdist.win-amd64\wheel\gaia\utils
+copying build\lib\gaia\utils\archive.py -> build\bdist.win-amd64\wheel\.\gaia\utils
+copying build\lib\gaia\utils\awake_clock.py -> build\bdist.win-amd64\wheel\.\gaia\utils
+copying build\lib\gaia\utils\file_lock.py -> build\bdist.win-amd64\wheel\.\gaia\utils
+copying build\lib\gaia\utils\file_watcher.py -> build\bdist.win-amd64\wheel\.\gaia\utils
+copying build\lib\gaia\utils\json_string.py -> build\bdist.win-amd64\wheel\.\gaia\utils
+copying build\lib\gaia\utils\parsing.py -> build\bdist.win-amd64\wheel\.\gaia\utils
+copying build\lib\gaia\utils\paths.py -> build\bdist.win-amd64\wheel\.\gaia\utils
+copying build\lib\gaia\utils\perf_trace.py -> build\bdist.win-amd64\wheel\.\gaia\utils
+copying build\lib\gaia\utils\power.py -> build\bdist.win-amd64\wheel\.\gaia\utils
+copying build\lib\gaia\utils\process_owner.py -> build\bdist.win-amd64\wheel\.\gaia\utils
+copying build\lib\gaia\utils\terminal.py -> build\bdist.win-amd64\wheel\.\gaia\utils
+copying build\lib\gaia\utils\tiktoken_bundle.py -> build\bdist.win-amd64\wheel\.\gaia\utils
+copying build\lib\gaia\utils\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\utils
+copying build\lib\gaia\version.py -> build\bdist.win-amd64\wheel\.\gaia
+creating build\bdist.win-amd64\wheel\gaia\vlm
+copying build\lib\gaia\vlm\mixin.py -> build\bdist.win-amd64\wheel\.\gaia\vlm
+copying build\lib\gaia\vlm\structured_extraction.py -> build\bdist.win-amd64\wheel\.\gaia\vlm
+copying build\lib\gaia\vlm\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\vlm
+creating build\bdist.win-amd64\wheel\gaia\web
+copying build\lib\gaia\web\client.py -> build\bdist.win-amd64\wheel\.\gaia\web
+copying build\lib\gaia\web\tavily.py -> build\bdist.win-amd64\wheel\.\gaia\web
+copying build\lib\gaia\web\__init__.py -> build\bdist.win-amd64\wheel\.\gaia\web
+copying build\lib\gaia\__init__.py -> build\bdist.win-amd64\wheel\.\gaia
+running install_egg_info
+Copying src\amd_gaia.egg-info to build\bdist.win-amd64\wheel\.\amd_gaia-0.25.1-py3.14.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\amd_gaia-0.25.1.dist-info\WHEEL
+creating 'F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\dist\\.tmp-f1ix3tud\\amd_gaia-0.25.1-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
+adding 'amd_gaia-0.25.1.dist-info/licenses/LICENSE.md'
+adding 'gaia/__init__.py'
+adding 'gaia/cli.py'
+adding 'gaia/cli_agent.py'
+adding 'gaia/config.py'
+adding 'gaia/device.py'
+adding 'gaia/env.py'
+adding 'gaia/log_rotation.py'
+adding 'gaia/logger.py'
+adding 'gaia/perf_analysis.py'
+adding 'gaia/ports.py'
+adding 'gaia/security.py'
+adding 'gaia/stream_timeout.py'
+adding 'gaia/tls.py'
+adding 'gaia/tool_cancellation.py'
+adding 'gaia/version.py'
+adding 'gaia/agents/__init__.py'
+adding 'gaia/agents/install_hints.py'
+adding 'gaia/agents/registry.py'
+adding 'gaia/agents/base/__init__.py'
+adding 'gaia/agents/base/agent.py'
+adding 'gaia/agents/base/api_agent.py'
+adding 'gaia/agents/base/artifacts.py'
+adding 'gaia/agents/base/bootstrap.py'
+adding 'gaia/agents/base/call_risk.py'
+adding 'gaia/agents/base/checks.py'
+adding 'gaia/agents/base/chunk_index.py'
+adding 'gaia/agents/base/claims.py'
+adding 'gaia/agents/base/command_facts.py'
+adding 'gaia/agents/base/completion.py'
+adding 'gaia/agents/base/console.py'
+adding 'gaia/agents/base/context_eviction.py'
+adding 'gaia/agents/base/deliverables.py'
+adding 'gaia/agents/base/denied_effects.py'
+adding 'gaia/agents/base/discovery.py'
+adding 'gaia/agents/base/errors.py'
+adding 'gaia/agents/base/extraction.py'
+adding 'gaia/agents/base/file_snapshots.py'
+adding 'gaia/agents/base/goal_store.py'
+adding 'gaia/agents/base/grounding.py'
+adding 'gaia/agents/base/history.py'
+adding 'gaia/agents/base/look_first.py'
+adding 'gaia/agents/base/mcp_agent.py'
+adding 'gaia/agents/base/memory.py'
+adding 'gaia/agents/base/memory_store.py'
+adding 'gaia/agents/base/offline.py'
+adding 'gaia/agents/base/procedural_memory.py'
+adding 'gaia/agents/base/project_deps.py'
+adding 'gaia/agents/base/project_map.py'
+adding 'gaia/agents/base/readiness.py'
+adding 'gaia/agents/base/server.py'
+adding 'gaia/agents/base/skill_catalog.py'
+adding 'gaia/agents/base/skill_deltas.py'
+adding 'gaia/agents/base/skill_loader.py'
+adding 'gaia/agents/base/skill_synthesis.py'
+adding 'gaia/agents/base/step_timing.py'
+adding 'gaia/agents/base/system_context.py'
+adding 'gaia/agents/base/task_lessons.py'
+adding 'gaia/agents/base/tool_grants.py'
+adding 'gaia/agents/base/tool_loader.py'
+adding 'gaia/agents/base/tool_markup.py'
+adding 'gaia/agents/base/tool_outcome.py'
+adding 'gaia/agents/base/tool_output.py'
+adding 'gaia/agents/base/tools.py'
+adding 'gaia/agents/base/turn_metrics.py'
+adding 'gaia/agents/base/turn_scope.py'
+adding 'gaia/agents/base/verification.py'
+adding 'gaia/agents/code_index/__init__.py'
+adding 'gaia/agents/code_index/tools/__init__.py'
+adding 'gaia/agents/code_index/tools/mixin.py'
+adding 'gaia/agents/tools/__init__.py'
+adding 'gaia/agents/tools/audio_tools.py'
+adding 'gaia/agents/tools/browser_tools.py'
+adding 'gaia/agents/tools/browser_use_tools.py'
+adding 'gaia/agents/tools/cli_setup_tools.py'
+adding 'gaia/agents/tools/code_index_tools.py'
+adding 'gaia/agents/tools/command_timeouts.py'
+adding 'gaia/agents/tools/document_text.py'
+adding 'gaia/agents/tools/edit_impact.py'
+adding 'gaia/agents/tools/email_tools.py'
+adding 'gaia/agents/tools/file_edit.py'
+adding 'gaia/agents/tools/file_io_tools.py'
+adding 'gaia/agents/tools/file_monitor_tools.py'
+adding 'gaia/agents/tools/file_tools.py'
+adding 'gaia/agents/tools/filesystem_tools.py'
+adding 'gaia/agents/tools/package_installs.py'
+adding 'gaia/agents/tools/path_access.py'
+adding 'gaia/agents/tools/protected_folders.py'
+adding 'gaia/agents/tools/rag_tools.py'
+adding 'gaia/agents/tools/reasoning_tools.py'
+adding 'gaia/agents/tools/scratchpad_tools.py'
+adding 'gaia/agents/tools/screenshot_tools.py'
+adding 'gaia/agents/tools/search_scope.py'
+adding 'gaia/agents/tools/shell_deletes.py'
+adding 'gaia/agents/tools/shell_session.py'
+adding 'gaia/agents/tools/shell_tools.py'
+adding 'gaia/agents/tools/skill_learning_tools.py'
+adding 'gaia/agents/tools/skill_library_tools.py'
+adding 'gaia/agents/tools/text_files.py'
+adding 'gaia/agents/tools/wait_tools.py'
+adding 'gaia/agents/tools/_email/__init__.py'
+adding 'gaia/agents/tools/_email/errors.py'
+adding 'gaia/agents/tools/_email/fixture.py'
+adding 'gaia/agents/tools/_email/gmail.py'
+adding 'gaia/agents/tools/_email/graph.py'
+adding 'gaia/agents/tools/_email/phishing.py'
+adding 'gaia/agents/tools/_email/scopes.py'
+adding 'gaia/api/__init__.py'
+adding 'gaia/api/agent_proxy.py'
+adding 'gaia/api/agent_registry.py'
+adding 'gaia/api/app.py'
+adding 'gaia/api/local_http.py'
+adding 'gaia/api/openai_server.py'
+adding 'gaia/api/schemas.py'
+adding 'gaia/api/sse_handler.py'
+adding 'gaia/apps/__init__.py'
+adding 'gaia/apps/llm/__init__.py'
+adding 'gaia/apps/llm/app.py'
+adding 'gaia/apps/webui/__init__.py'
+adding 'gaia/apps/webui/dist/favicon.png'
+adding 'gaia/apps/webui/dist/fonts-OFL.txt'
+adding 'gaia/apps/webui/dist/index.html'
+adding 'gaia/apps/webui/dist/assets/AdvancedSettings-D5VKpkPY.css'
+adding 'gaia/apps/webui/dist/assets/AdvancedSettings-D7jNZncZ.js'
+adding 'gaia/apps/webui/dist/assets/ConnectorsPane-CtDroHfp.js'
+adding 'gaia/apps/webui/dist/assets/ConnectorsPane-Dzu2DRTc.css'
+adding 'gaia/apps/webui/dist/assets/DocumentLibrary-CIKp6qld.css'
+adding 'gaia/apps/webui/dist/assets/DocumentLibrary-gE-tZarr.js'
+adding 'gaia/apps/webui/dist/assets/FileBrowser-CUJCMcVf.js'
+adding 'gaia/apps/webui/dist/assets/FileBrowser-D04I8Pvv.css'
+adding 'gaia/apps/webui/dist/assets/MemoryDashboard-Cxr_1R_c.js'
+adding 'gaia/apps/webui/dist/assets/MemoryDashboard-Mo721-BI.css'
+adding 'gaia/apps/webui/dist/assets/MobileAccessModal-CUqaV_OH.js'
+adding 'gaia/apps/webui/dist/assets/MobileAccessModal-DuVy9F1u.css'
+adding 'gaia/apps/webui/dist/assets/ScheduleManager-DgFrZse_.js'
+adding 'gaia/apps/webui/dist/assets/ScheduleManager-DotJl5JW.css'
+adding 'gaia/apps/webui/dist/assets/apiBase-BmPG2Rib.js'
+adding 'gaia/apps/webui/dist/assets/browser-KnDALPx_.js'
+adding 'gaia/apps/webui/dist/assets/eye-CwjwlxR5.js'
+adding 'gaia/apps/webui/dist/assets/fraunces-latin-BwwriW9Y.woff2'
+adding 'gaia/apps/webui/dist/assets/gaia-robot-NKaQnEIp.png'
+adding 'gaia/apps/webui/dist/assets/index-CtsaRdvF.css'
+adding 'gaia/apps/webui/dist/assets/index-D-noqAc3.js'
+adding 'gaia/apps/webui/dist/assets/inter-latin-C2S99t-D.woff2'
+adding 'gaia/apps/webui/dist/assets/inter-latin-ext-CFHvXkgd.woff2'
+adding 'gaia/apps/webui/dist/assets/jetbrains-mono-latin-6fWv1k7M.woff2'
+adding 'gaia/apps/webui/dist/assets/message-square-DuVoNniw.js'
+adding 'gaia/apps/webui/dist/assets/rolldown-runtime-XKyaHtl9.js'
+adding 'gaia/audio/__init__.py'
+adding 'gaia/audio/audio_client.py'
+adding 'gaia/audio/audio_recorder.py'
+adding 'gaia/audio/diarize.py'
+adding 'gaia/audio/kokoro_tts.py'
+adding 'gaia/audio/lemonade_asr.py'
+adding 'gaia/audio/lemonade_service.py'
+adding 'gaia/audio/lemonade_tts.py'
+adding 'gaia/audio/media.py'
+adding 'gaia/audio/whisper_asr.py'
+adding 'gaia/browser/__init__.py'
+adding 'gaia/browser/driver.py'
+adding 'gaia/browser/errors.py'
+adding 'gaia/browser/session.py'
+adding 'gaia/browser/snapshot.py'
+adding 'gaia/chat/__init__.py'
+adding 'gaia/chat/app.py'
+adding 'gaia/chat/prompts.py'
+adding 'gaia/chat/sdk.py'
+adding 'gaia/code_index/__init__.py'
+adding 'gaia/code_index/parsers.py'
+adding 'gaia/code_index/sdk.py'
+adding 'gaia/connectors/__init__.py'
+adding 'gaia/connectors/_keyring.py'
+adding 'gaia/connectors/_loop.py'
+adding 'gaia/connectors/_refresh_lock.py'
+adding 'gaia/connectors/activation_watcher.py'
+adding 'gaia/connectors/activations.py'
+adding 'gaia/connectors/api.py'
+adding 'gaia/connectors/cli.py'
+adding 'gaia/connectors/context.py'
+adding 'gaia/connectors/credential_wait.py'
+adding 'gaia/connectors/errors.py'
+adding 'gaia/connectors/events.py'
+adding 'gaia/connectors/flow.py'
+adding 'gaia/connectors/formatting.py'
+adding 'gaia/connectors/grants.py'
+adding 'gaia/connectors/handler.py'
+adding 'gaia/connectors/mcp_server.py'
+adding 'gaia/connectors/oauth_pkce.py'
+adding 'gaia/connectors/pkce.py'
+adding 'gaia/connectors/prior_state.py'
+adding 'gaia/connectors/registry.py'
+adding 'gaia/connectors/setup_routes.py'
+adding 'gaia/connectors/spec.py'
+adding 'gaia/connectors/store.py'
+adding 'gaia/connectors/tokens.py'
+adding 'gaia/connectors/catalog/__init__.py'
+adding 'gaia/connectors/catalog/google.py'
+adding 'gaia/connectors/catalog/mcp_servers.py'
+adding 'gaia/connectors/catalog/microsoft.py'
+adding 'gaia/connectors/providers/__init__.py'
+adding 'gaia/connectors/providers/base.py'
+adding 'gaia/connectors/providers/google.py'
+adding 'gaia/connectors/providers/microsoft.py'
+adding 'gaia/daemon/__init__.py'
+adding 'gaia/daemon/__main__.py'
+adding 'gaia/daemon/agent_control.py'
+adding 'gaia/daemon/agent_query.py'
+adding 'gaia/daemon/app.py'
+adding 'gaia/daemon/broker.py'
+adding 'gaia/daemon/broker_client.py'
+adding 'gaia/daemon/broker_routes.py'
+adding 'gaia/daemon/client.py'
+adding 'gaia/daemon/connections_routes.py'
+adding 'gaia/daemon/constants.py'
+adding 'gaia/daemon/errors.py'
+adding 'gaia/daemon/forward.py'
+adding 'gaia/daemon/forward_refresh.py'
+adding 'gaia/daemon/gateway_routes.py'
+adding 'gaia/daemon/instance.py'
+adding 'gaia/daemon/lemonade.py'
+adding 'gaia/daemon/lemonade_clients.py'
+adding 'gaia/daemon/lemonade_routes.py'
+adding 'gaia/daemon/lifetime.py'
+adding 'gaia/daemon/lock.py'
+adding 'gaia/daemon/migrate.py'
+adding 'gaia/daemon/paths.py'
+adding 'gaia/daemon/provider_key_routes.py'
+adding 'gaia/daemon/relay.py'
+adding 'gaia/daemon/server.py'
+adding 'gaia/daemon/strays.py'
+adding 'gaia/daemon/timeouts.py'
+adding 'gaia/daemon/custody/__init__.py'
+adding 'gaia/daemon/custody/auth.py'
+adding 'gaia/daemon/custody/constants.py'
+adding 'gaia/daemon/custody/errors.py'
+adding 'gaia/daemon/custody/provider.py'
+adding 'gaia/daemon/custody/routes.py'
+adding 'gaia/daemon/custody/store.py'
+adding 'gaia/daemon/scheduler/__init__.py'
+adding 'gaia/daemon/scheduler/clock.py'
+adding 'gaia/daemon/scheduler/lease.py'
+adding 'gaia/daemon/scheduler/migration.py'
+adding 'gaia/daemon/scheduler/models.py'
+adding 'gaia/daemon/scheduler/store.py'
+adding 'gaia/daemon/sidecars/__init__.py'
+adding 'gaia/daemon/sidecars/errors.py'
+adding 'gaia/daemon/sidecars/fetch.py'
+adding 'gaia/daemon/sidecars/install.py'
+adding 'gaia/daemon/sidecars/ledger.py'
+adding 'gaia/daemon/sidecars/manager.py'
+adding 'gaia/daemon/sidecars/platform.py'
+adding 'gaia/daemon/sidecars/registry.py'
+adding 'gaia/daemon/sidecars/routes.py'
+adding 'gaia/daemon/sidecars/spec.py'
+adding 'gaia/database/__init__.py'
+adding 'gaia/database/agent.py'
+adding 'gaia/database/mixin.py'
+adding 'gaia/database/sql_safety.py'
+adding 'gaia/database/testing.py'
+adding 'gaia/engineering/__init__.py'
+adding 'gaia/engineering/cli.py'
+adding 'gaia/engineering/handoff.py'
+adding 'gaia/engineering/identity.py'
+adding 'gaia/engineering/repository.py'
+adding 'gaia/engineering/service.py'
+adding 'gaia/engineering/store.py'
+adding 'gaia/eval/__init__.py'
+adding 'gaia/eval/action_item_quality.py'
+adding 'gaia/eval/analyze_failures.py'
+adding 'gaia/eval/audit.py'
+adding 'gaia/eval/benchmark.py'
+adding 'gaia/eval/briefing_quality.py'
+adding 'gaia/eval/claude.py'
+adding 'gaia/eval/claude_outage.py'
+adding 'gaia/eval/claude_usage.py'
+adding 'gaia/eval/code_bench.py'
+adding 'gaia/eval/code_bench_fixtures.py'
+adding 'gaia/eval/config.py'
+adding 'gaia/eval/draft_quality.py'
+adding 'gaia/eval/eval_lock.py'
+adding 'gaia/eval/fixture_paths.py'
+adding 'gaia/eval/flagship_tasks.py'
+adding 'gaia/eval/followup_quality.py'
+adding 'gaia/eval/integrity_gate.py'
+adding 'gaia/eval/judge_client.py'
+adding 'gaia/eval/judge_outage.py'
+adding 'gaia/eval/lane_summary.py'
+adding 'gaia/eval/model_comparison.py'
+adding 'gaia/eval/pdf_document_generator.py'
+adding 'gaia/eval/performance.py'
+adding 'gaia/eval/quality_metrics.py'
+adding 'gaia/eval/release_scorecard.py'
+adding 'gaia/eval/runner.py'
+adding 'gaia/eval/scenario_backend.py'
+adding 'gaia/eval/scorecard.py'
+adding 'gaia/eval/scorecard_gate.py'
+adding 'gaia/eval/session_dataset.py'
+adding 'gaia/eval/session_eval.py'
+adding 'gaia/eval/sidecar_harness.py'
+adding 'gaia/eval/statistics.py'
+adding 'gaia/eval/task_setups.py'
+adding 'gaia/eval/tool_cost.py'
+adding 'gaia/eval/tool_recall.py'
+adding 'gaia/eval/bench/__init__.py'
+adding 'gaia/eval/bench/config.py'
+adding 'gaia/eval/bench/controls.py'
+adding 'gaia/eval/bench/gaia_child.py'
+adding 'gaia/eval/bench/gateway.py'
+adding 'gaia/eval/bench/ghstub.py'
+adding 'gaia/eval/bench/harness.py'
+adding 'gaia/eval/bench/leaks.py'
+adding 'gaia/eval/bench/metering.py'
+adding 'gaia/eval/bench/report.py'
+adding 'gaia/eval/bench/sandbox.py'
+adding 'gaia/eval/bench/swebench.py'
+adding 'gaia/eval/bench/therock.py'
+adding 'gaia/eval/bench/transcripts.py'
+adding 'gaia/eval/code_retrieval/__init__.py'
+adding 'gaia/eval/code_retrieval/common.py'
+adding 'gaia/eval/code_retrieval/gold.py'
+adding 'gaia/eval/code_retrieval/instances.py'
+adding 'gaia/eval/code_retrieval/lexical.py'
+adding 'gaia/eval/code_retrieval/metrics.py'
+adding 'gaia/eval/code_retrieval/quality.py'
+adding 'gaia/eval/code_retrieval/report.py'
+adding 'gaia/eval/code_retrieval/repos.py'
+adding 'gaia/eval/code_retrieval/robustness.py'
+adding 'gaia/eval/code_retrieval/runner.py'
+adding 'gaia/eval/code_retrieval/scale.py'
+adding 'gaia/eval/code_retrieval/suites.py'
+adding 'gaia/eval/memory/__init__.py'
+adding 'gaia/eval/memory/clock.py'
+adding 'gaia/eval/memory/harness.py'
+adding 'gaia/eval/memory/runner.py'
+adding 'gaia/eval/memory/scenario.py'
+adding 'gaia/eval/memory/scenarios/alex_three_months_of_life.yaml'
+adding 'gaia/eval/memory/scenarios/chen_learns_project_quirks.yaml'
+adding 'gaia/eval/memory/scenarios/jordan_reminders_change.yaml'
+adding 'gaia/eval/memory/scenarios/maya_moves_and_changes_jobs.yaml'
+adding 'gaia/eval/memory/scenarios/priya_work_documents_and_forgetting.yaml'
+adding 'gaia/eval/memory/scenarios/sam_family_health.yaml'
+adding 'gaia/eval/retrieval/__init__.py'
+adding 'gaia/eval/retrieval/corpus.py'
+adding 'gaia/eval/retrieval/hard_cases.py'
+adding 'gaia/eval/retrieval/harness.py'
+adding 'gaia/eval/retrieval/locate.py'
+adding 'gaia/eval/retrieval/runner.py'
+adding 'gaia/eval/retrieval/scoring.py'
+adding 'gaia/eval/retrieval/sources.py'
+adding 'gaia/factory/__init__.py'
+adding 'gaia/factory/harvest/__init__.py'
+adding 'gaia/factory/harvest/analyze.py'
+adding 'gaia/factory/harvest/classify.py'
+adding 'gaia/factory/harvest/claude_cli.py'
+adding 'gaia/factory/harvest/context.py'
+adding 'gaia/factory/harvest/reader.py'
+adding 'gaia/factory/harvest/report.py'
+adding 'gaia/factory/harvest/savings.py'
+adding 'gaia/factory/harvest/scan.py'
+adding 'gaia/factory/harvest/synthesize.py'
+adding 'gaia/filesystem/__init__.py'
+adding 'gaia/filesystem/categorizer.py'
+adding 'gaia/filesystem/index.py'
+adding 'gaia/filesystem/name_match.py'
+adding 'gaia/governance/__init__.py'
+adding 'gaia/governance/action_mapper.py'
+adding 'gaia/governance/adapter.py'
+adding 'gaia/governance/checkpoint_bridge.py'
+adding 'gaia/governance/config.py'
+adding 'gaia/governance/decorators.py'
+adding 'gaia/governance/exceptions.py'
+adding 'gaia/governance/mixin.py'
+adding 'gaia/governance/policy_binding.py'
+adding 'gaia/governance/protocols.py'
+adding 'gaia/governance/receipt_service.py'
+adding 'gaia/governance/schemas.py'
+adding 'gaia/governance/stubs.py'
+adding 'gaia/hub/__init__.py'
+adding 'gaia/hub/catalog.py'
+adding 'gaia/hub/compatibility.py'
+adding 'gaia/hub/installer.py'
+adding 'gaia/hub/lifecycle.py'
+adding 'gaia/hub/manifest.py'
+adding 'gaia/hub/native_launcher.py'
+adding 'gaia/hub/packager.py'
+adding 'gaia/hub/prerelease.py'
+adding 'gaia/hub/publisher.py'
+adding 'gaia/installer/__init__.py'
+adding 'gaia/installer/_stdin.py'
+adding 'gaia/installer/export_import.py'
+adding 'gaia/installer/init_command.py'
+adding 'gaia/installer/lemonade_installer.py'
+adding 'gaia/installer/mcp_init.py'
+adding 'gaia/installer/uninstall_command.py'
+adding 'gaia/llm/__init__.py'
+adding 'gaia/llm/base_client.py'
+adding 'gaia/llm/cache_pricing.py'
+adding 'gaia/llm/cloud_keys.py'
+adding 'gaia/llm/context_choice.py'
+adding 'gaia/llm/embedding_cache.py'
+adding 'gaia/llm/exceptions.py'
+adding 'gaia/llm/factory.py'
+adding 'gaia/llm/gateway.py'
+adding 'gaia/llm/inference_location.py'
+adding 'gaia/llm/lemonade_choice.py'
+adding 'gaia/llm/lemonade_client.py'
+adding 'gaia/llm/lemonade_embedded.py'
+adding 'gaia/llm/lemonade_launcher.py'
+adding 'gaia/llm/lemonade_manager.py'
+adding 'gaia/llm/lemonade_service.py'
+adding 'gaia/llm/lemonade_supervisor.py'
+adding 'gaia/llm/model_device.py'
+adding 'gaia/llm/model_fit.py'
+adding 'gaia/llm/model_server_info.py'
+adding 'gaia/llm/recommended_models.py'
+adding 'gaia/llm/retry.py'
+adding 'gaia/llm/stream_watchdog.py'
+adding 'gaia/llm/surface_hints.py'
+adding 'gaia/llm/vlm_client.py'
+adding 'gaia/llm/providers/__init__.py'
+adding 'gaia/llm/providers/claude.py'
+adding 'gaia/llm/providers/fireworks.py'
+adding 'gaia/llm/providers/lemonade.py'
+adding 'gaia/mcp/__init__.py'
+adding 'gaia/mcp/agent_mcp_server.py'
+adding 'gaia/mcp/context7_cache.py'
+adding 'gaia/mcp/external_services.py'
+adding 'gaia/mcp/mcp_bridge.py'
+adding 'gaia/mcp/mixin.py'
+adding 'gaia/mcp/ports.py'
+adding 'gaia/mcp/client/__init__.py'
+adding 'gaia/mcp/client/config.py'
+adding 'gaia/mcp/client/mcp_client.py'
+adding 'gaia/mcp/client/mcp_client_manager.py'
+adding 'gaia/mcp/client/redaction.py'
+adding 'gaia/mcp/client/transports/__init__.py'
+adding 'gaia/mcp/client/transports/base.py'
+adding 'gaia/mcp/client/transports/http.py'
+adding 'gaia/mcp/client/transports/stdio.py'
+adding 'gaia/mcp/servers/__init__.py'
+adding 'gaia/mcp/servers/agent_ui_control.py'
+adding 'gaia/mcp/servers/agent_ui_mcp.py'
+adding 'gaia/mcp/servers/engineering_mcp.py'
+adding 'gaia/mcp/servers/tui_mcp.py'
+adding 'gaia/messaging/__init__.py'
+adding 'gaia/messaging/bridge.py'
+adding 'gaia/messaging/ingest.py'
+adding 'gaia/messaging/telegram.py'
+adding 'gaia/messaging/slack/__init__.py'
+adding 'gaia/messaging/slack/adapter.py'
+adding 'gaia/messaging/slack/cli.py'
+adding 'gaia/messaging/slack/credentials.py'
+adding 'gaia/messaging/slack/manifest.py'
+adding 'gaia/messaging/slack/onboarding.py'
+adding 'gaia/rag/__init__.py'
+adding 'gaia/rag/docx_utils.py'
+adding 'gaia/rag/pdf_utils.py'
+adding 'gaia/rag/pptx_utils.py'
+adding 'gaia/rag/sdk.py'
+adding 'gaia/schedule/__init__.py'
+adding 'gaia/schedule/daemon.py'
+adding 'gaia/schedule/lock.py'
+adding 'gaia/schedule/runner.py'
+adding 'gaia/schedule/sinks.py'
+adding 'gaia/schedule/store.py'
+adding 'gaia/scratchpad/__init__.py'
+adding 'gaia/scratchpad/service.py'
+adding 'gaia/sd/__init__.py'
+adding 'gaia/sd/mixin.py'
+adding 'gaia/sd/prompts.py'
+adding 'gaia/sidecar/__init__.py'
+adding 'gaia/sidecar/caller_auth.py'
+adding 'gaia/skills/__init__.py'
+adding 'gaia/skills/audit_gate.py'
+adding 'gaia/skills/binaries.py'
+adding 'gaia/skills/binary_setup.py'
+adding 'gaia/skills/capture.py'
+adding 'gaia/skills/cli.py'
+adding 'gaia/skills/consume.py'
+adding 'gaia/skills/deltas_cli.py'
+adding 'gaia/skills/drift.py'
+adding 'gaia/skills/errors.py'
+adding 'gaia/skills/format.py'
+adding 'gaia/skills/hub.py'
+adding 'gaia/skills/install.py'
+adding 'gaia/skills/listing.py'
+adding 'gaia/skills/loader.py'
+adding 'gaia/skills/lock.py'
+adding 'gaia/skills/manager.py'
+adding 'gaia/skills/migrate.py'
+adding 'gaia/skills/naming.py'
+adding 'gaia/skills/permissions.py'
+adding 'gaia/skills/publish.py'
+adding 'gaia/skills/sections.py'
+adding 'gaia/skills/sets.py'
+adding 'gaia/skills/signing.py'
+adding 'gaia/skills/tiers.py'
+adding 'gaia/skills/versions.py'
+adding 'gaia/skills/audit/__init__.py'
+adding 'gaia/skills/audit/code.py'
+adding 'gaia/skills/audit/engine.py'
+adding 'gaia/skills/audit/findings.py'
+adding 'gaia/skills/audit/instructions.py'
+adding 'gaia/skills/audit/permission_truth.py'
+adding 'gaia/skills/audit/report.py'
+adding 'gaia/skills/audit/supply.py'
+adding 'gaia/skills/audit/verdict.py'
+adding 'gaia/talk/__init__.py'
+adding 'gaia/talk/sdk.py'
+adding 'gaia/testing/__init__.py'
+adding 'gaia/testing/assertions.py'
+adding 'gaia/testing/fixtures.py'
+adding 'gaia/testing/mocks.py'
+adding 'gaia/ui/__init__.py'
+adding 'gaia/ui/_chat_helpers.py'
+adding 'gaia/ui/agent_loop.py'
+adding 'gaia/ui/agent_threads.py'
+adding 'gaia/ui/answer_retry.py'
+adding 'gaia/ui/build.py'
+adding 'gaia/ui/database.py'
+adding 'gaia/ui/dependencies.py'
+adding 'gaia/ui/dispatch.py'
+adding 'gaia/ui/document_monitor.py'
+adding 'gaia/ui/event_narration.py'
+adding 'gaia/ui/export_openapi.py'
+adding 'gaia/ui/followups.py'
+adding 'gaia/ui/local_models.py'
+adding 'gaia/ui/memory_settings.py'
+adding 'gaia/ui/models.py'
+adding 'gaia/ui/permissions.py'
+adding 'gaia/ui/restart_recovery.py'
+adding 'gaia/ui/run_manager.py'
+adding 'gaia/ui/scheduler.py'
+adding 'gaia/ui/scripted_user.py'
+adding 'gaia/ui/security.py'
+adding 'gaia/ui/server.py'
+adding 'gaia/ui/session_environment.py'
+adding 'gaia/ui/session_git.py'
+adding 'gaia/ui/session_outputs.py'
+adding 'gaia/ui/setup_plan.py'
+adding 'gaia/ui/setup_runner.py'
+adding 'gaia/ui/spending.py'
+adding 'gaia/ui/sse_handler.py'
+adding 'gaia/ui/sse_translation.py'
+adding 'gaia/ui/start_screen.py'
+adding 'gaia/ui/tunnel.py'
+adding 'gaia/ui/turn_changes.py'
+adding 'gaia/ui/turn_insights.py'
+adding 'gaia/ui/turn_queue.py'
+adding 'gaia/ui/turn_summary.py'
+adding 'gaia/ui/utils.py'
+adding 'gaia/ui/warmup.py'
+adding 'gaia/ui/email_sidecar/__init__.py'
+adding 'gaia/ui/email_sidecar/daemon_client.py'
+adding 'gaia/ui/email_sidecar/errors.py'
+adding 'gaia/ui/email_sidecar/profiles.py'
+adding 'gaia/ui/email_sidecar/proxy.py'
+adding 'gaia/ui/email_sidecar/relay.py'
+adding 'gaia/ui/email_sidecar/router.py'
+adding 'gaia/ui/routers/__init__.py'
+adding 'gaia/ui/routers/agents.py'
+adding 'gaia/ui/routers/changes.py'
+adding 'gaia/ui/routers/chat.py'
+adding 'gaia/ui/routers/connectors.py'
+adding 'gaia/ui/routers/documents.py'
+adding 'gaia/ui/routers/environment.py'
+adding 'gaia/ui/routers/files.py'
+adding 'gaia/ui/routers/goals.py'
+adding 'gaia/ui/routers/hub.py'
+adding 'gaia/ui/routers/lemonade.py'
+adding 'gaia/ui/routers/mcp.py'
+adding 'gaia/ui/routers/memory.py'
+adding 'gaia/ui/routers/onboarding.py'
+adding 'gaia/ui/routers/providers.py'
+adding 'gaia/ui/routers/schedules.py'
+adding 'gaia/ui/routers/sessions.py'
+adding 'gaia/ui/routers/setup.py'
+adding 'gaia/ui/routers/skills.py'
+adding 'gaia/ui/routers/spending.py'
+adding 'gaia/ui/routers/system.py'
+adding 'gaia/ui/routers/tunnel.py'
+adding 'gaia/utils/__init__.py'
+adding 'gaia/utils/archive.py'
+adding 'gaia/utils/awake_clock.py'
+adding 'gaia/utils/file_lock.py'
+adding 'gaia/utils/file_watcher.py'
+adding 'gaia/utils/json_string.py'
+adding 'gaia/utils/parsing.py'
+adding 'gaia/utils/paths.py'
+adding 'gaia/utils/perf_trace.py'
+adding 'gaia/utils/power.py'
+adding 'gaia/utils/process_owner.py'
+adding 'gaia/utils/terminal.py'
+adding 'gaia/utils/tiktoken_bundle.py'
+adding 'gaia/vlm/__init__.py'
+adding 'gaia/vlm/mixin.py'
+adding 'gaia/vlm/structured_extraction.py'
+adding 'gaia/web/__init__.py'
+adding 'gaia/web/client.py'
+adding 'gaia/web/tavily.py'
+adding 'amd_gaia-0.25.1.dist-info/METADATA'
+adding 'amd_gaia-0.25.1.dist-info/WHEEL'
+adding 'amd_gaia-0.25.1.dist-info/entry_points.txt'
+adding 'amd_gaia-0.25.1.dist-info/top_level.txt'
+adding 'amd_gaia-0.25.1.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+WARNING License classifiers are deprecated.
+!!
+
+        ********************************************************************************
+        Please consider removing the following classifiers in favor of a SPDX license expression:
+
+        License :: OSI Approved :: MIT License
+
+        See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+        ********************************************************************************
+
+!!
+WARNING Package 'gaia.apps.webui.dist' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'gaia.apps.webui.dist' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'gaia.apps.webui.dist' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'gaia.apps.webui.dist' to be distributed and are
+        already explicitly excluding 'gaia.apps.webui.dist' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+WARNING Package 'gaia.apps.webui.dist.assets' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'gaia.apps.webui.dist.assets' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'gaia.apps.webui.dist.assets' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'gaia.apps.webui.dist.assets' to be distributed and are
+        already explicitly excluding 'gaia.apps.webui.dist.assets' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+WARNING Package 'gaia.eval.memory.scenarios' is absent from the `packages` configuration.
+!!
+
+        ********************************************************************************
+        ############################
+        # Package would be ignored #
+        ############################
+        Python recognizes 'gaia.eval.memory.scenarios' as an importable package[^1],
+        but it is absent from setuptools' `packages` configuration.
+
+        This leads to an ambiguous overall configuration. If you want to distribute this
+        package, please make sure that 'gaia.eval.memory.scenarios' is explicitly added
+        to the `packages` configuration field.
+
+        Alternatively, you can also rely on setuptools' discovery methods
+        (for example by using `find_namespace_packages(...)`/`find_namespace:`
+        instead of `find_packages(...)`/`find:`).
+
+        You can read more about "package discovery" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+        If you don't want 'gaia.eval.memory.scenarios' to be distributed and are
+        already explicitly excluding 'gaia.eval.memory.scenarios' via
+        `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+        you can try to use `exclude_package_data`, or `include-package-data=False` in
+        combination with a more fine grained `package-data` configuration.
+
+        You can read more about "package data files" on setuptools documentation page:
+
+        - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+
+
+        [^1]: For Python, any directory (with suitable naming) can be imported,
+              even if it does not contain any `.py` files.
+              On the other hand, currently there is no concept of package data
+              directory, all directories are treated like packages.
+        ********************************************************************************
+
+!!
+Successfully built amd_gaia-0.25.1-py3-none-any.whl

@@ -1,0 +1,113 @@
+[
+  {
+    "phase": "baseline",
+    "mode": "JSON_STRING",
+    "exit_code": 1,
+    "recovered": false,
+    "command": [
+      "F:\\Github-PR\\inspection\\gaia-tool-arguments\\.venv\\Scripts\\gaia.exe",
+      "chat",
+      "--device",
+      "cpu",
+      "--base-url",
+      "http://127.0.0.1:18802/api/v1",
+      "--allowed-paths",
+      "F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\documents",
+      "--query",
+      "Read metadata for proof.txt. Deterministic HTTP fixture test: JSON_STRING"
+    ]
+  },
+  {
+    "phase": "baseline",
+    "mode": "NATIVE_LIST",
+    "exit_code": 1,
+    "recovered": false,
+    "command": [
+      "F:\\Github-PR\\inspection\\gaia-tool-arguments\\.venv\\Scripts\\gaia.exe",
+      "chat",
+      "--device",
+      "cpu",
+      "--base-url",
+      "http://127.0.0.1:18802/api/v1",
+      "--allowed-paths",
+      "F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\documents",
+      "--query",
+      "Read metadata for proof.txt. Deterministic HTTP fixture test: NATIVE_LIST"
+    ],
+    "agent_import": "F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\baseline-source\\src\\gaia\\agents\\base\\agent.py"
+  },
+  {
+    "phase": "candidate",
+    "mode": "JSON_STRING",
+    "exit_code": 0,
+    "recovered": true,
+    "command": [
+      "F:\\Github-PR\\inspection\\gaia-tool-arguments\\.venv\\Scripts\\gaia.exe",
+      "chat",
+      "--device",
+      "cpu",
+      "--base-url",
+      "http://127.0.0.1:18802/api/v1",
+      "--allowed-paths",
+      "F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\documents",
+      "--query",
+      "Read metadata for proof.txt. Deterministic HTTP fixture test: JSON_STRING"
+    ]
+  },
+  {
+    "phase": "candidate",
+    "mode": "NATIVE_LIST",
+    "exit_code": 0,
+    "recovered": true,
+    "command": [
+      "F:\\Github-PR\\inspection\\gaia-tool-arguments\\.venv\\Scripts\\gaia.exe",
+      "chat",
+      "--device",
+      "cpu",
+      "--base-url",
+      "http://127.0.0.1:18802/api/v1",
+      "--allowed-paths",
+      "F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\documents",
+      "--query",
+      "Read metadata for proof.txt. Deterministic HTTP fixture test: NATIVE_LIST"
+    ],
+    "agent_import": "F:\\Github-PR\\inspection\\gaia-tool-arguments\\src\\gaia\\agents\\base\\agent.py"
+  },
+  {
+    "phase": "wheel",
+    "mode": "JSON_STRING",
+    "exit_code": 0,
+    "recovered": true,
+    "command": [
+      "F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\wheel-venv\\Scripts\\gaia.exe",
+      "chat",
+      "--device",
+      "cpu",
+      "--base-url",
+      "http://127.0.0.1:18802/api/v1",
+      "--allowed-paths",
+      "F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\documents",
+      "--query",
+      "Read metadata for proof.txt. Deterministic HTTP fixture test: JSON_STRING"
+    ]
+  },
+  {
+    "phase": "wheel",
+    "mode": "NATIVE_LIST",
+    "exit_code": 0,
+    "recovered": true,
+    "command": [
+      "F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\wheel-venv\\Scripts\\gaia.exe",
+      "chat",
+      "--device",
+      "cpu",
+      "--base-url",
+      "http://127.0.0.1:18802/api/v1",
+      "--allowed-paths",
+      "F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\documents",
+      "--query",
+      "Read metadata for proof.txt. Deterministic HTTP fixture test: NATIVE_LIST"
+    ],
+    "agent_import": "F:\\Github-PR\\ci-evidence\\gaia-5471-runtime\\wheel-venv\\Lib\\site-packages\\gaia\\agents\\base\\agent.py"
+  }
+]

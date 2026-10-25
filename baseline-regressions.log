@@ -1,0 +1,886 @@
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF..................FFFFFF....   [100%]
+=================================== FAILURES ===================================
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-json-oops] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'str' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-json-arguments1] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-json-arguments2] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6777: in _execute_tool
+    tool_args, coercion_error = self._coerce_tool_args(tool_name, sig, tool_args)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:7229: in _coerce_tool_args
+    for name, value in tool_args.items():
+                       ^^^^^^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'items'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-json-None] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'NoneType' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-json-False] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'bool' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-json-0] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'int' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-json-42] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'int' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-native-oops] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'str' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-native-arguments1] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-native-arguments2] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6777: in _execute_tool
+    tool_args, coercion_error = self._coerce_tool_args(tool_name, sig, tool_args)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:7229: in _coerce_tool_args
+    for name, value in tool_args.items():
+                       ^^^^^^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'items'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-native-None] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'NoneType' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-native-False] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'bool' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-native-0] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'int' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-native-42] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'int' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-embedded-json-oops] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'str' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-embedded-json-arguments1] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-embedded-json-arguments2] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6777: in _execute_tool
+    tool_args, coercion_error = self._coerce_tool_args(tool_name, sig, tool_args)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:7229: in _coerce_tool_args
+    for name, value in tool_args.items():
+                       ^^^^^^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'items'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-embedded-json-None] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'NoneType' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-embedded-json-False] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'bool' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-embedded-json-0] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'int' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-embedded-json-42] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'int' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-json-oops] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'str' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-json-arguments1] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-json-arguments2] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6777: in _execute_tool
+    tool_args, coercion_error = self._coerce_tool_args(tool_name, sig, tool_args)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:7229: in _coerce_tool_args
+    for name, value in tool_args.items():
+                       ^^^^^^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'items'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-json-None] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'NoneType' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-json-False] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'bool' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-json-0] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'int' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-json-42] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'int' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-native-oops] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'str' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-native-arguments1] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-native-arguments2] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6777: in _execute_tool
+    tool_args, coercion_error = self._coerce_tool_args(tool_name, sig, tool_args)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:7229: in _coerce_tool_args
+    for name, value in tool_args.items():
+                       ^^^^^^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'items'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-native-None] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'NoneType' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-native-False] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'bool' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-native-0] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'int' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-native-42] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'int' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-embedded-json-oops] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'str' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-embedded-json-arguments1] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'get'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-embedded-json-arguments2] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6777: in _execute_tool
+    tool_args, coercion_error = self._coerce_tool_args(tool_name, sig, tool_args)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:7229: in _coerce_tool_args
+    for name, value in tool_args.items():
+                       ^^^^^^^^^^^^^^^
+E   AttributeError: 'list' object has no attribute 'items'
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-embedded-json-None] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'NoneType' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-embedded-json-False] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'bool' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-embedded-json-0] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6455: in _execute_tool_timed
+    result = self._execute_tool(tool_name, tool_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6759: in _execute_tool
+    unexpected_args = [arg for arg in tool_args if arg not in accepted_args]
+                                      ^^^^^^^^^
+E   TypeError: 'int' object is not iterable
+_ test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-embedded-json-42] _
+tests/unit/agents/test_tool_args_object.py:103: in test_non_object_arguments_are_reported_to_the_model_and_retried
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'int' object has no attribute 'get'
+_ test_a_bad_parallel_call_does_not_run_the_earlier_valid_call[non-streaming] __
+tests/unit/agents/test_tool_args_object.py:153: in test_a_bad_parallel_call_does_not_run_the_earlier_valid_call
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'str' object has no attribute 'get'
+___ test_a_bad_parallel_call_does_not_run_the_earlier_valid_call[streaming] ____
+tests/unit/agents/test_tool_args_object.py:153: in test_a_bad_parallel_call_does_not_run_the_earlier_valid_call
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'str' object has no attribute 'get'
+_ test_repeated_non_object_arguments_exhaust_the_existing_retry_budget[non-streaming-json] _
+tests/unit/agents/test_tool_args_object.py:163: in test_repeated_non_object_arguments_exhaust_the_existing_retry_budget
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'str' object has no attribute 'get'
+_ test_repeated_non_object_arguments_exhaust_the_existing_retry_budget[non-streaming-native] _
+tests/unit/agents/test_tool_args_object.py:163: in test_repeated_non_object_arguments_exhaust_the_existing_retry_budget
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'str' object has no attribute 'get'
+_ test_repeated_non_object_arguments_exhaust_the_existing_retry_budget[streaming-json] _
+tests/unit/agents/test_tool_args_object.py:163: in test_repeated_non_object_arguments_exhaust_the_existing_retry_budget
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:11017: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'str' object has no attribute 'get'
+_ test_repeated_non_object_arguments_exhaust_the_existing_retry_budget[streaming-native] _
+tests/unit/agents/test_tool_args_object.py:163: in test_repeated_non_object_arguments_exhaust_the_existing_retry_budget
+    result = agent.process_query("Check the status.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:8962: in process_query
+    return self._process_query_impl(user_input, max_steps, trace, filename)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:10763: in _process_query_impl
+    tool_result = self._execute_tool_timed(tool_name, tool_args)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6415: in _execute_tool_timed
+    refused = self._refuse_inventory_hand_edit(tool_name, tool_args)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/gaia/agents/base/agent.py:6383: in _refuse_inventory_hand_edit
+    path = (tool_args or {}).get("file_path")
+           ^^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: 'str' object has no attribute 'get'
+=========================== short test summary info ============================
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-json-oops]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-json-arguments1]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-json-arguments2]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-json-None]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-json-False]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-json-0]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-json-42]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-native-oops]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-native-arguments1]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-native-arguments2]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-native-None]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-native-False]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-native-0]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-native-42]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-embedded-json-oops]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-embedded-json-arguments1]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-embedded-json-arguments2]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-embedded-json-None]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-embedded-json-False]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-embedded-json-0]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[non-streaming-embedded-json-42]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-json-oops]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-json-arguments1]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-json-arguments2]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-json-None]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-json-False]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-json-0]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-json-42]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-native-oops]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-native-arguments1]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-native-arguments2]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-native-None]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-native-False]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-native-0]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-native-42]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-embedded-json-oops]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-embedded-json-arguments1]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-embedded-json-arguments2]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-embedded-json-None]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-embedded-json-False]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-embedded-json-0]
+FAILED tests/unit/agents/test_tool_args_object.py::test_non_object_arguments_are_reported_to_the_model_and_retried[streaming-embedded-json-42]
+FAILED tests/unit/agents/test_tool_args_object.py::test_a_bad_parallel_call_does_not_run_the_earlier_valid_call[non-streaming]
+FAILED tests/unit/agents/test_tool_args_object.py::test_a_bad_parallel_call_does_not_run_the_earlier_valid_call[streaming]
+FAILED tests/unit/agents/test_tool_args_object.py::test_repeated_non_object_arguments_exhaust_the_existing_retry_budget[non-streaming-json]
+FAILED tests/unit/agents/test_tool_args_object.py::test_repeated_non_object_arguments_exhaust_the_existing_retry_budget[non-streaming-native]
+FAILED tests/unit/agents/test_tool_args_object.py::test_repeated_non_object_arguments_exhaust_the_existing_retry_budget[streaming-json]
+FAILED tests/unit/agents/test_tool_args_object.py::test_repeated_non_object_arguments_exhaust_the_existing_retry_budget[streaming-native]
+48 failed, 22 passed in 11.26s
