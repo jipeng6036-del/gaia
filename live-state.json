@@ -1,0 +1,35 @@
+{
+  "started": "2026-10-25T04:52:14.727699+00:00",
+  "stage": "candidate",
+  "baseline": {
+    "exit": 1,
+    "expected": 1,
+    "command": [
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/integration/test_rag_no_break_spaces.py",
+      "-v",
+      "-s",
+      "--tb=short",
+      "--timeout=300",
+      "--junitxml=/evidence/baseline-live.xml"
+    ]
+  },
+  "candidate": {
+    "exit": 0,
+    "expected": 0,
+    "command": [
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/integration/test_rag_no_break_spaces.py",
+      "-v",
+      "-s",
+      "--tb=short",
+      "--timeout=300",
+      "--junitxml=/evidence/candidate-live.xml"
+    ]
+  },
+  "finished": "2026-10-25T04:52:40.653853+00:00"
+}

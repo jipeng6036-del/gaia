@@ -1,0 +1,95 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0 -- /core-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /5547/baseline
+configfile: pyproject.toml
+plugins: anyio-4.15.1, timeout-2.4.0, xdist-3.8.0, cov-7.1.0, asyncio-1.4.0, mock-3.17.0, respx-0.23.1, pyfakefs-6.2.0
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 19 items
+
+tests/unit/rag/test_embed_input_cap.py::test_cap_fits_the_embedder_ubatch_at_one_char_per_token PASSED [  5%]
+tests/unit/rag/test_embed_input_cap.py::test_default_chunk_size_fits_the_cap PASSED [ 10%]
+tests/unit/rag/test_embed_input_cap.py::test_embedder_loads_with_the_ubatch_the_cap_is_derived_from PASSED [ 15%]
+tests/unit/rag/test_embed_input_cap.py::test_split_for_embedding_keeps_every_piece_under_cap_and_drops_nothing[numeric_table] PASSED [ 21%]
+tests/unit/rag/test_embed_input_cap.py::test_split_for_embedding_keeps_every_piece_under_cap_and_drops_nothing[spaced_words] PASSED [ 26%]
+tests/unit/rag/test_embed_input_cap.py::test_split_for_embedding_keeps_every_piece_under_cap_and_drops_nothing[no_whitespace] PASSED [ 31%]
+tests/unit/rag/test_embed_input_cap.py::test_split_for_embedding_keeps_every_piece_under_cap_and_drops_nothing[one_long_sentence] PASSED [ 36%]
+tests/unit/rag/test_embed_input_cap.py::test_split_for_embedding_prefers_line_breaks PASSED [ 42%]
+tests/unit/rag/test_embed_input_cap.py::test_split_for_embedding_rejects_nonpositive_cap PASSED [ 47%]
+tests/unit/rag/test_embed_input_cap.py::test_indexing_embeds_every_chunk_whole[table_default_size] PASSED [ 52%]
+tests/unit/rag/test_embed_input_cap.py::test_indexing_embeds_every_chunk_whole[prose_large_chunk_size] PASSED [ 57%]
+tests/unit/rag/test_embed_input_cap.py::test_indexing_normalizes_no_break_spaces_only_for_embedding[False] FAILED [ 63%]
+tests/unit/rag/test_embed_input_cap.py::test_indexing_normalizes_no_break_spaces_only_for_embedding[True] FAILED [ 68%]
+tests/unit/rag/test_embed_input_cap.py::test_llm_chunking_output_is_also_cut_to_fit PASSED [ 73%]
+tests/unit/rag/test_embed_input_cap.py::test_oversized_input_is_refused_not_truncated PASSED [ 78%]
+tests/unit/rag/test_embed_input_cap.py::test_long_query_is_cut_with_a_warning PASSED [ 84%]
+tests/unit/rag/test_embed_input_cap.py::test_chunk_size_above_cap_warns_at_startup PASSED [ 89%]
+tests/unit/rag/test_embed_input_cap.py::test_changing_the_cap_invalidates_cached_chunks PASSED [ 94%]
+tests/unit/rag/test_embed_input_cap.py::test_embedder_reloaded_with_a_small_batch_is_reloaded_at_full_size PASSED [100%]
+
+=================================== FAILURES ===================================
+______ test_indexing_normalizes_no_break_spaces_only_for_embedding[False] ______
+tests/unit/rag/test_embed_input_cap.py:159: in test_indexing_normalizes_no_break_spaces_only_for_embedding
+    assert all("\u00a0" not in text for text in sdk.recorder.inputs)
+E   assert False
+E    +  where False = all(<generator object test_indexing_normalizes_no_break_spaces_only_for_embedding.<locals>.<genexpr> at 0x7db0039658a0>)
+----------------------------- Captured stderr call -----------------------------
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._index_document | sdk.py:3343 | 📄 Indexing document: /tmp/pytest-of-gaia-runner/pytest-0/test_indexing_normalizes_no_br0/report.txt (.txt)
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._extract_text_from_text_file | sdk.py:1993 | 📝 Extracted 3,280 characters from text file
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._split_text_into_chunks | sdk.py:2345 | 📝 Splitting text into semantic chunks...
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._fit_chunks_to_embedder | sdk.py:2570 | Split 1 chunk(s) longer than the embedder's 2000-char input into 2
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._split_text_into_chunks | sdk.py:2550 | 📦 Created 2 semantic chunks
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2645 | 🔍 Generating embeddings for 2 chunks...
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2686 | 🏗️  Building FAISS search index...
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2704 | 📚 Index ready with 2 vectors (embed: 0.00s, index: 0.00s)
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._index_document | sdk.py:3509 | ✅ Successfully indexed /tmp/pytest-of-gaia-runner/pytest-0/test_indexing_normalizes_no_br0/report.txt
+------------------------------ Captured log call -------------------------------
+INFO     gaia.rag.sdk:sdk.py:3343 📄 Indexing document: /tmp/pytest-of-gaia-runner/pytest-0/test_indexing_normalizes_no_br0/report.txt (.txt)
+INFO     gaia.rag.sdk:sdk.py:1993 📝 Extracted 3,280 characters from text file
+INFO     gaia.rag.sdk:sdk.py:2345 📝 Splitting text into semantic chunks...
+INFO     gaia.rag.sdk:sdk.py:2570 Split 1 chunk(s) longer than the embedder's 2000-char input into 2
+INFO     gaia.rag.sdk:sdk.py:2550 📦 Created 2 semantic chunks
+INFO     gaia.rag.sdk:sdk.py:2645 🔍 Generating embeddings for 2 chunks...
+INFO     gaia.rag.sdk:sdk.py:2686 🏗️  Building FAISS search index...
+INFO     gaia.rag.sdk:sdk.py:2704 📚 Index ready with 2 vectors (embed: 0.00s, index: 0.00s)
+INFO     gaia.rag.sdk:sdk.py:3509 ✅ Successfully indexed /tmp/pytest-of-gaia-runner/pytest-0/test_indexing_normalizes_no_br0/report.txt
+______ test_indexing_normalizes_no_break_spaces_only_for_embedding[True] _______
+tests/unit/rag/test_embed_input_cap.py:159: in test_indexing_normalizes_no_break_spaces_only_for_embedding
+    assert all("\u00a0" not in text for text in sdk.recorder.inputs)
+E   assert False
+E    +  where False = all(<generator object test_indexing_normalizes_no_break_spaces_only_for_embedding.<locals>.<genexpr> at 0x7db003966400>)
+----------------------------- Captured stderr call -----------------------------
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._index_document | sdk.py:3343 | 📄 Indexing document: /tmp/pytest-of-gaia-runner/pytest-0/test_indexing_normalizes_no_br1/report.txt (.txt)
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._extract_text_from_text_file | sdk.py:1993 | 📝 Extracted 3,280 characters from text file
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._split_text_into_chunks | sdk.py:2345 | 📝 Splitting text into semantic chunks...
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._fit_chunks_to_embedder | sdk.py:2570 | Split 1 chunk(s) longer than the embedder's 2000-char input into 2
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._split_text_into_chunks | sdk.py:2550 | 📦 Created 2 semantic chunks
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2645 | 🔍 Generating embeddings for 2 chunks...
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2686 | 🏗️  Building FAISS search index...
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2704 | 📚 Index ready with 2 vectors (embed: 0.00s, index: 0.00s)
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._index_document | sdk.py:3509 | ✅ Successfully indexed /tmp/pytest-of-gaia-runner/pytest-0/test_indexing_normalizes_no_br1/report.txt
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._index_document | sdk.py:3186 | 📦 Loading cached index for: /tmp/pytest-of-gaia-runner/pytest-0/test_indexing_normalizes_no_br1/report.txt
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._index_document | sdk.py:3204 |   ✅ Markdown cache also available: /tmp/pytest-of-gaia-runner/pytest-0/test_indexing_normalizes_no_br1/cache/75639eb59f6bc310_474dc630c02e9f95f319371a355e21a3_extracted.md
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2645 | 🔍 Generating embeddings for 2 chunks...
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2686 | 🏗️  Building FAISS search index...
+[2026-10-25 04:38:33] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2704 | 📚 Index ready with 2 vectors (embed: 0.00s, index: 0.00s)
+------------------------------ Captured log call -------------------------------
+INFO     gaia.rag.sdk:sdk.py:3343 📄 Indexing document: /tmp/pytest-of-gaia-runner/pytest-0/test_indexing_normalizes_no_br1/report.txt (.txt)
+INFO     gaia.rag.sdk:sdk.py:1993 📝 Extracted 3,280 characters from text file
+INFO     gaia.rag.sdk:sdk.py:2345 📝 Splitting text into semantic chunks...
+INFO     gaia.rag.sdk:sdk.py:2570 Split 1 chunk(s) longer than the embedder's 2000-char input into 2
+INFO     gaia.rag.sdk:sdk.py:2550 📦 Created 2 semantic chunks
+INFO     gaia.rag.sdk:sdk.py:2645 🔍 Generating embeddings for 2 chunks...
+INFO     gaia.rag.sdk:sdk.py:2686 🏗️  Building FAISS search index...
+INFO     gaia.rag.sdk:sdk.py:2704 📚 Index ready with 2 vectors (embed: 0.00s, index: 0.00s)
+INFO     gaia.rag.sdk:sdk.py:3509 ✅ Successfully indexed /tmp/pytest-of-gaia-runner/pytest-0/test_indexing_normalizes_no_br1/report.txt
+INFO     gaia.rag.sdk:sdk.py:3186 📦 Loading cached index for: /tmp/pytest-of-gaia-runner/pytest-0/test_indexing_normalizes_no_br1/report.txt
+INFO     gaia.rag.sdk:sdk.py:3204   ✅ Markdown cache also available: /tmp/pytest-of-gaia-runner/pytest-0/test_indexing_normalizes_no_br1/cache/75639eb59f6bc310_474dc630c02e9f95f319371a355e21a3_extracted.md
+INFO     gaia.rag.sdk:sdk.py:2645 🔍 Generating embeddings for 2 chunks...
+INFO     gaia.rag.sdk:sdk.py:2686 🏗️  Building FAISS search index...
+INFO     gaia.rag.sdk:sdk.py:2704 📚 Index ready with 2 vectors (embed: 0.00s, index: 0.00s)
+-------------- generated xml file: /evidence/baseline-focused.xml --------------
+=========================== short test summary info ============================
+FAILED tests/unit/rag/test_embed_input_cap.py::test_indexing_normalizes_no_break_spaces_only_for_embedding[False]
+FAILED tests/unit/rag/test_embed_input_cap.py::test_indexing_normalizes_no_break_spaces_only_for_embedding[True]
+========================= 2 failed, 17 passed in 1.37s =========================

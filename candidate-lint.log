@@ -1,0 +1,228 @@
+[2026-10-25 04:48:52] | [37mINFO[0m | faiss.loader.<module> | loader.py:189 | Successfully loaded faiss.
+[!] 1 test file(s) are run by no CI lane. Each one looks like a pass on every PR whether it works or not. Wire it into a lane, or add it to test_lane_allowlist.yml with a one-line reason:
+    - tests/integration/test_rag_no_break_spaces.py
+========================================
+Running Code Quality Checks
+========================================
+
+[1/12] Checking code formatting with Black...
+----------------------------------------
+[CMD] uvx black --check --diff src/gaia tests --config pyproject.toml
+[OK] Code formatting looks good!
+
+[2/12] Checking import sorting with isort...
+----------------------------------------
+[CMD] uvx isort==8.0.1 --check-only --diff src/gaia tests --settings-path pyproject.toml
+
+[!] Import sorting issues found.
+
+[OUTPUT]
+   --- /5547/candidate/tests/integration/test_rag_no_break_spaces.py:before	1970-01-01 00:00:00
+   +++ /5547/candidate/tests/integration/test_rag_no_break_spaces.py:after	2026-10-25 04:46:58.521074
+   @@ -2,7 +2,7 @@
+    # SPDX-License-Identifier: MIT
+    """Dense extracted tables must fit the real embedder, including cached chunks."""
+    
+   -from gaia.rag.sdk import RAGConfig, RAGSDK
+   +from gaia.rag.sdk import RAGSDK, RAGConfig
+    
+    
+    def test_index_dense_no_break_spaces_with_real_embeddings(require_lemonade, tmp_path):
+   Skipped 86 files
+   Installed 1 package in 3ms
+   ERROR: /5547/candidate/tests/integration/test_rag_no_break_spaces.py Imports are incorrectly sorted and/or formatted.
+
+Fix with: python util/lint.py --fix
+
+[3/12] Running Pylint (errors only)...
+----------------------------------------
+[CMD] uvx pylint src/gaia --rcfile .pylintrc --disable C0103,C0301,W0246,W0221,E1102,R0401,E0401,W0718,W0212
+[OK] No critical Pylint errors!
+
+[4/12] Running Flake8...
+----------------------------------------
+[CMD] uvx flake8 src/gaia tests --exclude=.git,__pycache__,venv,.venv,.mypy_cache,.tox,.eggs,_build,buck-out,node_modules --count --statistics --max-line-length=88 --extend-ignore=E203,W503,E501,F541,W291,W293,E402,F841,E722
+[OK] Flake8 checks passed!
+
+[5/12] Running MyPy type checking (warning only)...
+----------------------------------------
+[CMD] uvx mypy==2.3.1 src/gaia --ignore-missing-imports
+
+[WARNING] MyPy found type issues (non-blocking):
+src/gaia/utils/json_string.py:78: error: Need type annotation for "out" (hint: "out: list[<type>] = ...")  [var-annotated]
+src/gaia/ui/memory_settings.py:14: error: Returning Any from function declared to return "bool"  [no-any-return]
+src/gaia/eval/judge_outage.py:224: error: "object" has no attribute "get_completion"  [attr-defined]
+src/gaia/eval/retrieval/scoring.py:159: error: Incompatible types in assignment (expression has type "float", target has type "int")  [assignment]
+src/gaia/eval/retrieval/scoring.py:162: error: Incompatible types in assignment (expression has type "float", target has type "int")  [assignment]
+src/gaia/eval/retrieval/scoring.py:180: error: Unsupported operand types for * ("None" and "int")  [operator]
+src/gaia/eval/retrieval/scoring.py:180: note: Left operand is of type "float | None"
+src/gaia/eval/retrieval/scoring.py:181: error: Unsupported operand types for * ("None" and "int")  [operator]
+src/gaia/eval/retrieval/scoring.py:181: note: Left operand is of type "float | None"
+src/gaia/eval/bench/config.py:63: error: No overload variant of "int" matches argument type "object"  [call-overload]
+src/gaia/eval/bench/config.py:63: note: Error code "call-overload" not covered by "type: ignore[arg-type]" comment
+src/gaia/eval/bench/config.py:63: note: Possible overload variants:
+src/gaia/eval/bench/config.py:63: note:     def int(str | Buffer | SupportsInt | SupportsIndex | SupportsTrunc = ..., /) -> int
+src/gaia/eval/bench/config.py:63: note:     def int(str | bytes | bytearray, /, base: SupportsIndex) -> int
+src/gaia/eval/bench/config.py:68: error: Returning Any from function declared to return "int"  [no-any-return]
+src/gaia/mcp/client/redaction.py:273: error: Argument 1 to "append" of "list" has incompatible type "tuple[int, int, str | None, int]"; expected "tuple[int, int, str, int]"  [arg-type]
+src/gaia/mcp/client/redaction.py:367: error: Returning Any from function declared to return "tuple[Any, ...]"  [no-any-return]
+src/gaia/mcp/client/redaction.py:367: error: Value of type "list[Any] | None" is not indexable  [index]
+src/gaia/mcp/client/redaction.py:370: error: Item "None" of "_View | None" has no attribute "text"  [union-attr]
+src/gaia/mcp/client/redaction.py:514: error: Cannot infer type of lambda  [misc]
+... (output truncated, showing first 20 lines)
+
+[5b/12] Running MyPy on already-clean modules (blocking)...
+----------------------------------------
+[CMD] uvx mypy==2.3.1 src/gaia/__init__.py src/gaia/config.py src/gaia/device.py src/gaia/logger.py src/gaia/perf_analysis.py src/gaia/ports.py src/gaia/tool_cancellation.py --ignore-missing-imports --follow-imports=silent
+[OK] Clean modules are still mypy-clean!
+
+[8/12] Testing comprehensive SDK imports...
+----------------------------------------
+[OK]   CLI module                          - import gaia.cli
+[OK]   LLM package                         - import gaia.llm
+[OK]   LLM client class                    - from gaia.llm import LLMClient
+[OK]   Vision LLM client                   - from gaia.llm import VLMClient
+[OK]   LLM factory                         - from gaia.llm import create_client
+[OK]   LLM exception                       - from gaia.llm import NotSupportedError
+[OK]   Agent SDK module                    - import gaia.chat.sdk
+[OK]   Agent SDK class                     - from gaia.chat.sdk import AgentSDK
+[OK]   Agent configuration                 - from gaia.chat.sdk import AgentConfig
+[OK]   Agent session                       - from gaia.chat.sdk import AgentSession
+[OK]   Agent response                      - from gaia.chat.sdk import AgentResponse
+[OK]   Quick chat function                 - from gaia.chat.sdk import quick_chat
+[OK]   RAG SDK module                      - import gaia.rag.sdk
+[OK]   RAG SDK class                       - from gaia.rag.sdk import RAGSDK
+[OK]   RAG configuration                   - from gaia.rag.sdk import RAGConfig
+[OK]   Quick RAG function                  - from gaia.rag.sdk import quick_rag
+[OK]   Base agent module                   - import gaia.agents.base.agent
+[OK]   Base Agent class                    - from gaia.agents.base.agent import Agent
+[OK]   MCP agent mixin                     - from gaia.agents.base import MCPAgent
+[OK]   Tool decorator                      - from gaia.agents.base import tool
+[SKIP] Flagship agent                      - from gaia_agent.agent import GaiaAgent (ModuleNotFoundError: No module named 'gaia_agent')
+[SKIP] Chat agent                          - from gaia_agent_chat import ChatAgent (ModuleNotFoundError: No module named 'gaia_agent_chat')
+[OK]   Database agent                      - from gaia.database import DatabaseAgent
+[OK]   Database mixin                      - from gaia.database import DatabaseMixin
+[OK]   SD tools mixin                      - from gaia.sd import SDToolsMixin
+[OK]   VLM tools mixin                     - from gaia.vlm import VLMToolsMixin
+[OK]   File watcher                        - from gaia.utils import FileWatcher
+[OK]   File watcher mixin                  - from gaia.utils import FileWatcherMixin
+
+[OK] All required imports working!
+
+[6/12] Running security check with Bandit (HIGH = blocking)...
+----------------------------------------
+[INFO] 74 MEDIUM/LOW finding(s) (non-blocking).
+[OK] No HIGH-severity security issues found!
+
+[7/12] Checking security suppressions are reviewed...
+----------------------------------------
+[OK] 14 security suppression(s) - all reviewed in .security-suppressions.json.
+
+[9/12] Checking agent conventions...
+----------------------------------------
+[OK] All agent conventions satisfied!
+
+[10/12] Validating .github/dependabot.yml...
+----------------------------------------
+[OK] 4 dependabot.yml entries validated.
+
+[11/12] Validating workflow pull_request triggers...
+----------------------------------------
+[OK] 80 workflow pull_request triggers validated.
+
+Checking workflow job conditions for ancestor-skip risk...
+----------------------------------------
+[OK] 146 job `if:` condition(s) checked for ancestor-skip risk.
+
+Checking every test file is run by a CI lane...
+----------------------------------------
+
+Checking every CI lane triggers on what it depends on...[2026-10-25 04:48:59] | [37mINFO[0m | gaia.agents.base.project_map.resolve_project_root | project_map.py:517 | [project-map] /5547/candidate is GAIA's own source tree — no map. Set GAIA_PROJECT_ROOT to the project you want mapped.
+[2026-10-25 04:48:59] | [37mINFO[0m | gaia.agents.base.memory.register_memory_tools | memory.py:5190 | [MemoryMixin] registered 5 memory tools (v2)
+[2026-10-25 04:48:59] | [37mINFO[0m | gaia.agents.tools.browser_use_tools.register_browser_use_tools | browser_use_tools.py:375 | Browser-use tools not registered: Playwright is not installed. Install with: pip install 'amd-gaia[browser]' && python -m playwright install chromium
+
+----------------------------------------
+[OK] every pull_request lane triggers on the files it runs, imports, installs and reads; 4986 tracked files checked for orphans.
+
+Checking tool description budget...
+----------------------------------------
+[OK] All 88 flagship tool schemas within 500/160 chars.
+
+[12/12] Checking documentation version consistency...
+----------------------------------------
+============================================================
+  Documentation Version Consistency Check
+============================================================
+
+[SOURCE] src/gaia/version.py
+  LEMONADE_VERSION = 2026.43.3
+
+[CHECK] Lemonade Server (expected: 2026.43.3)
+----------------------------------------
+  [OK] All references match
+
+============================================================
+[OK] All documentation version references are consistent!
+============================================================
+
+Checking release version fields...
+----------------------------------------
+  OK     21 field(s) match their source
+  HELD   hub/agents/gaia/npm/package-lock.json (root version): 0.1.0, expected 0.3.1 (follows hub/agents/gaia/python/gaia_agent/__init__.py) -- left as shipped until v0.25.1 final and flagship 0.3.1 publish (#5172)
+  HELD   hub/agents/chat/python/gaia_agent_chat/__init__.py (__version__): 0.1.0, expected 0.2.0 (follows hub/agents/chat/python/pyproject.toml) -- left as shipped until v0.25.1 final and flagship 0.3.1 publish (#5172)
+
+Every version field matches its source (2 held, listed above).
+
+
+================================================================
+                    LINT SUMMARY REPORT                        
+================================================================
+
+[STATS] Project Statistics:
+   - Python Files: 1814
+   - Lines of Code: 737,940
+   - Directories: src/gaia, tests
+
+[RESULTS] Quality Check Results:
+
++--------------------------------+------------+-----------+
+| Check                          | Status     | Issues    |
++--------------------------------+------------+-----------+
+| Code Formatting (Black)        | [OK] PASS  | -         |
+| Import Sorting (isort)         | [X] FAIL   | 1 error   |
+| Critical Errors (Pylint)       | [OK] PASS  | -         |
+| Style Compliance (Flake8)      | [OK] PASS  | -         |
+| Type Checking (MyPy)           | [!] WARN   | 1770 warns |
+| MyPy Ratchet (clean modules)   | [OK] PASS  | -         |
+| Import Validation              | [OK] PASS  | -         |
+| Security Check (Bandit)        | [OK] PASS  | -         |
+| Security Suppressions          | [OK] PASS  | -         |
+| Agent Conventions              | [OK] PASS  | -         |
+| Dependabot Config              | [OK] PASS  | -         |
+| Workflow Triggers              | [OK] PASS  | -         |
+| Workflow Ancestor-Skip         | [OK] PASS  | -         |
+| Test Lane Coverage             | [X] FAIL   | 1 error   |
+| CI Path Coverage               | [OK] PASS  | -         |
+| Tool Descriptions              | [OK] PASS  | -         |
+| Doc Version Consistency        | [OK] PASS  | -         |
+| Release Versions               | [OK] PASS  | -         |
++--------------------------------+------------+-----------+
+
+[SUMMARY] Statistics:
+   - Total Checks Run: 18
+   - Passed: 15 (83.3%)
+   - Failed: 2 (11.1%)
+   - Warnings: 1 (5.6%)
+
+============================================================
+[FAILED] QUALITY CHECKS FAILED
+============================================================
+
+[ERROR] Issues Found:
+   - 2 critical error(s) - must fix before PR
+   - 1 warning(s) - non-blocking
+
+[TIP] Review the error messages above and fix the issues.
+[TIP] Use --fix flag to auto-fix formatting issues:
+   python util/lint.py --black --fix
+   python util/lint.py --isort --fix

@@ -1,0 +1,47 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 01:17:55) [GCC 14.2.0]",
+  "sdkPath": "/5547-wheel/gaia/rag/sdk.py",
+  "sdkSha256": "83a85263f04f8f5e3390d1f218ce43913fbc58554c2f1ef00155d626698cb834",
+  "results": [
+    {
+      "index": {
+        "success": true,
+        "file_name": "wheel-table.txt",
+        "file_type": ".txt",
+        "file_size_mb": 0.0,
+        "num_pages": null,
+        "vlm_pages": null,
+        "total_images": null,
+        "num_chunks": 1,
+        "total_indexed_files": 1,
+        "total_chunks": 1,
+        "max_indexed_files": 100,
+        "max_total_chunks": 10000
+      },
+      "retrievedChunks": 1,
+      "topScore": 0.428946316667478,
+      "originalNbsp": 949
+    },
+    {
+      "index": {
+        "success": true,
+        "file_name": "wheel-table.txt",
+        "file_type": ".txt",
+        "file_size_mb": 0.0,
+        "num_pages": null,
+        "vlm_pages": null,
+        "total_images": null,
+        "num_chunks": 1,
+        "total_indexed_files": 1,
+        "total_chunks": 1,
+        "max_indexed_files": 100,
+        "max_total_chunks": 10000,
+        "from_cache": true
+      },
+      "retrievedChunks": 1,
+      "topScore": 0.428946316667478,
+      "originalNbsp": 949
+    }
+  ],
+  "boundary": "Real target-installed wheel RAGSDK.index_document with local embedding model. Auxiliary retrieval exercises the real FAISS search using the existing internal retrieval method; no chat answer generation or model mock."
+}

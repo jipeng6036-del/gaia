@@ -1,0 +1,213 @@
+[2026-10-24 21:33:30] | INFO | faiss.loader.<module> | loader.py:189 | Successfully loaded faiss.
+{"python": "3.12.13 (main, Mar 10 2026, 18:15:39) [MSC v.1944 64 bit (AMD64)]", "platform": "Windows-11-10.0.26200-SP0", "source": "F:\\Github-PR\\inspection\\gaia-nbsp-embedding\\src\\gaia\\rag\\sdk.py", "sourceSha256": "34ab41500723c5869b57eeec39d79f2d8123801e2004d5b2566b4b4be2baa657", "documentSha256": "8023fac91ad417f996b692c506ee0e097effd091e698275288e4126cb8a2020e", "embedMaxChars": 2000, "use_vlm": false, "use_llm_chunking": false}
+[2026-10-24 21:33:30] | INFO | gaia.rag.sdk._index_document | sdk.py:3344 | 📄 Indexing document: F:\Github-PR\ci-evidence\gaia-5547-runtime\CORNING_2021_10K.pdf (.pdf)
+[2026-10-24 21:33:30] | INFO | gaia.rag.sdk._extract_text_from_pdf | sdk.py:1210 | 📄 Extracting text from 125 pages...
+🚀 Starting to index: CORNING_2021_10K.pdf (.pdf)
+
+============================================================
+  📄 COMPUTE INTENSIVE: PDF Text Extraction
+  📊 Total pages: 125
+  ⏱️  Estimated time: 25.0 seconds
+  🖼️  VLM: Disabled (text-only extraction)
+============================================================
+  📄 Page 1/125 (1%) | ⏱️  0.02s | ETA: 4.4s          
+  📄 Page 2/125 (2%) | ⏱️  0.01s | ETA: 3.0s          
+  📄 Page 3/125 (2%) | ⏱️  0.02s | ETA: 2.6s          
+  📄 Page 4/125 (3%) | ⏱️  0.02s | ETA: 2.5s          
+  📄 Page 5/125 (4%) | ⏱️  0.01s | ETA: 2.3s          
+  📄 Page 6/125 (5%) | ⏱️  0.01s | ETA: 2.2s          
+  📄 Page 7/125 (6%) | ⏱️  0.01s | ETA: 2.1s          
+  📄 Page 8/125 (6%) | ⏱️  0.02s | ETA: 2.1s          
+  📄 Page 9/125 (7%) | ⏱️  0.02s | ETA: 2.1s          
+  📄 Page 10/125 (8%) | ⏱️  0.01s | ETA: 2.0s          
+  📄 Page 11/125 (9%) | ⏱️  0.02s | ETA: 1.9s          
+  📄 Page 12/125 (10%) | ⏱️  0.02s | ETA: 1.9s          
+  📄 Page 13/125 (10%) | ⏱️  0.02s | ETA: 1.9s          
+  📄 Page 14/125 (11%) | ⏱️  0.02s | ETA: 1.9s          
+  📄 Page 15/125 (12%) | ⏱️  0.02s | ETA: 1.9s          
+  📄 Page 16/125 (13%) | ⏱️  0.02s | ETA: 1.9s          
+  📄 Page 17/125 (14%) | ⏱️  0.01s | ETA: 1.8s          
+  📄 Page 18/125 (14%) | ⏱️  0.02s | ETA: 1.8s          
+  📄 Page 19/125 (15%) | ⏱️  0.01s | ETA: 1.8s          
+  📄 Page 20/125 (16%) | ⏱️  0.02s | ETA: 1.8s          
+  📄 Page 21/125 (17%) | ⏱️  0.02s | ETA: 1.8s          
+  📄 Page 22/125 (18%) | ⏱️  0.01s | ETA: 1.7s          
+  📄 Page 23/125 (18%) | ⏱️  0.04s | ETA: 1.8s          
+  📄 Page 24/125 (19%) | ⏱️  0.01s | ETA: 1.7s          
+  📄 Page 25/125 (20%) | ⏱️  0.01s | ETA: 1.7s          
+  📄 Page 26/125 (21%) | ⏱️  0.07s | ETA: 1.9s          
+  📄 Page 27/125 (22%) | ⏱️  0.04s | ETA: 1.9s          
+  📄 Page 28/125 (22%) | ⏱️  0.08s | ETA: 2.1s          
+  📄 Page 29/125 (23%) | ⏱️  0.01s | ETA: 2.0s          
+  📄 Page 30/125 (24%) | ⏱️  0.04s | ETA: 2.1s          
+  📄 Page 31/125 (25%) | ⏱️  0.04s | ETA: 2.1s          
+  📄 Page 32/125 (26%) | ⏱️  0.07s | ETA: 2.2s          
+  📄 Page 33/125 (26%) | ⏱️  0.04s | ETA: 2.3s          
+  📄 Page 34/125 (27%) | ⏱️  0.12s | ETA: 2.5s          
+  📄 Page 35/125 (28%) | ⏱️  0.02s | ETA: 2.4s          
+  📄 Page 36/125 (29%) | ⏱️  0.02s | ETA: 2.4s          
+  📄 Page 37/125 (30%) | ⏱️  0.03s | ETA: 2.4s          
+  📄 Page 38/125 (30%) | ⏱️  0.05s | ETA: 2.4s          
+  📄 Page 39/125 (31%) | ⏱️  0.02s | ETA: 2.4s          
+  📄 Page 40/125 (32%) | ⏱️  0.04s | ETA: 2.4s          
+  📄 Page 41/125 (33%) | ⏱️  0.04s | ETA: 2.4s          
+  📄 Page 42/125 (34%) | ⏱️  0.08s | ETA: 2.4s          
+  📄 Page 43/125 (34%) | ⏱️  0.02s | ETA: 2.4s          
+  📄 Page 44/125 (35%) | ⏱️  0.03s | ETA: 2.3s          
+  📄 Page 45/125 (36%) | ⏱️  0.03s | ETA: 2.3s          
+  📄 Page 46/125 (37%) | ⏱️  0.03s | ETA: 2.3s          
+  📄 Page 47/125 (38%) | ⏱️  0.06s | ETA: 2.3s          
+  📄 Page 48/125 (38%) | ⏱️  0.02s | ETA: 2.3s          
+  📄 Page 49/125 (39%) | ⏱️  0.03s | ETA: 2.2s          
+  📄 Page 50/125 (40%) | ⏱️  0.02s | ETA: 2.2s          
+  📄 Page 51/125 (41%) | ⏱️  0.03s | ETA: 2.2s          
+  📄 Page 52/125 (42%) | ⏱️  0.03s | ETA: 2.1s          
+  📄 Page 53/125 (42%) | ⏱️  0.03s | ETA: 2.1s          
+  📄 Page 54/125 (43%) | ⏱️  0.05s | ETA: 2.1s          
+  📄 Page 55/125 (44%) | ⏱️  0.01s | ETA: 2.0s          
+  📄 Page 56/125 (45%) | ⏱️  0.04s | ETA: 2.0s          
+  📄 Page 57/125 (46%) | ⏱️  0.04s | ETA: 2.0s          
+  📄 Page 58/125 (46%) | ⏱️  0.04s | ETA: 2.0s          
+  📄 Page 59/125 (47%) | ⏱️  0.04s | ETA: 2.0s          
+  📄 Page 60/125 (48%) | ⏱️  0.03s | ETA: 1.9s          
+  📄 Page 61/125 (49%) | ⏱️  0.02s | ETA: 1.9s          
+  📄 Page 62/125 (50%) | ⏱️  0.03s | ETA: 1.8s          
+  📄 Page 63/125 (50%) | ⏱️  0.03s | ETA: 1.8s          
+  📄 Page 64/125 (51%) | ⏱️  0.02s | ETA: 1.8s          
+  📄 Page 65/125 (52%) | ⏱️  0.17s | ETA: 1.9s          
+  📄 Page 66/125 (53%) | ⏱️  0.04s | ETA: 1.9s          
+  📄 Page 67/125 (54%) | ⏱️  0.10s | ETA: 1.9s          
+  📄 Page 68/125 (54%) | ⏱️  0.24s | ETA: 2.0s          
+  📄 Page 69/125 (55%) | ⏱️  0.34s | ETA: 2.2s          
+  📄 Page 70/125 (56%) | ⏱️  0.02s | ETA: 2.2s          
+  📄 Page 71/125 (57%) | ⏱️  0.02s | ETA: 2.1s          
+  📄 Page 72/125 (58%) | ⏱️  0.10s | ETA: 2.1s          
+  📄 Page 73/125 (58%) | ⏱️  0.03s | ETA: 2.1s          
+  📄 Page 74/125 (59%) | ⏱️  0.03s | ETA: 2.0s          
+  📄 Page 75/125 (60%) | ⏱️  0.03s | ETA: 2.0s          
+  📄 Page 76/125 (61%) | ⏱️  0.05s | ETA: 2.0s          
+  📄 Page 77/125 (62%) | ⏱️  0.22s | ETA: 2.0s          
+  📄 Page 78/125 (62%) | ⏱️  0.08s | ETA: 2.0s          
+  📄 Page 79/125 (63%) | ⏱️  0.06s | ETA: 2.0s          
+  📄 Page 80/125 (64%) | ⏱️  0.05s | ETA: 1.9s          
+  📄 Page 81/125 (65%) | ⏱️  0.03s | ETA: 1.9s          
+  📄 Page 82/125 (66%) | ⏱️  0.07s | ETA: 1.9s          
+  📄 Page 83/125 (66%) | ⏱️  0.04s | ETA: 1.8s          
+  📄 Page 84/125 (67%) | ⏱️  0.14s | ETA: 1.8s          
+  📄 Page 85/125 (68%) | ⏱️  0.10s | ETA: 1.8s          
+  📄 Page 86/125 (69%) | ⏱️  0.05s | ETA: 1.8s          
+  📄 Page 87/125 (70%) | ⏱️  0.16s | ETA: 1.8s          
+  📄 Page 88/125 (70%) | ⏱️  0.05s | ETA: 1.7s          
+  📄 Page 89/125 (71%) | ⏱️  0.04s | ETA: 1.7s          
+  📄 Page 90/125 (72%) | ⏱️  0.16s | ETA: 1.7s          
+  📄 Page 91/125 (73%) | ⏱️  0.09s | ETA: 1.6s          
+  📄 Page 92/125 (74%) | ⏱️  0.09s | ETA: 1.6s          
+  📄 Page 93/125 (74%) | ⏱️  0.04s | ETA: 1.6s          
+  📄 Page 94/125 (75%) | ⏱️  0.02s | ETA: 1.5s          
+  📄 Page 95/125 (76%) | ⏱️  0.29s | ETA: 1.5s          
+  📄 Page 96/125 (77%) | ⏱️  0.25s | ETA: 1.5s          
+  📄 Page 97/125 (78%) | ⏱️  0.25s | ETA: 1.5s          
+  📄 Page 98/125 (78%) | ⏱️  0.30s | ETA: 1.6s          
+  📄 Page 99/125 (79%) | ⏱️  0.04s | ETA: 1.5s          
+  📄 Page 100/125 (80%) | ⏱️  0.11s | ETA: 1.4s          
+  📄 Page 101/125 (81%) | ⏱️  0.04s | ETA: 1.4s          
+  📄 Page 102/125 (82%) | ⏱️  0.03s | ETA: 1.3s          
+  📄 Page 103/125 (82%) | ⏱️  0.21s | ETA: 1.3s          
+  📄 Page 104/125 (83%) | ⏱️  0.07s | ETA: 1.2s          
+  📄 Page 105/125 (84%) | ⏱️  0.10s | ETA: 1.2s          
+  📄 Page 106/125 (85%) | ⏱️  0.08s | ETA: 1.1s          
+  📄 Page 107/125 (86%) | ⏱️  0.11s | ETA: 1.1s          
+  📄 Page 108/125 (86%) | ⏱️  0.18s | ETA: 1.0s          
+  📄 Page 109/125 (87%) | ⏱️  0.08s | ETA: 1.0s          
+  📄 Page 110/125 (88%) | ⏱️  0.08s | ETA: 0.9s          
+  📄 Page 111/125 (89%) | ⏱️  0.05s | ETA: 0.9s          
+  📄 Page 112/125 (90%) | ⏱️  0.06s | ETA: 0.8s          
+  📄 Page 113/125 (90%) | ⏱️  0.10s | ETA: 0.7s          
+  📄 Page 114/125 (91%) | ⏱️  0.04s | ETA: 0.7s          
+  📄 Page 115/125 (92%) | ⏱️  0.32s | ETA: 0.6s          
+  📄 Page 116/125 (93%) | ⏱️  0.11s | ETA: 0.6s          
+  📄 Page 117/125 (94%) | ⏱️  0.04s | ETA: 0.5s          
+  📄 Page 118/125 (94%) | ⏱️  0.20s | ETA: 0.5s          
+  📄 Page 119/125 (95%) | ⏱️  0.16s | ETA: 0.4s          
+  📄 Page 120/125 (96%) | ⏱️  0.02s | ETA: 0.3s          
+  📄 Page 121/125 (97%) | ⏱️  0.01s | ETA: 0.3s          
+  📄 Page 122/125 (98%) | ⏱️  0.01s | ETA: 0.2s          
+  📄 Page 123/125 (98%) | ⏱️  0.02s | ETA: 0.1s          
+  📄 Page 124/125 (99%) | ⏱️  0.02s | ETA: 0.1s          
+  📄 Page 125/125 (100%) | ⏱️  0.01s | ETA: 0.0s          
+[2026-10-24 21:33:38] | INFO | gaia.rag.sdk._extract_text_from_pdf | sdk.py:1377 | 📝 Extracted 439,494 characters in 7.94s (VLM: 0 pages)
+[2026-10-24 21:33:38] | INFO | gaia.rag.sdk._split_text_into_chunks | sdk.py:2346 | 📝 Splitting text into semantic chunks...
+[2026-10-24 21:33:38] | INFO | gaia.rag.sdk._fit_chunks_to_embedder | sdk.py:2571 | Split 41 chunk(s) longer than the embedder's 2000-char input into 85
+[2026-10-24 21:33:38] | INFO | gaia.rag.sdk._split_text_into_chunks | sdk.py:2551 | 📦 Created 357 semantic chunks
+[2026-10-24 21:33:38] | INFO | gaia.rag.sdk._start_embedder | sdk.py:801 | Loading embedding model via Lemonade: user.embeddinggemma-300m-GGUF
+[2026-10-24 21:33:38] | INFO | gaia.llm.lemonade_client.ensure_model_downloaded | lemonade_client.py:6587 | ✅ Model already downloaded: user.embeddinggemma-300m-GGUF
+[2026-10-24 21:33:38] | INFO | gaia.llm.lemonade_client.unload_model | lemonade_client.py:7852 | Model unloaded successfully: {'message': 'Model unloaded successfully', 'model_name': 'user.embeddinggemma-300m-GGUF', 'status': 'success'}
+[2026-10-24 21:33:43] | INFO | gaia.rag.sdk._start_embedder | sdk.py:858 | Loaded embedding model (ubatch-size=2048); chat model left resident
+[2026-10-24 21:33:43] | INFO | gaia.rag.sdk._create_vector_index | sdk.py:2646 | 🔍 Generating embeddings for 357 chunks...
+
+  ✅ Extracted 439,494 characters from 125 pages
+  ⏱️  Total extraction time: 7.94s (15.7 pages/sec)
+  💾 Text size: 429.2 KB
+============================================================
+
+  ✅ Created 357 semantic chunks (avg 1482 chars)
+
+============================================================
+  🧠 COMPUTE INTENSIVE: Generating vector embeddings
+  📊 Processing 357 chunks
+  ⏱️  Estimated time: 17.9 seconds
+============================================================
+PROGRESS 0 357
+[2026-10-24 21:33:43] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 1/10 (25 chunks)...
+[2026-10-24 21:33:51] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 1 complete in 7.96s (3.1 chunks/sec)
+[2026-10-24 21:33:51] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 2/10 (25 chunks)...
+[2026-10-24 21:34:00] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 2 complete in 8.89s (2.8 chunks/sec)
+[2026-10-24 21:34:00] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 3/10 (25 chunks)...
+[2026-10-24 21:34:08] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 3 complete in 8.58s (2.9 chunks/sec)
+[2026-10-24 21:34:08] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 4/10 (25 chunks)...
+[2026-10-24 21:34:22] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 4 complete in 13.31s (1.9 chunks/sec)
+[2026-10-24 21:34:22] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 5/10 (25 chunks)...
+[2026-10-24 21:34:32] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 5 complete in 9.97s (2.5 chunks/sec)
+[2026-10-24 21:34:32] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 6/10 (25 chunks)...
+[2026-10-24 21:34:40] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 6 complete in 8.03s (3.1 chunks/sec)
+[2026-10-24 21:34:40] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 7/10 (25 chunks)...
+[2026-10-24 21:34:48] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 7 complete in 8.65s (2.9 chunks/sec)
+[2026-10-24 21:34:48] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 8/10 (25 chunks)...
+[2026-10-24 21:34:57] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 8 complete in 8.34s (3.0 chunks/sec)
+[2026-10-24 21:34:57] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 9/10 (25 chunks)...
+[2026-10-24 21:35:03] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 9 complete in 6.13s (4.1 chunks/sec)
+[2026-10-24 21:35:03] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 10/10 (25 chunks)...
+[2026-10-24 21:35:10] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 10 complete in 7.66s (3.3 chunks/sec)
+[2026-10-24 21:35:10] | INFO | gaia.rag.sdk._encode_texts | sdk.py:936 |    🎯 Total embedding time: 87.51s (2.9 chunks/sec, 10 batches)
+PROGRESS 250 357
+[2026-10-24 21:35:10] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 1/5 (25 chunks)...
+[2026-10-24 21:35:21] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 1 complete in 10.50s (2.4 chunks/sec)
+[2026-10-24 21:35:21] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 2/5 (25 chunks)...
+[2026-10-24 21:35:29] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 2 complete in 8.21s (3.0 chunks/sec)
+[2026-10-24 21:35:29] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 3/5 (25 chunks)...
+[2026-10-24 21:35:37] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 3 complete in 7.46s (3.4 chunks/sec)
+[2026-10-24 21:35:37] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 4/5 (25 chunks)...
+[2026-10-24 21:35:46] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 4 complete in 9.01s (2.8 chunks/sec)
+[2026-10-24 21:35:46] | INFO | gaia.rag.sdk._encode_texts | sdk.py:912 |    📦 Embedding batch 5/5 (7 chunks)...
+[2026-10-24 21:35:47] | INFO | gaia.rag.sdk._encode_texts | sdk.py:929 |    ✅ Batch 5 complete in 1.80s (3.9 chunks/sec)
+[2026-10-24 21:35:47] | INFO | gaia.rag.sdk._encode_texts | sdk.py:936 |    🎯 Total embedding time: 36.98s (2.9 chunks/sec, 5 batches)
+PROGRESS 357 357
+[2026-10-24 21:35:47] | INFO | gaia.rag.sdk._create_vector_index | sdk.py:2687 | 🏗️  Building FAISS search index...
+[2026-10-24 21:35:47] | INFO | gaia.rag.sdk._create_vector_index | sdk.py:2705 | 📚 Index ready with 357 vectors (embed: 124.52s, index: 0.00s)
+[2026-10-24 21:35:48] | INFO | gaia.rag.sdk._get_hmac_key | sdk.py:646 | Generated new HMAC key for cache integrity verification
+[2026-10-24 21:35:49] | INFO | gaia.rag.sdk._index_document | sdk.py:3510 | ✅ Successfully indexed F:\Github-PR\ci-evidence\gaia-5547-runtime\CORNING_2021_10K.pdf
+
+  ✅ Generated 357 embeddings (768 dimensions)
+  ⏱️  Embedding time: 124.52s (2.9 chunks/sec)
+
+  🏗️  Building FAISS search index...
+  ✅ Built search index for 357 vectors in 0.00s
+  💾 Memory: ~1.0MB for embeddings
+============================================================
+
+🔍 Building per-file search index...
+💾 Caching processed chunks...
+✅ Successfully indexed CORNING_2021_10K.pdf
+📊 Total: 1 documents, 357 chunks
+📈 Memory usage: 357/10000 chunks, 1/100 files
+{"python": "3.12.13 (main, Mar 10 2026, 18:15:39) [MSC v.1944 64 bit (AMD64)]", "platform": "Windows-11-10.0.26200-SP0", "source": "F:\\Github-PR\\inspection\\gaia-nbsp-embedding\\src\\gaia\\rag\\sdk.py", "sourceSha256": "34ab41500723c5869b57eeec39d79f2d8123801e2004d5b2566b4b4be2baa657", "documentSha256": "8023fac91ad417f996b692c506ee0e097effd091e698275288e4126cb8a2020e", "embedMaxChars": 2000, "use_vlm": false, "use_llm_chunking": false, "indexResult": {"success": true, "file_name": "CORNING_2021_10K.pdf", "file_type": ".pdf", "file_size_mb": 1.08, "num_pages": 125, "vlm_pages": null, "total_images": null, "num_chunks": 357, "total_indexed_files": 1, "total_chunks": 357, "max_indexed_files": 100, "max_total_chunks": 10000, "pdf_status": "readable"}, "chunks": 357, "chunkNbsp": 64306, "maxChunkChars": 2000, "elapsedSeconds": 138.59399999957532}

@@ -1,0 +1,14 @@
+{
+  "candidate": "cd3dcaeb1a0d31d605e5b1db782286b877804a68",
+  "completeCoreExit": 0,
+  "affectedRagExit": 0,
+  "baselineFocusedExpectedExit": 1,
+  "baselineRealEmbeddingExpectedExit": 1,
+  "candidateRealEmbeddingExit": 0,
+  "finalLintExit": 0,
+  "finalLintLog": "candidate-lint-final.log",
+  "finalLintCommand": "docker exec -w /5547/candidate -e PYTHONUNBUFFERED=1 ghpr-gaia-5547-tests /usr/sbin/runuser -u gaia-runner -- /core-venv/bin/python util/lint.py --all",
+  "historicalNote": "checks-state.json and candidate-lint.log retain the first lint failure. The corrected final run passes; no failure was hidden or disabled.",
+  "packageExit": 0,
+  "independentReview": "approved; no human approval inferred"
+}

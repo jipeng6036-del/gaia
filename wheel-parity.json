@@ -1,0 +1,8 @@
+{
+  "testedWheelSha256": "23c0066c1aba0a6eba102ac1a453955d23c828b4ba67f39637af27f794f6511e",
+  "finalWheelSha256": "0cfc902181f3de6c79b2a700b4cf98cfc6897a24193a75ec4b97a4d18ef098d9",
+  "allUncompressedFilesIdentical": true,
+  "fileCount": 576,
+  "sdkSha256": "83a85263f04f8f5e3390d1f218ce43913fbc58554c2f1ef00155d626698cb834",
+  "reason": "Final source changes only add CI wiring and reorder the integration test import; final wheel contents match the actual runtime-tested wheel byte for byte."
+}

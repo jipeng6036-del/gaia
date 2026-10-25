@@ -1,0 +1,62 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0 -- /core-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /5547/baseline
+configfile: pyproject.toml
+plugins: anyio-4.15.1, timeout-2.4.0, xdist-3.8.0, cov-7.1.0, asyncio-1.4.0, mock-3.17.0, respx-0.23.1, pyfakefs-6.2.0
+timeout: 300.0s
+timeout method: signal
+timeout func_only: False
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... [2026-10-25 04:52:18] | [37mINFO[0m | faiss.loader.<module> | loader.py:189 | Successfully loaded faiss.
+collected 1 item
+
+tests/integration/test_rag_no_break_spaces.py::test_index_dense_no_break_spaces_with_real_embeddings [2026-10-25 04:52:18] | [37mINFO[0m | gaia.rag.sdk._index_document | sdk.py:3343 | 📄 Indexing document: /tmp/pytest-of-root/pytest-0/test_index_dense_no_break_spac0/table.txt (.txt)
+[2026-10-25 04:52:18] | [37mINFO[0m | gaia.rag.sdk._extract_text_from_text_file | sdk.py:1993 | 📝 Extracted 1,900 characters from text file
+[2026-10-25 04:52:18] | [37mINFO[0m | gaia.rag.sdk._split_text_into_chunks | sdk.py:2345 | 📝 Splitting text into semantic chunks...
+[2026-10-25 04:52:18] | [37mINFO[0m | gaia.rag.sdk._split_text_into_chunks | sdk.py:2550 | 📦 Created 1 semantic chunks
+[2026-10-25 04:52:18] | [37mINFO[0m | gaia.rag.sdk._start_embedder | sdk.py:801 | Loading embedding model via Lemonade: user.embeddinggemma-300m-GGUF
+[2026-10-25 04:52:18] | [37mINFO[0m | gaia.llm.lemonade_client.ensure_model_downloaded | lemonade_client.py:6587 | ✅ Model already downloaded: user.embeddinggemma-300m-GGUF
+[2026-10-25 04:52:18] | [37mINFO[0m | gaia.llm.lemonade_client.unload_model | lemonade_client.py:7852 | Model unloaded successfully: {'message': 'Model unloaded successfully', 'model_name': 'user.embeddinggemma-300m-GGUF', 'status': 'success'}
+[2026-10-25 04:52:22] | [37mINFO[0m | gaia.rag.sdk._start_embedder | sdk.py:858 | Loaded embedding model (ubatch-size=2048); chat model left resident
+[2026-10-25 04:52:22] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2645 | 🔍 Generating embeddings for 1 chunks...
+[2026-10-25 04:52:22] | [31mERROR[0m | gaia.llm.lemonade_client._embeddings_once | lemonade_client.py:5705 | Error generating embeddings: Request failed with status 500: {"error":{"code":500,"details":{"backend":"llama-server","response":{"error":{"code":500,"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","type":"server_error"}}},"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","status_code":500,"type":"server_error"}}
+[2026-10-25 04:52:22] | [33mWARNING[0m | gaia.rag.sdk._embed_batch | sdk.py:960 |    ⚠️  Batch 1: the embedder was reloaded with a smaller batch than RAG chunks need; reloading it with --ubatch-size 2048 and sending the batch once more.
+[2026-10-25 04:52:22] | [37mINFO[0m | gaia.rag.sdk._start_embedder | sdk.py:801 | Loading embedding model via Lemonade: user.embeddinggemma-300m-GGUF
+[2026-10-25 04:52:22] | [37mINFO[0m | gaia.llm.lemonade_client.ensure_model_downloaded | lemonade_client.py:6587 | ✅ Model already downloaded: user.embeddinggemma-300m-GGUF
+[2026-10-25 04:52:22] | [37mINFO[0m | gaia.llm.lemonade_client.unload_model | lemonade_client.py:7852 | Model unloaded successfully: {'message': 'Model unloaded successfully', 'model_name': 'user.embeddinggemma-300m-GGUF', 'status': 'success'}
+[2026-10-25 04:52:25] | [37mINFO[0m | gaia.rag.sdk._start_embedder | sdk.py:858 | Loaded embedding model (ubatch-size=2048); chat model left resident
+[2026-10-25 04:52:25] | [31mERROR[0m | gaia.llm.lemonade_client._embeddings_once | lemonade_client.py:5705 | Error generating embeddings: Request failed with status 500: {"error":{"code":500,"details":{"backend":"llama-server","response":{"error":{"code":500,"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","type":"server_error"}}},"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","status_code":500,"type":"server_error"}}
+[2026-10-25 04:52:25] | [31mERROR[0m | gaia.rag.sdk._embed_batch | sdk.py:969 |    ❌ Batch 1 failed: Error generating embeddings: Request failed with status 500: {"error":{"code":500,"details":{"backend":"llama-server","response":{"error":{"code":500,"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","type":"server_error"}}},"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","status_code":500,"type":"server_error"}}
+[2026-10-25 04:52:25] | [31mERROR[0m | gaia.rag.sdk._embedding_failed | sdk.py:3614 | Failed to index /tmp/pytest-of-root/pytest-0/test_index_dense_no_break_spac0/table.txt: The embedding model user.embeddinggemma-300m-GGUF failed: Error generating embeddings: Request failed with status 500: {"error":{"code":500,"details":{"backend":"llama-server","response":{"error":{"code":500,"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","type":"server_error"}}},"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","status_code":500,"type":"server_error"}}
+FAILED
+
+=================================== FAILURES ===================================
+____________ test_index_dense_no_break_spaces_with_real_embeddings _____________
+tests/integration/test_rag_no_break_spaces.py:22: in test_index_dense_no_break_spaces_with_real_embeddings
+    assert result["success"], result.get("error")
+E   AssertionError: The embedding model user.embeddinggemma-300m-GGUF failed: Error generating embeddings: Request failed with status 500: {"error":{"code":500,"details":{"backend":"llama-server","response":{"error":{"code":500,"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","type":"server_error"}}},"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","status_code":500,"type":"server_error"}}
+E   assert False
+------------------------------ Captured log call -------------------------------
+INFO     gaia.rag.sdk:sdk.py:3343 📄 Indexing document: /tmp/pytest-of-root/pytest-0/test_index_dense_no_break_spac0/table.txt (.txt)
+INFO     gaia.rag.sdk:sdk.py:1993 📝 Extracted 1,900 characters from text file
+INFO     gaia.rag.sdk:sdk.py:2345 📝 Splitting text into semantic chunks...
+INFO     gaia.rag.sdk:sdk.py:2550 📦 Created 1 semantic chunks
+INFO     gaia.rag.sdk:sdk.py:801 Loading embedding model via Lemonade: user.embeddinggemma-300m-GGUF
+INFO     gaia.llm.lemonade_client:lemonade_client.py:6587 ✅ Model already downloaded: user.embeddinggemma-300m-GGUF
+INFO     gaia.llm.lemonade_client:lemonade_client.py:7852 Model unloaded successfully: {'message': 'Model unloaded successfully', 'model_name': 'user.embeddinggemma-300m-GGUF', 'status': 'success'}
+INFO     gaia.rag.sdk:sdk.py:858 Loaded embedding model (ubatch-size=2048); chat model left resident
+INFO     gaia.rag.sdk:sdk.py:2645 🔍 Generating embeddings for 1 chunks...
+ERROR    gaia.llm.lemonade_client:lemonade_client.py:5705 Error generating embeddings: Request failed with status 500: {"error":{"code":500,"details":{"backend":"llama-server","response":{"error":{"code":500,"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","type":"server_error"}}},"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","status_code":500,"type":"server_error"}}
+WARNING  gaia.rag.sdk:sdk.py:960    ⚠️  Batch 1: the embedder was reloaded with a smaller batch than RAG chunks need; reloading it with --ubatch-size 2048 and sending the batch once more.
+INFO     gaia.rag.sdk:sdk.py:801 Loading embedding model via Lemonade: user.embeddinggemma-300m-GGUF
+INFO     gaia.llm.lemonade_client:lemonade_client.py:6587 ✅ Model already downloaded: user.embeddinggemma-300m-GGUF
+INFO     gaia.llm.lemonade_client:lemonade_client.py:7852 Model unloaded successfully: {'message': 'Model unloaded successfully', 'model_name': 'user.embeddinggemma-300m-GGUF', 'status': 'success'}
+INFO     gaia.rag.sdk:sdk.py:858 Loaded embedding model (ubatch-size=2048); chat model left resident
+ERROR    gaia.llm.lemonade_client:lemonade_client.py:5705 Error generating embeddings: Request failed with status 500: {"error":{"code":500,"details":{"backend":"llama-server","response":{"error":{"code":500,"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","type":"server_error"}}},"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","status_code":500,"type":"server_error"}}
+ERROR    gaia.rag.sdk:sdk.py:969    ❌ Batch 1 failed: Error generating embeddings: Request failed with status 500: {"error":{"code":500,"details":{"backend":"llama-server","response":{"error":{"code":500,"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","type":"server_error"}}},"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","status_code":500,"type":"server_error"}}
+ERROR    gaia.rag.sdk:sdk.py:3614 Failed to index /tmp/pytest-of-root/pytest-0/test_index_dense_no_break_spac0/table.txt: The embedding model user.embeddinggemma-300m-GGUF failed: Error generating embeddings: Request failed with status 500: {"error":{"code":500,"details":{"backend":"llama-server","response":{"error":{"code":500,"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","type":"server_error"}}},"message":"input (2850 tokens) is too large to process. increase the physical batch size (current batch size: 2048)","status_code":500,"type":"server_error"}}
+--------------- generated xml file: /evidence/baseline-live.xml ----------------
+=========================== short test summary info ============================
+FAILED tests/integration/test_rag_no_break_spaces.py::test_index_dense_no_break_spaces_with_real_embeddings
+============================== 1 failed in 7.11s ===============================

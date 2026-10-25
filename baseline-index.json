@@ -1,0 +1,32 @@
+{
+  "python": "3.12.13 (main, Mar 10 2026, 18:15:39) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "source": "F:\\Github-PR\\inspection\\gaia-nbsp-embedding\\src\\gaia\\rag\\sdk.py",
+  "sourceSha256": "dc316b0e79151509a1022cdcdae88e5b9df85a515f889829ae30120ec7b6ba1f",
+  "documentSha256": "8023fac91ad417f996b692c506ee0e097effd091e698275288e4126cb8a2020e",
+  "embedMaxChars": 2000,
+  "use_vlm": false,
+  "use_llm_chunking": false,
+  "indexResult": {
+    "success": false,
+    "file_name": "CORNING_2021_10K.pdf",
+    "file_type": ".pdf",
+    "file_size_mb": 1.08,
+    "num_pages": 125,
+    "vlm_pages": null,
+    "total_images": null,
+    "num_chunks": 0,
+    "total_indexed_files": 0,
+    "total_chunks": 0,
+    "max_indexed_files": 100,
+    "max_total_chunks": 10000,
+    "error": "The embedding model user.embeddinggemma-300m-GGUF failed: Error generating embeddings: Request failed with status 500: {\"error\":{\"code\":500,\"details\":{\"backend\":\"llama-server\",\"response\":{\"error\":{\"code\":500,\"message\":\"input (2066 tokens) is too large to process. increase the physical batch size (current batch size: 2048)\",\"type\":\"server_error\"}}},\"message\":\"input (2066 tokens) is too large to process. increase the physical batch size (current batch size: 2048)\",\"status_code\":500,\"type\":\"server_error\"}}",
+    "error_type": "embedding_unavailable",
+    "lemonade_unreachable": false,
+    "embedder_busy": false
+  },
+  "chunks": 0,
+  "chunkNbsp": 0,
+  "maxChunkChars": 0,
+  "elapsedSeconds": 72.96899999957532
+}

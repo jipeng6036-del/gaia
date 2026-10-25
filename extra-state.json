@@ -1,0 +1,37 @@
+{
+  "started": "2026-10-25T04:49:47.514649+00:00",
+  "stage": "twine-core",
+  "module-skip-guard": {
+    "exit": 0,
+    "command": [
+      "/core-venv/bin/python",
+      "util/check_module_skips.py",
+      "--workflow",
+      "test_unit.yml",
+      "--job",
+      "unit-tests"
+    ]
+  },
+  "build-core": {
+    "exit": 0,
+    "command": [
+      "/hub-venv/bin/python",
+      "-m",
+      "build",
+      "--outdir",
+      "/evidence/core-dist"
+    ]
+  },
+  "twine-core": {
+    "exit": 0,
+    "command": [
+      "/hub-venv/bin/python",
+      "-m",
+      "twine",
+      "check",
+      "/evidence/core-dist/amd_gaia-0.25.1-py3-none-any.whl",
+      "/evidence/core-dist/amd_gaia-0.25.1.tar.gz"
+    ]
+  },
+  "finished": "2026-10-25T04:50:47.603887+00:00"
+}

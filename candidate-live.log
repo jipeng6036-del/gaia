@@ -1,0 +1,39 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.14, pytest-9.1.1, pluggy-1.7.0 -- /core-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /5547/candidate
+configfile: pyproject.toml
+plugins: anyio-4.15.1, timeout-2.4.0, xdist-3.8.0, cov-7.1.0, asyncio-1.4.0, mock-3.17.0, respx-0.23.1, pyfakefs-6.2.0
+timeout: 300.0s
+timeout method: signal
+timeout func_only: False
+asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... [2026-10-25 04:52:27] | [37mINFO[0m | faiss.loader.<module> | loader.py:189 | Successfully loaded faiss.
+collected 1 item
+
+tests/integration/test_rag_no_break_spaces.py::test_index_dense_no_break_spaces_with_real_embeddings [2026-10-25 04:52:27] | [37mINFO[0m | gaia.rag.sdk._index_document | sdk.py:3344 | 📄 Indexing document: /tmp/pytest-of-root/pytest-1/test_index_dense_no_break_spac0/table.txt (.txt)
+[2026-10-25 04:52:27] | [37mINFO[0m | gaia.rag.sdk._extract_text_from_text_file | sdk.py:1994 | 📝 Extracted 1,900 characters from text file
+[2026-10-25 04:52:27] | [37mINFO[0m | gaia.rag.sdk._split_text_into_chunks | sdk.py:2346 | 📝 Splitting text into semantic chunks...
+[2026-10-25 04:52:27] | [37mINFO[0m | gaia.rag.sdk._split_text_into_chunks | sdk.py:2551 | 📦 Created 1 semantic chunks
+[2026-10-25 04:52:27] | [37mINFO[0m | gaia.rag.sdk._start_embedder | sdk.py:801 | Loading embedding model via Lemonade: user.embeddinggemma-300m-GGUF
+[2026-10-25 04:52:27] | [37mINFO[0m | gaia.llm.lemonade_client.ensure_model_downloaded | lemonade_client.py:6587 | ✅ Model already downloaded: user.embeddinggemma-300m-GGUF
+[2026-10-25 04:52:27] | [37mINFO[0m | gaia.llm.lemonade_client.unload_model | lemonade_client.py:7852 | Model unloaded successfully: {'message': 'Model unloaded successfully', 'model_name': 'user.embeddinggemma-300m-GGUF', 'status': 'success'}
+[2026-10-25 04:52:30] | [37mINFO[0m | gaia.rag.sdk._start_embedder | sdk.py:858 | Loaded embedding model (ubatch-size=2048); chat model left resident
+[2026-10-25 04:52:30] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2646 | 🔍 Generating embeddings for 1 chunks...
+[2026-10-25 04:52:33] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2687 | 🏗️  Building FAISS search index...
+[2026-10-25 04:52:33] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2705 | 📚 Index ready with 1 vectors (embed: 2.78s, index: 0.00s)
+[2026-10-25 04:52:34] | [37mINFO[0m | gaia.rag.sdk._get_hmac_key | sdk.py:646 | Generated new HMAC key for cache integrity verification
+[2026-10-25 04:52:34] | [37mINFO[0m | gaia.rag.sdk._index_document | sdk.py:3510 | ✅ Successfully indexed /tmp/pytest-of-root/pytest-1/test_index_dense_no_break_spac0/table.txt
+[2026-10-25 04:52:34] | [37mINFO[0m | gaia.rag.sdk._index_document | sdk.py:3187 | 📦 Loading cached index for: /tmp/pytest-of-root/pytest-1/test_index_dense_no_break_spac0/table.txt
+[2026-10-25 04:52:34] | [37mINFO[0m | gaia.rag.sdk._index_document | sdk.py:3205 |   ✅ Markdown cache also available: /tmp/pytest-of-root/pytest-1/test_index_dense_no_break_spac0/cache/469a22011fd69628_0836b11380566cf13dccce87f8d17762_extracted.md
+[2026-10-25 04:52:34] | [37mINFO[0m | gaia.rag.sdk._start_embedder | sdk.py:801 | Loading embedding model via Lemonade: user.embeddinggemma-300m-GGUF
+[2026-10-25 04:52:34] | [37mINFO[0m | gaia.llm.lemonade_client.ensure_model_downloaded | lemonade_client.py:6587 | ✅ Model already downloaded: user.embeddinggemma-300m-GGUF
+[2026-10-25 04:52:34] | [37mINFO[0m | gaia.llm.lemonade_client.unload_model | lemonade_client.py:7852 | Model unloaded successfully: {'message': 'Model unloaded successfully', 'model_name': 'user.embeddinggemma-300m-GGUF', 'status': 'success'}
+[2026-10-25 04:52:37] | [37mINFO[0m | gaia.rag.sdk._start_embedder | sdk.py:858 | Loaded embedding model (ubatch-size=2048); chat model left resident
+[2026-10-25 04:52:37] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2646 | 🔍 Generating embeddings for 1 chunks...
+[2026-10-25 04:52:40] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2687 | 🏗️  Building FAISS search index...
+[2026-10-25 04:52:40] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2705 | 📚 Index ready with 1 vectors (embed: 2.67s, index: 0.00s)
+PASSED
+
+--------------- generated xml file: /evidence/candidate-live.xml ---------------
+============================== 1 passed in 13.19s ==============================

@@ -1,0 +1,101 @@
+Last100 lines of complete local log; SHA256 in manifest.
+tests/unit/test_mcp_bridge_concurrency.py::test_any_transfer_encoding_is_refused_411_instead_of_run_empty[identity] 
+[gw2] [ 99%] PASSED tests/unit/test_mcp_bridge_concurrency.py::test_any_transfer_encoding_is_refused_411_instead_of_run_empty[identity] 
+tests/unit/test_mcp_bridge_protocol.py::TestInitialize::test_supported_requested_version_is_echoed[2025-06-18] 
+[gw1] [ 99%] PASSED tests/unit/test_mcp_bridge_protocol.py::TestInitialize::test_supported_requested_version_is_echoed[2025-06-18] 
+tests/unit/test_mcp_bridge_auth.py::TestNoWildcardEver::test_no_wildcard_acao[POST-/-payload4-null] 
+[gw0] [ 99%] PASSED tests/unit/test_mcp_bridge_auth.py::TestNoWildcardEver::test_no_wildcard_acao[POST-/-payload4-null] 
+tests/unit/test_mcp_bridge_protocol.py::TestNotifications::test_initialized_notification_is_accepted_without_a_body 
+[gw3] [ 99%] PASSED tests/unit/test_mcp_bridge_protocol.py::TestNotifications::test_initialized_notification_is_accepted_without_a_body 
+tests/unit/test_mcp_bridge_concurrency.py::test_any_transfer_encoding_is_refused_411_instead_of_run_empty[gzip-with-length] 
+[gw2] [ 99%] PASSED tests/unit/test_mcp_bridge_concurrency.py::test_any_transfer_encoding_is_refused_411_instead_of_run_empty[gzip-with-length] 
+tests/unit/test_mcp_bridge_protocol.py::TestInitialize::test_supported_requested_version_is_echoed[2025-11-25] 
+[gw1] [ 99%] PASSED tests/unit/test_mcp_bridge_protocol.py::TestInitialize::test_supported_requested_version_is_echoed[2025-11-25] 
+tests/unit/test_mcp_bridge_auth.py::TestNoWildcardEver::test_no_wildcard_acao[POST-/-payload4-http://localhost:3000] 
+[gw0] [ 99%] PASSED tests/unit/test_mcp_bridge_auth.py::TestNoWildcardEver::test_no_wildcard_acao[POST-/-payload4-http://localhost:3000] 
+tests/unit/test_mcp_bridge_protocol.py::TestNotifications::test_ping_returns_empty_result 
+[gw3] [ 99%] PASSED tests/unit/test_mcp_bridge_protocol.py::TestNotifications::test_ping_returns_empty_result 
+tests/unit/test_mcp_bridge_concurrency.py::test_conflicting_content_lengths_are_answered_400 
+[gw2] [ 99%] PASSED tests/unit/test_mcp_bridge_concurrency.py::test_conflicting_content_lengths_are_answered_400 
+tests/unit/test_mcp_bridge_protocol.py::TestInitialize::test_unsupported_requested_version_gets_server_latest 
+[gw1] [ 99%] PASSED tests/unit/test_mcp_bridge_protocol.py::TestInitialize::test_unsupported_requested_version_gets_server_latest 
+tests/unit/test_mcp_bridge_auth.py::TestNoWildcardEver::test_no_wildcard_acao[POST-/-payload4-None] 
+[gw0] [ 99%] PASSED tests/unit/test_mcp_bridge_auth.py::TestNoWildcardEver::test_no_wildcard_acao[POST-/-payload4-None] 
+tests/unit/test_mcp_bridge_protocol.py::TestToolsList::test_every_tool_has_an_object_input_schema 
+[gw3] [ 99%] PASSED tests/unit/test_mcp_bridge_protocol.py::TestToolsList::test_every_tool_has_an_object_input_schema 
+tests/unit/test_mcp_bridge_auth.py::test_bridge_requires_a_token_by_default 
+[gw2] [ 99%] XFAIL tests/unit/test_mcp_bridge_auth.py::test_bridge_requires_a_token_by_default 
+tests/unit/test_mcp_bridge_auth.py::TestConfigurationContract::test_health_is_the_only_public_path 
+[gw1] [100%] PASSED tests/unit/test_mcp_bridge_auth.py::TestConfigurationContract::test_health_is_the_only_public_path 
+
+=============================== warnings summary ===============================
+tests/unit/test_console_image.py::TestRenderImageHalfblock::test_returns_nonempty_for_valid_image
+tests/unit/test_console_image.py::TestRenderImageHalfblock::test_contains_ansi_codes
+tests/unit/test_console_image.py::TestRenderImageHalfblock::test_contains_halfblock_char
+tests/unit/test_console_image.py::TestRenderImageHalfblock::test_respects_max_width
+tests/unit/test_console_image.py::TestPrintImage::test_falls_through_to_halfblock_when_term_image_fails
+  /5547/candidate/src/gaia/agents/base/console.py:1588: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+    pixels = list(img.getdata())
+
+tests/unit/chat/ui/test_answer_retry.py::test_deleting_a_chat_drops_its_open_comparison
+  tests/unit/chat/ui/test_answer_retry.py:185: PytestWarning: The test <Function test_deleting_a_chat_drops_its_open_comparison> is marked with '@pytest.mark.asyncio' but it is not an async function. Please remove the asyncio mark. If the test is not marked explicitly, check for global marks applied via 'pytestmark'.
+    def test_deleting_a_chat_drops_its_open_comparison():
+
+tests/unit/test_web_client_fetch_deadline.py::test_a_proxy_that_trickles_headers_stops_at_the_deadline
+  /core-venv/lib/python3.12/site-packages/urllib3/contrib/socks.py:50: DependencyWarning: SOCKS support in urllib3 requires the installation of optional dependencies: specifically, PySocks.  For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#socks-proxies
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+--------------- generated xml file: /evidence/candidate-core.xml ---------------
+============================= slowest 50 durations =============================
+22.65s call     tests/unit/test_starter_skills.py::test_cli_imports_every_starter_skill
+10.55s call     tests/unit/test_agent_sidecar_manager.py::test_health_rejects_foreign_server_on_port
+10.53s call     tests/unit/test_agent_sidecar_manager.py::test_start_does_not_retry_on_health_timeout
+10.03s call     tests/unit/test_agent_sidecar_manager.py::test_start_retries_on_early_exit_then_succeeds
+10.02s call     tests/unit/test_sidecar_orphan_group_kill.py::test_registry_stop_is_loud_when_the_group_survives
+10.01s call     tests/unit/test_lemonade_shared_server.py::test_ensure_ready_reports_a_stalled_server_as_busy
+10.01s call     tests/unit/test_lemonade_shared_server.py::test_initialize_reports_a_busy_remote_server_as_busy
+8.10s call     tests/unit/test_daemon_status_under_load.py::test_status_answers_while_lease_waiters_fill_the_thread_pool
+8.01s call     tests/unit/test_lemonade_shared_lifecycle.py::TestSlowButAliveEmbeddedServer::test_a_server_answering_nothing_is_still_reported_stalled
+8.01s call     tests/unit/test_stream_stall_watchdog.py::test_hosted_reply_silent_on_every_attempt_fails_loudly
+7.78s call     tests/unit/agents/test_step_budget_adversarial.py::test_notices_never_reach_a_later_turn_across_three_turns
+7.10s call     tests/unit/test_file_watcher_settle.py::test_a_new_change_to_a_locked_file_restarts_its_retries
+7.05s call     tests/unit/test_file_watcher_settle.py::test_a_file_locked_for_good_is_given_up_on_loudly
+6.64s call     tests/unit/test_skills_cli.py::test_real_cli_create_list_info_export_import
+6.54s call     tests/unit/eval/test_scenario_backend.py::test_a_backend_that_will_not_go_idle_stops_the_run_with_a_named_error
+6.51s call     tests/unit/test_stream_stall_watchdog.py::test_trickle_just_under_the_idle_limit_is_not_killed
+6.13s call     tests/unit/eval/test_scenario_backend.py::test_a_timed_out_turn_is_stopped_and_the_next_scenario_starts_at_once
+6.07s call     tests/unit/test_daemon_broker_queue.py::test_cancelling_an_upload_queued_behind_a_chat_leaves_the_queue
+6.05s call     tests/unit/mcp/client/test_stdio_hung_server.py::test_a_launcher_that_dies_during_the_startup_check_has_its_child_stopped
+6.03s call     tests/unit/eval/test_scenario_backend.py::test_a_timeout_keeps_the_turns_that_finished
+6.01s call     tests/unit/test_lemonade_shared_lifecycle.py::TestSlowButAliveEmbeddedServer::test_a_busy_server_is_running_and_reused
+6.01s call     tests/unit/test_stream_stall_watchdog.py::test_local_non_streaming_keeps_its_prefill_budget
+5.76s call     tests/unit/test_remote_disconnected_handling.py::test_every_urlerror_handler_also_handles_a_dropped_connection
+5.35s call     tests/unit/mcp/client/test_stdio_hung_server.py::test_redaction_stays_fast_on_dense_escapes
+5.31s call     tests/unit/chat/ui/test_document_monitor.py::TestDocumentMonitor::test_reindex_zero_chunks_sets_failed
+5.12s call     tests/unit/mcp/client/test_stdio_hung_server.py::test_secrets_are_found_once_not_per_stderr_line
+5.11s call     tests/unit/chat/ui/test_document_monitor.py::TestDocumentMonitor::test_detects_file_change
+5.06s call     tests/unit/test_hub_installer_pip_timeout.py::test_an_orphaned_grandchild_is_killed_too
+5.03s call     tests/unit/test_filesystem_index_locked.py::test_a_real_exclusive_lock_raises_and_keeps_the_index
+5.01s call     tests/unit/test_lemonade_shared_server.py::test_cloud_model_agent_builds_on_a_busy_server
+5.01s call     tests/unit/test_lemonade_shared_server.py::test_get_status_flags_busy_not_down
+5.01s call     tests/unit/test_lemonade_shared_server.py::test_launch_server_does_not_take_over_a_busy_server
+5.00s call     tests/unit/test_lemonade_shared_server.py::test_auto_start_does_not_launch_over_a_busy_server
+5.00s call     tests/unit/test_lemonade_client_http.py::TestLaunchServerModernLegacyDispatch::test_launch_server_uses_resolved_modern_command
+5.00s call     tests/unit/test_lemonade_shared_server.py::test_initialize_does_not_start_over_a_busy_server
+5.00s call     tests/unit/test_lemonade_shared_server.py::test_health_check_default_is_a_short_probe
+5.00s call     tests/unit/test_mic_failure_reporting.py::TestTheLivePlaybackPathIsBounded::test_speak_text_survives_a_consumer_that_never_reads
+5.00s call     tests/unit/test_lemonade_client_http.py::TestLaunchServerModernLegacyDispatch::test_launch_server_legacy_fallback_unchanged
+4.60s call     tests/unit/eval/test_scenario_backend.py::test_a_prompt_nobody_could_answer_is_an_infra_error_naming_the_tool
+4.51s call     tests/unit/test_stream_stall_watchdog.py::test_hosted_reply_that_never_comes_is_retried
+4.07s call     tests/unit/test_daemon_broker_queue.py::test_a_scoped_wait_limit_caps_work_that_must_not_wait_forever
+4.07s call     tests/unit/test_hub_installer.py::test_hung_pip_fails_the_install_and_frees_the_slot
+4.07s call     tests/unit/test_daemon_broker_queue.py::test_cancelling_a_streaming_wait_leaves_the_queue
+4.02s call     tests/unit/test_stream_stall_watchdog.py::test_stall_on_every_attempt_fails_loudly_in_bounded_time
+4.02s call     tests/unit/test_stream_stall_watchdog.py::test_bounded_time_counts_real_seconds
+4.01s call     tests/unit/test_stream_stall_watchdog.py::test_slow_local_prefill_is_not_killed[prefill_before_headers]
+4.01s call     tests/unit/test_stream_stall_watchdog.py::test_slow_local_prefill_is_not_killed[prefill_after_headers]
+4.01s call     tests/unit/test_lemonade_shared_server.py::test_a_server_that_never_answers_fails_loudly
+4.01s call     tests/unit/test_starter_skills.py::test_cli_import_list_info_round_trip
+4.01s call     tests/unit/eval/test_flagship_tasks.py::test_the_hanging_test_does_not_finish
+= 27510 passed, 478 skipped, 3 xfailed, 7 warnings, 41 subtests passed in 436.26s (0:07:16) =

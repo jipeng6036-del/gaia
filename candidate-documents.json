@@ -1,0 +1,25 @@
+{
+  "method": "GET",
+  "url": "http://127.0.0.1:18833/api/documents",
+  "status": 200,
+  "body": {
+    "documents": [
+      {
+        "id": "89c093fb-dffb-43aa-825d-68511a4d6c84",
+        "filename": "CORNING_2021_10K.pdf",
+        "filepath": "/documents/CORNING_2021_10K.pdf",
+        "file_size": 1131912,
+        "chunk_count": 357,
+        "indexed_at": "2026-10-25T04:51:51.660143+00:00",
+        "last_accessed_at": "2026-10-25T04:51:51.660143+00:00",
+        "sessions_using": 0,
+        "indexing_status": "complete",
+        "last_error": null,
+        "error_kind": null
+      }
+    ],
+    "total": 1,
+    "total_size_bytes": 1131912,
+    "total_chunks": 357
+  }
+}

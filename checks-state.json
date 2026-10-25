@@ -1,0 +1,77 @@
+{
+  "started": "2026-10-25T04:38:29.902003+00:00",
+  "init": "docker-init",
+  "stage": "candidate-lint",
+  "baseline-focused": {
+    "exit": 1,
+    "command": [
+      "/usr/sbin/runuser",
+      "-u",
+      "gaia-runner",
+      "--",
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/rag/test_embed_input_cap.py",
+      "-v",
+      "--tb=short",
+      "--junitxml=/evidence/baseline-focused.xml"
+    ],
+    "expectedExit": 1
+  },
+  "candidate-rag": {
+    "exit": 0,
+    "command": [
+      "/usr/sbin/runuser",
+      "-u",
+      "gaia-runner",
+      "--",
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/rag",
+      "tests/test_rag.py",
+      "-v",
+      "--tb=short",
+      "--timeout=180",
+      "--junitxml=/evidence/candidate-rag.xml"
+    ],
+    "expectedExit": 0
+  },
+  "candidate-core": {
+    "exit": 0,
+    "command": [
+      "/usr/sbin/runuser",
+      "-u",
+      "gaia-runner",
+      "--",
+      "/core-venv/bin/python",
+      "-m",
+      "pytest",
+      "tests/unit/",
+      "-n",
+      "4",
+      "--dist=worksteal",
+      "--timeout=180",
+      "-v",
+      "--tb=short",
+      "--durations=50",
+      "--basetemp=/tmp/gaia-core",
+      "--junitxml=/evidence/candidate-core.xml"
+    ],
+    "expectedExit": 0
+  },
+  "candidate-lint": {
+    "exit": 1,
+    "command": [
+      "/usr/sbin/runuser",
+      "-u",
+      "gaia-runner",
+      "--",
+      "/core-venv/bin/python",
+      "util/lint.py",
+      "--all"
+    ],
+    "expectedExit": 0
+  }
+}

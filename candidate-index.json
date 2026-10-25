@@ -1,0 +1,29 @@
+{
+  "python": "3.12.13 (main, Mar 10 2026, 18:15:39) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "source": "F:\\Github-PR\\inspection\\gaia-nbsp-embedding\\src\\gaia\\rag\\sdk.py",
+  "sourceSha256": "34ab41500723c5869b57eeec39d79f2d8123801e2004d5b2566b4b4be2baa657",
+  "documentSha256": "8023fac91ad417f996b692c506ee0e097effd091e698275288e4126cb8a2020e",
+  "embedMaxChars": 2000,
+  "use_vlm": false,
+  "use_llm_chunking": false,
+  "indexResult": {
+    "success": true,
+    "file_name": "CORNING_2021_10K.pdf",
+    "file_type": ".pdf",
+    "file_size_mb": 1.08,
+    "num_pages": 125,
+    "vlm_pages": null,
+    "total_images": null,
+    "num_chunks": 357,
+    "total_indexed_files": 1,
+    "total_chunks": 357,
+    "max_indexed_files": 100,
+    "max_total_chunks": 10000,
+    "pdf_status": "readable"
+  },
+  "chunks": 357,
+  "chunkNbsp": 64306,
+  "maxChunkChars": 2000,
+  "elapsedSeconds": 138.59399999957532
+}

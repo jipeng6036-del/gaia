@@ -1,0 +1,84 @@
+[2026-10-25 04:48:41] | [37mINFO[0m | gaia.cli.ensure_webui_built | build.py:214 | Agent UI frontend has not been built yet
+[2026-10-25 04:48:41] | [33mWARNING[0m | gaia.cli.ensure_webui_built | build.py:220 | Warning: Node.js not found. Cannot auto-rebuild Agent UI frontend.
+[2026-10-25 04:48:41] | [33mWARNING[0m | gaia.cli.ensure_webui_built | build.py:221 |   The UI may be stale. Install Node.js from https://nodejs.org/
+[2026-10-25 04:48:41] | [37mINFO[0m | gaia.cli._launch_agent_ui | cli.py:903 | Using remote Lemonade server: http://host.docker.internal:13355/api/v1
+[2026-10-25 04:48:41] | [37mINFO[0m | gaia.cli._launch_agent_ui | cli.py:908 | Starting GAIA Agent UI on http://127.0.0.1:18823
+[2026-10-25 04:48:42] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated messages table: added model_messages column
+[2026-10-25 04:48:42] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated messages table: added inference_stats column
+[2026-10-25 04:48:42] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated messages table: added turn_summary column
+[2026-10-25 04:48:42] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated documents table: added indexing_status column
+[2026-10-25 04:48:42] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated documents table: added file_mtime column
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated documents table: added indexing_owner column
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added private column
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added agent_type column
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added pinned column
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added unread column
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added last_run_status column
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.database._add_column | database.py:335 | Migrated sessions table: added kind column
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.database.__init__ | database.py:241 | Chat database initialized: /ui-state/candidate/chat/gaia_chat.db
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.server.create_app | server.py:1000 | Email REST surface served by the daemon-supervised sidecar (GAIA_EMAIL_AGENT_MODE=user).
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.server.create_app | server.py:1044 | Serving frontend from /webui
+INFO:     Started server process [21]
+INFO:     Waiting for application startup.
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.agents.registry.discover | registry.py:627 | registry: Starting agent discovery
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.agents.registry.discover | registry.py:638 | registry: Found 1 agent directories: ['gaia']
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.agents.registry.discover | registry.py:669 | registry: Agent discovery complete. 0 agents registered: []
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.agents.registry.register_sidecar | registry.py:1267 | registry: Registered sidecar agent: gaia (namespaced installed:gaia)
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:574 | server: Agent registry initialized with 1 agents: ['gaia']
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.agent_loop.start | agent_loop.py:161 | AgentLoop started (tick_interval=60s)
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:739 | AgentLoop started
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.scheduler.__init__ | scheduler.py:909 | Scheduler initialized
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.scheduler.start | scheduler.py:934 | Scheduler started with 0 task(s)
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:774 | Task scheduler started (timeout=300.0s)
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.document_monitor.start | document_monitor.py:98 | Document monitor started (interval=30s)
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:785 | Document file monitor started (30s polling interval)
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.connectors.activation_watcher.start | activation_watcher.py:82 | activation-watcher: started (poll=1.0s)
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:795 | Connector activation watcher started
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:809 | connections: tripwire sweep complete
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.server.lifespan | server.py:831 | connectors: McpServerHandler reload_callback wired to reload_all_session_agents_mcp
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:18823 (Press CTRL+C to quit)
+[2026-10-25 04:48:43] | [37mINFO[0m | faiss.loader.<module> | loader.py:189 | Successfully loaded faiss.
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.server._import_modules | server.py:619 | faiss: loaded (generic — no AVX2/AVX-512 SWIG module in this wheel; vector search still works, just slower)
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.dispatch._run | dispatch.py:166 | Boot init: Loading ML libraries → done (0.2s)
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.llm.lemonade_manager.ensure_ready | lemonade_manager.py:1053 | Lemonade reachable at http://host.docker.internal:13355/api/v1 with no chat model loaded; not loading Gemma-4-E4B-it-GGUF (preload disabled by the caller)
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.dispatch._run | dispatch.py:166 | Boot init: Checking LLM server → done (0.2s)
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.server._load_model | server.py:699 | Model preload: Gemma-4-E4B-it-GGUF is not downloaded; skipping the boot preload (setup or the first chat downloads it)
+[2026-10-25 04:48:43] | [37mINFO[0m | gaia.ui.dispatch._run | dispatch.py:166 | Boot init: Loading AI model → done (0.4s)
+[2026-10-25 04:48:44] | [37mINFO[0m | gaia.ui.warmup.request_warm_up | warmup.py:349 | Warm-up (startup) not started: first-run setup has not finished
+[2026-10-25 04:48:44] | [37mINFO[0m | gaia.ui.dispatch._run | dispatch.py:166 | Boot init: Priming the first prompt → done (0.5s)
+[2026-10-25 04:48:48] | [37mINFO[0m | gaia.ui.warmup._warm_new_chat_prefix | warmup.py:251 | Warm-up skipped: the gaia agent runs in its daemon sidecar
+[2026-10-25 04:48:48] | [37mINFO[0m | gaia.skills.manager.discover | manager.py:235 | Discovered 36 skill(s) across 5 root(s); 0 shadowed, 0 invalid
+[2026-10-25 04:48:48] | [33mWARNING[0m | gaia.ui.start_screen._mail_connected | start_screen.py:159 | New-chat inbox card skipped: can't read connections: Keyring get_password failed: No recommended backend was available. Install a recommended 3rd party backend package; or, install the keyrings.alt package if you want to use the non-recommended backends. See https://pypi.org/project/keyring for details.. Install a system credential store (gnome-keyring on Linux, or rely on the macOS Keychain / Windows Credential Locker), configure it, and restart GAIA. See docs/security/connections.mdx.
+[2026-10-25 04:49:18] | [33mWARNING[0m | gaia.security._intersect_scopes | security.py:637 | GAIA_ALLOWED_PATHS entry '/documents' is outside the agent's scope ['/tmp', '/root'] and is ignored: the setting can only narrow file access, never widen it.
+[2026-10-25 04:49:18] | [37mINFO[0m | gaia.security.__init__ | security.py:769 | GAIA_ALLOWED_PATHS confines file access to []
+[2026-10-25 04:49:18] | [37mINFO[0m | gaia.rag.sdk.index_document | sdk.py:3009 | Indexing CORNING_2021_10K.pdf (copy at /tmp/gaia_upload_76pzm0px.pdf)
+[2026-10-25 04:49:18] | [33mWARNING[0m | gaia.rag.sdk._content_key | sdk.py:757 | Cannot read file for cache key: Access denied: /tmp/gaia_upload_76pzm0px.pdf is not in allowed paths
+[2026-10-25 04:49:18] | [37mINFO[0m | gaia.rag.sdk._index_document | sdk.py:3344 | 📄 Indexing document: /tmp/gaia_upload_76pzm0px.pdf (.pdf)
+[2026-10-25 04:49:18] | [37mINFO[0m | gaia.rag.sdk._extract_text_from_pdf | sdk.py:1210 | 📄 Extracting text from 125 pages...
+[2026-10-25 04:49:18] | [33mWARNING[0m | gaia.llm.vlm_client.check_availability | vlm_client.py:150 | ❌ VLM model not found: Qwen3-VL-4B-Instruct-GGUF
+[2026-10-25 04:49:18] | [33mWARNING[0m | gaia.llm.vlm_client.check_availability | vlm_client.py:151 | 
+[2026-10-25 04:49:18] | [33mWARNING[0m | gaia.llm.vlm_client.check_availability | vlm_client.py:152 | 📥 To download this model:
+[2026-10-25 04:49:18] | [33mWARNING[0m | gaia.llm.vlm_client.check_availability | vlm_client.py:153 |    1. Open Lemonade Model Manager (http://host.docker.internal:13355)
+[2026-10-25 04:49:18] | [33mWARNING[0m | gaia.llm.vlm_client.check_availability | vlm_client.py:154 |    2. Search for: Qwen3-VL-4B-Instruct-GGUF
+[2026-10-25 04:49:18] | [33mWARNING[0m | gaia.llm.vlm_client.check_availability | vlm_client.py:155 |    3. Click 'Download' to install the model
+[2026-10-25 04:49:18] | [33mWARNING[0m | gaia.llm.vlm_client.check_availability | vlm_client.py:156 | 
+[2026-10-25 04:49:18] | [33mWARNING[0m | gaia.llm.vlm_client.check_availability | vlm_client.py:157 |    Available models: embeddinggemma-300m-GGUF...
+[2026-10-25 04:49:24] | [37mINFO[0m | gaia.rag.sdk._extract_text_from_pdf | sdk.py:1377 | 📝 Extracted 439,494 characters in 5.96s (VLM: 0 pages)
+[2026-10-25 04:49:24] | [37mINFO[0m | gaia.rag.sdk._split_text_into_chunks | sdk.py:2346 | 📝 Splitting text into semantic chunks...
+[2026-10-25 04:49:24] | [37mINFO[0m | gaia.rag.sdk._fit_chunks_to_embedder | sdk.py:2571 | Split 41 chunk(s) longer than the embedder's 2000-char input into 85
+[2026-10-25 04:49:24] | [37mINFO[0m | gaia.rag.sdk._split_text_into_chunks | sdk.py:2551 | 📦 Created 357 semantic chunks
+[2026-10-25 04:49:24] | [37mINFO[0m | gaia.rag.sdk._start_embedder | sdk.py:801 | Loading embedding model via Lemonade: user.embeddinggemma-300m-GGUF
+[2026-10-25 04:49:27] | [37mINFO[0m | gaia.rag.sdk._start_embedder | sdk.py:858 | Loaded embedding model (ubatch-size=2048); chat model left resident
+[2026-10-25 04:49:27] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2646 | 🔍 Generating embeddings for 357 chunks...
+[2026-10-25 04:51:06] | [37mINFO[0m | gaia.rag.sdk._encode_texts | sdk.py:936 |    🎯 Total embedding time: 99.07s (2.5 chunks/sec, 10 batches)
+[2026-10-25 04:51:51] | [37mINFO[0m | gaia.rag.sdk._encode_texts | sdk.py:936 |    🎯 Total embedding time: 44.58s (2.4 chunks/sec, 5 batches)
+[2026-10-25 04:51:51] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2687 | 🏗️  Building FAISS search index...
+[2026-10-25 04:51:51] | [37mINFO[0m | gaia.rag.sdk._create_vector_index | sdk.py:2705 | 📚 Index ready with 357 vectors (embed: 143.66s, index: 0.00s)
+[2026-10-25 04:51:51] | [37mINFO[0m | gaia.rag.sdk._get_hmac_key | sdk.py:646 | Generated new HMAC key for cache integrity verification
+[2026-10-25 04:51:51] | [37mINFO[0m | gaia.rag.sdk._index_document | sdk.py:3510 | ✅ Successfully indexed /tmp/gaia_upload_76pzm0px.pdf
+[2026-10-25 04:51:51] | [37mINFO[0m | gaia.ui._chat_helpers._do_index | _chat_helpers.py:5142 | RAG index_document result for CORNING_2021_10K.pdf (/tmp/gaia_upload_76pzm0px.pdf): {'success': True, 'file_name': 'CORNING_2021_10K.pdf', 'file_type': '.pdf', 'file_size_mb': 1.08, 'num_pages': 125, 'vlm_pages': None, 'total_images': None, 'num_chunks': 357, 'total_indexed_files': 1, 'total_chunks': 357, 'max_indexed_files': 100, 'max_total_chunks': 10000, 'pdf_status': 'readable'}
+[2026-10-25 04:51:51] | [37mINFO[0m | gaia.ui._chat_helpers._do_index | _chat_helpers.py:5163 | Indexed CORNING_2021_10K.pdf (/tmp/gaia_upload_76pzm0px.pdf): 357 chunks
+[2026-10-25 04:52:13] | [37mINFO[0m | gaia.ui.warmup._warm_new_chat_prefix | warmup.py:251 | Warm-up skipped: the gaia agent runs in its daemon sidecar
+[2026-10-25 04:52:13] | [37mINFO[0m | gaia.skills.manager.discover | manager.py:235 | Discovered 36 skill(s) across 5 root(s); 0 shadowed, 0 invalid
+[2026-10-25 04:52:13] | [33mWARNING[0m | gaia.ui.start_screen._mail_connected | start_screen.py:159 | New-chat inbox card skipped: can't read connections: Keyring get_password failed: No recommended backend was available. Install a recommended 3rd party backend package; or, install the keyrings.alt package if you want to use the non-recommended backends. See https://pypi.org/project/keyring for details.. Install a system credential store (gnome-keyring on Linux, or rely on the macOS Keychain / Windows Credential Locker), configure it, and restart GAIA. See docs/security/connections.mdx.

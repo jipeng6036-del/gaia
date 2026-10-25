@@ -1,0 +1,31 @@
+{
+  "build-core-final": {
+    "command": [
+      "/hub-venv/bin/python",
+      "-m",
+      "build",
+      "--outdir",
+      "/evidence/final-dist"
+    ],
+    "exit": 0
+  },
+  "twine-core-final": {
+    "command": [
+      "/hub-venv/bin/python",
+      "-m",
+      "twine",
+      "check",
+      "/evidence/final-dist/amd_gaia-0.25.1-py3-none-any.whl",
+      "/evidence/final-dist/amd_gaia-0.25.1.tar.gz"
+    ],
+    "exit": 0
+  },
+  "capability-matrix": {
+    "command": [
+      "/hub-venv/bin/python",
+      "hub/agents/gaia/python/packaging/capability_matrix.py",
+      "--check"
+    ],
+    "exit": 0
+  }
+}

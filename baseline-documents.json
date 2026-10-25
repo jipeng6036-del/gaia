@@ -1,0 +1,25 @@
+{
+  "method": "GET",
+  "url": "http://127.0.0.1:18833/api/documents",
+  "status": 200,
+  "body": {
+    "documents": [
+      {
+        "id": "ae640088-a15e-4505-bc54-00ff3ebb11af",
+        "filename": "CORNING_2021_10K.pdf",
+        "filepath": "/documents/CORNING_2021_10K.pdf",
+        "file_size": 1131912,
+        "chunk_count": 0,
+        "indexed_at": "2026-10-25T04:45:41.110769+00:00",
+        "last_accessed_at": "2026-10-25T04:45:41.135760+00:00",
+        "sessions_using": 0,
+        "indexing_status": "failed",
+        "last_error": "RAG indexing failed for CORNING_2021_10K.pdf: The embedding model user.embeddinggemma-300m-GGUF failed: Error generating embeddings: Request failed with status 500: {\"error\":{\"code\":500,\"details\":{\"backend\":\"llama-server\",\"response\":{\"error\":{\"code\":500,\"message\":\"input (2066 tokens) is too large to process. increase the physical batch size (current batch size: 2048)\",\"type\":\"server_error\"}}},\"message\":\"input (2066 tokens) is too large to process. increase the physical batch size (current batch\u2026",
+        "error_kind": null
+      }
+    ],
+    "total": 1,
+    "total_size_bytes": 1131912,
+    "total_chunks": 0
+  }
+}

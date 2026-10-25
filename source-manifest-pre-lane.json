@@ -1,0 +1,8 @@
+{
+  "baseline": "82ad2a771c7ed5b6b26f4521b3e4eaad40820f85",
+  "files": {
+    "src/gaia/rag/sdk.py": "83a85263f04f8f5e3390d1f218ce43913fbc58554c2f1ef00155d626698cb834",
+    "tests/unit/rag/test_embed_input_cap.py": "8c1a82bc84cd395a70c0f3ceb0022ac13182b40bb2d0e2dd7565d1821948707c",
+    "tests/integration/test_rag_no_break_spaces.py": "4d80df95c049a96fc7bc22d6f25a096825e9a4302579567f611c8662ccd4d1bf"
+  }
+}
